@@ -21,12 +21,12 @@ button {
 
  [dir="rtl"] .dir-ltr {
   direction: ltr;
-  text-align: left;
+  text-align: start;
 }
 
 [dir="ltr"] .dir-rtl {
   direction: rtl;
-  text-align: right;
+  text-align: start;
 }
 
  .text-start {
