@@ -1,0 +1,38 @@
+/**
+ * --------------------------------------------------------------------------
+ * Direction
+ * --------------------------------------------------------------------------
+ */
+
+ html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+ input,
+textarea,
+select,
+button {
+  direction: inherit;
+}
+
+ [dir="rtl"] .dir-ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+[dir="ltr"] .dir-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+ .text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
