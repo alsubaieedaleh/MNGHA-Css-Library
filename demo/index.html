@@ -1,102 +1,120 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="external">
+<html lang="en" dir="ltr" data-theme="internal">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGA Universal Styles</title>
+  <title>DGA Internal Theme Test</title>
   <link rel="stylesheet" href="./../dga-ui.css">
 </head>
 
 <body>
-  <main class="dga-container" style="padding-block: var(--spacing-8);">
+  <!-- Top Header -->
+  <header class="site-header">
+    <div class="dga-container header-content">
+      <div>
+        <p class="eyebrow">DGA Universal Styles</p>
+        <h1>Internal Theme Preview</h1>
+        <p class="hero-text">
+          This page tests the internal theme using the same visual direction:
+          gradient header, blue headings, blue body text, cards, spacing, and RTL/LTR behavior.
+        </p>
+      </div>
 
-    <!-- Header -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <p style="color: var(--color-text-brand-primary); font-weight: var(--font-weight-semibold);">
-        DGA Universal Styles
-      </p>
-
-      <h1 style="margin-block-end: var(--spacing-4);">
-        Theme Test Page
-      </h1>
-
-      <p class="dga-paragraph" style="color: var(--color-gray-600);">
-        This page is used to test the theme system. Change between
-        external and internal themes and check if colors change automatically.
-      </p>
-
-      <div style="display: flex; gap: var(--spacing-3); flex-wrap: wrap; margin-block-start: var(--spacing-6);">
-        <button
-          type="button"
-          onclick="toggleTheme()"
-          style="
-            padding: var(--spacing-3) var(--spacing-4);
-            border: 1px solid var(--color-action-primary-border);
-            border-radius: var(--radius-sm);
-            background: var(--color-action-primary-bg);
-            color: var(--color-action-primary-text);
-            cursor: pointer;
-          "
-        >
-          Toggle External / Internal
+      <div class="header-actions">
+        <button type="button" class="demo-btn demo-btn-primary" onclick="toggleTheme()">
+          Toggle Theme
         </button>
 
-        <button
-          type="button"
-          onclick="toggleDirection()"
-          style="
-            padding: var(--spacing-3) var(--spacing-4);
-            border: 1px solid var(--color-gray-300);
-            border-radius: var(--radius-sm);
-            background: var(--color-white);
-            color: var(--color-gray-900);
-            cursor: pointer;
-          "
-        >
+        <button type="button" class="demo-btn demo-btn-light" onclick="toggleDirection()">
           Toggle RTL / LTR
         </button>
       </div>
+    </div>
+  </header>
 
-      <p style="margin-block-start: var(--spacing-4); color: var(--color-gray-600);">
+  <main class="dga-container page-content">
+
+    <!-- Theme Status -->
+    <section class="status-card">
+      <p>
         Current theme:
-        <strong id="themeLabel" style="color: var(--color-brand-primary);">internal</strong>
+        <strong id="themeLabel">internal</strong>
+      </p>
+
+      <p>
+        Current direction:
+        <strong id="directionLabel">ltr</strong>
       </p>
     </section>
 
-    <!-- Theme Color Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Theme Color Test</h2>
+    <!-- Main Services Section -->
+    <section class="section">
+      <p class="section-kicker">Services</p>
+      <h2>Digital Government Services</h2>
 
-      <div class="dga-grid dga-grid-cols-3">
-        <div class="theme-card">
-          <h3>Brand Primary</h3>
-          <p>This uses <code>--color-brand-primary</code>.</p>
-        </div>
+      <p class="section-description">
+        These cards test semantic theme colors, spacing, radius, shadows, and layout behavior.
+        The visual style is intentionally close to the internal portal design.
+      </p>
 
-        <div class="theme-card action-card">
-          <h3>Action Primary</h3>
-          <p>This uses action semantic variables.</p>
-        </div>
+      <div class="dga-grid dga-grid-cols-3 cards-grid">
+        <article class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Government Platforms</h3>
+          <p>
+            Manage platform standards, service quality, and digital experience requirements.
+          </p>
+          <a href="#">View details</a>
+        </article>
 
-        <div class="theme-card border-card">
-          <h3>Brand Border</h3>
-          <p>This border follows the active theme.</p>
-        </div>
+        <article class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Compliance Review</h3>
+          <p>
+            Review digital products against design, accessibility, and service guidelines.
+          </p>
+          <a href="#">View details</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">03</div>
+          <h3>Internal Requests</h3>
+          <p>
+            Submit, track, and manage internal requests using theme-aware components.
+          </p>
+          <a href="#">View details</a>
+        </article>
       </div>
     </section>
 
-    <!-- Direction Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Direction Test</h2>
+    <!-- Gradient Feature Section -->
+    <section class="feature-panel">
+      <div>
+        <p class="section-kicker light">Theme Layer</p>
+        <h2>Semantic colors control the whole page</h2>
+        <p>
+          Components should use variables like
+          <code>--color-action-primary-bg</code>,
+          <code>--color-text-brand-primary</code>, and
+          <code>--color-brand-surface</code>
+          instead of raw color values.
+        </p>
+      </div>
 
-      <div
-        style="
-          padding: var(--spacing-5);
-          border: 1px solid var(--color-gray-200);
-          border-radius: var(--radius-md);
-          background: var(--color-gray-50);
-        "
-      >
+      <div class="glass-card">
+        <h3>Backdrop Blur</h3>
+        <p>
+          This card tests your blur token and theme gradient together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Direction Section -->
+    <section class="section">
+      <p class="section-kicker">Direction</p>
+      <h2>RTL and LTR Test</h2>
+
+      <div class="direction-box">
         <p class="text-start">
           This text uses <strong>text-align: start</strong>.
         </p>
@@ -106,7 +124,7 @@
         </p>
 
         <p class="dir-ltr">
-          English inside any page direction: user@example.com
+          English value inside any direction: user@example.com
         </p>
 
         <p class="dir-rtl">
@@ -115,202 +133,280 @@
       </div>
     </section>
 
-    <!-- Grid Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Grid Test</h2>
-
-      <div class="dga-grid-responsive">
-        <div class="demo-box">1</div>
-        <div class="demo-box">2</div>
-        <div class="demo-box">3</div>
-        <div class="demo-box">4</div>
-        <div class="demo-box">5</div>
-        <div class="demo-box">6</div>
-        <div class="demo-box">7</div>
-        <div class="demo-box">8</div>
-        <div class="demo-box">9</div>
-        <div class="demo-box">10</div>
-        <div class="demo-box">11</div>
-        <div class="demo-box">12</div>
-      </div>
-    </section>
-
-    <!-- Width Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Width Tokens Test</h2>
-
-      <div style="display: grid; gap: var(--spacing-4);">
-        <div class="width-demo" style="max-width: var(--width-sm);">
-          width-sm / 480px
-        </div>
-
-        <div class="width-demo" style="max-width: var(--width-lg);">
-          width-lg / 640px
-        </div>
-
-        <div class="width-demo" style="max-width: var(--width-3xl);">
-          width-3xl / 1280px
-        </div>
-      </div>
-    </section>
-
-    <!-- Radius + Shadow Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Radius and Shadow Test</h2>
-
-      <div class="dga-grid dga-grid-cols-3">
-        <div class="card-demo">
-          <h3>Card One</h3>
-          <p>Testing radius, spacing, and shadow tokens.</p>
-        </div>
-
-        <div class="card-demo">
-          <h3>Card Two</h3>
-          <p>Testing reusable visual foundations.</p>
-        </div>
-
-        <div class="card-demo">
-          <h3>Card Three</h3>
-          <p>Testing layout consistency.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Backdrop Blur Test -->
-    <section style="margin-block-end: var(--spacing-8);">
-      <h2>Backdrop Blur Test</h2>
-
-      <div class="blur-demo">
-        <div class="blur-card">
-          <h3>Blur Card</h3>
-          <p>This box uses backdrop blur token and theme colors.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Form Direction Test -->
-    <section>
+    <!-- Form Section -->
+    <section class="section">
+      <p class="section-kicker">Form</p>
       <h2>Form Direction Test</h2>
 
-      <form style="display: grid; gap: var(--spacing-4); max-width: var(--width-md);">
+      <form class="demo-form">
         <label>
           Name
-          <input
-            type="text"
-            placeholder="Write your name"
-            style="
-              width: 100%;
-              margin-block-start: var(--spacing-2);
-              padding: var(--spacing-3);
-              border: 1px solid var(--color-gray-300);
-              border-radius: var(--radius-sm);
-            "
-          >
+          <input type="text" placeholder="Write your name">
         </label>
 
         <label>
           Message
-          <textarea
-            placeholder="Write your message"
-            rows="4"
-            style="
-              width: 100%;
-              margin-block-start: var(--spacing-2);
-              padding: var(--spacing-3);
-              border: 1px solid var(--color-gray-300);
-              border-radius: var(--radius-sm);
-            "
-          ></textarea>
+          <textarea rows="4" placeholder="Write your message"></textarea>
         </label>
+
+        <button type="button" class="demo-btn demo-btn-primary">
+          Submit Request
+        </button>
       </form>
     </section>
 
   </main>
 
   <style>
-    .theme-card {
-      padding: var(--spacing-5);
-      border-radius: var(--radius-lg);
-      background: color-mix(in srgb, var(--color-brand-primary) 10%, white);
-      border: 1px solid color-mix(in srgb, var(--color-brand-primary) 35%, white);
-      color: var(--color-gray-900);
+    body {
+      background: #f6f8fb;
     }
- 
-    .theme-card h3 {
+
+    .site-header {
+      color: var(--color-white);
+      background: var(
+        --color-brand-surface,
+        linear-gradient(135deg, var(--color-brand-primary) 10%, var(--color-brand-secondary))
+      );
+      padding-block: var(--spacing-10);
+      border-end-start-radius: var(--radius-xl);
+      border-end-end-radius: var(--radius-xl);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--spacing-8);
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin-block-end: var(--spacing-3);
+      font-weight: var(--font-weight-semibold);
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .site-header h1 {
+      max-width: var(--width-lg);
+      margin-block-end: var(--spacing-4);
+      color: var(--color-white);
+    }
+
+    .hero-text {
+      max-width: var(--width-lg);
+      color: rgba(255, 255, 255, 0.85);
+      line-height: var(--line-height-lg);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: var(--spacing-3);
+      flex-wrap: wrap;
+    }
+
+    .page-content {
+      padding-block: var(--spacing-8);
+    }
+
+    .status-card {
+      display: flex;
+      gap: var(--spacing-6);
+      flex-wrap: wrap;
+      padding: var(--spacing-4) var(--spacing-5);
+      margin-block-end: var(--spacing-8);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-gray-700);
+    }
+
+    .status-card strong {
       color: var(--color-text-brand-primary);
     }
 
-    .action-card {
+    .section {
+      margin-block-end: var(--spacing-10);
+    }
+
+    .section-kicker {
+      margin-block-end: var(--spacing-2);
+      color: var(--color-text-brand-primary);
+      font-weight: var(--font-weight-semibold);
+    }
+
+    .section-kicker.light {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .section h2 {
+      margin-block-end: var(--spacing-4);
+      color: var(--color-text-brand-primary);
+    }
+
+    .section-description {
+      max-width: var(--paragraph-max-width);
+      margin-block-end: var(--spacing-6);
+      color: var(--color-text-brand-secondary);
+      line-height: var(--line-height-lg);
+    }
+
+    .cards-grid {
+      gap: var(--spacing-6);
+    }
+
+    .service-card {
+      padding: var(--spacing-6);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      margin-block-end: var(--spacing-5);
+      display: grid;
+      place-items: center;
+      border-radius: var(--radius-full);
+      background: color-mix(in srgb, var(--color-text-brand-primary) 12%, white);
+      color: var(--color-text-brand-primary);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .service-card h3 {
+      margin-block-end: var(--spacing-3);
+      color: var(--color-text-brand-primary);
+    }
+
+    .service-card p {
+      margin-block-end: var(--spacing-5);
+      color: var(--color-text-brand-secondary);
+      line-height: var(--line-height-lg);
+    }
+
+    .service-card a {
+      color: var(--color-link, var(--color-text-brand-primary));
+      font-weight: var(--font-weight-semibold);
+      text-decoration: none;
+    }
+
+    .feature-panel {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--spacing-8);
+      align-items: center;
+      margin-block-end: var(--spacing-10);
+      padding: var(--spacing-8);
+      border-radius: var(--radius-xl);
+      color: var(--color-white);
+      background: var(
+        --color-brand-surface  );
+    }
+
+    .feature-panel h2 {
+      margin-block-end: var(--spacing-4);
+      color: var(--color-white);
+    }
+
+    .feature-panel p {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: var(--line-height-lg);
+    }
+
+    .feature-panel code {
+      color: var(--color-white);
+    }
+
+    .glass-card {
+      padding: var(--spacing-6);
+      border-radius: var(--radius-xl);
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(var(--backdrop-blur-md));
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .glass-card h3 {
+      color: var(--color-white);
+      margin-block-end: var(--spacing-3);
+    }
+
+    .direction-box {
+      padding: var(--spacing-6);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-text-brand-secondary);
+    }
+
+    .demo-form {
+      display: grid;
+      gap: var(--spacing-4);
+      max-width: var(--width-md);
+      padding: var(--spacing-6);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .demo-form label {
+      color: var(--color-text-brand-secondary);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .demo-form input,
+    .demo-form textarea {
+      width: 100%;
+      margin-block-start: var(--spacing-2);
+      padding: var(--spacing-3);
+      border: 1px solid var(--color-gray-300);
+      border-radius: var(--radius-sm);
+      background: var(--color-white);
+      color: var(--color-gray-900);
+    }
+
+    .demo-btn {
+      padding: var(--spacing-3) var(--spacing-5);
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+    }
+
+    .demo-btn-primary {
       background: var(--color-action-primary-bg);
       color: var(--color-action-primary-text);
       border-color: var(--color-action-primary-border);
     }
 
-    .action-card h3 {
-      color: var(--color-action-primary-text);
+    .demo-btn-primary:hover {
+      background: var(--color-action-primary-bg-hover);
     }
 
-    .border-card {
-      border: 2px solid var(--color-brand-primary);
-      background: var(--color-white);
-    }
-
-    .demo-box {
-      padding: var(--spacing-4);
-      border-radius: var(--radius-sm);
-      background: color-mix(in srgb, var(--color-brand-primary) 10%, white);
-      border: 1px solid color-mix(in srgb, var(--color-brand-primary) 35%, white);
-      color: var(--color-text-brand-primary);
-      text-align: center;
-    }
-
-    .width-demo {
-      width: 100%;
-      padding: var(--spacing-4);
-      border-radius: var(--radius-sm);
-      background: var(--color-gray-50);
-      border: 1px solid var(--color-gray-200);
-    }
-
-    .card-demo {
-      padding: var(--spacing-5);
-      border-radius: var(--radius-lg);
-      background: var(--color-white);
-      border: 1px solid var(--color-gray-200);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .card-demo h3 {
-      color: var(--color-text-brand-primary);
-    }
-
-    .blur-demo {
-      min-height: 260px;
-      padding: var(--spacing-8);
-      border-radius: var(--radius-lg);
-      background:
-        linear-gradient(
-          135deg,
-          color-mix(in srgb, var(--color-brand-primary) 30%, white),
-          var(--color-brand-primary)
-        );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .blur-card {
-      max-width: var(--width-sm);
-      padding: var(--spacing-6);
-      border-radius: var(--radius-lg);
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(var(--backdrop-blur-md));
-      border: 1px solid rgba(255, 255, 255, 0.4);
+    .demo-btn-light {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--color-white);
+      border-color: rgba(255, 255, 255, 0.45);
     }
 
     @media (max-width: 767px) {
+      .header-content,
+      .feature-panel {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .dga-grid-cols-3 {
         grid-template-columns: 1fr;
+      }
+
+      .site-header {
+        border-end-start-radius: var(--radius-lg);
+        border-end-end-radius: var(--radius-lg);
       }
     }
   </style>
@@ -327,14 +423,12 @@
 
     function toggleDirection() {
       const html = document.documentElement;
+      const nextDirection = html.dir === "rtl" ? "ltr" : "rtl";
 
-      if (html.dir === "rtl") {
-        html.dir = "ltr";
-        html.lang = "en";
-      } else {
-        html.dir = "rtl";
-        html.lang = "ar";
-      }
+      html.dir = nextDirection;
+      html.lang = nextDirection === "rtl" ? "ar" : "en";
+
+      document.getElementById("directionLabel").textContent = nextDirection;
     }
   </script>
 </body>

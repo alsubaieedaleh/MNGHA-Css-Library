@@ -3,17 +3,27 @@
  * Internal Theme
  * --------------------------------------------------------------------------
  */
-
 [data-theme="internal"] {
   --color-brand-primary: var(--color-internal-primary);
-  --color-brand-secondary: var(--color-info-800);
+  --color-brand-secondary: var(--color-internal-secondary);
 
-  --color-action-primary-bg: var(--color-internal-primary-600);
-  --color-action-primary-bg-hover: var(--color-info-700);
+  --color-brand-surface: linear-gradient(
+    135deg,
+    var(--color-internal-primary) 10%,
+    var(--color-internal-secondary)
+  );
+
+  --color-action-primary-bg: var(--color-internal-secondary);
+  --color-action-primary-bg-hover: var(--color-internal-primary);
   --color-action-primary-text: var(--color-white);
-  --color-action-primary-border: var(--color-internal-primary-600);
+  --color-action-primary-border: var(--color-internal-secondary);
 
-  --color-text-brand-primary: var(--color-internal-primary-600);
-  --color-text-brand-secondary: var(--color-internal-primary-600);
-  --color-text-brand-tertiary: var(--color-info-500);
+  --color-text-brand-primary: var(--color-internal-heading);
+  --color-text-brand-secondary: var(--color-internal-body);
+  --color-text-brand-tertiary: var(--color-internal-accent);
+
+  --color-heading-brand: var(--color-internal-heading);
+  --color-body-brand: var(--color-internal-body);
+  --color-link: var(--color-internal-heading);
+  --color-link-hover: var(--color-internal-primary);
 }
