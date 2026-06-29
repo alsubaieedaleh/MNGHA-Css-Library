@@ -153,6 +153,11 @@
  * --------------------------------------------------------------------------
  */
 --color-primary: var(--color-primary-600);
+--color-secondary: var(--color-secondary-600);
+--color-success: var(--color-success-600);
+--color-warning: var(--color-warning-600);
+--color-error: var(--color-error-600);
+--color-info: var(--color-info-600);
 
 /**
  * --------------------------------------------------------------------------
@@ -160,15 +165,11 @@
  * --------------------------------------------------------------------------
  */
 
---color-internal-primary: #0d6efd;
-
---color-secondary: var(--color-secondary-600);
-
---color-success: var(--color-success-600);
---color-warning: var(--color-warning-600);
---color-error: var(--color-error-600);
---color-info: var(--color-info-600);
-
+  --color-internal-primary: #133a5c;      
+  --color-internal-secondary: #006384;   
+  --color-internal-heading: #0072c6;    
+  --color-internal-body: #37548b;       
+  --color-internal-accent: #21527d;  
   /**
  * --------------------------------------------------------------------------
  * Text Colors
