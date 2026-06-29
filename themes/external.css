@@ -1,0 +1,20 @@
+/**
+ * --------------------------------------------------------------------------
+ * External Theme
+ * --------------------------------------------------------------------------
+ */
+
+:root,
+[data-theme="external"] {
+  --color-brand-primary: var(--color-primary-600);
+  --color-brand-secondary: var(--color-secondary-600);
+
+  --color-action-primary-bg: var(--color-primary-600);
+  --color-action-primary-bg-hover: var(--color-primary-700);
+  --color-action-primary-text: var(--color-white);
+  --color-action-primary-border: var(--color-primary-600);
+
+  --color-text-brand-primary: var(--color-primary-800);
+  --color-text-brand-secondary: var(--color-primary-600);
+  --color-text-brand-tertiary: var(--color-primary-500);
+}

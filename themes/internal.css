@@ -1,0 +1,19 @@
+/**
+ * --------------------------------------------------------------------------
+ * Internal Theme
+ * --------------------------------------------------------------------------
+ */
+
+[data-theme="internal"] {
+  --color-brand-primary: var(--color-internal-primary);
+  --color-brand-secondary: var(--color-info-800);
+
+  --color-action-primary-bg: var(--color-internal-primary-600);
+  --color-action-primary-bg-hover: var(--color-info-700);
+  --color-action-primary-text: var(--color-white);
+  --color-action-primary-border: var(--color-internal-primary-600);
+
+  --color-text-brand-primary: var(--color-internal-primary-600);
+  --color-text-brand-secondary: var(--color-internal-primary-600);
+  --color-text-brand-tertiary: var(--color-info-500);
+}

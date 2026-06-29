@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGA Universal Styles</title>
+  <link rel="stylesheet" href="./../dga-ui.css">
+</head>
+
+<body>
+  <main class="dga-container" style="padding-block: var(--spacing-8);">
+
+    <!-- Header -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <p style="color: var(--color-text-brand-primary); font-weight: var(--font-weight-semibold);">
+        DGA Universal Styles
+      </p>
+
+      <h1 style="margin-block-end: var(--spacing-4);">
+        Theme Test Page
+      </h1>
+
+      <p class="dga-paragraph" style="color: var(--color-gray-600);">
+        This page is used to test the theme system. Change between
+        external and internal themes and check if colors change automatically.
+      </p>
+
+      <div style="display: flex; gap: var(--spacing-3); flex-wrap: wrap; margin-block-start: var(--spacing-6);">
+        <button
+          type="button"
+          onclick="toggleTheme()"
+          style="
+            padding: var(--spacing-3) var(--spacing-4);
+            border: 1px solid var(--color-action-primary-border);
+            border-radius: var(--radius-sm);
+            background: var(--color-action-primary-bg);
+            color: var(--color-action-primary-text);
+            cursor: pointer;
+          "
+        >
+          Toggle External / Internal
+        </button>
+
+        <button
+          type="button"
+          onclick="toggleDirection()"
+          style="
+            padding: var(--spacing-3) var(--spacing-4);
+            border: 1px solid var(--color-gray-300);
+            border-radius: var(--radius-sm);
+            background: var(--color-white);
+            color: var(--color-gray-900);
+            cursor: pointer;
+          "
+        >
+          Toggle RTL / LTR
+        </button>
+      </div>
+
+      <p style="margin-block-start: var(--spacing-4); color: var(--color-gray-600);">
+        Current theme:
+        <strong id="themeLabel" style="color: var(--color-brand-primary);">internal</strong>
+      </p>
+    </section>
+
+    <!-- Theme Color Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Theme Color Test</h2>
+
+      <div class="dga-grid dga-grid-cols-3">
+        <div class="theme-card">
+          <h3>Brand Primary</h3>
+          <p>This uses <code>--color-brand-primary</code>.</p>
+        </div>
+
+        <div class="theme-card action-card">
+          <h3>Action Primary</h3>
+          <p>This uses action semantic variables.</p>
+        </div>
+
+        <div class="theme-card border-card">
+          <h3>Brand Border</h3>
+          <p>This border follows the active theme.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Direction Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Direction Test</h2>
+
+      <div
+        style="
+          padding: var(--spacing-5);
+          border: 1px solid var(--color-gray-200);
+          border-radius: var(--radius-md);
+          background: var(--color-gray-50);
+        "
+      >
+        <p class="text-start">
+          This text uses <strong>text-align: start</strong>.
+        </p>
+
+        <p class="text-end">
+          This text uses <strong>text-align: end</strong>.
+        </p>
+
+        <p class="dir-ltr">
+          English inside any page direction: user@example.com
+        </p>
+
+        <p class="dir-rtl">
+          نص عربي داخل أي اتجاه للصفحة
+        </p>
+      </div>
+    </section>
+
+    <!-- Grid Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Grid Test</h2>
+
+      <div class="dga-grid-responsive">
+        <div class="demo-box">1</div>
+        <div class="demo-box">2</div>
+        <div class="demo-box">3</div>
+        <div class="demo-box">4</div>
+        <div class="demo-box">5</div>
+        <div class="demo-box">6</div>
+        <div class="demo-box">7</div>
+        <div class="demo-box">8</div>
+        <div class="demo-box">9</div>
+        <div class="demo-box">10</div>
+        <div class="demo-box">11</div>
+        <div class="demo-box">12</div>
+      </div>
+    </section>
+
+    <!-- Width Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Width Tokens Test</h2>
+
+      <div style="display: grid; gap: var(--spacing-4);">
+        <div class="width-demo" style="max-width: var(--width-sm);">
+          width-sm / 480px
+        </div>
+
+        <div class="width-demo" style="max-width: var(--width-lg);">
+          width-lg / 640px
+        </div>
+
+        <div class="width-demo" style="max-width: var(--width-3xl);">
+          width-3xl / 1280px
+        </div>
+      </div>
+    </section>
+
+    <!-- Radius + Shadow Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Radius and Shadow Test</h2>
+
+      <div class="dga-grid dga-grid-cols-3">
+        <div class="card-demo">
+          <h3>Card One</h3>
+          <p>Testing radius, spacing, and shadow tokens.</p>
+        </div>
+
+        <div class="card-demo">
+          <h3>Card Two</h3>
+          <p>Testing reusable visual foundations.</p>
+        </div>
+
+        <div class="card-demo">
+          <h3>Card Three</h3>
+          <p>Testing layout consistency.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backdrop Blur Test -->
+    <section style="margin-block-end: var(--spacing-8);">
+      <h2>Backdrop Blur Test</h2>
+
+      <div class="blur-demo">
+        <div class="blur-card">
+          <h3>Blur Card</h3>
+          <p>This box uses backdrop blur token and theme colors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Direction Test -->
+    <section>
+      <h2>Form Direction Test</h2>
+
+      <form style="display: grid; gap: var(--spacing-4); max-width: var(--width-md);">
+        <label>
+          Name
+          <input
+            type="text"
+            placeholder="Write your name"
+            style="
+              width: 100%;
+              margin-block-start: var(--spacing-2);
+              padding: var(--spacing-3);
+              border: 1px solid var(--color-gray-300);
+              border-radius: var(--radius-sm);
+            "
+          >
+        </label>
+
+        <label>
+          Message
+          <textarea
+            placeholder="Write your message"
+            rows="4"
+            style="
+              width: 100%;
+              margin-block-start: var(--spacing-2);
+              padding: var(--spacing-3);
+              border: 1px solid var(--color-gray-300);
+              border-radius: var(--radius-sm);
+            "
+          ></textarea>
+        </label>
+      </form>
+    </section>
+
+  </main>
+
+  <style>
+    .theme-card {
+      padding: var(--spacing-5);
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--color-brand-primary) 10%, white);
+      border: 1px solid color-mix(in srgb, var(--color-brand-primary) 35%, white);
+      color: var(--color-gray-900);
+    }
+ 
+    .theme-card h3 {
+      color: var(--color-text-brand-primary);
+    }
+
+    .action-card {
+      background: var(--color-action-primary-bg);
+      color: var(--color-action-primary-text);
+      border-color: var(--color-action-primary-border);
+    }
+
+    .action-card h3 {
+      color: var(--color-action-primary-text);
+    }
+
+    .border-card {
+      border: 2px solid var(--color-brand-primary);
+      background: var(--color-white);
+    }
+
+    .demo-box {
+      padding: var(--spacing-4);
+      border-radius: var(--radius-sm);
+      background: color-mix(in srgb, var(--color-brand-primary) 10%, white);
+      border: 1px solid color-mix(in srgb, var(--color-brand-primary) 35%, white);
+      color: var(--color-text-brand-primary);
+      text-align: center;
+    }
+
+    .width-demo {
+      width: 100%;
+      padding: var(--spacing-4);
+      border-radius: var(--radius-sm);
+      background: var(--color-gray-50);
+      border: 1px solid var(--color-gray-200);
+    }
+
+    .card-demo {
+      padding: var(--spacing-5);
+      border-radius: var(--radius-lg);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-demo h3 {
+      color: var(--color-text-brand-primary);
+    }
+
+    .blur-demo {
+      min-height: 260px;
+      padding: var(--spacing-8);
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(
+          135deg,
+          color-mix(in srgb, var(--color-brand-primary) 30%, white),
+          var(--color-brand-primary)
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blur-card {
+      max-width: var(--width-sm);
+      padding: var(--spacing-6);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(var(--backdrop-blur-md));
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    @media (max-width: 767px) {
+      .dga-grid-cols-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute("data-theme");
+      const nextTheme = currentTheme === "internal" ? "external" : "internal";
+
+      html.setAttribute("data-theme", nextTheme);
+      document.getElementById("themeLabel").textContent = nextTheme;
+    }
+
+    function toggleDirection() {
+      const html = document.documentElement;
+
+      if (html.dir === "rtl") {
+        html.dir = "ltr";
+        html.lang = "en";
+      } else {
+        html.dir = "rtl";
+        html.lang = "ar";
+      }
+    }
+  </script>
+</body>
+</html>
