@@ -6,7 +6,7 @@
 [data-theme="internal"] {
   --color-brand-primary: var(--color-internal-primary);
   --color-brand-secondary: var(--color-internal-secondary);
-
+ --color-brand-light: var(--color-internal-light);
   --color-brand-surface: linear-gradient(
     135deg,
     var(--color-internal-primary) 10%,

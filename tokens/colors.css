@@ -165,7 +165,8 @@
  * --------------------------------------------------------------------------
  */
 
-  --color-internal-primary: #133a5c;      
+  --color-internal-primary: #133a5c;    
+  --color-internal-light: #E7EEF3;
   --color-internal-secondary: #006384;   
   --color-internal-heading: #0072c6;    
   --color-internal-body: #37548b;       

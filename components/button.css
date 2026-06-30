@@ -29,19 +29,19 @@
 }
 
 .dga-button--sm {
-  min-height: 2rem;
+  min-height: 1.5rem;
   padding-inline: var(--space-2);
   font-size: var(--text-xs-size);
 }
 
 .dga-button--md {
-  min-height: 2.5rem;
+  min-height: 2rem;
   padding-inline: var(--space-2);
   font-size: var(--text-sm-size);
 }
 
 .dga-button--lg {
-  min-height: 3rem;
+  min-height: 2.5rem;
   padding-inline: var(--space-4);
   font-size: var(--text-md-size);
 }
