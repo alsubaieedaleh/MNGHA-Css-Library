@@ -50,3 +50,59 @@
   gap: var(--space-4);
   flex-wrap: wrap;
 }
+.dga-card--interactive {
+  cursor: pointer;
+}
+
+.dga-card--interactive:not(.dga-card--disabled):hover {
+  border-color: var(--color-gray-700);
+}
+
+.dga-card--selected {
+  border-color: var(--color-gray-950);
+}
+
+.dga-card--disabled {
+  background: var(--color-gray-100);
+  border-color: var(--color-gray-100);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.dga-card--disabled .dga-card-icon,
+.dga-card--disabled .dga-card-title,
+.dga-card--disabled .dga-card-description {
+  color: var(--color-gray-400);
+}
+
+.dga-card--disabled .dga-card-icon {
+  background: var(--color-gray-200);
+}
+
+.dga-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.dga-card-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-brand-primary);
+}
+
+.dga-card-toggle {
+  justify-self: end;
+  border: 0;
+  background: transparent;
+  color: var(--color-gray-950);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dga-card-toggle:disabled {
+  color: var(--color-gray-400);
+  cursor: not-allowed;
+}

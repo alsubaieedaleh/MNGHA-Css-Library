@@ -175,8 +175,9 @@
     </section>
 
     <hr>
-<section>
-  <h2>Card Component</h2>
+<section class="dga-section">
+  <h2 class="dga-section-title">Card Component</h2>
+  <div class="dga-grid dga-grid-cols-3">
 
  <div class="dga-card">
   <span class="dga-card-icon" aria-hidden="true">
@@ -184,7 +185,7 @@
       <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
       <path d="M7.75 12.25L10.5 15L16.25 9.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-  </span>
+    </span>
 
   <div class="dga-card-content">
     <h3 class="dga-card-title">Card Title</h3>
@@ -202,10 +203,78 @@
       Action
     </button>
   </div>
+  </div>
+  <div class="dga-card dga-card--interactive">
+  <span class="dga-card-icon" aria-hidden="true">✓</span>
+
+  <div class="dga-card-content">
+    <h3 class="dga-card-title">Card Title</h3>
+    <p class="dga-card-description">
+      Card content placeholder text goes here
+    </p>
+  </div>
+
+  <button class="dga-card-toggle" type="button" aria-label="Expand card">
+    ˅
+  </button>
+</div>
+<div class="dga-card dga-card--interactive dga-card--selected">
+  <span class="dga-card-icon" aria-hidden="true">✓</span>
+
+  <div class="dga-card-content">
+    <h3 class="dga-card-title">Selected Card</h3>
+    <p class="dga-card-description">
+      This card uses the selected state.
+    </p>
+  </div>
+
+  <button class="dga-card-toggle" type="button" aria-label="Collapse card">
+    ˄
+  </button>
+</div>
+<div class="dga-card dga-card--interactive">
+  <div class="dga-card-header">
+    <span class="dga-card-icon" aria-hidden="true">✓</span>
+    <input class="dga-card-checkbox" type="checkbox" aria-label="Select card">
+  </div>
+
+  <div class="dga-card-content">
+    <h3 class="dga-card-title">Selectable Card</h3>
+    <p class="dga-card-description">
+      Card content placeholder text goes here.
+    </p>
+  </div>
+</div>
+<div class="dga-card dga-card--selected">
+  <div class="dga-card-header">
+    <span class="dga-card-icon" aria-hidden="true">✓</span>
+    <input class="dga-card-checkbox" type="checkbox" checked aria-label="Select card">
+  </div>
+
+  <div class="dga-card-content">
+    <h3 class="dga-card-title">Checked Card</h3>
+    <p class="dga-card-description">
+      This card is selected.
+    </p>
+  </div>
+</div>
+<div class="dga-card dga-card--disabled">
+  <div class="dga-card-header">
+    <span class="dga-card-icon" aria-hidden="true">✓</span>
+    <input class="dga-card-checkbox" type="checkbox" disabled aria-label="Select card">
+  </div>
+
+  <div class="dga-card-content">
+    <h3 class="dga-card-title">Disabled Card</h3>
+    <p class="dga-card-description">
+      This card is disabled.
+    </p>
+  </div>
+</div>
 </div>
 </section>
-    <section>
-      <h2>5. Direction Support</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">5. Direction Support</h2>
 
       <p class="dga-paragraph">
         Direction utilities support Arabic and English interfaces using logical CSS behavior.
@@ -230,8 +299,8 @@
 
     <hr>
 
-   <section>
-  <h2>6. Form Controls</h2>
+   <section class="dga-section">
+  <h2 class="dga-section-title">6. Form Controls</h2>
 
   <p class="dga-paragraph">
     The form controls currently include label, text input, textarea, helper text,
