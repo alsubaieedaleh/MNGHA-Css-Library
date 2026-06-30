@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGA Universal CSS Test</title>
+  <title>DGA Universal CSS - Current Progress</title>
   <link rel="stylesheet" href="./../dga-ui.css">
 </head>
 
@@ -11,27 +11,15 @@
 
   <header>
     <div class="dga-container">
-      <p>DGA Universal Styles</p>
+      <p>DGA Universal CSS</p>
 
-      <h1>Internal Theme Preview</h1>
+      <h1>Current Design System Progress</h1>
 
       <p class="dga-paragraph">
-        This page has no custom page CSS. It only uses the universal CSS system.
+        This page documents the currently implemented parts of the universal CSS system.
+        It uses only classes from the shared CSS library without page-specific styling.
       </p>
 
-      <button class="dga-button dga-button--primary dga-button--md" onclick="toggleTheme()">
-        ➜ Toggle Theme
-      </button>
-
-      <button class="dga-button dga-button--primary dga-button--md" onclick="toggleDirection()">
-        ➜ Toggle RTL / LTR
-      </button>
-    </div>
-  </header>
-
-  <main class="dga-container">
-
-    <section>
       <p>
         Current theme:
         <strong id="themeLabel">internal</strong>
@@ -41,58 +29,147 @@
         Current direction:
         <strong id="directionLabel">ltr</strong>
       </p>
+
+      <button
+        type="button"
+        class="dga-button dga-button--primary dga-button--md"
+        onclick="toggleTheme()"
+      >
+        ➜ Toggle Theme
+      </button>
+
+      <button
+        type="button"
+        class="dga-button dga-button--primary dga-button--md"
+        onclick="toggleDirection()"
+      >
+        ➜ Toggle RTL / LTR
+      </button>
+    </div>
+  </header>
+
+  <main class="dga-container">
+
+    <hr>
+
+    <section>
+      <h2>1. Foundation Layer</h2>
+
+      <p class="dga-paragraph">
+        The foundation layer includes tokens, base styles, layout rules, direction support,
+        width values, blur values, and theme variables.
+      </p>
+
+      <ul>
+        <li>Tokens: colors, typography, spacing, radius, shadows, widths, and blur.</li>
+        <li>Base: reset, root styles, fonts, and direction rules.</li>
+        <li>Layout: container and grid system.</li>
+        <li>Themes: external and internal semantic color mapping.</li>
+      </ul>
     </section>
 
     <hr>
 
     <section>
-      <h2>Button Test</h2>
+      <h2>2. Theme System</h2>
+
+      <p class="dga-paragraph">
+        The same components should automatically change color when switching between
+        internal and external themes.
+      </p>
+
+      <button class="dga-button dga-button--primary dga-button--md">
+        ➜ Theme Primary Button
+      </button>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>3. Button Component</h2>
+
+      <p class="dga-paragraph">
+        The button component currently supports sizes, variants, hover, focus, and disabled states.
+      </p>
+
+      <h3>Button Sizes</h3>
 
       <button class="dga-button dga-button--primary dga-button--sm">
-        ➜ Button SM
+        ➜ Small
       </button>
 
       <button class="dga-button dga-button--primary dga-button--md">
-        ➜ Button MD
+        ➜ Medium
       </button>
 
       <button class="dga-button dga-button--primary dga-button--lg">
-        ➜ Button LG
+        ➜ Large
       </button>
 
       <button class="dga-button dga-button--primary dga-button--md" disabled>
         ➜ Disabled
       </button>
+
+      <h3>Button Variants</h3>
+
+      <div class="dga-grid dga-grid-cols-3">
+        <button class="dga-button dga-button--primary dga-button--md">
+          Primary
+        </button>
+
+        <button class="dga-button dga-button--secondary dga-button--md">
+          Secondary
+        </button>
+
+        <button class="dga-button dga-button--outline dga-button--md">
+          Outline
+        </button>
+
+        <button class="dga-button dga-button--ghost dga-button--md">
+          Ghost
+        </button>
+
+        <button class="dga-button dga-button--danger dga-button--md">
+          Danger
+        </button>
+
+        <button class="dga-button dga-button--warning dga-button--md">
+          Warning
+        </button>
+
+        <button class="dga-button dga-button--success dga-button--md">
+          Success
+        </button>
+
+        <button class="dga-button dga-button--info dga-button--md">
+          Info
+        </button>
+      </div>
     </section>
-<section>
-  <button class="dga-button dga-button--primary dga-button--md">Primary</button>
-<button class="dga-button dga-button--secondary dga-button--md">Secondary</button>
-<button class="dga-button dga-button--outline dga-button--md">Outline</button>
-<button class="dga-button dga-button--ghost dga-button--md">Ghost</button>
-<button class="dga-button dga-button--danger dga-button--lg">Danger</button>
-<button class="dga-button dga-button--warning dga-button--md">Warning</button>
-<button class="dga-button dga-button--success dga-button--md">Success</button>
-<button class="dga-button dga-button--info dga-button--md">Info</button>
- </section>
+
     <hr>
 
     <section>
-      <h2>Grid Test</h2>
+      <h2>4. Layout Grid</h2>
+
+      <p class="dga-paragraph">
+        The grid system arranges content using predefined column utilities.
+      </p>
 
       <div class="dga-grid dga-grid-cols-3">
         <div>
-          <h3>Card One</h3>
-          <p>Testing grid column one.</p>
+          <h3>Column One</h3>
+          <p>Testing the first grid column.</p>
         </div>
 
         <div>
-          <h3>Card Two</h3>
-          <p>Testing grid column two.</p>
+          <h3>Column Two</h3>
+          <p>Testing the second grid column.</p>
         </div>
 
         <div>
-          <h3>Card Three</h3>
-          <p>Testing grid column three.</p>
+          <h3>Column Three</h3>
+          <p>Testing the third grid column.</p>
         </div>
       </div>
     </section>
@@ -100,18 +177,22 @@
     <hr>
 
     <section>
-      <h2>Direction Test</h2>
+      <h2>5. Direction Support</h2>
+
+      <p class="dga-paragraph">
+        Direction utilities support Arabic and English interfaces using logical CSS behavior.
+      </p>
 
       <p class="text-start">
-        This text uses <strong>text-align: start</strong>.
+        This paragraph uses <strong>text-align: start</strong>.
       </p>
 
       <p class="text-end">
-        This text uses <strong>text-align: end</strong>.
+        This paragraph uses <strong>text-align: end</strong>.
       </p>
 
       <p class="dir-ltr">
-        English value inside any direction: user@example.com
+        English value inside any page direction: user@example.com
       </p>
 
       <p class="dir-rtl">
@@ -121,28 +202,116 @@
 
     <hr>
 
+   <section>
+  <h2>6. Form Controls</h2>
+
+  <p class="dga-paragraph">
+    The form controls currently include label, text input, textarea, helper text,
+    error text, disabled, readonly, hover, focus, and error states.
+  </p>
+
+  <h3>Text Inputs</h3>
+
+  <div class="dga-grid dga-grid-cols-3">
+
+    <div class="dga-field">
+      <label class="dga-label" for="input-default">Default Input</label>
+      <input
+        class="dga-input"
+        id="input-default"
+        type="text"
+        placeholder="Write your name"
+      >
+      <p class="dga-helper-text">Use your official name.</p>
+    </div>
+
+    <div class="dga-field">
+      <label class="dga-label" for="input-filled">Filled Input</label>
+      <input
+        class="dga-input"
+        id="input-filled"
+        type="text"
+        value="Entered text"
+      >
+      <p class="dga-helper-text">This field contains entered text.</p>
+    </div>
+
+    <div class="dga-field">
+      <label class="dga-label" for="input-disabled">Disabled Input</label>
+      <input
+        class="dga-input"
+        id="input-disabled"
+        type="text"
+        value="Disabled text"
+        disabled
+      >
+      <p class="dga-helper-text">This field is disabled.</p>
+    </div>
+
+    <div class="dga-field">
+      <label class="dga-label" for="input-readonly">Readonly Input</label>
+      <input
+        class="dga-input"
+        id="input-readonly"
+        type="text"
+        value="Readonly text"
+        readonly
+      >
+      <p class="dga-helper-text">This field is readonly.</p>
+    </div>
+
+    <div class="dga-field">
+      <label class="dga-label" for="input-error">Error Input</label>
+      <input
+        class="dga-input dga-input--error"
+        id="input-error"
+        type="text"
+        value="Invalid value"
+      >
+      <p class="dga-error-text">Please enter a valid value.</p>
+    </div>
+
+  </div>
+
+  <h3>Textareas</h3>
+
+  <div class="dga-grid dga-grid-cols-2">
+
+    <div class="dga-field">
+      <label class="dga-label" for="textarea-default">Default Textarea</label>
+      <textarea
+        class="dga-textarea"
+        id="textarea-default"
+        placeholder="Write your message"
+      ></textarea>
+      <p class="dga-helper-text">Textarea component with default state.</p>
+    </div>
+
+    <div class="dga-field">
+      <label class="dga-label" for="textarea-error">Textarea Error</label>
+      <textarea
+        class="dga-textarea dga-textarea--error"
+        id="textarea-error"
+      >Invalid message</textarea>
+      <p class="dga-error-text">Please enter a valid message.</p>
+    </div>
+
+  </div>
+</section>
+
+    <hr>
+
     <section>
-      <h2>Form Test</h2>
+      <h2>7. Current Scope</h2>
 
-      <form>
-       <div class="dga-field">
-  <label class="dga-label" for="name">Name</label>
-  <input   class="dga-input" id="name" type="text" placeholder="Write your name">
-</div>
+      <p class="dga-paragraph">
+        This page intentionally shows only the parts currently implemented in the shared CSS system.
+      </p>
 
-        <br><br>
-
-        <label>
-          Message
-          <textarea rows="4" placeholder="Write your message"></textarea>
-        </label>
-
-        <br><br>
-
-        <button type="button" class="dga-button dga-button--primary dga-button--md">
-          ➜ Submit
-        </button>
-      </form>
+      <p class="dga-paragraph">
+        Upcoming components include card, badge, alert, table, select, checkbox,
+        radio, dropdown, and menu.
+      </p>
     </section>
 
   </main>
@@ -167,5 +336,6 @@
       document.getElementById("directionLabel").textContent = nextDirection;
     }
   </script>
+
 </body>
 </html>
