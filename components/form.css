@@ -1,0 +1,52 @@
+/**
+ * --------------------------------------------------------------------------
+ * Form Controls
+ * --------------------------------------------------------------------------
+ */
+
+.dga-field {
+  display: grid;
+  gap: var(--space-2);
+}
+.dga-label {
+  color: var(--color-gray-950);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-sm-line-height);
+}
+.dga-input {
+  width: 100%;
+  min-height: 2.5rem;
+  padding-inline: var(--space-2);
+
+  border: 1px solid var(--color-gray-400);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-gray-950);
+
+  font-family: inherit;
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-md-line-height);
+
+  appearance: none;
+}
+.dga-input::placeholder {
+  color: var(--color-gray-400);
+}
+.dga-input:hover:not(:disabled):not([readonly]) {
+  border-color: var(--color-gray-700);
+}
+.dga-input:focus {
+  outline: none;
+  border-color: var(--color-gray-400);
+  border-bottom-color: var(--color-gray-950);
+  border-bottom-width: 2px;
+}
+.dga-input:disabled,
+.dga-input[readonly] {
+  background: var(--color-gray-100);
+  color: var(--color-gray-500);
+  border-color: var(--color-gray-400);
+  cursor: not-allowed;
+}
