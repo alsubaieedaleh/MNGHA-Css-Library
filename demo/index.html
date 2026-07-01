@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="internal">
+<html lang="en" dir="ltr" data-theme="external">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +9,81 @@
 
 <body>
 
-  <header>
-    <div class="dga-container">
-      <p>DGA Universal CSS</p>
+<header class="dga-header">
 
-      <h1>Current Design System Progress</h1>
+  <div class="dga-header-top">
+    <div class="dga-container-fluid  dga-header-top-content">
+      <div class="dga-header-meta">
+        <span>▢ 1-July-2026</span>
+        <span>◷ 10:48 AM</span>
+      </div>
 
-      <p class="dga-paragraph">
-        This page documents the currently implemented parts of the universal CSS system.
-        It uses only classes from the shared CSS library without page-specific styling.
-      </p>
-
-      <p>
-        Current theme:
-        <strong id="themeLabel">internal</strong>
-      </p>
-
-      <p>
-        Current direction:
-        <strong id="directionLabel">ltr</strong>
-      </p>
-
-      <button
-        type="button"
-        class="dga-button dga-button--primary dga-button--md"
-        onclick="toggleTheme()"
-      >
-        ➜ Toggle Theme
-      </button>
-
-      <button
-        type="button"
-        class="dga-button dga-button--primary dga-button--md"
-        onclick="toggleDirection()"
-      >
-        ➜ Toggle RTL / LTR
-      </button>
+      <div class="dga-header-meta">
+        <span>◉</span>
+        <span>☾</span>
+      </div>
     </div>
-  </header>
+  </div>
+
+  <div class="dga-header-main">
+    <div class="dga-container-fluid  dga-header-main-content">
+
+      <a href="#" class="dga-header-brand">
+        <img class="dga-header-logo" src="../assets/mngha-logo.webp" alt="MNGHA logo">
+
+        <span class="dga-header-title">
+          Ministry of National Guard<br>
+          Health Affairs (MNGHA)
+        </span>
+      </a>
+
+    <nav class="dga-header-nav" aria-label="Main navigation">
+  <a href="#" class="dga-header-link">About MNGHA  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+  <a href="#" class="dga-header-link">E-Services  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+  <a href="#" class="dga-header-link dga-header-link--active">Campuses <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+  <a href="#" class="dga-header-link">Patients and Visitors <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+  <a href="#" class="dga-header-link">Professionals  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+  <a href="#" class="dga-header-link">Media Center <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg></a>
+</nav>
+
+ 
+
+      <div class="dga-header-actions">
+        <button type="button" class="dga-header-action">
+          ⌕ Search
+        </button>
+
+        <button type="button" class="dga-header-action" onclick="toggleDirection()">
+          ⚙ العربية
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+
+
 
   <main class="dga-container">
 
     <hr>
 
-    <section>
-      <h2>1. Foundation Layer</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">1. Foundation Layer</h2>
 
       <p class="dga-paragraph">
         The foundation layer includes tokens, base styles, layout rules, direction support,
@@ -70,12 +100,11 @@
 
     <hr>
 
-    <section>
-      <h2>2. Theme System</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">2. Theme System</h2>
 
       <p class="dga-paragraph">
-        The same components should automatically change color when switching between
-        internal and external themes.
+        The same components automatically change color when switching between internal and external themes.
       </p>
 
       <button class="dga-button dga-button--primary dga-button--md">
@@ -85,8 +114,8 @@
 
     <hr>
 
-    <section>
-      <h2>3. Button Component</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">3. Button Component</h2>
 
       <p class="dga-paragraph">
         The button component currently supports sizes, variants, hover, focus, and disabled states.
@@ -94,63 +123,29 @@
 
       <h3>Button Sizes</h3>
 
-      <button class="dga-button dga-button--primary dga-button--sm">
-        ➜ Small
-      </button>
-
-      <button class="dga-button dga-button--primary dga-button--md">
-        ➜ Medium
-      </button>
-
-      <button class="dga-button dga-button--primary dga-button--lg">
-        ➜ Large
-      </button>
-
-      <button class="dga-button dga-button--primary dga-button--md" disabled>
-        ➜ Disabled
-      </button>
+      <button class="dga-button dga-button--primary dga-button--sm">➜ Small</button>
+      <button class="dga-button dga-button--primary dga-button--md">➜ Medium</button>
+      <button class="dga-button dga-button--primary dga-button--lg">➜ Large</button>
+      <button class="dga-button dga-button--primary dga-button--md" disabled>➜ Disabled</button>
 
       <h3>Button Variants</h3>
 
       <div class="dga-grid dga-grid-cols-3">
-        <button class="dga-button dga-button--primary dga-button--md">
-          Primary
-        </button>
-
-        <button class="dga-button dga-button--secondary dga-button--md">
-          Secondary
-        </button>
-
-        <button class="dga-button dga-button--outline dga-button--md">
-          Outline
-        </button>
-
-        <button class="dga-button dga-button--ghost dga-button--md">
-          Ghost
-        </button>
-
-        <button class="dga-button dga-button--danger dga-button--md">
-          Danger
-        </button>
-
-        <button class="dga-button dga-button--warning dga-button--md">
-          Warning
-        </button>
-
-        <button class="dga-button dga-button--success dga-button--md">
-          Success
-        </button>
-
-        <button class="dga-button dga-button--info dga-button--md">
-          Info
-        </button>
+        <button class="dga-button dga-button--primary dga-button--md">Primary</button>
+        <button class="dga-button dga-button--secondary dga-button--md">Secondary</button>
+        <button class="dga-button dga-button--outline dga-button--md">Outline</button>
+        <button class="dga-button dga-button--ghost dga-button--md">Ghost</button>
+        <button class="dga-button dga-button--danger dga-button--md">Danger</button>
+        <button class="dga-button dga-button--warning dga-button--md">Warning</button>
+        <button class="dga-button dga-button--success dga-button--md">Success</button>
+        <button class="dga-button dga-button--info dga-button--md">Info</button>
       </div>
     </section>
 
     <hr>
 
-    <section>
-      <h2>4. Layout Grid</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">4. Layout Grid</h2>
 
       <p class="dga-paragraph">
         The grid system arranges content using predefined column utilities.
@@ -175,106 +170,112 @@
     </section>
 
     <hr>
-<section class="dga-section">
-  <h2 class="dga-section-title">Card Component</h2>
-  <div class="dga-grid dga-grid-cols-3">
 
- <div class="dga-card">
-  <span class="dga-card-icon" aria-hidden="true">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
-      <path d="M7.75 12.25L10.5 15L16.25 9.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    </span>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Card Title</h3>
-    <p class="dga-card-description">
-      Card content placeholder text goes here
-    </p>
-  </div>
-
-  <div class="dga-card-actions">
-    <button class="dga-button dga-button--secondary dga-button--lg">
-      Action
-    </button>
-
-    <button class="dga-button dga-button--primary dga-button--lg">
-      Action
-    </button>
-  </div>
-  </div>
-  <div class="dga-card dga-card--interactive">
-  <span class="dga-card-icon" aria-hidden="true">✓</span>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Card Title</h3>
-    <p class="dga-card-description">
-      Card content placeholder text goes here
-    </p>
-  </div>
-
-  <button class="dga-card-toggle" type="button" aria-label="Expand card">
-    ˅
-  </button>
-</div>
-<div class="dga-card dga-card--interactive dga-card--selected">
-  <span class="dga-card-icon" aria-hidden="true">✓</span>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Selected Card</h3>
-    <p class="dga-card-description">
-      This card uses the selected state.
-    </p>
-  </div>
-
-  <button class="dga-card-toggle" type="button" aria-label="Collapse card">
-    ˄
-  </button>
-</div>
-<div class="dga-card dga-card--interactive">
-  <div class="dga-card-header">
-    <span class="dga-card-icon" aria-hidden="true">✓</span>
-    <input class="dga-card-checkbox" type="checkbox" aria-label="Select card">
-  </div>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Selectable Card</h3>
-    <p class="dga-card-description">
-      Card content placeholder text goes here.
-    </p>
-  </div>
-</div>
-<div class="dga-card dga-card--selected">
-  <div class="dga-card-header">
-    <span class="dga-card-icon" aria-hidden="true">✓</span>
-    <input class="dga-card-checkbox" type="checkbox" checked aria-label="Select card">
-  </div>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Checked Card</h3>
-    <p class="dga-card-description">
-      This card is selected.
-    </p>
-  </div>
-</div>
-<div class="dga-card dga-card--disabled">
-  <div class="dga-card-header">
-    <span class="dga-card-icon" aria-hidden="true">✓</span>
-    <input class="dga-card-checkbox" type="checkbox" disabled aria-label="Select card">
-  </div>
-
-  <div class="dga-card-content">
-    <h3 class="dga-card-title">Disabled Card</h3>
-    <p class="dga-card-description">
-      This card is disabled.
-    </p>
-  </div>
-</div>
-</div>
-</section>
     <section class="dga-section">
-      <h2 class="dga-section-title">5. Direction Support</h2>
+      <h2 class="dga-section-title">5. Card Component</h2>
+
+      <p class="dga-paragraph">
+        The card component currently supports default, interactive, selected, selectable, checked, and disabled states.
+      </p>
+
+      <div class="dga-grid dga-grid-cols-3">
+
+        <div class="dga-card">
+          <span class="dga-card-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M7.75 12.25L10.5 15L16.25 9.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Default Card</h3>
+            <p class="dga-card-description">
+              Card content placeholder text goes here.
+            </p>
+          </div>
+
+          <div class="dga-card-actions">
+            <button class="dga-button dga-button--secondary dga-button--md">Action</button>
+            <button class="dga-button dga-button--primary dga-button--md">Action</button>
+          </div>
+        </div>
+
+        <div class="dga-card dga-card--interactive">
+          <span class="dga-card-icon" aria-hidden="true">✓</span>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Interactive Card</h3>
+            <p class="dga-card-description">
+              This card uses the interactive hover state.
+            </p>
+          </div>
+
+          <button class="dga-card-toggle" type="button" aria-label="Expand card">˅</button>
+        </div>
+
+        <div class="dga-card dga-card--interactive dga-card--selected">
+          <span class="dga-card-icon" aria-hidden="true">✓</span>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Selected Card</h3>
+            <p class="dga-card-description">
+              This card uses the selected state.
+            </p>
+          </div>
+
+          <button class="dga-card-toggle" type="button" aria-label="Collapse card">˄</button>
+        </div>
+
+        <div class="dga-card dga-card--interactive">
+          <div class="dga-card-header">
+            <span class="dga-card-icon" aria-hidden="true">✓</span>
+            <input class="dga-card-checkbox" type="checkbox" aria-label="Select card">
+          </div>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Selectable Card</h3>
+            <p class="dga-card-description">
+              Card content placeholder text goes here.
+            </p>
+          </div>
+        </div>
+
+        <div class="dga-card dga-card--selected">
+          <div class="dga-card-header">
+            <span class="dga-card-icon" aria-hidden="true">✓</span>
+            <input class="dga-card-checkbox" type="checkbox" checked aria-label="Select card">
+          </div>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Checked Card</h3>
+            <p class="dga-card-description">
+              This card is selected.
+            </p>
+          </div>
+        </div>
+
+        <div class="dga-card dga-card--disabled">
+          <div class="dga-card-header">
+            <span class="dga-card-icon" aria-hidden="true">✓</span>
+            <input class="dga-card-checkbox" type="checkbox" disabled aria-label="Select card">
+          </div>
+
+          <div class="dga-card-content">
+            <h3 class="dga-card-title">Disabled Card</h3>
+            <p class="dga-card-description">
+              This card is disabled.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="dga-section">
+      <h2 class="dga-section-title">6. Direction Support</h2>
 
       <p class="dga-paragraph">
         Direction utilities support Arabic and English interfaces using logical CSS behavior.
@@ -299,115 +300,76 @@
 
     <hr>
 
-   <section class="dga-section">
-  <h2 class="dga-section-title">6. Form Controls</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">7. Form Controls</h2>
 
-  <p class="dga-paragraph">
-    The form controls currently include label, text input, textarea, helper text,
-    error text, disabled, readonly, hover, focus, and error states.
-  </p>
+      <p class="dga-paragraph">
+        The form controls currently include label, text input, textarea, helper text,
+        error text, disabled, readonly, hover, focus, and error states.
+      </p>
 
-  <h3>Text Inputs</h3>
+      <h3>Text Inputs</h3>
 
-  <div class="dga-grid dga-grid-cols-3">
+      <div class="dga-grid dga-grid-cols-3">
+        <div class="dga-field">
+          <label class="dga-label" for="input-default">Default Input</label>
+          <input class="dga-input" id="input-default" type="text" placeholder="Write your name">
+          <p class="dga-helper-text">Use your official name.</p>
+        </div>
 
-    <div class="dga-field">
-      <label class="dga-label" for="input-default">Default Input</label>
-      <input
-        class="dga-input"
-        id="input-default"
-        type="text"
-        placeholder="Write your name"
-      >
-      <p class="dga-helper-text">Use your official name.</p>
-    </div>
+        <div class="dga-field">
+          <label class="dga-label" for="input-filled">Filled Input</label>
+          <input class="dga-input" id="input-filled" type="text" value="Entered text">
+          <p class="dga-helper-text">This field contains entered text.</p>
+        </div>
 
-    <div class="dga-field">
-      <label class="dga-label" for="input-filled">Filled Input</label>
-      <input
-        class="dga-input"
-        id="input-filled"
-        type="text"
-        value="Entered text"
-      >
-      <p class="dga-helper-text">This field contains entered text.</p>
-    </div>
+        <div class="dga-field">
+          <label class="dga-label" for="input-disabled">Disabled Input</label>
+          <input class="dga-input" id="input-disabled" type="text" value="Disabled text" disabled>
+          <p class="dga-helper-text">This field is disabled.</p>
+        </div>
 
-    <div class="dga-field">
-      <label class="dga-label" for="input-disabled">Disabled Input</label>
-      <input
-        class="dga-input"
-        id="input-disabled"
-        type="text"
-        value="Disabled text"
-        disabled
-      >
-      <p class="dga-helper-text">This field is disabled.</p>
-    </div>
+        <div class="dga-field">
+          <label class="dga-label" for="input-readonly">Readonly Input</label>
+          <input class="dga-input" id="input-readonly" type="text" value="Readonly text" readonly>
+          <p class="dga-helper-text">This field is readonly.</p>
+        </div>
 
-    <div class="dga-field">
-      <label class="dga-label" for="input-readonly">Readonly Input</label>
-      <input
-        class="dga-input"
-        id="input-readonly"
-        type="text"
-        value="Readonly text"
-        readonly
-      >
-      <p class="dga-helper-text">This field is readonly.</p>
-    </div>
+        <div class="dga-field">
+          <label class="dga-label" for="input-error">Error Input</label>
+          <input class="dga-input dga-input--error" id="input-error" type="text" value="Invalid value">
+          <p class="dga-error-text">Please enter a valid value.</p>
+        </div>
+      </div>
 
-    <div class="dga-field">
-      <label class="dga-label" for="input-error">Error Input</label>
-      <input
-        class="dga-input dga-input--error"
-        id="input-error"
-        type="text"
-        value="Invalid value"
-      >
-      <p class="dga-error-text">Please enter a valid value.</p>
-    </div>
+      <h3>Textareas</h3>
 
-  </div>
+      <div class="dga-grid dga-grid-cols-2">
+        <div class="dga-field">
+          <label class="dga-label" for="textarea-default">Default Textarea</label>
+          <textarea class="dga-textarea" id="textarea-default" placeholder="Write your message"></textarea>
+          <p class="dga-helper-text">Textarea component with default state.</p>
+        </div>
 
-  <h3>Textareas</h3>
-
-  <div class="dga-grid dga-grid-cols-2">
-
-    <div class="dga-field">
-      <label class="dga-label" for="textarea-default">Default Textarea</label>
-      <textarea
-        class="dga-textarea"
-        id="textarea-default"
-        placeholder="Write your message"
-      ></textarea>
-      <p class="dga-helper-text">Textarea component with default state.</p>
-    </div>
-
-    <div class="dga-field">
-      <label class="dga-label" for="textarea-error">Textarea Error</label>
-      <textarea
-        class="dga-textarea dga-textarea--error"
-        id="textarea-error"
-      >Invalid message</textarea>
-      <p class="dga-error-text">Please enter a valid message.</p>
-    </div>
-
-  </div>
-</section>
+        <div class="dga-field">
+          <label class="dga-label" for="textarea-error">Textarea Error</label>
+          <textarea class="dga-textarea dga-textarea--error" id="textarea-error">Invalid message</textarea>
+          <p class="dga-error-text">Please enter a valid message.</p>
+        </div>
+      </div>
+    </section>
 
     <hr>
 
-    <section>
-      <h2>7. Current Scope</h2>
+    <section class="dga-section">
+      <h2 class="dga-section-title">8. Current Scope</h2>
 
       <p class="dga-paragraph">
         This page intentionally shows only the parts currently implemented in the shared CSS system.
       </p>
 
       <p class="dga-paragraph">
-        Upcoming components include card, badge, alert, table, select, checkbox,
-        radio, dropdown, and menu.
+        Upcoming components include badge, alert, table, select, checkbox, radio, dropdown, and menu.
       </p>
     </section>
 
