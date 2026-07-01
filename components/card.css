@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-full);
-  background: var(--color-brand-light);
+  background: var(--color-brand-very-light);
   color: var(--color-brand-primary);
 }
 .dga-card-content {

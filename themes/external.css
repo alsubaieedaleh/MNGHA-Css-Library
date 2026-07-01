@@ -7,9 +7,11 @@
 :root,
 [data-theme="external"] {
   --color-brand-primary: var(--color-primary-600);
+  --color-brand-primary-hover: var(--color-primary-700);
   --color-brand-secondary: var(--color-primary-600);
   --color-brand-surface: var(--color-primary-600);
-  --color-brand-light: var(--color-primary-50);
+  --color-brand-very-light: var(--color-primary-50);
+  --color-brand-light: var(--color-primary-400);
   --color-action-primary-bg: var(--color-primary-600);
   --color-action-primary-bg-hover: var(--color-primary-700);
   --color-action-primary-text: var(--color-white);

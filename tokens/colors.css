@@ -166,7 +166,9 @@
  */
 
   --color-internal-primary: #043673;    
-  --color-internal-light: #E7EEF3;
+  --color-internal-light: #2F7FD3;;
+  --color-internal-primary-hover: #042a5a;    
+  --color-internal-very-light: #E7EEF3;
   --color-internal-secondary: #006384;   
   --color-internal-heading: #0072c6;    
   --color-internal-body: #37548b;       
