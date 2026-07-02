@@ -44,6 +44,7 @@
  }
 
 .dga-header-main-content {
+    min-height: 4.5rem;
    display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -75,7 +76,7 @@
 
 .dga-header-nav {
   display: flex;
-  align-items: start;
+  align-items: stretch;
   gap: var(--space-0);
    margin-inline-end: auto;
 }
@@ -135,14 +136,14 @@
 }
 .dga-header-actions {
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: var(--space-4);
   margin-inline-start: auto;
 }
 
 .dga-header-action {
   display: inline-flex;
-  align-items: start;
+  align-items: center;
   gap: var(--space-1);
   border: 0;
   background: transparent;
@@ -244,4 +245,67 @@
 .dga-header-item--icon {
   width: 1.5rem;
   padding-inline: 0;
+}
+.dga-header-mobile-action {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border: 0;
+  background: transparent;
+  color: var(--color-gray-950);
+
+  font-family: inherit;
+  font-size: var(--text-md-size);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dga-header-mobile-action:hover {
+  background: var(--color-gray-100);
+}
+
+.dga-header-mobile-action:focus-visible {
+  outline: 2px solid var(--color-gray-950);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+ 
+
+  .dga-header-main {
+    padding-inline: var(--space-4);
+  }
+
+  .dga-header-main-content {
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .dga-header-nav,
+  .dga-header-actions {
+    display: none;
+  }
+
+  .dga-header-mobile-action {
+    display: inline-flex;
+    position: absolute;
+    inset-inline-end: 0;
+  }
+
+  .dga-header-brand {
+    justify-self: start;
+    gap: var(--space-2);
+    min-width: 0;
+  }
+
+  
+
+ 
 }
