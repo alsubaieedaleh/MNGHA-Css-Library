@@ -387,7 +387,126 @@
           <input class="dga-input" id="input-default" type="text" placeholder="Write your name">
           <p class="dga-helper-text">Use your official name.</p>
         </div>
+<div class="dga-field">
+  <label class="dga-label" for="city">City</label>
 
+  <div class="dga-select-wrapper">
+    <select class="dga-select" id="city">
+      <option value="">Select city</option>
+      <option value="riyadh">Riyadh</option>
+      <option value="jeddah">Jeddah</option>
+      <option value="dammam">Dammam</option>
+    </select>
+  </div>
+
+  <p class="dga-helper-text">Choose your city.</p>
+</div>
+<div class="dga-field">
+  <label class="dga-label" for="city">City</label>
+
+  <div class="dga-select-wrapper">
+    <select class="dga-select dga-select--error" id="city">
+      <option value="">Select city</option>
+      <option value="riyadh">Riyadh</option>
+      <option value="jeddah">Jeddah</option>
+      <option value="dammam">Dammam</option>
+    </select>
+  </div>
+
+  <p class="dga-helper-text">Choose your city.</p>
+</div>
+<div class="dga-field">
+  <label class="dga-label" for="city">City</label>
+
+  <div class="dga-select-wrapper">
+    <select disabled class="dga-select dga-select--error" id="city">
+      <option value="">Select city</option>
+      <option value="riyadh">Riyadh</option>
+      <option value="jeddah">Jeddah</option>
+      <option value="dammam">Dammam</option>
+    </select>
+  </div>
+
+  <p class="dga-helper-text">Choose your city.</p>
+</div>
+<div class="dga-field dga-field--full">
+  <div class="dga-file-upload">
+    <div class="dga-file-upload-content">
+      <p class="dga-file-upload-title">Upload files</p>
+      <p class="dga-file-upload-description">
+        Maximum file size allowed is 2MB, supported file formats include .jpg, .png, and .pdf.
+      </p>
+    </div>
+
+    <input
+      class="dga-file-upload-input"
+      id="file-upload"
+      type="file"
+      accept=".jpg,.jpeg,.png,.pdf,.csv"
+    />
+
+    <label class="dga-file-upload-button" for="file-upload">
+      Browse Files
+    </label>
+
+    <div class="dga-file-list" id="file-list"></div>
+  </div>
+</div>
+<div class="dga-field dga-field--full">
+  <div class="dga-file-upload dga-file-upload--dropzone">
+    <input
+      class="dga-file-upload-input"
+      id="dropzone-upload"
+      type="file"
+      accept=".jpg,.jpeg,.png,.pdf,.csv"
+    />
+
+    <label class="dga-file-upload-dropzone" for="dropzone-upload">
+      <span class="dga-file-upload-icon">↥</span>
+
+      <span class="dga-file-upload-dropzone-content">
+        <span class="dga-file-upload-title">
+          Drag and drop files here to upload
+        </span>
+
+        <span class="dga-file-upload-description">
+          Maximum file size allowed is 2MB, supported file formats include .jpg, .png, and .pdf.
+        </span>
+      </span>
+
+      <span class="dga-file-upload-button">
+        Browse Files
+      </span>
+    </label>
+
+    <div class="dga-file-item">
+      <span class="dga-file-status">✓</span>
+      <span class="dga-file-name">File-name.csv</span>
+      <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+    </div>
+  </div>
+</div>
+<div class="dga-field--full">
+  <span class="dga-label">Preferred contact method</span>
+
+  <div class="dga-radio-group">
+    <label class="dga-radio-option">
+      <input class="dga-radio-input" type="radio" name="contact" value="email" />
+      <span class="dga-radio-content">
+        <span class="dga-radio-label">Email</span>
+        <span class="dga-radio-description">Receive updates by email.</span>
+      </span>
+    </label>
+
+    <label class="dga-radio-option">
+      <input class="dga-radio-input" type="radio" name="contact" value="sms" />
+      <span class="dga-radio-content">
+        <span class="dga-radio-label">SMS</span>
+        <span class="dga-radio-description">Receive updates by SMS.</span>
+      </span>
+    </label>
+  </div>
+</div>
         <div class="dga-field">
           <label class="dga-label" for="input-filled">Filled Input</label>
           <input class="dga-input" id="input-filled" type="text" value="Entered text">
@@ -508,6 +627,30 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     closeHeaderMenus();
   }
+});
+
+const fileInput = document.querySelector(".dga-file-upload-input");
+const fileList = document.querySelector("#file-list");
+
+fileInput.addEventListener("change", function () {
+  const file = fileInput.files[0];
+
+  if (!file) return;
+
+  fileList.innerHTML = `
+    <div class="dga-file-item">
+      <span class="dga-file-status">✓</span>
+      <span class="dga-file-name">${file.name}</span>
+      <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+    </div>
+  `;
+
+  const removeButton = fileList.querySelector(".dga-file-remove");
+
+  removeButton.addEventListener("click", function () {
+    fileInput.value = "";
+    fileList.innerHTML = "";
+  });
 });
   </script>
 
