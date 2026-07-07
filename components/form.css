@@ -26,7 +26,16 @@
 
   border: 1px solid var(--color-gray-400);
   border-radius: var(--radius-sm);
-  background: var(--color-white);
+
+  background-color: var(--color-gray-100);
+  background-image: linear-gradient(
+      transparent,
+    transparent
+  );
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 0 2px;
+
   color: var(--color-gray-950);
 
   font-family: inherit;
@@ -35,6 +44,11 @@
   line-height: var(--text-md-line-height);
 
   appearance: none;
+
+  transition:
+    background-color 220ms ease,
+    border-color 420ms ease,
+    background-size 420ms ease;
 }
 
 .dga-input {
@@ -59,34 +73,45 @@
   border-color: var(--color-gray-700);
 }
 
-.dga-input:focus,
-.dga-textarea:focus {
-  outline: none;
+.dga-input:focus:not(:disabled):not([readonly]),
+.dga-textarea:focus:not(:disabled):not([readonly]) {
+ outline: none;
+  background-color: var(--color-white);
   border-color: var(--color-gray-400);
-  border-bottom-color: var(--color-gray-950);
-  border-bottom-width: 2px;
+  background-image: linear-gradient(
+    var(--color-gray-950),
+    var(--color-gray-950)
+  );
+  background-size: 100% 2px;
 }
-
 .dga-input:disabled,
 .dga-input[readonly],
 .dga-textarea:disabled,
 .dga-textarea[readonly] {
-  background: var(--color-gray-100);
+  background-color: var(--color-gray-100);
+  background-image: none;
   color: var(--color-gray-500);
   border-color: var(--color-gray-400);
   cursor: not-allowed;
 }
-
 .dga-input--error,
 .dga-textarea--error {
   border-color: var(--color-error-600);
+  background-image: linear-gradient(
+    transparent,
+    transparent
+  );
 }
 
-.dga-input--error:hover:not(:disabled):not([readonly]),
-.dga-textarea--error:hover:not(:disabled):not([readonly]) {
+.dga-input--error:focus:not(:disabled):not([readonly]),
+.dga-textarea--error:focus:not(:disabled):not([readonly]) {
   border-color: var(--color-error-600);
+  background-image: linear-gradient(
+    var(--color-error-600),
+    var(--color-error-600)
+  );
+  background-size: 100% 2px;
 }
-
 .dga-input--error:focus,
 .dga-textarea--error:focus {
   border-color: var(--color-error-600);

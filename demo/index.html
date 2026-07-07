@@ -3,433 +3,744 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DGA Universal CSS - Current Progress</title>
+  <title>DGA Universal CSS - Documentation</title>
   <link rel="stylesheet" href="./../dga-ui.css">
 </head>
 
 <body>
 
 <header class="dga-header">
-
   <div class="dga-header-top">
-    <div class="dga-container-fluid  dga-header-top-content">
+    <div class="dga-container-fluid dga-header-top-content">
       <div class="dga-header-meta">
-        <span>▢ 1-July-2026</span>
-        <span>◷ 10:48 AM</span>
+        <span>DGA Universal CSS</span>
+        <span>Documentation</span>
       </div>
 
       <div class="dga-header-meta">
-        <span>◉</span>
-        <span>☾</span>
+        <span id="themeLabel">external</span>
+        <span id="directionLabel">ltr</span>
       </div>
     </div>
   </div>
 
   <div class="dga-header-main">
-    <div class="dga-container-fluid  dga-header-main-content">
-      <a href="#" class="dga-header-brand">
+    <div class="dga-container-fluid dga-header-main-content">
+      <a href="#foundations" class="dga-header-brand">
         <img class="dga-header-logo" src="../assets/mngha-logo.webp" alt="MNGHA logo">
         <span class="dga-header-title">
-          Ministry of National Guard<br>
-          Health Affairs (MNGHA)
+          DGA Universal CSS<br>
+          Design System Docs
         </span>
       </a>
 
-  <nav class="dga-header-nav" aria-label="Main navigation">
+      <nav class="dga-header-nav" aria-label="Documentation navigation">
+        <a href="#foundations" class="dga-header-link">Foundations</a>
 
-  <div class="dga-header-nav-item">
-    <button
-      class="dga-header-link "
-      type="button"
-      aria-expanded="false"
-      data-header-menu-trigger
-    >
-      About MNGHA
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+        <div class="dga-header-nav-item">
+          <button
+            class="dga-header-link"
+            type="button"
+            aria-expanded="false"
+            data-header-menu-trigger
+          >
+            Components
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
 
-    <div class="dga-header-menu">
-      <div class="dga-header-menu-grid">
-        <div class="dga-header-menu-group">
-          <h3 class="dga-header-menu-label">About</h3>
-          <ul class="dga-header-menu-list">
-            <li><a href="#" class="dga-header-menu-link">Overview</a></li>
-            <li><a href="#" class="dga-header-menu-link">Leadership</a></li>
-            <li><a href="#" class="dga-header-menu-link">Strategy</a></li>
-            <li><a href="#" class="dga-header-menu-link">Contact us</a></li>
-          </ul>
+          <div class="dga-header-menu">
+            <div class="dga-header-menu-grid">
+              <div class="dga-header-menu-group">
+                <h3 class="dga-header-menu-label">Components</h3>
+                <ul class="dga-header-menu-list">
+                  <li><a href="#header" class="dga-header-menu-link">Header</a></li>
+                  <li><a href="#buttons" class="dga-header-menu-link">Buttons</a></li>
+                  <li><a href="#cards" class="dga-header-menu-link">Cards</a></li>
+                  <li><a href="#forms" class="dga-header-menu-link">Form Controls</a></li>
+                  <li><a href="#select" class="dga-header-menu-link">Select</a></li>
+                  <li><a href="#radio" class="dga-header-menu-link">Radio</a></li>
+                  <li><a href="#file-upload" class="dga-header-menu-link">File Upload</a></li>
+                </ul>
+              </div>
+
+              <div class="dga-header-menu-group">
+                <h3 class="dga-header-menu-label">Utilities</h3>
+                <ul class="dga-header-menu-list">
+                  <li><a href="#layout" class="dga-header-menu-link">Layout Grid</a></li>
+                  <li><a href="#direction" class="dga-header-menu-link">Direction Support</a></li>
+                  <li><a href="#theme" class="dga-header-menu-link">Theme System</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="dga-header-menu-group">
-          <h3 class="dga-header-menu-label">Information</h3>
-          <ul class="dga-header-menu-list">
-            <li><a href="#" class="dga-header-menu-link">News</a></li>
-            <li><a href="#" class="dga-header-menu-link">Events</a></li>
-            <li><a href="#" class="dga-header-menu-link">Reports</a></li>
-            <li><a href="#" class="dga-header-menu-link">Careers</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
- 
-
-  <a href="#" class="dga-header-link"> E-Services</a>
-  <a href="#" class="dga-header-link">Campuses</a>
-
-  <a href="#" class="dga-header-link">Patients and Visitors</a>
-  <a href="#" class="dga-header-link">Professionals</a>
-   <div class="dga-header-nav-item">
-     <button
-      class="dga-header-link"
-      type="button"
-      aria-expanded="false"
-      data-header-menu-trigger
-    >
-      Media Center
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-
-    <div class="dga-header-menu">
-      <div class="dga-header-menu-grid">
-        <div class="dga-header-menu-group">
-          <h3 class="dga-header-menu-label">Media</h3>
-          <ul class="dga-header-menu-list">
-            <li><a href="#" class="dga-header-menu-link">News</a></li>
-            <li><a href="#" class="dga-header-menu-link">Announcements</a></li>
-            <li><a href="#" class="dga-header-menu-link">Gallery</a></li>
-            <li><a href="#" class="dga-header-menu-link">Publications</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</nav>
-
- 
+        <a href="#layout" class="dga-header-link">Layout</a>
+        <a href="#theme" class="dga-header-link">Theme</a>
+        <a href="#direction" class="dga-header-link">Direction</a>
+      </nav>
 
       <div class="dga-header-actions">
-        <button type="button" class="dga-header-action">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
-    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-  </svg>  <span>Search</span>
+        <button type="button" class="dga-header-action" onclick="toggleTheme()">
+          <span>Switch Theme</span>
         </button>
 
         <button type="button" class="dga-header-action" onclick="toggleDirection()">
-         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <rect x="3" y="3" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
-    <rect x="9" y="9" width="12" height="12" rx="3" stroke="currentColor" stroke-width="1.5"/>
-
-    <path d="M6.5 7H11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M9 5.5V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    <path d="M7 10.5C8.2 9.6 9 8.4 9.3 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M11 10.5C9.8 9.6 9 8.4 8.7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-
-    <path d="M13 18L15 13L17 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M13.8 16.2H16.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </svg>
-  <span>العربية</span>
+          <span>العربية</span>
         </button>
       </div>
-        <button class="dga-header-mobile-action" type="button" aria-label="Open menu">
-    ☰
-  </button>
+
+      <button class="dga-header-mobile-action" type="button" aria-label="Open menu">
+        ☰
+      </button>
     </div>
   </div>
-
 </header>
 
+<main class="dga-container">
 
+  <section class="dga-section" id="foundations">
+    <h2 class="dga-section-title">1. Foundations</h2>
 
+    <p class="dga-paragraph">
+      Foundations are the base layer of the CSS system. They should be used before components because components depend on tokens, base styles, layout, themes, and direction support.
+    </p>
 
-  <main class="dga-container">
+    <h3>Foundation Layers</h3>
+    <ul>
+      <li>Colors: brand, gray, error, warning, success, and semantic theme colors.</li>
+      <li>Typography: text sizes, line heights, and font weights.</li>
+      <li>Spacing: shared spacing variables used by components.</li>
+      <li>Radius: shared border radius values.</li>
+      <li>Layout: containers and grid utilities.</li>
+      <li>Direction: logical CSS support for LTR and RTL.</li>
+      <li>Themes: external and internal theme mapping using <code>data-theme</code>.</li>
+    </ul>
 
-    <hr>
+    <h3>Example Usage</h3>
+    <p class="dga-paragraph">
+      Import the compiled CSS file once in the page.
+    </p>
 
-    <section class="dga-section">
-      <h2 class="dga-section-title">1. Foundation Layer</h2>
+    <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./../dga-ui.css&quot;&gt;</code></pre>
+  </section>
 
-      <p class="dga-paragraph">
-        The foundation layer includes tokens, base styles, layout rules, direction support,
-        width values, blur values, and theme variables.
-      </p>
+  <hr>
 
-      <ul>
-        <li>Tokens: colors, typography, spacing, radius, shadows, widths, and blur.</li>
-        <li>Base: reset, root styles, fonts, and direction rules.</li>
-        <li>Layout: container and grid system.</li>
-        <li>Themes: external and internal semantic color mapping.</li>
-      </ul>
-    </section>
+  <section class="dga-section" id="theme">
+    <h2 class="dga-section-title">2. Theme System</h2>
 
-    <hr>
+    <p class="dga-paragraph">
+      Theme colors are controlled from the root HTML element. The same component can change its semantic colors when the theme changes.
+    </p>
 
-    <section class="dga-section">
-      <h2 class="dga-section-title">2. Theme System</h2>
+    <h3>Colors</h3>
+    <ul>
+      <li>External theme: <code>data-theme=&quot;external&quot;</code></li>
+      <li>Internal theme: <code>data-theme=&quot;internal&quot;</code></li>
+      <li>Theme primary color: used by primary buttons and selected states.</li>
+      <li>Theme light color: used by focus rings and light backgrounds.</li>
+    </ul>
 
-      <p class="dga-paragraph">
-        The same components automatically change color when switching between internal and external themes.
-      </p>
+    <h3>Types</h3>
+    <ul>
+      <li>External</li>
+      <li>Internal</li>
+    </ul>
 
-      <button class="dga-button dga-button--primary dga-button--md">
-        ➜ Theme Primary Button
-      </button>
-    </section>
+    <h3>Example</h3>
+    <button class="dga-button dga-button--primary dga-button--md" type="button" onclick="toggleTheme()">
+      Switch Theme
+    </button>
 
-    <hr>
+    <h3>HTML Code</h3>
+    <pre><code>&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot; data-theme=&quot;external&quot;&gt;
 
-    <section class="dga-section">
-      <h2 class="dga-section-title">3. Button Component</h2>
+&lt;button class=&quot;dga-button dga-button--primary dga-button--md&quot; type=&quot;button&quot;&gt;
+  Primary Button
+&lt;/button&gt;</code></pre>
+  </section>
 
-      <p class="dga-paragraph">
-        The button component currently supports sizes, variants, hover, focus, and disabled states.
-      </p>
+  <hr>
 
-      <h3>Button Sizes</h3>
+  <section class="dga-section" id="header">
+    <h2 class="dga-section-title">3. Header Component</h2>
 
-      <button class="dga-button dga-button--primary dga-button--sm">➜ Small</button>
-      <button class="dga-button dga-button--primary dga-button--md">➜ Medium</button>
-      <button class="dga-button dga-button--primary dga-button--lg">➜ Large</button>
-      <button class="dga-button dga-button--primary dga-button--md" disabled>➜ Disabled</button>
+    <p class="dga-paragraph">
+      The header is used for brand identity, main navigation, dropdown navigation, actions, and mobile menu entry.
+    </p>
 
-      <h3>Button Variants</h3>
+    <h3>Colors</h3>
+    <ul>
+      <li>Header background: component background color.</li>
+      <li>Header text: gray/semantic text color.</li>
+      <li>Active link: primary/brand color.</li>
+      <li>Dropdown menu: white/background surface with text and hover states.</li>
+    </ul>
 
-      <div class="dga-grid dga-grid-cols-3">
-        <button class="dga-button dga-button--primary dga-button--md">Primary</button>
-        <button class="dga-button dga-button--secondary dga-button--md">Secondary</button>
-        <button class="dga-button dga-button--outline dga-button--md">Outline</button>
-        <button class="dga-button dga-button--ghost dga-button--md">Ghost</button>
-        <button class="dga-button dga-button--danger dga-button--md">Danger</button>
-        <button class="dga-button dga-button--warning dga-button--md">Warning</button>
-        <button class="dga-button dga-button--success dga-button--md">Success</button>
-        <button class="dga-button dga-button--info dga-button--md">Info</button>
+    <h3>Types</h3>
+    <ul>
+      <li>Top header meta area</li>
+      <li>Main header</li>
+      <li>Brand area</li>
+      <li>Navigation link</li>
+      <li>Navigation dropdown</li>
+      <li>Header actions</li>
+      <li>Mobile action</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-card">
+      <div class="dga-card-content">
+        <h3 class="dga-card-title">Header is shown at the top of this page</h3>
+        <p class="dga-card-description">
+          Use the page header as the live component example. The Components item opens a dropdown menu using the same header classes.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <hr>
+    <h3>HTML Code</h3>
+    <pre><code>&lt;header class=&quot;dga-header&quot;&gt;
+  &lt;div class=&quot;dga-header-main&quot;&gt;
+    &lt;div class=&quot;dga-container-fluid dga-header-main-content&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;dga-header-brand&quot;&gt;
+        &lt;img class=&quot;dga-header-logo&quot; src=&quot;../assets/mngha-logo.webp&quot; alt=&quot;Logo&quot;&gt;
+        &lt;span class=&quot;dga-header-title&quot;&gt;System Name&lt;/span&gt;
+      &lt;/a&gt;
 
-    <section class="dga-section">
-      <h2 class="dga-section-title">4. Layout Grid</h2>
+      &lt;nav class=&quot;dga-header-nav&quot; aria-label=&quot;Main navigation&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dga-header-link&quot;&gt;Home&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;dga-header-link&quot;&gt;Services&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+  </section>
 
-      <p class="dga-paragraph">
-        The grid system arranges content using predefined column utilities.
-      </p>
+  <hr>
 
-      <div class="dga-grid dga-grid-cols-3">
-        <div>
-          <h3>Column One</h3>
-          <p>Testing the first grid column.</p>
-        </div>
+  <section class="dga-section" id="buttons">
+    <h2 class="dga-section-title">4. Button Component</h2>
 
-        <div>
-          <h3>Column Two</h3>
-          <p>Testing the second grid column.</p>
-        </div>
+    <p class="dga-paragraph">
+      Buttons are used for main actions, secondary actions, destructive actions, and status actions.
+    </p>
 
-        <div>
-          <h3>Column Three</h3>
-          <p>Testing the third grid column.</p>
+    <h3>Colors</h3>
+    <ul>
+      <li>Primary: uses the current theme primary color.</li>
+      <li>Secondary: neutral secondary action.</li>
+      <li>Outline: bordered action.</li>
+      <li>Ghost: low-emphasis action.</li>
+      <li>Danger: error/destructive action.</li>
+      <li>Warning: warning action.</li>
+      <li>Success: success action.</li>
+      <li>Info: information action.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Variants: primary, secondary, outline, ghost, danger, warning, success, info.</li>
+      <li>Sizes: small, medium, large.</li>
+      <li>States: default, hover, focus, disabled.</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-grid-cols-3">
+      <button class="dga-button dga-button--primary dga-button--sm" type="button">Small</button>
+      <button class="dga-button dga-button--primary dga-button--md" type="button">Medium</button>
+      <button class="dga-button dga-button--primary dga-button--lg" type="button">Large</button>
+      <button class="dga-button dga-button--secondary dga-button--md" type="button">Secondary</button>
+      <button class="dga-button dga-button--outline dga-button--md" type="button">Outline</button>
+      <button class="dga-button dga-button--ghost dga-button--md" type="button">Ghost</button>
+      <button class="dga-button dga-button--danger dga-button--md" type="button">Danger</button>
+      <button class="dga-button dga-button--warning dga-button--md" type="button">Warning</button>
+      <button class="dga-button dga-button--success dga-button--md" type="button">Success</button>
+      <button class="dga-button dga-button--info dga-button--md" type="button">Info</button>
+      <button class="dga-button dga-button--primary dga-button--md" type="button" disabled>Disabled</button>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;button class=&quot;dga-button dga-button--primary dga-button--md&quot; type=&quot;button&quot;&gt;
+  Primary Button
+&lt;/button&gt;
+
+&lt;button class=&quot;dga-button dga-button--secondary dga-button--md&quot; type=&quot;button&quot;&gt;
+  Secondary Button
+&lt;/button&gt;
+
+&lt;button class=&quot;dga-button dga-button--primary dga-button--md&quot; type=&quot;button&quot; disabled&gt;
+  Disabled Button
+&lt;/button&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="layout">
+    <h2 class="dga-section-title">5. Layout Grid</h2>
+
+    <p class="dga-paragraph">
+      Layout utilities help arrange documentation sections, cards, buttons, and form fields using the same grid classes.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>The layout grid itself does not define visual colors.</li>
+      <li>Children inside the grid keep their own component colors.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Container: <code>dga-container</code></li>
+      <li>Fluid container: <code>dga-container-fluid</code></li>
+      <li>Grid: <code>dga-grid</code></li>
+      <li>Three-column grid: <code>dga-grid-cols-3</code></li>
+      <li>Card grid: <code>dga-card-grid</code></li>
+      <li>Form grid: <code>dga-form-grid</code></li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-grid-cols-3">
+      <div class="dga-card">
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Column One</h3>
+          <p class="dga-card-description">Grid item example.</p>
         </div>
       </div>
-    </section>
 
-    <hr>
-
-    <section class="dga-section">
-      <h2 class="dga-section-title">5. Card Component</h2>
-
-      <p class="dga-paragraph">
-        The card component currently supports default, interactive, selected, selectable, checked, and disabled states.
-      </p>
-
-      <div class="dga-grid dga-card-grid">
-
-        <div class="dga-card">
-          <span class="dga-card-icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M7.75 12.25L10.5 15L16.25 9.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Default Card</h3>
-            <p class="dga-card-description">
-              Card content placeholder text goes here.
-            </p>
-          </div>
-
-          <div class="dga-card-actions">
-            <button class="dga-button dga-button--secondary dga-button--md">Action</button>
-            <button class="dga-button dga-button--primary dga-button--md">Action</button>
-          </div>
+      <div class="dga-card">
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Column Two</h3>
+          <p class="dga-card-description">Grid item example.</p>
         </div>
+      </div>
 
-        <div class="dga-card dga-card--interactive">
+      <div class="dga-card">
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Column Three</h3>
+          <p class="dga-card-description">Grid item example.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-grid dga-grid-cols-3&quot;&gt;
+  &lt;div&gt;Column One&lt;/div&gt;
+  &lt;div&gt;Column Two&lt;/div&gt;
+  &lt;div&gt;Column Three&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="cards">
+    <h2 class="dga-section-title">6. Card Component</h2>
+
+    <p class="dga-paragraph">
+      Cards are used to group related content, actions, and selectable items.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>Default card: neutral surface and border.</li>
+      <li>Interactive card: hover border/state.</li>
+      <li>Selected card: primary/brand selected state.</li>
+      <li>Disabled card: muted background and text.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Default card</li>
+      <li>Interactive card</li>
+      <li>Selected card</li>
+      <li>Selectable card with checkbox</li>
+      <li>Disabled card</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-card-grid">
+      <div class="dga-card">
+        <span class="dga-card-icon" aria-hidden="true">✓</span>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Default Card</h3>
+          <p class="dga-card-description">Default card content example.</p>
+        </div>
+        <div class="dga-card-actions">
+          <button class="dga-button dga-button--secondary dga-button--md" type="button">Cancel</button>
+          <button class="dga-button dga-button--primary dga-button--md" type="button">Action</button>
+        </div>
+      </div>
+
+      <div class="dga-card dga-card--interactive">
+        <span class="dga-card-icon" aria-hidden="true">✓</span>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Interactive Card</h3>
+          <p class="dga-card-description">This card uses the interactive hover state.</p>
+        </div>
+        <button class="dga-card-toggle" type="button" aria-label="Expand card">˅</button>
+      </div>
+
+      <div class="dga-card dga-card--interactive dga-card--selected">
+        <span class="dga-card-icon" aria-hidden="true">✓</span>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Selected Card</h3>
+          <p class="dga-card-description">This card uses the selected state.</p>
+        </div>
+        <button class="dga-card-toggle" type="button" aria-label="Collapse card">˄</button>
+      </div>
+
+      <div class="dga-card dga-card--interactive">
+        <div class="dga-card-header">
           <span class="dga-card-icon" aria-hidden="true">✓</span>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Interactive Card</h3>
-            <p class="dga-card-description">
-              This card uses the interactive hover state.
-            </p>
-          </div>
-
-          <button class="dga-card-toggle" type="button" aria-label="Expand card">˅</button>
+          <input class="dga-card-checkbox" type="checkbox" aria-label="Select card">
         </div>
-
-        <div class="dga-card dga-card--interactive dga-card--selected">
-          <span class="dga-card-icon" aria-hidden="true">✓</span>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Selected Card</h3>
-            <p class="dga-card-description">
-              This card uses the selected state.
-            </p>
-          </div>
-
-          <button class="dga-card-toggle" type="button" aria-label="Collapse card">˄</button>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Selectable Card</h3>
+          <p class="dga-card-description">Card with checkbox.</p>
         </div>
-
-        <div class="dga-card dga-card--interactive">
-          <div class="dga-card-header">
-            <span class="dga-card-icon" aria-hidden="true">✓</span>
-            <input class="dga-card-checkbox" type="checkbox" aria-label="Select card">
-          </div>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Selectable Card</h3>
-            <p class="dga-card-description">
-              Card content placeholder text goes here.
-            </p>
-          </div>
-        </div>
-
-        <div class="dga-card dga-card--selected">
-          <div class="dga-card-header">
-            <span class="dga-card-icon" aria-hidden="true">✓</span>
-            <input class="dga-card-checkbox" type="checkbox" checked aria-label="Select card">
-          </div>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Checked Card</h3>
-            <p class="dga-card-description">
-              This card is selected.
-            </p>
-          </div>
-        </div>
-
-        <div class="dga-card dga-card--disabled">
-          <div class="dga-card-header">
-            <span class="dga-card-icon" aria-hidden="true">✓</span>
-            <input class="dga-card-checkbox" type="checkbox" disabled aria-label="Select card">
-          </div>
-
-          <div class="dga-card-content">
-            <h3 class="dga-card-title">Disabled Card</h3>
-            <p class="dga-card-description">
-              This card is disabled.
-            </p>
-          </div>
-        </div>
-
       </div>
-    </section>
 
-    <hr>
-
-    <section class="dga-section">
-      <h2 class="dga-section-title">6. Direction Support</h2>
-
-      <p class="dga-paragraph">
-        Direction utilities support Arabic and English interfaces using logical CSS behavior.
-      </p>
-
-      <p class="text-start">
-        This paragraph uses <strong>text-align: start</strong>.
-      </p>
-
-      <p class="text-end">
-        This paragraph uses <strong>text-align: end</strong>.
-      </p>
-
-      <p class="dir-ltr">
-        English value inside any page direction: user@example.com
-      </p>
-
-      <p class="dir-rtl">
-        نص عربي داخل أي اتجاه للصفحة
-      </p>
-    </section>
-
-    <hr>
-
-    <section class="dga-section">
-      <h2 class="dga-section-title">7. Form Controls</h2>
-
-      <p class="dga-paragraph">
-        The form controls currently include label, text input, textarea, helper text,
-        error text, disabled, readonly, hover, focus, and error states.
-      </p>
-
-      <h3>Text Inputs</h3>
-
-      <div class="dga-grid dga-form-grid">
-        <div class="dga-field">
-          <label class="dga-label" for="input-default">Default Input</label>
-          <input class="dga-input" id="input-default" type="text" placeholder="Write your name">
-          <p class="dga-helper-text">Use your official name.</p>
+      <div class="dga-card dga-card--selected">
+        <div class="dga-card-header">
+          <span class="dga-card-icon" aria-hidden="true">✓</span>
+          <input class="dga-card-checkbox" type="checkbox" checked aria-label="Select card">
         </div>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Checked Card</h3>
+          <p class="dga-card-description">Selected card with checked checkbox.</p>
+        </div>
+      </div>
+
+      <div class="dga-card dga-card--disabled">
+        <div class="dga-card-header">
+          <span class="dga-card-icon" aria-hidden="true">✓</span>
+          <input class="dga-card-checkbox" type="checkbox" disabled aria-label="Select card">
+        </div>
+        <div class="dga-card-content">
+          <h3 class="dga-card-title">Disabled Card</h3>
+          <p class="dga-card-description">Disabled card state.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-card&quot;&gt;
+  &lt;span class=&quot;dga-card-icon&quot; aria-hidden=&quot;true&quot;&gt;✓&lt;/span&gt;
+
+  &lt;div class=&quot;dga-card-content&quot;&gt;
+    &lt;h3 class=&quot;dga-card-title&quot;&gt;Card Title&lt;/h3&gt;
+    &lt;p class=&quot;dga-card-description&quot;&gt;Card description text.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;dga-card-actions&quot;&gt;
+    &lt;button class=&quot;dga-button dga-button--primary dga-button--md&quot; type=&quot;button&quot;&gt;
+      Action
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="forms">
+    <h2 class="dga-section-title">7. Form Controls</h2>
+
+    <p class="dga-paragraph">
+      Form controls include labels, text inputs, textareas, helper text, error text, disabled state, readonly state, hover state, and focus state.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>Label: strong gray text.</li>
+      <li>Input border: neutral gray.</li>
+      <li>Input hover: darker gray border.</li>
+      <li>Input focus: bottom border emphasis.</li>
+      <li>Error: error color on border and text.</li>
+      <li>Disabled: muted gray background and text.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Default input</li>
+      <li>Filled input</li>
+      <li>Readonly input</li>
+      <li>Disabled input</li>
+      <li>Error input</li>
+      <li>Default textarea</li>
+      <li>Error textarea</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-form-grid">
+      <div class="dga-field">
+        <label class="dga-label" for="input-default">Default Input</label>
+        <input class="dga-input" id="input-default" type="text" placeholder="Write your name">
+        <p class="dga-helper-text">Use your official name.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="input-filled">Filled Input</label>
+        <input class="dga-input" id="input-filled" type="text" value="Entered text">
+        <p class="dga-helper-text">This field contains entered text.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="input-disabled">Disabled Input</label>
+        <input class="dga-input" id="input-disabled" type="text" value="Disabled text" disabled>
+        <p class="dga-helper-text">This field is disabled.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="input-readonly">Readonly Input</label>
+        <input class="dga-input" id="input-readonly" type="text" value="Readonly text" readonly>
+        <p class="dga-helper-text">This field is readonly.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="input-error">Error Input</label>
+        <input class="dga-input dga-input--error" id="input-error" type="text" value="Invalid value">
+        <p class="dga-error-text">Please enter a valid value.</p>
+      </div>
+    </div>
+
+    <div class="dga-grid dga-grid-cols-2">
+      <div class="dga-field">
+        <label class="dga-label" for="textarea-default">Default Textarea</label>
+        <textarea class="dga-textarea" id="textarea-default" placeholder="Write your message"></textarea>
+        <p class="dga-helper-text">Textarea component with default state.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="textarea-error">Textarea Error</label>
+        <textarea class="dga-textarea dga-textarea--error" id="textarea-error">Invalid message</textarea>
+        <p class="dga-error-text">Please enter a valid message.</p>
+      </div>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-field&quot;&gt;
+  &lt;label class=&quot;dga-label&quot; for=&quot;full-name&quot;&gt;Full Name&lt;/label&gt;
+  &lt;input class=&quot;dga-input&quot; id=&quot;full-name&quot; type=&quot;text&quot; placeholder=&quot;Write your name&quot;&gt;
+  &lt;p class=&quot;dga-helper-text&quot;&gt;Use your official name.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;dga-field&quot;&gt;
+  &lt;label class=&quot;dga-label&quot; for=&quot;message&quot;&gt;Message&lt;/label&gt;
+  &lt;textarea class=&quot;dga-textarea&quot; id=&quot;message&quot; placeholder=&quot;Write your message&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="select">
+    <h2 class="dga-section-title">8. Select / Dropdown</h2>
+
+    <p class="dga-paragraph">
+      The select component styles the native select element and uses a wrapper to display the custom arrow.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>Default border: neutral gray.</li>
+      <li>Hover border: darker gray.</li>
+      <li>Focus: bottom border emphasis.</li>
+      <li>Error: error border.</li>
+      <li>Disabled: muted gray background and text.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Default select</li>
+      <li>Error select</li>
+      <li>Disabled select</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-form-grid">
+      <div class="dga-field">
+        <label class="dga-label" for="city-default">City</label>
+        <div class="dga-select-wrapper">
+          <select class="dga-select" id="city-default">
+            <option value="">Select city</option>
+            <option value="riyadh">Riyadh</option>
+            <option value="jeddah">Jeddah</option>
+            <option value="dammam">Dammam</option>
+          </select>
+        </div>
+        <p class="dga-helper-text">Choose your city.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="city-error">City</label>
+        <div class="dga-select-wrapper">
+          <select class="dga-select dga-select--error" id="city-error">
+            <option value="">Select city</option>
+            <option value="riyadh">Riyadh</option>
+            <option value="jeddah">Jeddah</option>
+            <option value="dammam">Dammam</option>
+          </select>
+        </div>
+        <p class="dga-error-text">Please select a city.</p>
+      </div>
+
+      <div class="dga-field">
+        <label class="dga-label" for="city-disabled">City</label>
+        <div class="dga-select-wrapper">
+          <select class="dga-select" id="city-disabled" disabled>
+            <option value="">Select city</option>
+            <option value="riyadh">Riyadh</option>
+            <option value="jeddah">Jeddah</option>
+            <option value="dammam">Dammam</option>
+          </select>
+        </div>
+        <p class="dga-helper-text">This select is disabled.</p>
+      </div>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-field&quot;&gt;
+  &lt;label class=&quot;dga-label&quot; for=&quot;city&quot;&gt;City&lt;/label&gt;
+
+  &lt;div class=&quot;dga-select-wrapper&quot;&gt;
+    &lt;select class=&quot;dga-select&quot; id=&quot;city&quot;&gt;
+      &lt;option value=&quot;&quot;&gt;Select city&lt;/option&gt;
+      &lt;option value=&quot;riyadh&quot;&gt;Riyadh&lt;/option&gt;
+      &lt;option value=&quot;jeddah&quot;&gt;Jeddah&lt;/option&gt;
+      &lt;option value=&quot;dammam&quot;&gt;Dammam&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;dga-helper-text&quot;&gt;Choose your city.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="radio">
+    <h2 class="dga-section-title">9. Radio Component</h2>
+
+    <p class="dga-paragraph">
+      Radio controls are used when the user must choose one option from a small set of choices.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>Default border: neutral gray.</li>
+      <li>Checked state: strong gray inner dot.</li>
+      <li>Hover: brand/primary border.</li>
+      <li>Focus: light focus ring.</li>
+      <li>Error: error border and checked state.</li>
+      <li>Disabled: muted gray state.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Default radio group</li>
+      <li>Checked radio</li>
+      <li>Disabled radio</li>
+      <li>Error radio group</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-grid-cols-2">
+      <div class="dga-field">
+        <span class="dga-label">Preferred contact method</span>
+
+        <div class="dga-radio-group">
+          <label class="dga-radio-option">
+            <input class="dga-radio-input" type="radio" name="contact" value="email" checked>
+            <span class="dga-radio-content">
+              <span class="dga-radio-label">Email</span>
+              <span class="dga-radio-description">Receive updates by email.</span>
+            </span>
+          </label>
+
+          <label class="dga-radio-option">
+            <input class="dga-radio-input" type="radio" name="contact" value="sms">
+            <span class="dga-radio-content">
+              <span class="dga-radio-label">SMS</span>
+              <span class="dga-radio-description">Receive updates by SMS.</span>
+            </span>
+          </label>
+
+          <label class="dga-radio-option">
+            <input class="dga-radio-input" type="radio" name="contact" value="phone" disabled>
+            <span class="dga-radio-content">
+              <span class="dga-radio-label">Phone</span>
+              <span class="dga-radio-description">This option is disabled.</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="dga-field">
+        <span class="dga-label">Error Example</span>
+
+        <div class="dga-radio-group dga-radio-group--error">
+          <label class="dga-radio-option">
+            <input class="dga-radio-input" type="radio" name="error-contact" value="email">
+            <span class="dga-radio-content">
+              <span class="dga-radio-label">Email</span>
+              <span class="dga-radio-description">Select one option.</span>
+            </span>
+          </label>
+        </div>
+
+        <p class="dga-error-text">Please choose a contact method.</p>
+      </div>
+    </div>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-field&quot;&gt;
+  &lt;span class=&quot;dga-label&quot;&gt;Preferred contact method&lt;/span&gt;
+
+  &lt;div class=&quot;dga-radio-group&quot;&gt;
+    &lt;label class=&quot;dga-radio-option&quot;&gt;
+      &lt;input class=&quot;dga-radio-input&quot; type=&quot;radio&quot; name=&quot;contact&quot; value=&quot;email&quot;&gt;
+      &lt;span class=&quot;dga-radio-content&quot;&gt;
+        &lt;span class=&quot;dga-radio-label&quot;&gt;Email&lt;/span&gt;
+        &lt;span class=&quot;dga-radio-description&quot;&gt;Receive updates by email.&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <hr>
+
+  <section class="dga-section" id="file-upload">
+    <h2 class="dga-section-title">10. File Upload</h2>
+
+    <p class="dga-paragraph">
+      File upload supports a simple browse button version and a dropzone version. The uploaded file item uses status, file name, remove button, and optional helper text.
+    </p>
+
+    <h3>Colors</h3>
+    <ul>
+      <li>Browse button: strong gray background and white text.</li>
+      <li>File item: neutral gray surface and border.</li>
+      <li>Success status: brand/primary background.</li>
+      <li>Error status: error background and border.</li>
+      <li>Dropzone: dashed neutral border and muted background.</li>
+    </ul>
+
+    <h3>Types</h3>
+    <ul>
+      <li>Simple file upload</li>
+      <li>Dropzone file upload</li>
+      <li>Success file item</li>
+      <li>Error file item</li>
+      <li>Loading file item</li>
+    </ul>
+
+    <h3>Example</h3>
+    <div class="dga-grid dga-grid-cols-2">
+      <div class="dga-field">
+       <h3>Default File Upload</h3>
+
 <div class="dga-field">
-  <label class="dga-label" for="city">City</label>
-
-  <div class="dga-select-wrapper">
-    <select class="dga-select" id="city">
-      <option value="">Select city</option>
-      <option value="riyadh">Riyadh</option>
-      <option value="jeddah">Jeddah</option>
-      <option value="dammam">Dammam</option>
-    </select>
-  </div>
-
-  <p class="dga-helper-text">Choose your city.</p>
-</div>
-<div class="dga-field">
-  <label class="dga-label" for="city">City</label>
-
-  <div class="dga-select-wrapper">
-    <select class="dga-select dga-select--error" id="city">
-      <option value="">Select city</option>
-      <option value="riyadh">Riyadh</option>
-      <option value="jeddah">Jeddah</option>
-      <option value="dammam">Dammam</option>
-    </select>
-  </div>
-
-  <p class="dga-helper-text">Choose your city.</p>
-</div>
-<div class="dga-field">
-  <label class="dga-label" for="city">City</label>
-
-  <div class="dga-select-wrapper">
-    <select disabled class="dga-select dga-select--error" id="city">
-      <option value="">Select city</option>
-      <option value="riyadh">Riyadh</option>
-      <option value="jeddah">Jeddah</option>
-      <option value="dammam">Dammam</option>
-    </select>
-  </div>
-
-  <p class="dga-helper-text">Choose your city.</p>
-</div>
-<div class="dga-field dga-field--full">
   <div class="dga-file-upload">
     <div class="dga-file-upload-content">
       <p class="dga-file-upload-title">Upload files</p>
@@ -443,23 +754,31 @@
       id="file-upload"
       type="file"
       accept=".jpg,.jpeg,.png,.pdf,.csv"
-    />
+    >
 
     <label class="dga-file-upload-button" for="file-upload">
       Browse Files
     </label>
 
-    <div class="dga-file-list" id="file-list"></div>
+    <div class="dga-file-list">
+      <div class="dga-file-item dga-file-item--success">
+        <span class="dga-file-status">✓</span>
+        <span class="dga-file-name">File-name.csv</span>
+        <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+      </div>
+    </div>
   </div>
 </div>
-<div class="dga-field dga-field--full">
+<h3>Dropzone File Upload</h3>
+
+<div class="dga-field">
   <div class="dga-file-upload dga-file-upload--dropzone">
     <input
       class="dga-file-upload-input"
       id="dropzone-upload"
       type="file"
       accept=".jpg,.jpeg,.png,.pdf,.csv"
-    />
+    >
 
     <label class="dga-file-upload-dropzone" for="dropzone-upload">
       <span class="dga-file-upload-icon">↥</span>
@@ -479,180 +798,202 @@
       </span>
     </label>
 
-    <div class="dga-file-item">
-      <span class="dga-file-status">✓</span>
-      <span class="dga-file-name">File-name.csv</span>
-      <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+    <div class="dga-file-list">
+      <div class="dga-file-item dga-file-item--error">
+        <span class="dga-file-status">!</span>
+        <span class="dga-file-name">large-file.pdf</span>
+        <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+        <p class="dga-file-helper">File size is larger than 2MB.</p>
+      </div>
     </div>
   </div>
 </div>
-<div class="dga-field--full">
-  <span class="dga-label">Preferred contact method</span>
-
-  <div class="dga-radio-group">
-    <label class="dga-radio-option">
-      <input class="dga-radio-input" type="radio" name="contact" value="email" />
-      <span class="dga-radio-content">
-        <span class="dga-radio-label">Email</span>
-        <span class="dga-radio-description">Receive updates by email.</span>
-      </span>
-    </label>
-
-    <label class="dga-radio-option">
-      <input class="dga-radio-input" type="radio" name="contact" value="sms" />
-      <span class="dga-radio-content">
-        <span class="dga-radio-label">SMS</span>
-        <span class="dga-radio-description">Receive updates by SMS.</span>
-      </span>
-    </label>
-  </div>
-</div>
-        <div class="dga-field">
-          <label class="dga-label" for="input-filled">Filled Input</label>
-          <input class="dga-input" id="input-filled" type="text" value="Entered text">
-          <p class="dga-helper-text">This field contains entered text.</p>
-        </div>
-
-        <div class="dga-field">
-          <label class="dga-label" for="input-disabled">Disabled Input</label>
-          <input class="dga-input" id="input-disabled" type="text" value="Disabled text" disabled>
-          <p class="dga-helper-text">This field is disabled.</p>
-        </div>
-
-        <div class="dga-field">
-          <label class="dga-label" for="input-readonly">Readonly Input</label>
-          <input class="dga-input" id="input-readonly" type="text" value="Readonly text" readonly>
-          <p class="dga-helper-text">This field is readonly.</p>
-        </div>
-
-        <div class="dga-field">
-          <label class="dga-label" for="input-error">Error Input</label>
-          <input class="dga-input dga-input--error" id="input-error" type="text" value="Invalid value">
-          <p class="dga-error-text">Please enter a valid value.</p>
-        </div>
       </div>
+    </div>
 
-      <h3>Textareas</h3>
+    <h3>HTML Code</h3>
+    <pre><code>&lt;div class=&quot;dga-file-upload&quot;&gt;
+  &lt;div class=&quot;dga-file-upload-content&quot;&gt;
+    &lt;p class=&quot;dga-file-upload-title&quot;&gt;Upload files&lt;/p&gt;
+    &lt;p class=&quot;dga-file-upload-description&quot;&gt;
+      Maximum file size allowed is 2MB.
+    &lt;/p&gt;
+  &lt;/div&gt;
 
-      <div class="dga-grid dga-grid-cols-2">
-        <div class="dga-field">
-          <label class="dga-label" for="textarea-default">Default Textarea</label>
-          <textarea class="dga-textarea" id="textarea-default" placeholder="Write your message"></textarea>
-          <p class="dga-helper-text">Textarea component with default state.</p>
-        </div>
+  &lt;input class=&quot;dga-file-upload-input&quot; id=&quot;file-upload&quot; type=&quot;file&quot;&gt;
 
-        <div class="dga-field">
-          <label class="dga-label" for="textarea-error">Textarea Error</label>
-          <textarea class="dga-textarea dga-textarea--error" id="textarea-error">Invalid message</textarea>
-          <p class="dga-error-text">Please enter a valid message.</p>
-        </div>
-      </div>
-    </section>
+  &lt;label class=&quot;dga-file-upload-button&quot; for=&quot;file-upload&quot;&gt;
+    Browse Files
+  &lt;/label&gt;
 
-    <hr>
+  &lt;div class=&quot;dga-file-list&quot;&gt;
+    &lt;div class=&quot;dga-file-item dga-file-item--success&quot;&gt;
+      &lt;span class=&quot;dga-file-status&quot;&gt;✓&lt;/span&gt;
+      &lt;span class=&quot;dga-file-name&quot;&gt;File-name.csv&lt;/span&gt;
+      &lt;button class=&quot;dga-file-remove&quot; type=&quot;button&quot; aria-label=&quot;Remove file&quot;&gt;×&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
 
-    <section class="dga-section">
-      <h2 class="dga-section-title">8. Current Scope</h2>
+  <hr>
 
-      <p class="dga-paragraph">
-        This page intentionally shows only the parts currently implemented in the shared CSS system.
-      </p>
+  <section class="dga-section" id="direction">
+    <h2 class="dga-section-title">11. Direction Support</h2>
 
-      <p class="dga-paragraph">
-        Upcoming components include badge, alert, table, select, checkbox, radio, dropdown, and menu.
-      </p>
-    </section>
+    <p class="dga-paragraph">
+      Direction support allows the same HTML and CSS to work in English and Arabic by using logical properties and direction utilities.
+    </p>
 
-  </main>
+    <h3>Colors</h3>
+    <ul>
+      <li>Direction utilities do not define colors.</li>
+      <li>Text keeps the same typography and color tokens in both LTR and RTL.</li>
+    </ul>
 
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute("data-theme");
-      const nextTheme = currentTheme === "internal" ? "external" : "internal";
+    <h3>Types</h3>
+    <ul>
+      <li>Page direction: <code>dir=&quot;ltr&quot;</code> or <code>dir=&quot;rtl&quot;</code></li>
+      <li>Text start alignment: <code>text-start</code></li>
+      <li>Text end alignment: <code>text-end</code></li>
+      <li>Forced LTR content: <code>dir-ltr</code></li>
+      <li>Forced RTL content: <code>dir-rtl</code></li>
+    </ul>
 
-      html.setAttribute("data-theme", nextTheme);
-      document.getElementById("themeLabel").textContent = nextTheme;
+    <h3>Example</h3>
+    <p class="text-start">
+      This paragraph uses text start alignment.
+    </p>
+
+    <p class="text-end">
+      This paragraph uses text end alignment.
+    </p>
+
+    <p class="dir-ltr">
+      English value inside any page direction: user@example.com
+    </p>
+
+    <p class="dir-rtl">
+      نص عربي داخل أي اتجاه للصفحة
+    </p>
+
+    <button class="dga-button dga-button--primary dga-button--md" type="button" onclick="toggleDirection()">
+      Toggle Direction
+    </button>
+
+    <h3>HTML Code</h3>
+    <pre><code>&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+
+&lt;p class=&quot;text-start&quot;&gt;
+  This paragraph uses text start alignment.
+&lt;/p&gt;
+
+&lt;p class=&quot;dir-rtl&quot;&gt;
+  نص عربي داخل أي اتجاه للصفحة
+&lt;/p&gt;</code></pre>
+  </section>
+
+</main>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute("data-theme");
+    const nextTheme = currentTheme === "internal" ? "external" : "internal";
+
+    html.setAttribute("data-theme", nextTheme);
+
+    const themeLabel = document.getElementById("themeLabel");
+    if (themeLabel) {
+      themeLabel.textContent = nextTheme;
     }
-
-    function toggleDirection() {
-      const html = document.documentElement;
-      const nextDirection = html.dir === "rtl" ? "ltr" : "rtl";
-
-      html.dir = nextDirection;
-      html.lang = nextDirection === "rtl" ? "ar" : "en";
-
-      document.getElementById("directionLabel").textContent = nextDirection;
-    }
-
- 
- const headerMenuTriggers = document.querySelectorAll("[data-header-menu-trigger]");
-
-function closeHeaderMenus() {
-  document.querySelectorAll(".dga-header-nav-item.is-open").forEach(function (item) {
-    item.classList.remove("is-open");
-
-    const trigger = item.querySelector("[data-header-menu-trigger]");
-
-    if (trigger) {
-      trigger.classList.remove("dga-header-link--active");
-      trigger.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
-headerMenuTriggers.forEach(function (trigger) {
-  trigger.addEventListener("click", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    const navItem = trigger.closest(".dga-header-nav-item");
-    const isOpen = navItem.classList.contains("is-open");
-
-    closeHeaderMenus();
-
-    if (!isOpen) {
-      navItem.classList.add("is-open");
-      trigger.classList.add("dga-header-link--active");
-      trigger.setAttribute("aria-expanded", "true");
-    }
-  });
-});
-
-document.addEventListener("click", function () {
-  closeHeaderMenus();
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeHeaderMenus();
   }
-});
 
-const fileInput = document.querySelector(".dga-file-upload-input");
-const fileList = document.querySelector("#file-list");
+  function toggleDirection() {
+    const html = document.documentElement;
+    const nextDirection = html.dir === "rtl" ? "ltr" : "rtl";
 
-fileInput.addEventListener("change", function () {
-  const file = fileInput.files[0];
+    html.dir = nextDirection;
+    html.lang = nextDirection === "rtl" ? "ar" : "en";
 
-  if (!file) return;
+    const directionLabel = document.getElementById("directionLabel");
+    if (directionLabel) {
+      directionLabel.textContent = nextDirection;
+    }
+  }
 
-  fileList.innerHTML = `
-    <div class="dga-file-item">
-      <span class="dga-file-status">✓</span>
-      <span class="dga-file-name">${file.name}</span>
-      <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
-    </div>
-  `;
+  const headerMenuTriggers = document.querySelectorAll("[data-header-menu-trigger]");
 
-  const removeButton = fileList.querySelector(".dga-file-remove");
+  function closeHeaderMenus() {
+    document.querySelectorAll(".dga-header-nav-item.is-open").forEach(function (item) {
+      item.classList.remove("is-open");
 
-  removeButton.addEventListener("click", function () {
-    fileInput.value = "";
-    fileList.innerHTML = "";
+      const trigger = item.querySelector("[data-header-menu-trigger]");
+
+      if (trigger) {
+        trigger.classList.remove("dga-header-link--active");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  headerMenuTriggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const navItem = trigger.closest(".dga-header-nav-item");
+      const isOpen = navItem.classList.contains("is-open");
+
+      closeHeaderMenus();
+
+      if (!isOpen) {
+        navItem.classList.add("is-open");
+        trigger.classList.add("dga-header-link--active");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
   });
-});
-  </script>
+
+  document.addEventListener("click", function () {
+    closeHeaderMenus();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeHeaderMenus();
+    }
+  });
+
+  const fileInput = document.querySelector("#file-upload-input");
+  const fileList = document.querySelector("#file-list");
+
+  if (fileInput && fileList) {
+    fileInput.addEventListener("change", function () {
+      const file = fileInput.files[0];
+
+      if (!file) return;
+
+      fileList.innerHTML = `
+        <div class="dga-file-item dga-file-item--success">
+          <span class="dga-file-status">✓</span>
+          <span class="dga-file-name"></span>
+          <button class="dga-file-remove" type="button" aria-label="Remove file">×</button>
+        </div>
+      `;
+
+      const fileName = fileList.querySelector(".dga-file-name");
+      const removeButton = fileList.querySelector(".dga-file-remove");
+
+      fileName.textContent = file.name;
+
+      removeButton.addEventListener("click", function () {
+        fileInput.value = "";
+        fileList.innerHTML = "";
+      });
+    });
+  }
+</script>
 
 </body>
 </html>
