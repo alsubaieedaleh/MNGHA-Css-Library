@@ -4,7 +4,7 @@
   --container-max-width-desktop: 80rem;
   --paragraph-max-width: 45rem; 
 }
-.dga-container {
+.mngha-container {
   width: 100%;
   max-width: var(--container-max-width-desktop);
   margin-inline: auto;
@@ -12,21 +12,21 @@
 }
 
 @media (min-width: 768px) {
-  .dga-container {
+  .mngha-container {
     padding-inline: var(--container-padding-desktop);
   }
 }
 
-.dga-paragraph {
+.mngha-paragraph {
   max-width: var(--paragraph-max-width);
 }
-.dga-container-fluid {
+.mngha-container-fluid {
   width: 100%;
   padding-inline: var(--container-padding-mobile);
 }
 
 @media (min-width: 768px) {
-  .dga-container-fluid {
+  .mngha-container-fluid {
     padding-inline: var(--container-padding-desktop);
   }
 }

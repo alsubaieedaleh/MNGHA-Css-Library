@@ -4,7 +4,7 @@
  * --------------------------------------------------------------------------
  */
 
-.dga-card {
+.mngha-card {
   display: grid;
   gap: var(--space-6);  
   background: var(--color-white);
@@ -15,18 +15,18 @@
    
 
 }
-.dga-card-grid {
+.mngha-card-grid {
   display: grid;
   gap: var(--space-6);
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 @media (max-width: 640px) {
-  .dga-card-grid {
+  .mngha-card-grid {
     grid-template-columns: 1fr;
   }
 }
-.dga-card-icon {
+.mngha-card-icon {
   width: 3rem;
   height: 3rem;
   display: inline-flex;
@@ -36,11 +36,11 @@
   background: var(--color-brand-very-light);
   color: var(--color-brand-primary);
 }
-.dga-card-content {
+.mngha-card-content {
   display: grid;
   gap: var(--space-2);
 }
-.dga-card-title {
+.mngha-card-title {
   margin: 0;
   color: var(--color-gray-950);
   font-size: var(--text-lg-size);
@@ -48,7 +48,7 @@
   line-height: var(--text-lg-line-height);
 }
 
-.dga-card-description {
+.mngha-card-description {
   margin: 0;
   color: var(--color-gray-700);
   font-size: var(--text-md-size);
@@ -56,54 +56,54 @@
   line-height: var(--text-md-line-height);
 }
 
-.dga-card-actions {
+.mngha-card-actions {
   display: flex;
   gap: var(--space-4);
   flex-wrap: wrap;
 }
-.dga-card--interactive {
+.mngha-card--interactive {
   cursor: pointer;
 }
 
-.dga-card--interactive:not(.dga-card--disabled):hover {
+.mngha-card--interactive:not(.mngha-card--disabled):hover {
   border-color: var(--color-gray-700);
 }
 
-.dga-card--selected {
+.mngha-card--selected {
   border-color: var(--color-gray-950);
 }
 
-.dga-card--disabled {
+.mngha-card--disabled {
   background: var(--color-gray-100);
   border-color: var(--color-gray-100);
   box-shadow: none;
   cursor: not-allowed;
 }
 
-.dga-card--disabled .dga-card-icon,
-.dga-card--disabled .dga-card-title,
-.dga-card--disabled .dga-card-description {
+.mngha-card--disabled .mngha-card-icon,
+.mngha-card--disabled .mngha-card-title,
+.mngha-card--disabled .mngha-card-description {
   color: var(--color-gray-400);
 }
 
-.dga-card--disabled .dga-card-icon {
+.mngha-card--disabled .mngha-card-icon {
   background: var(--color-gray-200);
 }
 
-.dga-card-header {
+.mngha-card-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-4);
 }
 
-.dga-card-checkbox {
+.mngha-card-checkbox {
   width: 1rem;
   height: 1rem;
   accent-color: var(--color-brand-primary);
 }
 
-.dga-card-toggle {
+.mngha-card-toggle {
   justify-self: end;
   border: 0;
   background: transparent;
@@ -113,7 +113,7 @@
   padding: 0;
 }
 
-.dga-card-toggle:disabled {
+.mngha-card-toggle:disabled {
   color: var(--color-gray-400);
   cursor: not-allowed;
 }
