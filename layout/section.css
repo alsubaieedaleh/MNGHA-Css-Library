@@ -5,9 +5,9 @@
  */
 
 .mngha-section {
-  margin-block-end: var(--space-8);
+  margin-block-end: var(--spacing-4xl);
 }
 
 .mngha-section-title {
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--spacing-xl);
 }

@@ -1,6 +1,6 @@
 .mngha-grid {
   display: grid;
-  gap: var(--space-8);
+  gap: var(--spacing-4xl);
 }
 
 .mngha-grid-cols-12 {
@@ -25,7 +25,7 @@
 
 .mngha-grid-responsive {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--spacing-xl);
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 

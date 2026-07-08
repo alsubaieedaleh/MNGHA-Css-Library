@@ -8,7 +8,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-1);
+  gap: var(--spacing-xs);
   appearance: none;
   border: 1px solid transparent;
   border-radius: var(--radius-sm);
@@ -30,19 +30,19 @@
 
 .mngha-button--sm {
   min-height: 1.5rem;
-  padding-inline: var(--space-2);
+  padding-inline: var(--spacing-md);
   font-size: var(--text-xs-size);
 }
 
 .mngha-button--md {
   min-height: 2rem;
-  padding-inline: var(--space-2);
+  padding-inline: var(--spacing-md);
   font-size: var(--text-sm-size);
 }
 
 .mngha-button--lg {
-  min-height: 2.5rem;
-  padding-inline: var(--space-4);
+  min-height: var(--spacing-5xl);
+  padding-inline: var(--spacing-xl);
   font-size: var(--text-md-size);
 }
 .mngha-button--primary {
