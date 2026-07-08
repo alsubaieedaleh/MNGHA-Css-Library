@@ -36,19 +36,18 @@
 
   --text-display-2xl-size: 4.5rem;
   --text-display-2xl-line-height:5.625rem;
-  --text-display-2xl-letter-spacing:-2%;
+  --text-display-2xl-letter-spacing:-0.02em;
 
   --text-display-xl-size: 3.75rem;
   --text-display-xl-line-height:4.5rem;
-  --text-display-xl-letter-spacing:-2%;
-
+--text-display-xl-letter-spacing: -0.02em;
   --text-display-lg-size: 3rem;
   --text-display-lg-line-height: 3.75rem;
-  --text-display-lg-letter-spacing:-2%;
+  --text-display-lg-letter-spacing:-0.02em;
 
   --text-display-md-size: 2.25rem;
   --text-display-md-line-height:2.75rem;
-  --text-display-md-letter-spacing:-2%;
+  --text-display-md-letter-spacing:-0.02em;
 
   --text-display-sm-size: 1.875rem;
   --text-display-sm-line-height: 2.375rem;
