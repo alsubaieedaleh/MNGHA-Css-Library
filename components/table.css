@@ -31,12 +31,24 @@
   text-align: start;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+
+.mngha-table th {
   border: 1px solid var(--color-gray-300);
+}
+
+
+.mngha-table td {
+  border-inline: 0;
+  border-block-start: 0;
+  border-block-end: 1px solid var(--color-gray-300);
 }
 
 /* Header */
 .mngha-table th {
-  height: var(--spacing-4xl);
+  height: var(--spacing-6xl);
+  width: var(--spacing-10xl);
   background: var(--color-gray-100);
   color: var(--color-gray-700);
   font-size: var(--text-xs-size);
@@ -51,7 +63,7 @@
 
 /* Body rows */
 .mngha-table td {
-  height: var(--spacing-5xl);
+  height: var(--spacing-7xl);
   background: var(--color-white);
   color: var(--color-gray-900);
   font-size: var(--text-sm-size);
