@@ -15,18 +15,19 @@
   width: 100%;
   min-width: 900px;
   border-collapse: separate;
-  border-spacing: 0;
+  border-spacing: var(--spacing-none);
   background: var(--color-white);
   color: var(--color-gray-900);
-  font-size:var(--text-sm-size);
- line-height: var(--text-sm-line-height);
+  font-family: var(--font-family-base);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
 }
 
 /* Cells */
 .mngha-table th,
 .mngha-table td {
-  padding-block: 0;
-  padding-inline: 12px;
+  padding-block: var(--spacing-none);
+  padding-inline: var(--spacing-lg);
   text-align: start;
   vertical-align: middle;
   white-space: nowrap;
@@ -35,7 +36,7 @@
 
 /* Header */
 .mngha-table th {
-  height: 32px;
+  height: var(--spacing-4xl);
   background: var(--color-gray-100);
   color: var(--color-gray-700);
   font-size: var(--text-xs-size);
@@ -50,16 +51,16 @@
 
 /* Body rows */
 .mngha-table td {
-  height: 43px;
+  height: var(--spacing-5xl);
   background: var(--color-white);
   color: var(--color-gray-900);
-  font-size:var(--text-sm-size);
- line-height: var(--text-sm-line-height);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
   font-weight: var(--font-weight-regular);
 }
 
 .mngha-table tbody tr:last-child td {
-  border-block-end: 0;
+  border-block-end: var(--spacing-none);
 }
 
 .mngha-table tbody tr:hover td {
@@ -73,18 +74,18 @@
 
 /* Checkbox column */
 .mngha-table-checkbox-cell {
-  width: 34px;
-  min-width: 34px;
-  max-width: 34px;
-  padding-inline: 10px;
+  width: calc(var(--spacing-4xl) + var(--spacing-xxs));
+  min-width: calc(var(--spacing-4xl) + var(--spacing-xxs));
+  max-width: calc(var(--spacing-4xl) + var(--spacing-xxs));
+  padding-inline: calc(var(--spacing-md) + var(--spacing-xxs));
 }
 
 /* Action column */
 .mngha-table-action-cell {
-  width: 44px;
-  min-width: 44px;
-  max-width: 44px;
-  padding-inline: 10px;
+  width: calc(var(--spacing-5xl) + var(--spacing-xs));
+  min-width: calc(var(--spacing-5xl) + var(--spacing-xs));
+  max-width: calc(var(--spacing-5xl) + var(--spacing-xs));
+  padding-inline: calc(var(--spacing-md) + var(--spacing-xxs));
   text-align: center;
 }
 
@@ -92,8 +93,8 @@
 .mngha-table-link {
   color: var(--color-primary-600);
   text-decoration: none;
-  font-size:var(--text-sm-size);
- line-height: var(--text-sm-line-height);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
   font-weight: var(--font-weight-regular);
 }
 
@@ -107,11 +108,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 20px;
-  padding-block: 1px;
-  padding-inline: 6px;
+  min-height: var(--spacing-2xl);
+  padding-block: var(--spacing-none);
+  padding-inline: var(--spacing-sm);
   border: 1px solid var(--color-gray-300);
-  border-radius:  var(--radius-sm);
+  border-radius: var(--radius-sm);
   background: var(--color-white);
   color: var(--color-gray-700);
   font-size: var(--text-xs-size);
@@ -123,11 +124,11 @@
 .mngha-table-status {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 20px;
-  padding-block: 1px;
-  padding-inline: 8px;
-  border-radius: 999px;
+  gap: var(--spacing-sm);
+  min-height: var(--spacing-2xl);
+  padding-block: var(--spacing-none);
+  padding-inline: var(--spacing-md);
+  border-radius: var(--radius-full);
   background: var(--color-gray-50);
   color: var(--color-gray-700);
   font-size: var(--text-xs-size);
@@ -138,8 +139,8 @@
 .mngha-table-status::before {
   content: "";
   flex: 0 0 auto;
-  width: 8px;
-  height: 8px;
+  width: var(--spacing-md);
+  height: var(--spacing-md);
   border-radius: 50%;
   background: var(--color-gray-600);
 }
@@ -149,8 +150,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-3xl);
+  height: var(--spacing-3xl);
   color: var(--color-gray-900);
   text-decoration: none;
   border: 0;
@@ -173,9 +174,9 @@
   -webkit-appearance: none;
   display: inline-grid;
   place-content: center;
-  width: 14px;
-  height: 14px;
-  margin: 0;
+  width: calc(var(--spacing-lg) + var(--spacing-xxs));
+  height: calc(var(--spacing-lg) + var(--spacing-xxs));
+  margin: var(--spacing-none);
   border: 1px solid var(--color-gray-400);
   border-radius: var(--radius-xs);
   background: var(--color-white);
@@ -185,8 +186,8 @@
 
 .mngha-table-checkbox::before {
   content: "";
-  width: 9px;
-  height: 9px;
+  width: var(--spacing-md);
+  height: var(--spacing-md);
   transform: scale(0);
   background-color: var(--color-white);
   clip-path: polygon(14% 44%, 0 58%, 38% 96%, 100% 22%, 86% 8%, 36% 68%);
@@ -206,7 +207,7 @@
 }
 
 .mngha-table-checkbox:focus-visible {
-  box-shadow: 0 0 0 3px var(--color-primary-100);
+  box-shadow: 0 0 0 var(--spacing-xs) var(--color-primary-100);
 }
 
 .mngha-table-checkbox:disabled {
