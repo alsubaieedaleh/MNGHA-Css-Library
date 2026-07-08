@@ -165,6 +165,8 @@
 
   
 <section class="mngha-section">
+  <div class="mngha-table-container">
+
   <div class="mngha-table-wrapper">
     <table class="mngha-table" aria-label="Data table">
       <thead>
@@ -366,7 +368,9 @@
         </tr>
       </tbody>
     </table>
-    <nav class="mngha-pagination" aria-label="Pagination">
+  </div>
+  <div class="mngha-table-footer">
+   <nav class="mngha-pagination" aria-label="Pagination">
   <button class="mngha-pagination-arrow" type="button" aria-label="Previous page">
     ‹
   </button>
@@ -378,9 +382,29 @@
   <button class="mngha-pagination-item" type="button">2</button>
   <button class="mngha-pagination-item" type="button">3</button>
 
-  <button class="mngha-pagination-more" type="button" aria-label="More pages">
-    ...
-  </button>
+  <div class="mngha-pagination-dropdown">
+    <button
+      class="mngha-pagination-more"
+      type="button"
+      aria-label="More pages"
+      aria-expanded="false"
+    >
+      ...
+    </button>
+
+    <div class="mngha-pagination-menu" role="menu">
+      <button class="mngha-pagination-menu-item is-selected" type="button" role="menuitem">
+        4
+      </button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">5</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">6</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">7</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">8</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">9</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">10</button>
+      <button class="mngha-pagination-menu-item" type="button" role="menuitem">11</button>
+    </div>
+  </div>
 
   <button class="mngha-pagination-item" type="button">999</button>
 
@@ -388,6 +412,7 @@
     ›
   </button>
 </nav>
+</div>
   </div>
 </section>
   <section class="mngha-section" id="header">
@@ -1352,7 +1377,57 @@
   document.addEventListener("click", function () {
     closeCustomSelects();
   });
+const paginationDropdowns = document.querySelectorAll(".mngha-pagination-dropdown");
 
+function closePaginationDropdowns() {
+  paginationDropdowns.forEach(function (dropdown) {
+    dropdown.classList.remove("is-open");
+
+    const trigger = dropdown.querySelector(".mngha-pagination-more");
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+paginationDropdowns.forEach(function (dropdown) {
+  const trigger = dropdown.querySelector(".mngha-pagination-more");
+  const items = dropdown.querySelectorAll(".mngha-pagination-menu-item");
+
+  if (!trigger) return;
+
+  trigger.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    const isOpen = dropdown.classList.contains("is-open");
+
+    closePaginationDropdowns();
+
+    if (!isOpen) {
+      dropdown.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  items.forEach(function (item) {
+    item.addEventListener("click", function () {
+      items.forEach(function (menuItem) {
+        menuItem.classList.remove("is-selected");
+      });
+
+      item.classList.add("is-selected");
+      closePaginationDropdowns();
+    });
+  });
+});
+
+document.addEventListener("click", closePaginationDropdowns);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePaginationDropdowns();
+  }
+});
 </script>
 
 </body>

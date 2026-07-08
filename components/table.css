@@ -231,3 +231,27 @@
 .mngha-table-checkbox:disabled::before {
   background-color: var(--color-gray-400);
 }
+
+.mngha-table-container {
+  width: 100%;
+  min-width: 0;
+}
+
+.mngha-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.mngha-table-footer {
+  display: flex;
+  align-items: center;
+  padding-block-start: var(--spacing-xl);
+  overflow: visible;
+}
+
+.mngha-pagination {
+  position: relative;
+  overflow: visible;
+}
