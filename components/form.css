@@ -112,12 +112,6 @@
   );
   background-size: 100% 2px;
 }
-.mngha-input--error:focus,
-.mngha-textarea--error:focus {
-  border-color: var(--color-error-600);
-  border-bottom-color: var(--color-error-600);
-  border-bottom-width: 2px;
-}
 
 .mngha-helper-text,
 .mngha-error-text {
@@ -238,6 +232,154 @@
   border-bottom-color: var(--color-error-600);
   border-bottom-width: 2px;
 }
+
+
+/**
+ * Custom Select / Dropdown
+ * Use this when the selected option needs a check icon and no native blue selected effect.
+ */
+
+.mngha-custom-select {
+  position: relative;
+  min-width: 0;
+}
+
+.mngha-custom-select-trigger {
+  width: 100%;
+  max-width: 100%;
+  min-height: 2.5rem;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  padding-inline: var(--space-4);
+
+  border: 1px solid var(--color-gray-400);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-gray-950);
+
+  font-family: inherit;
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-md-line-height);
+  text-align: start;
+
+  cursor: pointer;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.mngha-custom-select-trigger:hover:not(:disabled) {
+  border-color: var(--color-gray-700);
+}
+
+.mngha-custom-select-trigger:focus {
+  outline: none;
+  border-color: var(--color-gray-400);
+  box-shadow: inset 0 -2px 0 var(--color-gray-950);
+}
+
+.mngha-custom-select-trigger:disabled {
+  background: var(--color-gray-100);
+  color: var(--color-gray-500);
+  border-color: var(--color-gray-400);
+  cursor: not-allowed;
+}
+
+.mngha-custom-select-arrow {
+  flex-shrink: 0;
+  color: var(--color-gray-950);
+  font-size: var(--text-md-size);
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.mngha-custom-select-trigger:disabled .mngha-custom-select-arrow {
+  color: var(--color-gray-400);
+}
+
+.mngha-custom-select.is-open .mngha-custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+.mngha-custom-select-menu {
+  position: absolute;
+  z-index: 50;
+  inset-inline: 0;
+  /* top: calc(100% + 2px); */
+padding: 0;
+  display: none;
+  max-height: 15rem;
+   
+
+  margin: 0;
+   list-style: none;
+
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.mngha-custom-select.is-open .mngha-custom-select-menu {
+  display: block;
+}
+
+.mngha-custom-select-option {
+  min-height: 2.5rem;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  padding-inline: var(--space-4);
+
+  background: var(--color-white);
+  color: var(--color-gray-950);
+
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-md-line-height);
+
+  cursor: pointer;
+}
+
+.mngha-custom-select-option:hover {
+  background: var(--color-gray-50);
+}
+
+.mngha-custom-select-option.is-selected {
+  background: var(--color-white);
+  color: var(--color-gray-950);
+}
+
+.mngha-custom-select-option.is-selected::after {
+  content: "✓";
+  flex-shrink: 0;
+  color: var(--color-gray-950);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.mngha-custom-select--error .mngha-custom-select-trigger {
+  border-color: var(--color-error-600);
+}
+
+.mngha-custom-select--error .mngha-custom-select-trigger:focus {
+  border-color: var(--color-error-600);
+  box-shadow: inset 0 -2px 0 var(--color-error-600);
+}
+
 /**
  * --------------------------------------------------------------------------
  * Radio
@@ -641,7 +783,7 @@
 
   border: 1px solid var(--color-gray-300);
   border-radius: var(--radius-sm);
-  background: var(--color-gray-50);
+  background: var(--color-gray-100);
 }
 
 .mngha-file-status {

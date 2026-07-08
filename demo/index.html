@@ -538,78 +538,138 @@
     <h2 class="mngha-section-title">8. Select / Dropdown</h2>
 
     <p class="mngha-paragraph">
-      The select component styles the native select element and uses a wrapper to display the custom arrow.
+      The custom select component uses a button and listbox menu. This allows full control over the selected option style, removes the native browser blue selected effect, and supports a check icon for the selected option.
     </p>
 
     <h3>Colors</h3>
     <ul>
       <li>Default border: neutral gray.</li>
       <li>Hover border: darker gray.</li>
-      <li>Focus: bottom border emphasis.</li>
-      <li>Error: error border.</li>
+      <li>Focus: bottom emphasis without changing layout height.</li>
+      <li>Selected option: white background with check icon.</li>
+      <li>Error: error border and focus emphasis.</li>
       <li>Disabled: muted gray background and text.</li>
     </ul>
 
     <h3>Types</h3>
     <ul>
-      <li>Default select</li>
-      <li>Error select</li>
-      <li>Disabled select</li>
+      <li>Default custom select</li>
+      <li>Error custom select</li>
+      <li>Disabled custom select</li>
     </ul>
 
     <h3>Example</h3>
     <div class="mngha-grid mngha-form-grid">
       <div class="mngha-field">
-        <label class="mngha-label" for="city-default">City</label>
-        <div class="mngha-select-wrapper">
-          <select class="mngha-select" id="city-default">
-            <option value="">Select city</option>
-            <option value="riyadh">Riyadh</option>
-            <option value="jeddah">Jeddah</option>
-            <option value="dammam">Dammam</option>
-          </select>
+        <label class="mngha-label" id="city-default-label">City</label>
+
+        <div class="mngha-custom-select" data-custom-select>
+          <input type="hidden" name="city-default" value="jeddah">
+
+          <button
+            class="mngha-custom-select-trigger"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="city-default-label"
+          >
+            <span data-custom-select-value>Jeddah</span>
+            <span class="mngha-custom-select-arrow" aria-hidden="true">⌄</span>
+          </button>
+
+          <ul class="mngha-custom-select-menu" role="listbox" aria-labelledby="city-default-label">
+            <li class="mngha-custom-select-option" role="option" data-value="">Select city</li>
+            <li class="mngha-custom-select-option" role="option" data-value="riyadh">Riyadh</li>
+            <li class="mngha-custom-select-option is-selected" role="option" data-value="jeddah" aria-selected="true">Jeddah</li>
+            <li class="mngha-custom-select-option" role="option" data-value="dammam">Dammam</li>
+          </ul>
         </div>
+
         <p class="mngha-helper-text">Choose your city.</p>
       </div>
 
       <div class="mngha-field">
-        <label class="mngha-label" for="city-error">City</label>
-        <div class="mngha-select-wrapper">
-          <select class="mngha-select mngha-select--error" id="city-error">
-            <option value="">Select city</option>
-            <option value="riyadh">Riyadh</option>
-            <option value="jeddah">Jeddah</option>
-            <option value="dammam">Dammam</option>
-          </select>
+        <label class="mngha-label" id="city-error-label">City</label>
+
+        <div class="mngha-custom-select mngha-custom-select--error" data-custom-select>
+          <input type="hidden" name="city-error" value="">
+
+          <button
+            class="mngha-custom-select-trigger"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="city-error-label"
+          >
+            <span data-custom-select-value>Select city</span>
+            <span class="mngha-custom-select-arrow" aria-hidden="true">⌄</span>
+          </button>
+
+          <ul class="mngha-custom-select-menu" role="listbox" aria-labelledby="city-error-label">
+            <li class="mngha-custom-select-option" role="option" data-value="">Select city</li>
+            <li class="mngha-custom-select-option" role="option" data-value="riyadh">Riyadh</li>
+            <li class="mngha-custom-select-option" role="option" data-value="jeddah">Jeddah</li>
+            <li class="mngha-custom-select-option" role="option" data-value="dammam">Dammam</li>
+          </ul>
         </div>
+
         <p class="mngha-error-text">Please select a city.</p>
       </div>
 
       <div class="mngha-field">
-        <label class="mngha-label" for="city-disabled">City</label>
-        <div class="mngha-select-wrapper">
-          <select class="mngha-select" id="city-disabled" disabled>
-            <option value="">Select city</option>
-            <option value="riyadh">Riyadh</option>
-            <option value="jeddah">Jeddah</option>
-            <option value="dammam">Dammam</option>
-          </select>
+        <label class="mngha-label" id="city-disabled-label">City</label>
+
+        <div class="mngha-custom-select" data-custom-select>
+          <input type="hidden" name="city-disabled" value="" disabled>
+
+          <button
+            class="mngha-custom-select-trigger"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-labelledby="city-disabled-label"
+            disabled
+          >
+            <span data-custom-select-value>Select city</span>
+            <span class="mngha-custom-select-arrow" aria-hidden="true">⌄</span>
+          </button>
+
+          <ul class="mngha-custom-select-menu" role="listbox" aria-labelledby="city-disabled-label">
+            <li class="mngha-custom-select-option" role="option" data-value="">Select city</li>
+            <li class="mngha-custom-select-option" role="option" data-value="riyadh">Riyadh</li>
+            <li class="mngha-custom-select-option" role="option" data-value="jeddah">Jeddah</li>
+            <li class="mngha-custom-select-option" role="option" data-value="dammam">Dammam</li>
+          </ul>
         </div>
+
         <p class="mngha-helper-text">This select is disabled.</p>
       </div>
     </div>
 
     <h3>HTML Code</h3>
     <pre><code>&lt;div class=&quot;mngha-field&quot;&gt;
-  &lt;label class=&quot;mngha-label&quot; for=&quot;city&quot;&gt;City&lt;/label&gt;
+  &lt;label class=&quot;mngha-label&quot; id=&quot;city-label&quot;&gt;City&lt;/label&gt;
 
-  &lt;div class=&quot;mngha-select-wrapper&quot;&gt;
-    &lt;select class=&quot;mngha-select&quot; id=&quot;city&quot;&gt;
-      &lt;option value=&quot;&quot;&gt;Select city&lt;/option&gt;
-      &lt;option value=&quot;riyadh&quot;&gt;Riyadh&lt;/option&gt;
-      &lt;option value=&quot;jeddah&quot;&gt;Jeddah&lt;/option&gt;
-      &lt;option value=&quot;dammam&quot;&gt;Dammam&lt;/option&gt;
-    &lt;/select&gt;
+  &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;city&quot; value=&quot;jeddah&quot;&gt;
+
+    &lt;button
+      class=&quot;mngha-custom-select-trigger&quot;
+      type=&quot;button&quot;
+      aria-haspopup=&quot;listbox&quot;
+      aria-expanded=&quot;false&quot;
+      aria-labelledby=&quot;city-label&quot;
+    &gt;
+      &lt;span data-custom-select-value&gt;Jeddah&lt;/span&gt;
+      &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;⌄&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;ul class=&quot;mngha-custom-select-menu&quot; role=&quot;listbox&quot; aria-labelledby=&quot;city-label&quot;&gt;
+      &lt;li class=&quot;mngha-custom-select-option&quot; role=&quot;option&quot; data-value=&quot;&quot;&gt;Select city&lt;/li&gt;
+      &lt;li class=&quot;mngha-custom-select-option&quot; role=&quot;option&quot; data-value=&quot;riyadh&quot;&gt;Riyadh&lt;/li&gt;
+      &lt;li class=&quot;mngha-custom-select-option is-selected&quot; role=&quot;option&quot; data-value=&quot;jeddah&quot; aria-selected=&quot;true&quot;&gt;Jeddah&lt;/li&gt;
+      &lt;li class=&quot;mngha-custom-select-option&quot; role=&quot;option&quot; data-value=&quot;dammam&quot;&gt;Dammam&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/div&gt;
 
   &lt;p class=&quot;mngha-helper-text&quot;&gt;Choose your city.&lt;/p&gt;
@@ -736,7 +796,7 @@
     </ul>
 
     <h3>Example</h3>
-    <div class="mngha-grid mngha-grid-cols-2">
+    <div class="mngha-grid mngha-form-grid">
       <div class="mngha-field">
        <h3>Default File Upload</h3>
 
@@ -993,6 +1053,81 @@
       });
     });
   }
+
+  const customSelects = document.querySelectorAll("[data-custom-select]");
+
+  function closeCustomSelects(currentSelect) {
+    customSelects.forEach(function (select) {
+      if (select === currentSelect) return;
+
+      select.classList.remove("is-open");
+
+      const trigger = select.querySelector(".mngha-custom-select-trigger");
+
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  customSelects.forEach(function (select) {
+    const trigger = select.querySelector(".mngha-custom-select-trigger");
+    const valueText = select.querySelector("[data-custom-select-value]");
+    const hiddenInput = select.querySelector("input[type='hidden']");
+    const options = select.querySelectorAll(".mngha-custom-select-option");
+
+    if (!trigger || trigger.disabled) return;
+
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const isOpen = select.classList.contains("is-open");
+
+      closeCustomSelects(select);
+      select.classList.toggle("is-open", !isOpen);
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    options.forEach(function (option) {
+      option.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        options.forEach(function (item) {
+          item.classList.remove("is-selected");
+          item.removeAttribute("aria-selected");
+        });
+
+        option.classList.add("is-selected");
+        option.setAttribute("aria-selected", "true");
+
+        if (valueText) {
+          valueText.textContent = option.textContent.trim();
+        }
+
+        if (hiddenInput) {
+          hiddenInput.value = option.dataset.value || "";
+        }
+
+        select.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.focus();
+      });
+    });
+
+    trigger.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        select.classList.remove("is-open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+  document.addEventListener("click", function () {
+    closeCustomSelects();
+  });
+
 </script>
 
 </body>
