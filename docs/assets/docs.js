@@ -12,8 +12,30 @@ async function loadDocsHeader() {
   initDocsTheme();
   initDocsDirection();
   setActiveDocsLink();
+  initCodeBlockCopy()
 }
+function initCodeBlockCopy() {
+  const copyButtons = document.querySelectorAll("[data-code-copy]");
 
+  copyButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const codeBlock = button.closest(".mngha-code-block");
+      const codeBody = codeBlock.querySelector(".mngha-code-block-body");
+
+      if (!codeBody) return;
+
+      navigator.clipboard.writeText(codeBody.innerText).then(function () {
+        const originalText = button.textContent;
+
+        button.textContent = "Copied";
+
+        setTimeout(function () {
+          button.textContent = originalText;
+        }, 1500);
+      });
+    });
+  });
+}
 function initDocsHeader() {
   const headerMenuTriggers = document.querySelectorAll("[data-header-menu-trigger]");
 

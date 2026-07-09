@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme System - mngha Universal CSS</title>
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Theme System</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              The theme system controls the main visual identity of mngha Universal CSS. Use it to switch the ready styles between external and internal themes without changing component CSS.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button class="mngha-button mngha-button--primary mngha-button--md" type="button" data-toggle-theme>
+              Switch Theme
+            </button>
+
+            <a class="mngha-button mngha-button--secondary mngha-button--md" href="./foundations.html">
+              View Foundations
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Theme Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">External Theme</h3>
+              <p class="mngha-card-description">
+                Uses the external green brand direction.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Internal Theme</h3>
+              <p class="mngha-card-description">
+                Uses the internal blue brand direction.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Ready Components</h3>
+              <p class="mngha-card-description">
+                Components already read from theme tokens and update automatically.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">How to Apply Theme</h2>
+
+        <p class="mngha-paragraph">
+          Apply the theme from the root HTML element using the data-theme attribute.
+        </p>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Apply theme</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;html lang="en" dir="ltr" data-theme="external"&gt;
+
+&lt;html lang="en" dir="ltr" data-theme="internal"&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Current Theme Preview</h2>
+
+        <p class="mngha-paragraph">
+          These values come from the currently active theme. Use the switch theme button to see the preview change.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Current theme preview">
+              <thead>
+                <tr>
+                  <th scope="col">Token</th>
+                  <th scope="col">Preview</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>--color-brand-primary</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-primary);"></span>
+                  </td>
+                  <td>Main brand color for the active theme.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-primary-hover</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-primary-hover);"></span>
+                  </td>
+                  <td>Hover or stronger brand state.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-secondary</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-secondary);"></span>
+                  </td>
+                  <td>Secondary brand role for the active theme.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-surface</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-surface);"></span>
+                  </td>
+                  <td>Brand surface for headers, hero sections, and strong brand areas.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-very-light</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-very-light); border: 1px solid var(--color-gray-300);"></span>
+                  </td>
+                  <td>Subtle brand background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-light</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-brand-light);"></span>
+                  </td>
+                  <td>Light brand accent and focus color.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-action-primary-bg);"></span>
+                  </td>
+                  <td>Primary button background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg-hover</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-action-primary-bg-hover);"></span>
+                  </td>
+                  <td>Primary button hover background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-link</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-link);"></span>
+                  </td>
+                  <td>Default link color.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-link-hover</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-link-hover);"></span>
+                  </td>
+                  <td>Link hover color.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">External Theme</h2>
+
+        <p class="mngha-paragraph">
+          The external theme uses the green brand direction. It is the default theme when no internal theme is selected.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="External theme tokens">
+              <thead>
+                <tr>
+                  <th scope="col">Theme Token</th>
+                  <th scope="col">Maps To</th>
+                  <th scope="col">Preview</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>--color-brand-primary</span></td>
+                  <td><span>--color-primary-600</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
+                  <td>Main external brand color.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-primary-hover</span></td>
+                  <td><span>--color-primary-700</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-700);"></span></td>
+                  <td>Hover or pressed brand state.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-secondary</span></td>
+                  <td><span>--color-primary-600</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
+                  <td>Secondary brand role. Currently same as primary by design.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-surface</span></td>
+                  <td><span>--color-primary-600</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
+                  <td>External brand surface.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-very-light</span></td>
+                  <td><span>--color-primary-50</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-50); border: 1px solid var(--color-gray-300);"></span></td>
+                  <td>Subtle external brand background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-light</span></td>
+                  <td><span>--color-primary-400</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-400);"></span></td>
+                  <td>Light external brand accent.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg</span></td>
+                  <td><span>--color-primary-600</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
+                  <td>Primary action background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg-hover</span></td>
+                  <td><span>--color-primary-700</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-700);"></span></td>
+                  <td>Primary action hover background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-text</span></td>
+                  <td><span>--color-white</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);">
+                      <span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-white);"></span>
+                    </span>
+                  </td>
+                  <td>Primary action text.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-border</span></td>
+                  <td><span>--color-primary-600</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
+                  <td>Primary action border.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Internal Theme</h2>
+
+        <p class="mngha-paragraph">
+          The internal theme uses the blue brand direction. Apply it by setting data-theme to internal on the root HTML element.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Internal theme tokens">
+              <thead>
+                <tr>
+                  <th scope="col">Theme Token</th>
+                  <th scope="col">Maps To</th>
+                  <th scope="col">Preview</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>--color-brand-primary</span></td>
+                  <td><span>--color-internal-primary</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-primary);"></span></td>
+                  <td>Main internal brand color.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-primary-hover</span></td>
+                  <td><span>--color-internal-primary-hover</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-primary-hover);"></span></td>
+                  <td>Internal hover or pressed state.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-secondary</span></td>
+                  <td><span>--color-internal-secondary</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-secondary);"></span></td>
+                  <td>Internal secondary brand role.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-surface</span></td>
+                  <td><span>Internal brand gradient</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--color-internal-primary) 10%, var(--color-internal-secondary));"></span></td>
+                  <td>Internal header and brand surface.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-very-light</span></td>
+                  <td><span>--color-internal-very-light</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-very-light); border: 1px solid var(--color-gray-300);"></span></td>
+                  <td>Subtle internal background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-brand-light</span></td>
+                  <td><span>--color-internal-light</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-light);"></span></td>
+                  <td>Internal light accent.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg</span></td>
+                  <td><span>--color-internal-secondary</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-secondary);"></span></td>
+                  <td>Internal primary action background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-bg-hover</span></td>
+                  <td><span>--color-internal-primary</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-primary);"></span></td>
+                  <td>Internal primary action hover background.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-text</span></td>
+                  <td><span>--color-white</span></td>
+                  <td>
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);">
+                      <span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-white);"></span>
+                    </span>
+                  </td>
+                  <td>Internal primary action text.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-action-primary-border</span></td>
+                  <td><span>--color-internal-secondary</span></td>
+                  <td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-secondary);"></span></td>
+                  <td>Internal primary action border.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Text Theme Tokens</h2>
+
+        <p class="mngha-paragraph">
+          Text theme tokens control brand headings, body text, and links.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Text theme tokens">
+              <thead>
+                <tr>
+                  <th scope="col">Token</th>
+                  <th scope="col">Preview</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>--color-text-brand-primary</span></td>
+                  <td><span style="color: var(--color-text-brand-primary); font-weight: var(--font-weight-semibold);">Primary brand text</span></td>
+                  <td>High-emphasis brand text.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-text-brand-secondary</span></td>
+                  <td><span style="color: var(--color-text-brand-secondary);">Secondary brand text</span></td>
+                  <td>Default supporting brand text.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-text-brand-tertiary</span></td>
+                  <td><span style="color: var(--color-text-brand-tertiary);">Tertiary brand text</span></td>
+                  <td>Lower-emphasis brand text.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-heading-brand</span></td>
+                  <td><span style="color: var(--color-heading-brand); font-weight: var(--font-weight-semibold);">Heading brand text</span></td>
+                  <td>Headings in branded layouts.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-body-brand</span></td>
+                  <td><span style="color: var(--color-body-brand);">Body brand text</span></td>
+                  <td>Body text in branded layouts.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-link</span></td>
+                  <td><span style="color: var(--color-link); font-weight: var(--font-weight-medium);">Example link</span></td>
+                  <td>Default link color.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--color-link-hover</span></td>
+                  <td><span style="color: var(--color-link-hover); font-weight: var(--font-weight-medium);">Example link hover</span></td>
+                  <td>Link hover color.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Theme Usage Rules</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do not declare new colors</h3>
+              <p class="mngha-card-description">
+                Pages and applications should not add custom colors outside the design system.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use themed styles</h3>
+              <p class="mngha-card-description">
+                Use the ready components and theme color tokens so the UI changes correctly between themes.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Switch from the root only</h3>
+              <p class="mngha-card-description">
+                Change the active theme using data-theme on the html element, not by overriding component styles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+</body>
+</html>
