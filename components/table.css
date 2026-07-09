@@ -64,7 +64,6 @@
 /* Body rows */
 .mngha-table td {
   height: var(--spacing-7xl);
-  background: var(--color-white);
   color: var(--color-gray-900);
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-line-height);
@@ -76,7 +75,7 @@
 }
 
 .mngha-table tbody tr:hover td {
-  background: var(--color-gray-50);
+  /* background: var(--color-gray-50); */
 }
 
 .mngha-table tbody tr.is-selected td,

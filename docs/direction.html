@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direction - mngha Universal CSS</title>
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Direction</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Direction utilities help pages support both Arabic and English layouts. Use root direction, logical CSS properties, and direction helper classes to make components work correctly in RTL and LTR.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <a class="mngha-button mngha-button--primary mngha-button--md" href="#root-direction">
+              Root Direction
+            </a>
+
+            <a class="mngha-button mngha-button--secondary mngha-button--md" href="#direction-utilities">
+              Direction Utilities
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Direction Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Root Direction</h3>
+              <p class="mngha-card-description">
+                Set the main page direction from the html element using the dir attribute.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Logical Layout</h3>
+              <p class="mngha-card-description">
+                Use start and end instead of left and right so layouts adapt automatically.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Utility Classes</h3>
+              <p class="mngha-card-description">
+                Use direction and text alignment helpers when a specific block needs different behavior.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="root-direction">
+        <h2 class="mngha-section-title">Root Direction</h2>
+
+        <p class="mngha-paragraph">
+          The recommended way to control page direction is from the root html element. Use rtl for Arabic pages and ltr for English pages.
+        </p>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Arabic page direction</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;html lang="ar" dir="rtl" data-theme="external"&gt;</pre>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">English page direction</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;html lang="en" dir="ltr" data-theme="external"&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="direction-utilities">
+        <h2 class="mngha-section-title">Direction Utilities</h2>
+
+        <p class="mngha-paragraph">
+          Use direction utility classes when only one part of the page needs a specific direction.
+        </p>
+
+        <div class="mngha-table-wrapper">
+          <table class="mngha-table" aria-label="Direction utilities">
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">Usage</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><span>.dir-rtl</span></td>
+                <td>Forces right-to-left direction.</td>
+                <td>Use for Arabic blocks inside an English page.</td>
+              </tr>
+
+              <tr>
+                <td><span>.dir-ltr</span></td>
+                <td>Forces left-to-right direction.</td>
+                <td>Use for English blocks, numbers, or technical content inside an Arabic page.</td>
+              </tr>
+
+              <tr>
+                <td><span>.text-start</span></td>
+                <td>Aligns text to the start side.</td>
+                <td>Left in LTR, right in RTL.</td>
+              </tr>
+
+              <tr>
+                <td><span>.text-end</span></td>
+                <td>Aligns text to the end side.</td>
+                <td>Right in LTR, left in RTL.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Direction utilities example</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;div class="dir-rtl"&gt;
+  محتوى عربي باتجاه من اليمين إلى اليسار
+&lt;/div&gt;
+
+&lt;div class="dir-ltr"&gt;
+  English content from left to right
+&lt;/div&gt;
+
+&lt;p class="text-start"&gt;Start aligned text&lt;/p&gt;
+&lt;p class="text-end"&gt;End aligned text&lt;/p&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Direction Preview</h2>
+
+        <p class="mngha-paragraph">
+          These examples show how the same card structure can work in both directions.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card dir-ltr">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">English Example</h3>
+              <p class="mngha-card-description text-start">
+                This content uses left-to-right direction and start-aligned text.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <button class="mngha-button mngha-button--primary mngha-button--md" type="button">
+                Action
+              </button>
+            </div>
+          </div>
+
+          <div class="mngha-card dir-rtl">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">مثال عربي</h3>
+              <p class="mngha-card-description text-start">
+                هذا المحتوى يستخدم اتجاه من اليمين إلى اليسار مع محاذاة البداية.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <button class="mngha-button mngha-button--primary mngha-button--md" type="button">
+                إجراء
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Logical CSS Rules</h2>
+
+        <p class="mngha-paragraph">
+          Components should use logical properties so the same CSS works in Arabic and English without separate layout overrides.
+        </p>
+
+        <div class="mngha-table-wrapper">
+          <table class="mngha-table" aria-label="Logical CSS rules">
+            <thead>
+              <tr>
+                <th scope="col">Avoid</th>
+                <th scope="col">Use Instead</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><span>margin-left</span></td>
+                <td><span>margin-inline-start</span></td>
+                <td>Start side changes automatically between LTR and RTL.</td>
+              </tr>
+
+              <tr>
+                <td><span>margin-right</span></td>
+                <td><span>margin-inline-end</span></td>
+                <td>End side changes automatically between LTR and RTL.</td>
+              </tr>
+
+              <tr>
+                <td><span>padding-left</span></td>
+                <td><span>padding-inline-start</span></td>
+                <td>Padding follows the writing direction.</td>
+              </tr>
+
+              <tr>
+                <td><span>padding-right</span></td>
+                <td><span>padding-inline-end</span></td>
+                <td>Padding follows the writing direction.</td>
+              </tr>
+
+              <tr>
+                <td><span>text-align: left</span></td>
+                <td><span>text-align: start</span></td>
+                <td>Text aligns correctly in both Arabic and English.</td>
+              </tr>
+
+              <tr>
+                <td><span>text-align: right</span></td>
+                <td><span>text-align: end</span></td>
+                <td>Text aligns correctly in both Arabic and English.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Logical CSS example</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">.example {
+  padding-inline-start: var(--spacing-md);
+  padding-inline-end: var(--spacing-md);
+  margin-inline-start: var(--spacing-lg);
+  text-align: start;
+}</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Direction Usage Rules</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Set direction once</h3>
+              <p class="mngha-card-description">
+                Use the html dir attribute for the main page direction instead of setting direction on every component.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid left and right</h3>
+              <p class="mngha-card-description">
+                Do not use left and right spacing in component CSS unless the position is intentionally fixed.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use start and end</h3>
+              <p class="mngha-card-description">
+                Use logical properties and text alignment utilities so components support Arabic and English.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+</body>
+</html>

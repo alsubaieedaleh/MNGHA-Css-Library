@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout - mngha Universal CSS</title>
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Layout</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Layout utilities help structure pages using containers, sections, paragraphs, and grids. Use these classes to keep page width, spacing, and responsive behavior consistent across all applications.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <a class="mngha-button mngha-button--primary mngha-button--md" href="#page-structure">
+              Page Structure
+            </a>
+
+            <a class="mngha-button mngha-button--secondary mngha-button--md" href="#grid-system">
+              Grid System
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Layout Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Container</h3>
+              <p class="mngha-card-description">
+                Controls page width and horizontal padding.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Section</h3>
+              <p class="mngha-card-description">
+                Creates vertical rhythm between page blocks.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Grid</h3>
+              <p class="mngha-card-description">
+                Creates column-based layouts for cards, forms, tables, and content groups.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="page-structure">
+        <h2 class="mngha-section-title">Page Structure</h2>
+
+        <p class="mngha-paragraph">
+          A standard page should use a main element, then a container, then sections. This keeps the page consistent and prevents content from touching the screen edges.
+        </p>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Basic page layout</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;main class="mngha-main"&gt;
+  &lt;div class="mngha-container"&gt;
+
+    &lt;section class="mngha-section"&gt;
+      ...
+    &lt;/section&gt;
+
+  &lt;/div&gt;
+&lt;/main&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Container Utilities</h2>
+
+        <p class="mngha-paragraph">
+          Containers control horizontal layout. Use the standard container for normal pages and the fluid container for full-width areas like headers or wide sections.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Container utilities">
+              <thead>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Purpose</th>
+                  <th scope="col">Behavior</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>.mngha-container</span></td>
+                  <td>Standard centered page container.</td>
+                  <td>Full width until max width, centered with responsive padding.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-container-fluid</span></td>
+                  <td>Full-width container.</td>
+                  <td>Uses full available width with responsive horizontal padding.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-paragraph</span></td>
+                  <td>Readable text width.</td>
+                  <td>Limits paragraph width so long text stays readable.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Container examples</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;div class="mngha-container"&gt;
+  Standard page content
+&lt;/div&gt;
+
+&lt;div class="mngha-container-fluid"&gt;
+  Full-width content
+&lt;/div&gt;
+
+&lt;p class="mngha-paragraph"&gt;
+  Long readable paragraph content.
+&lt;/p&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Container Tokens</h2>
+
+        <p class="mngha-paragraph">
+          These tokens define the container width, page padding, and readable paragraph width.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Container tokens">
+              <thead>
+                <tr>
+                  <th scope="col">Token</th>
+                  <th scope="col">Value</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>--container-padding-mobile</span></td>
+                  <td><span>1rem</span></td>
+                  <td>Horizontal padding on smaller screens.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--container-padding-desktop</span></td>
+                  <td><span>2rem</span></td>
+                  <td>Horizontal padding from tablet size and above.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--container-max-width-desktop</span></td>
+                  <td><span>80rem</span></td>
+                  <td>Maximum width of the standard page container.</td>
+                </tr>
+
+                <tr>
+                  <td><span>--paragraph-max-width</span></td>
+                  <td><span>45rem</span></td>
+                  <td>Maximum readable width for long paragraph text.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Section Layout</h2>
+
+        <p class="mngha-paragraph">
+          Use sections to divide page content into clear blocks. Sections should contain related content such as a heading, description, table, card group, or example.
+        </p>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Section example</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;section class="mngha-section"&gt;
+  &lt;h2 class="mngha-section-title"&gt;Section title&lt;/h2&gt;
+
+  &lt;p class="mngha-paragraph"&gt;
+    Section description.
+  &lt;/p&gt;
+&lt;/section&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="grid-system">
+        <h2 class="mngha-section-title">Grid System</h2>
+
+        <p class="mngha-paragraph">
+          Grid utilities create consistent column layouts. Use fixed column grids when you control the content, and use the responsive grid when the layout should adapt across screen sizes.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Grid utilities">
+              <thead>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Columns</th>
+                  <th scope="col">Recommended Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>.mngha-grid</span></td>
+                  <td>Base grid wrapper</td>
+                  <td>Required before using fixed grid column classes.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-cols-12</span></td>
+                  <td>12 columns</td>
+                  <td>Advanced layouts and large page structures.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-cols-6</span></td>
+                  <td>6 columns</td>
+                  <td>Medium card groups and form sections.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-cols-5</span></td>
+                  <td>5 columns</td>
+                  <td>Special layouts that need five equal columns.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-cols-3</span></td>
+                  <td>3 columns</td>
+                  <td>Feature cards, overview cards, and small groups.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-cols-2</span></td>
+                  <td>2 columns</td>
+                  <td>Two-column content, side-by-side examples, and forms.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-grid-responsive</span></td>
+                  <td>4 → 6 → 12 columns</td>
+                  <td>Responsive page layouts that adapt at breakpoints.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Fixed Grid Example</h2>
+
+        <p class="mngha-paragraph">
+          Fixed grid classes create a specific number of columns. Use them when the layout is simple and predictable.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Column 1</h3>
+              <p class="mngha-card-description">Grid item inside a three-column grid.</p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Column 2</h3>
+              <p class="mngha-card-description">Grid item inside a three-column grid.</p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Column 3</h3>
+              <p class="mngha-card-description">Grid item inside a three-column grid.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Fixed grid</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;div class="mngha-grid mngha-grid-cols-3"&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Responsive Grid Example</h2>
+
+        <p class="mngha-paragraph">
+          The responsive grid starts with 4 columns, becomes 6 columns from tablet width, and becomes 12 columns on desktop.
+        </p>
+
+<div class="mngha-grid mngha-grid-responsive">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Item 1</h3>
+              <p class="mngha-card-description">Responsive grid item.</p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Item 2</h3>
+              <p class="mngha-card-description">Responsive grid item.</p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Item 3</h3>
+              <p class="mngha-card-description">Responsive grid item.</p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Item 4</h3>
+              <p class="mngha-card-description">Responsive grid item.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-code-block">
+          <div class="mngha-code-block-header">
+            <p class="mngha-code-block-title">Responsive grid</p>
+
+            <button class="mngha-code-block-copy" type="button" data-code-copy>
+              Copy
+            </button>
+          </div>
+
+          <pre class="mngha-code-block-body">&lt;div class="mngha-grid-responsive"&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+  &lt;div class="mngha-card"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Common Layout Patterns</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Content Page</h3>
+              <p class="mngha-card-description">
+                Use a standard container, section blocks, and readable paragraphs for documentation or content-heavy pages.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--secondary mngha-button--md" href="#page-structure">
+                View Structure
+              </a>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Dashboard Page</h3>
+              <p class="mngha-card-description">
+                Use a container with grid sections for cards, tables, actions, and status summaries.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--secondary mngha-button--md" href="#grid-system">
+                View Grid
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Layout Usage Rules</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use containers</h3>
+              <p class="mngha-card-description">
+                Do not place page content directly under body. Wrap it with main and container classes.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use sections</h3>
+              <p class="mngha-card-description">
+                Divide pages into clear sections instead of using random margins between blocks.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use system spacing</h3>
+              <p class="mngha-card-description">
+                Do not create custom layout spacing. Use the ready layout utilities and spacing tokens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+</body>
+</html>

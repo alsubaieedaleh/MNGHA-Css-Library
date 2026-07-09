@@ -1,883 +1,740 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="external">
+
+<html data-theme="external" dir="ltr" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundations - mngha Universal CSS</title>
-  <link rel="stylesheet" href="./../mngha-ui.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Foundations - mngha Universal CSS</title>
+<link href="./../mngha-ui.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <div id="docs-header"></div>
-
-  <main class="mngha-main">
-    <div class="mngha-container">
-
-    <section class="mngha-section">
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h1 class="mngha-section-title">Foundations</h1>
-          <p class="mngha-card-description mngha-paragraph">
-            Foundations are the base layer of mngha Universal CSS. This page documents the tokens and layout utilities currently available in the system: colors, typography, spacing, radius, container, grid, theme, and direction.
+<div id="docs-header"></div>
+<main class="mngha-main">
+<div class="mngha-container">
+<section class="mngha-section">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h1 class="mngha-section-title">Foundations</h1>
+<p class="mngha-card-description mngha-paragraph">
+            Foundations are the base layer of mngha Universal CSS. This page documents the tokens and layout utilities currently available in the system: colors, typography, spacing, radius, width, container, grid, theme, and direction.
           </p>
-        </div>
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="#color-system">View Colors</a>
-          <a class="mngha-button mngha-button--secondary mngha-button--md" href="#typography-system">View Typography</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Foundation Checklist</h2>
-      <div class="mngha-grid mngha-grid-cols-3">
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Colors</h3><p class="mngha-card-description">Core, external primary, secondary, gray, status, semantic aliases, internal colors, and text aliases.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Typography</h3><p class="mngha-card-description">Font family, defaults, weights, text sizes, display sizes, line heights, and letter-spacing tokens.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Spacing</h3><p class="mngha-card-description">Primitive spacing scale and semantic spacing aliases from none to 12xl.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Radius</h3><p class="mngha-card-description">Primitive and semantic radius tokens for controls, cards, pills, and badges.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Container</h3><p class="mngha-card-description">Centered container, fluid container, paragraph width, and responsive page padding.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Grid</h3><p class="mngha-card-description">Fixed column grid utilities and responsive 4/6/12-column grid behavior.</p></div></div>
-      </div>
-    </section>
-
-    <section class="mngha-section" id="color-system">
-      <h2 class="mngha-section-title">Color System</h2>
-      <p class="mngha-paragraph">
+</div>
+<div class="mngha-card-actions">
+<a class="mngha-button mngha-button--primary mngha-button--md" href="#color-system">View Colors</a>
+<a class="mngha-button mngha-button--secondary mngha-button--md" href="#typography-system">View Typography</a>
+</div>
+</div>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Foundation Checklist</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Colors</h3><p class="mngha-card-description">Core, external primary, secondary, gray, status, semantic aliases, internal colors, and text aliases.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Typography</h3><p class="mngha-card-description">Font family, defaults, weights, text sizes, display sizes, line heights, and letter-spacing tokens.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Spacing</h3><p class="mngha-card-description">Primitive spacing scale and semantic spacing aliases from none to 12xl.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Radius</h3><p class="mngha-card-description">Primitive and semantic radius tokens for controls, cards, pills, and badges.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Width</h3><p class="mngha-card-description">Width tokens for readable panels, forms, dialogs, and full page sections.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Container</h3><p class="mngha-card-description">Centered container, fluid container, paragraph width, and responsive page padding.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Grid</h3><p class="mngha-card-description">Fixed column grid utilities and responsive 4/6/12-column grid behavior.</p></div></div>
+</div>
+</section>
+<section class="mngha-section" id="color-system">
+<h2 class="mngha-section-title">Color System</h2>
+<p class="mngha-paragraph">
         Use primitive color tokens to build aliases, and use semantic aliases inside components when the color has a meaning such as primary, success, warning, error, info, or text.
       </p>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Core Colors</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Core Colors"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Core Colors</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Core Colors" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-white</span></td>
 <td><span>#FFFFFF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-white); border: 1px solid var(--color-gray-300);"></span></td>
-<td>White surface and inverse text backgrounds.</td>
+<td aria-label="Preview for --color-white" class="mngha-bg-white"> </td><td>White surface and inverse text backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-black</span></td>
 <td><span>#000000</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-black);"></span></td>
-<td>Black primitive color.</td>
+<td aria-label="Preview for --color-black" class="mngha-bg-black"> </td><td>Black primitive color.</td>
 </tr>
 <tr>
 <td><span>--color-white-80</span></td>
 <td><span>rgba(255, 255, 255, 0.8)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);"><span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-white-80);"></span></span></td>
-<td>Secondary inverse text on dark backgrounds.</td>
+<td aria-label="Preview for --color-white-80" class="mngha-bg-white-80"> </td><td>Secondary inverse text on dark backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-white-60</span></td>
 <td><span>rgba(255, 255, 255, 0.6)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);"><span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-white-60);"></span></span></td>
-<td>Tertiary inverse text on dark backgrounds.</td>
+<td aria-label="Preview for --color-white-60" class="mngha-bg-white-60"> </td><td>Tertiary inverse text on dark backgrounds.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Primary / External Brand Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Primary / External Brand Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Primary / External Brand Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Primary / External Brand Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-primary-25</span></td>
 <td><span>#F7FDF9</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-25" class="mngha-bg-primary-25"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-50</span></td>
 <td><span>#F3FCF6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-50" class="mngha-bg-primary-50"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-100</span></td>
 <td><span>#DFF6E7</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-100);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-100" class="mngha-bg-primary-100"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-200</span></td>
 <td><span>#B8EACB</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-200);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-200" class="mngha-bg-primary-200"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-300</span></td>
 <td><span>#88D8AD</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-300);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-300" class="mngha-bg-primary-300"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-400</span></td>
 <td><span>#54C08A</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-400);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-400" class="mngha-bg-primary-400"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-500</span></td>
 <td><span>#25935F</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-500" class="mngha-bg-primary-500"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-600</span></td>
 <td><span>#1B8354</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-600);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-600" class="mngha-bg-primary-600"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-700</span></td>
 <td><span>#166A45</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-700);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-700" class="mngha-bg-primary-700"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-800</span></td>
 <td><span>#14573A</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-800);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-800" class="mngha-bg-primary-800"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-900</span></td>
 <td><span>#104631</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-900);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-900" class="mngha-bg-primary-900"> </td><td>External green brand scale.</td>
 </tr>
 <tr>
 <td><span>--color-primary-950</span></td>
 <td><span>#092A1E</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary-950);"></span></td>
-<td>External green brand scale.</td>
+<td aria-label="Preview for --color-primary-950" class="mngha-bg-primary-950"> </td><td>External green brand scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Secondary / DGA Gold Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Secondary / DGA Gold Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Secondary / DGA Gold Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Secondary / DGA Gold Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-secondary-25</span></td>
 <td><span>#FFFEF7</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-25" class="mngha-bg-secondary-25"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-50</span></td>
 <td><span>#FFFEF2</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-50" class="mngha-bg-secondary-50"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-100</span></td>
 <td><span>#FFFCE6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-100);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-100" class="mngha-bg-secondary-100"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-200</span></td>
 <td><span>#FCF3BD</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-200);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-200" class="mngha-bg-secondary-200"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-300</span></td>
 <td><span>#FAE996</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-300);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-300" class="mngha-bg-secondary-300"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-400</span></td>
 <td><span>#F7D54D</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-400);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-400" class="mngha-bg-secondary-400"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-500</span></td>
 <td><span>#F5BD02</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-500" class="mngha-bg-secondary-500"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-600</span></td>
 <td><span>#DBA102</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-600);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-600" class="mngha-bg-secondary-600"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-700</span></td>
 <td><span>#B87B02</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-700);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-700" class="mngha-bg-secondary-700"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-800</span></td>
 <td><span>#945C01</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-800);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-800" class="mngha-bg-secondary-800"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-900</span></td>
 <td><span>#6E3C00</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-900);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-900" class="mngha-bg-secondary-900"> </td><td>Secondary gold scale.</td>
 </tr>
 <tr>
 <td><span>--color-secondary-950</span></td>
 <td><span>#472400</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary-950);"></span></td>
-<td>Secondary gold scale.</td>
+<td aria-label="Preview for --color-secondary-950" class="mngha-bg-secondary-950"> </td><td>Secondary gold scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Gray Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Gray Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Gray Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Gray Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-gray-25</span></td>
 <td><span>#FCFCFD</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-25" class="mngha-bg-gray-25"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-50</span></td>
 <td><span>#F9FAFB</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-50" class="mngha-bg-gray-50"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-100</span></td>
 <td><span>#F3F4F6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-100);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-100" class="mngha-bg-gray-100"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-200</span></td>
 <td><span>#E5E7EB</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-200);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-200" class="mngha-bg-gray-200"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-300</span></td>
 <td><span>#D2D6DB</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-300);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-300" class="mngha-bg-gray-300"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-400</span></td>
 <td><span>#9DA4AE</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-400);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-400" class="mngha-bg-gray-400"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-500</span></td>
 <td><span>#6C737F</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-500" class="mngha-bg-gray-500"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-600</span></td>
 <td><span>#4D5761</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-600);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-600" class="mngha-bg-gray-600"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-700</span></td>
 <td><span>#384250</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-700);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-700" class="mngha-bg-gray-700"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-800</span></td>
 <td><span>#1F2437</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-800);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-800" class="mngha-bg-gray-800"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-900</span></td>
 <td><span>#111927</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-900);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-900" class="mngha-bg-gray-900"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 <tr>
 <td><span>--color-gray-950</span></td>
 <td><span>#0D121C</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-gray-950);"></span></td>
-<td>Neutral text, border, and surface scale.</td>
+<td aria-label="Preview for --color-gray-950" class="mngha-bg-gray-950"> </td><td>Neutral text, border, and surface scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Success Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Success Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Success Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Success Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-success-25</span></td>
 <td><span>#F6FEF9</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-25" class="mngha-bg-success-25"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-50</span></td>
 <td><span>#ECFDF3</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-50" class="mngha-bg-success-50"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-100</span></td>
 <td><span>#DCFAE6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-100);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-100" class="mngha-bg-success-100"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-200</span></td>
 <td><span>#ABEFC6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-200);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-200" class="mngha-bg-success-200"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-300</span></td>
 <td><span>#75E0A7</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-300);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-300" class="mngha-bg-success-300"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-400</span></td>
 <td><span>#47CD89</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-400);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-400" class="mngha-bg-success-400"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-500</span></td>
 <td><span>#17B26A</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-500" class="mngha-bg-success-500"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-600</span></td>
 <td><span>#079455</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-600);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-600" class="mngha-bg-success-600"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-700</span></td>
 <td><span>#067647</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-700);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-700" class="mngha-bg-success-700"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-800</span></td>
 <td><span>#085D3A</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-800);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-800" class="mngha-bg-success-800"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-900</span></td>
 <td><span>#074D31</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-900);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-900" class="mngha-bg-success-900"> </td><td>Success feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-success-950</span></td>
 <td><span>#053321</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success-950);"></span></td>
-<td>Success feedback scale.</td>
+<td aria-label="Preview for --color-success-950" class="mngha-bg-success-950"> </td><td>Success feedback scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Warning Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Warning Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Warning Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Warning Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-warning-25</span></td>
 <td><span>#FFFCF5</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-25" class="mngha-bg-warning-25"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-50</span></td>
 <td><span>#FFFAEB</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-50" class="mngha-bg-warning-50"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-100</span></td>
 <td><span>#FEF0C7</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-100);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-100" class="mngha-bg-warning-100"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-200</span></td>
 <td><span>#FEDF89</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-200);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-200" class="mngha-bg-warning-200"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-300</span></td>
 <td><span>#FEC84B</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-300);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-300" class="mngha-bg-warning-300"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-400</span></td>
 <td><span>#FDB022</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-400);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-400" class="mngha-bg-warning-400"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-500</span></td>
 <td><span>#F79009</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-500" class="mngha-bg-warning-500"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-600</span></td>
 <td><span>#DC6803</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-600);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-600" class="mngha-bg-warning-600"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-700</span></td>
 <td><span>#B54708</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-700);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-700" class="mngha-bg-warning-700"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-800</span></td>
 <td><span>#93370D</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-800);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-800" class="mngha-bg-warning-800"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-900</span></td>
 <td><span>#7A2E0E</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-900);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-900" class="mngha-bg-warning-900"> </td><td>Warning feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-warning-950</span></td>
 <td><span>#4E1D09</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning-950);"></span></td>
-<td>Warning feedback scale.</td>
+<td aria-label="Preview for --color-warning-950" class="mngha-bg-warning-950"> </td><td>Warning feedback scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Error Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Error Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Error Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Error Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-error-25</span></td>
 <td><span>#FFFBFA</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-25" class="mngha-bg-error-25"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-50</span></td>
 <td><span>#FEF3F2</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-50" class="mngha-bg-error-50"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-100</span></td>
 <td><span>#FEE4E2</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-100);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-100" class="mngha-bg-error-100"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-200</span></td>
 <td><span>#FECDCA</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-200);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-200" class="mngha-bg-error-200"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-300</span></td>
 <td><span>#FDA29B</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-300);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-300" class="mngha-bg-error-300"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-400</span></td>
 <td><span>#F97066</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-400);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-400" class="mngha-bg-error-400"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-500</span></td>
 <td><span>#F04438</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-500" class="mngha-bg-error-500"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-600</span></td>
 <td><span>#D92D20</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-600);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-600" class="mngha-bg-error-600"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-700</span></td>
 <td><span>#B42318</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-700);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-700" class="mngha-bg-error-700"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-800</span></td>
 <td><span>#912018</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-800);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-800" class="mngha-bg-error-800"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-900</span></td>
 <td><span>#7A271A</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-900);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-900" class="mngha-bg-error-900"> </td><td>Error feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-error-950</span></td>
 <td><span>#55160C</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error-950);"></span></td>
-<td>Error feedback scale.</td>
+<td aria-label="Preview for --color-error-950" class="mngha-bg-error-950"> </td><td>Error feedback scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Info Palette</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Info Palette"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Info Palette</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Info Palette" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-info-25</span></td>
 <td><span>#F5FAFF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-25); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-25" class="mngha-bg-info-25"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-50</span></td>
 <td><span>#EFF8FF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-50); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-50" class="mngha-bg-info-50"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-100</span></td>
 <td><span>#D1E9FF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-100);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-100" class="mngha-bg-info-100"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-200</span></td>
 <td><span>#B2DDFF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-200);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-200" class="mngha-bg-info-200"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-300</span></td>
 <td><span>#84CAFF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-300);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-300" class="mngha-bg-info-300"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-400</span></td>
 <td><span>#53B1FD</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-400);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-400" class="mngha-bg-info-400"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-500</span></td>
 <td><span>#2E90FA</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-500); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-500" class="mngha-bg-info-500"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-600</span></td>
 <td><span>#1570EF</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-600);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-600" class="mngha-bg-info-600"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-700</span></td>
 <td><span>#175CD3</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-700);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-700" class="mngha-bg-info-700"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-800</span></td>
 <td><span>#1849A9</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-800);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-800" class="mngha-bg-info-800"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-900</span></td>
 <td><span>#194185</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-900);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-900" class="mngha-bg-info-900"> </td><td>Information feedback scale.</td>
 </tr>
 <tr>
 <td><span>--color-info-950</span></td>
 <td><span>#102A56</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info-950);"></span></td>
-<td>Information feedback scale.</td>
+<td aria-label="Preview for --color-info-950" class="mngha-bg-info-950"> </td><td>Information feedback scale.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Semantic Color Aliases</h2>
-      <p class="mngha-paragraph">These are the main semantic aliases currently available from your color foundation file.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Semantic color aliases"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Semantic Color Aliases</h2>
+<p class="mngha-paragraph">These are the main semantic aliases currently available from your color foundation file.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Semantic color aliases" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Maps To</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-primary</span></td>
 <td><span>var(--color-primary-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-primary);"></span></td>
-<td>External main brand color alias.</td>
+<td aria-label="Preview for --color-primary" class="mngha-bg-primary"> </td><td>External main brand color alias.</td>
 </tr>
 <tr>
 <td><span>--color-secondary</span></td>
 <td><span>var(--color-secondary-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-secondary);"></span></td>
-<td>Secondary brand color alias.</td>
+<td aria-label="Preview for --color-secondary" class="mngha-bg-secondary"> </td><td>Secondary brand color alias.</td>
 </tr>
 <tr>
 <td><span>--color-success</span></td>
 <td><span>var(--color-success-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-success);"></span></td>
-<td>Success state alias.</td>
+<td aria-label="Preview for --color-success" class="mngha-bg-success"> </td><td>Success state alias.</td>
 </tr>
 <tr>
 <td><span>--color-warning</span></td>
 <td><span>var(--color-warning-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-warning);"></span></td>
-<td>Warning state alias.</td>
+<td aria-label="Preview for --color-warning" class="mngha-bg-warning"> </td><td>Warning state alias.</td>
 </tr>
 <tr>
 <td><span>--color-error</span></td>
 <td><span>var(--color-error-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-error);"></span></td>
-<td>Error state alias.</td>
+<td aria-label="Preview for --color-error" class="mngha-bg-error"> </td><td>Error state alias.</td>
 </tr>
 <tr>
 <td><span>--color-info</span></td>
 <td><span>var(--color-info-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-info);"></span></td>
-<td>Info state alias.</td>
+<td aria-label="Preview for --color-info" class="mngha-bg-info"> </td><td>Info state alias.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Internal Brand Colors</h2>
-      <p class="mngha-paragraph">These tokens are specific to the internal theme/brand direction.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Internal brand color tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Internal Brand Colors</h2>
+<p class="mngha-paragraph">These tokens are specific to the internal theme/brand direction.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Internal brand color tokens" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-internal-primary</span></td>
 <td><span>#043673</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-primary);"></span></td>
-<td>Internal main color.</td>
+<td aria-label="Preview for --color-internal-primary" class="mngha-bg-internal-primary"> </td><td>Internal main color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-light</span></td>
 <td><span>#2F7FD3</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-light);"></span></td>
-<td>Internal light/bright color.</td>
+<td aria-label="Preview for --color-internal-light" class="mngha-bg-internal-light"> </td><td>Internal light/bright color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-primary-hover</span></td>
 <td><span>#042a5a</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-primary-hover);"></span></td>
-<td>Internal hover or pressed color.</td>
+<td aria-label="Preview for --color-internal-primary-hover" class="mngha-bg-internal-primary-hover"> </td><td>Internal hover or pressed color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-very-light</span></td>
 <td><span>#E7EEF3</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-very-light); border: 1px solid var(--color-gray-300);"></span></td>
-<td>Internal subtle background color.</td>
+<td aria-label="Preview for --color-internal-very-light" class="mngha-bg-internal-very-light"> </td><td>Internal subtle background color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-secondary</span></td>
 <td><span>#006384</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-secondary);"></span></td>
-<td>Internal secondary color.</td>
+<td aria-label="Preview for --color-internal-secondary" class="mngha-bg-internal-secondary"> </td><td>Internal secondary color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-heading</span></td>
 <td><span>#0072c6</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-heading);"></span></td>
-<td>Internal heading/accent heading color.</td>
+<td aria-label="Preview for --color-internal-heading" class="mngha-bg-internal-heading"> </td><td>Internal heading/accent heading color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-body</span></td>
 <td><span>#37548b</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-body);"></span></td>
-<td>Internal body/supporting text color.</td>
+<td aria-label="Preview for --color-internal-body" class="mngha-bg-internal-body"> </td><td>Internal body/supporting text color.</td>
 </tr>
 <tr>
 <td><span>--color-internal-accent</span></td>
 <td><span>#21527d</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-internal-accent);"></span></td>
-<td>Internal accent color.</td>
+<td aria-label="Preview for --color-internal-accent" class="mngha-bg-internal-accent"> </td><td>Internal accent color.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Text Color Aliases</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Text color aliases"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Text Color Aliases</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Text color aliases" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Maps To</th>
-<th scope="col">Preview</th>
-<th scope="col">Usage</th>
+<th scope="col">Preview</th><th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--color-text-primary</span></td>
 <td><span>var(--color-gray-950)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-primary);"></span></td>
-<td>Primary text on light backgrounds.</td>
+<td aria-label="Preview for --color-text-primary" class="mngha-bg-text-primary"> </td><td>Primary text on light backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-secondary</span></td>
 <td><span>var(--color-gray-700)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-secondary);"></span></td>
-<td>Secondary text on light backgrounds.</td>
+<td aria-label="Preview for --color-text-secondary" class="mngha-bg-text-secondary"> </td><td>Secondary text on light backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-tertiary</span></td>
 <td><span>var(--color-gray-600)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-tertiary);"></span></td>
-<td>Tertiary/helper text on light backgrounds.</td>
+<td aria-label="Preview for --color-text-tertiary" class="mngha-bg-text-tertiary"> </td><td>Tertiary/helper text on light backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-inverse-primary</span></td>
 <td><span>var(--color-white)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);"><span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-text-inverse-primary);"></span></span></td>
-<td>Primary text on dark backgrounds.</td>
+<td aria-label="Preview for --color-text-inverse-primary" class="mngha-bg-text-inverse-primary"> </td><td>Primary text on dark backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-inverse-secondary</span></td>
 <td><span>var(--color-white-80)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);"><span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-text-inverse-secondary);"></span></span></td>
-<td>Secondary text on dark backgrounds.</td>
+<td aria-label="Preview for --color-text-inverse-secondary" class="mngha-bg-text-inverse-secondary"> </td><td>Secondary text on dark backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-inverse-tertiary</span></td>
 <td><span>var(--color-white-60)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; align-items: center; width: var(--spacing-8xl); height: var(--spacing-4xl); padding: var(--spacing-xs); border-radius: var(--radius-sm); background: var(--color-gray-950);"><span style="display: inline-flex; width: 100%; height: 100%; border-radius: var(--radius-xs); background: var(--color-text-inverse-tertiary);"></span></span></td>
-<td>Tertiary text on dark backgrounds.</td>
+<td aria-label="Preview for --color-text-inverse-tertiary" class="mngha-bg-text-inverse-tertiary"> </td><td>Tertiary text on dark backgrounds.</td>
 </tr>
 <tr>
 <td><span>--color-text-brand-primary</span></td>
 <td><span>var(--color-primary-800)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-brand-primary);"></span></td>
-<td>Strong brand text.</td>
+<td aria-label="Preview for --color-text-brand-primary" class="mngha-bg-text-brand-primary"> </td><td>Strong brand text.</td>
 </tr>
 <tr>
 <td><span>--color-text-brand-secondary</span></td>
 <td><span>var(--color-primary)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-brand-secondary);"></span></td>
-<td>Default brand text.</td>
+<td aria-label="Preview for --color-text-brand-secondary" class="mngha-bg-text-brand-secondary"> </td><td>Default brand text.</td>
 </tr>
 <tr>
 <td><span>--color-text-brand-tertiary</span></td>
 <td><span>var(--color-primary-500)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-brand-tertiary);"></span></td>
-<td>Subtle brand text.</td>
+<td aria-label="Preview for --color-text-brand-tertiary" class="mngha-bg-text-brand-tertiary"> </td><td>Subtle brand text.</td>
 </tr>
 <tr>
 <td><span>--color-text-info</span></td>
 <td><span>var(--color-info)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-info);"></span></td>
-<td>Information text.</td>
+<td aria-label="Preview for --color-text-info" class="mngha-bg-text-info"> </td><td>Information text.</td>
 </tr>
 <tr>
 <td><span>--color-text-success</span></td>
 <td><span>var(--color-success)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-success);"></span></td>
-<td>Success text.</td>
+<td aria-label="Preview for --color-text-success" class="mngha-bg-text-success"> </td><td>Success text.</td>
 </tr>
 <tr>
 <td><span>--color-text-warning</span></td>
 <td><span>var(--color-warning)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-warning);"></span></td>
-<td>Warning text.</td>
+<td aria-label="Preview for --color-text-warning" class="mngha-bg-text-warning"> </td><td>Warning text.</td>
 </tr>
 <tr>
 <td><span>--color-text-error</span></td>
 <td><span>var(--color-error)</span></td>
-<td><span aria-hidden="true" style="display: inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border-radius: var(--radius-sm); background: var(--color-text-error);"></span></td>
-<td>Error text.</td>
+<td aria-label="Preview for --color-text-error" class="mngha-bg-text-error"> </td><td>Error text.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Main Color Rule</h2>
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">Use theme aliases for main colors</h3>
-          <p class="mngha-card-description mngha-paragraph">
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Main Color Rule</h2>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Use theme aliases for main colors</h3>
+<p class="mngha-card-description mngha-paragraph">
             Components should use theme-aware aliases such as <span>--color-brand-primary</span>, <span>--color-action-primary-bg</span>, and <span>--color-link</span>. Primitive palettes like <span>--color-primary-600</span> and <span>--color-internal-primary</span> should stay in the foundation layer.
           </p>
-          <div class="mngha-code-block" data-code-block>
-            <div class="mngha-code-block-header">
-              <p class="mngha-code-block-title">Theme-aware color usage</p>
-
-              <button class="mngha-code-block-copy" type="button" data-code-copy>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Theme-aware color usage</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                 Copy
               </button>
-            </div>
-
-            <pre class="mngha-code-block-body"><code>/* Brand color */
+</div>
+<pre class="mngha-code-block-body">/* Brand color */
 color: var(--color-brand-primary);
 
 /* Primary action */
@@ -886,23 +743,22 @@ color: var(--color-action-primary-text);
 border-color: var(--color-action-primary-border);
 
 /* Links */
-color: var(--color-link);</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mngha-section" id="typography-system">
-      <h2 class="mngha-section-title">Typography System</h2>
-      <p class="mngha-paragraph">Typography foundations define the system font, base defaults, font weights, text styles, and display styles.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Font defaults"><thead><tr>
+color: var(--color-link);</pre>
+</div>
+</div>
+</div>
+</section>
+<section class="mngha-section" id="typography-system">
+<h2 class="mngha-section-title">Typography System</h2>
+<p class="mngha-paragraph">Typography foundations define the system font, base defaults, font weights, text styles, and display styles.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Font defaults" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
 <th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--font-family-base</span></td>
-<td><span>&quot;IBM Plex Sans Arabic&quot;, sans-serif</span></td>
+<td><span>"IBM Plex Sans Arabic", sans-serif</span></td>
 <td>Base font family.</td>
 </tr>
 <tr>
@@ -921,11 +777,10 @@ color: var(--color-link);</code></pre>
 <td>Default body font weight.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Font Weights</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Font weight tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Font Weights</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Font weight tokens" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
 <th scope="col">Preview</th>
@@ -934,33 +789,32 @@ color: var(--color-link);</code></pre>
 <tr>
 <td><span>--font-weight-regular</span></td>
 <td><span>400</span></td>
-<td><span style="font-weight: var(--font-weight-regular);">Body text</span></td>
+<td><span class="mngha-font-regular">Body text</span></td>
 <td>Body text, helper text, table body.</td>
 </tr>
 <tr>
 <td><span>--font-weight-medium</span></td>
 <td><span>500</span></td>
-<td><span style="font-weight: var(--font-weight-medium);">Buttons</span></td>
+<td><span class="mngha-font-medium">Buttons and labels</span></td>
 <td>Buttons, labels, table headers, status pills.</td>
 </tr>
 <tr>
 <td><span>--font-weight-semibold</span></td>
 <td><span>600</span></td>
-<td><span style="font-weight: var(--font-weight-semibold);">Section headings and stronger emphasis.</span></td>
+<td><span class="mngha-font-semibold">Section heading</span></td>
 <td>Section headings and stronger emphasis.</td>
 </tr>
 <tr>
 <td><span>--font-weight-bold</span></td>
 <td><span>700</span></td>
-<td><span style="font-weight: var(--font-weight-bold);">High emphasis headings and important labels.</span></td>
+<td><span class="mngha-font-bold">Important label</span></td>
 <td>High emphasis headings and important labels.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Text Styles</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Text style tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Text Styles</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Text style tokens" class="mngha-table"><thead><tr>
 <th scope="col">Size Token</th>
 <th scope="col">Size</th>
 <th scope="col">Line Height Token</th>
@@ -973,7 +827,7 @@ color: var(--color-link);</code></pre>
 <td><span>0.75rem</span></td>
 <td><span>--text-xs-line-height</span></td>
 <td><span>1.125rem</span></td>
-<td><span style="font-size: var(--text-xs-size); line-height: var(--text-xs-line-height);">Sample text</span></td>
+<td><span class="mngha-text-xs">Sample text</span></td>
 <td>Tags, helper labels, compact table headers.</td>
 </tr>
 <tr>
@@ -981,7 +835,7 @@ color: var(--color-link);</code></pre>
 <td><span>0.875rem</span></td>
 <td><span>--text-sm-line-height</span></td>
 <td><span>1.25rem</span></td>
-<td><span style="font-size: var(--text-sm-size); line-height: var(--text-sm-line-height);">Sample text</span></td>
+<td><span class="mngha-text-sm">Sample text</span></td>
 <td>Small body, helper text, table cells.</td>
 </tr>
 <tr>
@@ -989,7 +843,7 @@ color: var(--color-link);</code></pre>
 <td><span>1rem</span></td>
 <td><span>--text-md-line-height</span></td>
 <td><span>1.5rem</span></td>
-<td><span style="font-size: var(--text-md-size); line-height: var(--text-md-line-height);">Sample text</span></td>
+<td><span class="mngha-text-md">Sample text</span></td>
 <td>Default body, inputs, selects, paragraphs.</td>
 </tr>
 <tr>
@@ -997,7 +851,7 @@ color: var(--color-link);</code></pre>
 <td><span>1.125rem</span></td>
 <td><span>--text-lg-line-height</span></td>
 <td><span>1.75rem</span></td>
-<td><span style="font-size: var(--text-lg-size); line-height: var(--text-lg-line-height);">Sample text</span></td>
+<td><span class="mngha-text-lg">Sample text</span></td>
 <td>Large body and emphasized content.</td>
 </tr>
 <tr>
@@ -1005,15 +859,14 @@ color: var(--color-link);</code></pre>
 <td><span>1.25rem</span></td>
 <td><span>--text-xl-line-height</span></td>
 <td><span>1.875rem</span></td>
-<td><span style="font-size: var(--text-xl-size); line-height: var(--text-xl-line-height);">Sample text</span></td>
+<td><span class="mngha-text-xl">Sample text</span></td>
 <td>Small headings and large labels.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Display Styles</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Display style tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Display Styles</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Display style tokens" class="mngha-table"><thead><tr>
 <th scope="col">Size Token</th>
 <th scope="col">Size</th>
 <th scope="col">Line Height Token</th>
@@ -1028,7 +881,7 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-xs-line-height</span></td>
 <td><span>2rem</span></td>
 <td>—</td>
-<td><span style="font-size: var(--text-display-xs-size); line-height: var(--text-display-xs-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-xs">Display</span></td>
 <td>Small page headings.</td>
 </tr>
 <tr>
@@ -1037,7 +890,7 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-sm-line-height</span></td>
 <td><span>2.375rem</span></td>
 <td>—</td>
-<td><span style="font-size: var(--text-display-sm-size); line-height: var(--text-display-sm-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-sm">Display</span></td>
 <td>Section hero headings.</td>
 </tr>
 <tr>
@@ -1046,7 +899,7 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-md-line-height</span></td>
 <td><span>2.75rem</span></td>
 <td><span>--text-display-md-letter-spacing</span></td>
-<td><span style="font-size: var(--text-display-md-size); line-height: var(--text-display-md-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-md">Display</span></td>
 <td>Page hero headings.</td>
 </tr>
 <tr>
@@ -1055,7 +908,7 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-lg-line-height</span></td>
 <td><span>3.75rem</span></td>
 <td><span>--text-display-lg-letter-spacing</span></td>
-<td><span style="font-size: var(--text-display-lg-size); line-height: var(--text-display-lg-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-lg">Display</span></td>
 <td>Large marketing headings.</td>
 </tr>
 <tr>
@@ -1064,7 +917,7 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-xl-line-height</span></td>
 <td><span>4.5rem</span></td>
 <td><span>--text-display-xl-letter-spacing</span></td>
-<td><span style="font-size: var(--text-display-xl-size); line-height: var(--text-display-xl-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-xl">Display</span></td>
 <td>Large landing page headings.</td>
 </tr>
 <tr>
@@ -1073,416 +926,491 @@ color: var(--color-link);</code></pre>
 <td><span>--text-display-2xl-line-height</span></td>
 <td><span>5.625rem</span></td>
 <td><span>--text-display-2xl-letter-spacing</span></td>
-<td><span style="font-size: var(--text-display-2xl-size); line-height: var(--text-display-2xl-line-height); font-weight: var(--font-weight-semibold);">Display</span></td>
+<td><span class="mngha-display-2xl">Display</span></td>
 <td>Highest-impact display headings.</td>
 </tr>
 </tbody></table></div></div>
-     
-    </section>
-
-    <section class="mngha-section" id="spacing-system">
-      <h2 class="mngha-section-title">Spacing System</h2>
-      <p class="mngha-paragraph">Primitive spacing tokens are the raw scale. Semantic spacing tokens are the preferred aliases for components and layout decisions.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Primitive spacing tokens"><thead><tr>
+</section>
+<section class="mngha-section" id="spacing-system">
+<h2 class="mngha-section-title">Spacing System</h2>
+<p class="mngha-paragraph">Primitive spacing tokens are the raw scale. Semantic spacing tokens are the preferred aliases for components and layout decisions.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Primitive spacing tokens" class="mngha-table"><thead><tr>
 <th scope="col">Primitive Token</th>
 <th scope="col">Value</th>
 <th scope="col">Pixel Equivalent</th>
-<th scope="col">Preview</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--space-0</span></td>
 <td><span>0rem</span></td>
 <td>0px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-0), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-0-5</span></td>
 <td><span>0.125rem</span></td>
 <td>2px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-0-5), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-1</span></td>
 <td><span>0.25rem</span></td>
 <td>4px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-1), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-1-5</span></td>
 <td><span>0.375rem</span></td>
 <td>6px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-1-5), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-2</span></td>
 <td><span>0.5rem</span></td>
 <td>8px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-2), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-3</span></td>
 <td><span>0.75rem</span></td>
 <td>12px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-3), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-4</span></td>
 <td><span>1rem</span></td>
 <td>16px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-4), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-5</span></td>
 <td><span>1.25rem</span></td>
 <td>20px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-5), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-6</span></td>
 <td><span>1.5rem</span></td>
 <td>24px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-6), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-8</span></td>
 <td><span>2rem</span></td>
 <td>32px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-8), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-10</span></td>
 <td><span>2.5rem</span></td>
 <td>40px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-10), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-12</span></td>
 <td><span>3rem</span></td>
 <td>48px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-12), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-16</span></td>
 <td><span>4rem</span></td>
 <td>64px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-16), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-20</span></td>
 <td><span>5rem</span></td>
 <td>80px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-20), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-24</span></td>
 <td><span>6rem</span></td>
 <td>96px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-24), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-32</span></td>
 <td><span>8rem</span></td>
 <td>128px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-32), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-40</span></td>
 <td><span>10rem</span></td>
 <td>160px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-40), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-48</span></td>
 <td><span>12rem</span></td>
 <td>192px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-48), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-64</span></td>
 <td><span>16rem</span></td>
 <td>256px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-64), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-80</span></td>
 <td><span>20rem</span></td>
 <td>320px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-80), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-96</span></td>
 <td><span>24rem</span></td>
 <td>384px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-96), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-120</span></td>
 <td><span>30rem</span></td>
 <td>480px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-120), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-140</span></td>
 <td><span>35rem</span></td>
 <td>560px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-140), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-160</span></td>
 <td><span>40rem</span></td>
 <td>640px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-160), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-180</span></td>
 <td><span>45rem</span></td>
 <td>720px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-180), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-192</span></td>
 <td><span>48rem</span></td>
 <td>768px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-192), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 <tr>
 <td><span>--space-256</span></td>
 <td><span>64rem</span></td>
 <td>1024px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--space-256), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-primary-600);"></span></td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Semantic Spacing Tokens</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Semantic spacing tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Semantic Spacing Tokens</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Semantic spacing tokens" class="mngha-table"><thead><tr>
 <th scope="col">Semantic Token</th>
 <th scope="col">Maps To</th>
 <th scope="col">Pixel Equivalent</th>
-<th scope="col">Preview</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--spacing-none</span></td>
 <td><span>var(--space-0)</span></td>
 <td>0px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-none), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-xxs</span></td>
 <td><span>var(--space-0-5)</span></td>
 <td>2px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-xxs), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-xs</span></td>
 <td><span>var(--space-1)</span></td>
 <td>4px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-xs), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-sm</span></td>
 <td><span>var(--space-1-5)</span></td>
 <td>6px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-sm), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-md</span></td>
 <td><span>var(--space-2)</span></td>
 <td>8px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-md), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-lg</span></td>
 <td><span>var(--space-3)</span></td>
 <td>12px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-lg), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-xl</span></td>
 <td><span>var(--space-4)</span></td>
 <td>16px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-2xl</span></td>
 <td><span>var(--space-5)</span></td>
 <td>20px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-2xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-3xl</span></td>
 <td><span>var(--space-6)</span></td>
 <td>24px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-3xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-4xl</span></td>
 <td><span>var(--space-8)</span></td>
 <td>32px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-4xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-5xl</span></td>
 <td><span>var(--space-10)</span></td>
 <td>40px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-5xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-6xl</span></td>
 <td><span>var(--space-12)</span></td>
 <td>48px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-6xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-7xl</span></td>
 <td><span>var(--space-16)</span></td>
 <td>64px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-7xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-8xl</span></td>
 <td><span>var(--space-20)</span></td>
 <td>80px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-8xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-9xl</span></td>
 <td><span>var(--space-24)</span></td>
 <td>96px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-9xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-10xl</span></td>
 <td><span>var(--space-32)</span></td>
 <td>128px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-10xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-11xl</span></td>
 <td><span>var(--space-40)</span></td>
 <td>160px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-11xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 <tr>
 <td><span>--spacing-12xl</span></td>
 <td><span>var(--space-48)</span></td>
 <td>192px</td>
-<td><span aria-hidden="true" style="display:inline-flex; width: min(var(--spacing-12xl), var(--spacing-12xl)); height: var(--spacing-md); border-radius: var(--radius-xs); background: var(--color-internal-primary);"></span></td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section" id="radius-system">
-      <h2 class="mngha-section-title">Radius System</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Primitive radius tokens"><thead><tr>
+</section>
+<section class="mngha-section" id="radius-system">
+<h2 class="mngha-section-title">Radius System</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Primitive radius tokens" class="mngha-table"><thead><tr>
 <th scope="col">Primitive Token</th>
 <th scope="col">Value</th>
-<th scope="col">Preview</th>
 <th scope="col">Meaning</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--radius-0</span></td>
 <td><span>0rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-0);"></span></td>
 <td>0px</td>
 </tr>
 <tr>
 <td><span>--radius-1</span></td>
 <td><span>0.125rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-1);"></span></td>
 <td>2px</td>
 </tr>
 <tr>
 <td><span>--radius-2</span></td>
 <td><span>0.25rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-2);"></span></td>
 <td>4px</td>
 </tr>
 <tr>
 <td><span>--radius-3</span></td>
 <td><span>0.5rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-3);"></span></td>
 <td>8px</td>
 </tr>
 <tr>
 <td><span>--radius-4</span></td>
 <td><span>1rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-4);"></span></td>
 <td>16px</td>
 </tr>
 <tr>
 <td><span>--radius-5</span></td>
 <td><span>1.5rem</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-5);"></span></td>
 <td>24px</td>
 </tr>
 <tr>
 <td><span>--radius-9999</span></td>
 <td><span>9999px</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-gray-50); border-radius: var(--radius-9999);"></span></td>
 <td>Full / pill</td>
 </tr>
 </tbody></table></div></div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Semantic Radius Tokens</h2>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Semantic radius tokens"><thead><tr>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Semantic Radius Tokens</h2>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Semantic radius tokens" class="mngha-table"><thead><tr>
 <th scope="col">Semantic Token</th>
 <th scope="col">Maps To</th>
-<th scope="col">Preview</th>
 <th scope="col">Usage</th>
 </tr></thead><tbody>
 <tr>
 <td><span>--radius-none</span></td>
 <td><span>var(--radius-0)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-none);"></span></td>
 <td>No radius.</td>
 </tr>
 <tr>
 <td><span>--radius-xs</span></td>
 <td><span>var(--radius-1)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-xs);"></span></td>
 <td>Extra small radius.</td>
 </tr>
 <tr>
 <td><span>--radius-sm</span></td>
 <td><span>var(--radius-2)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-sm);"></span></td>
 <td>Small radius; good default for controls.</td>
 </tr>
 <tr>
 <td><span>--radius-md</span></td>
 <td><span>var(--radius-3)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-md);"></span></td>
 <td>Medium radius.</td>
 </tr>
 <tr>
 <td><span>--radius-lg</span></td>
 <td><span>var(--radius-4)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-lg);"></span></td>
 <td>Large card radius.</td>
 </tr>
 <tr>
 <td><span>--radius-xl</span></td>
 <td><span>var(--radius-5)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-xl);"></span></td>
 <td>Extra large radius.</td>
 </tr>
 <tr>
 <td><span>--radius-full</span></td>
 <td><span>var(--radius-9999)</span></td>
-<td><span aria-hidden="true" style="display:inline-flex; width: var(--spacing-8xl); height: var(--spacing-4xl); border: 1px solid var(--color-gray-300); background: var(--color-primary-50); border-radius: var(--radius-full);"></span></td>
 <td>Pills, badges, circular controls.</td>
 </tr>
 </tbody></table></div></div>
-    </section>
+</section>
 
-    <section class="mngha-section" id="container-system">
-      <h2 class="mngha-section-title">Container Foundation</h2>
-      <p class="mngha-paragraph">Container utilities control page width, inline padding, and paragraph readability.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Container tokens"><thead><tr>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Radius Real Examples</h2>
+<p class="mngha-paragraph">
+  These examples show how radius tokens look on real UI surfaces. Use semantic radius tokens instead of raw pixel values when building components.
+</p>
+<div class="mngha-grid mngha-grid-cols-3">
+  <div class="mngha-card" style="border-radius: var(--radius-none);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">No Radius</h3>
+      <p class="mngha-card-description"><span>--radius-none</span> for sharp containers.</p>
+    </div>
+  </div>
+
+  <div class="mngha-card" style="border-radius: var(--radius-sm);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">Small Radius</h3>
+      <p class="mngha-card-description"><span>--radius-sm</span> for controls and compact surfaces.</p>
+    </div>
+  </div>
+
+  <div class="mngha-card" style="border-radius: var(--radius-md);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">Medium Radius</h3>
+      <p class="mngha-card-description"><span>--radius-md</span> for normal grouped content.</p>
+    </div>
+  </div>
+
+  <div class="mngha-card" style="border-radius: var(--radius-lg);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">Large Radius</h3>
+      <p class="mngha-card-description"><span>--radius-lg</span> for cards and elevated sections.</p>
+    </div>
+  </div>
+
+  <div class="mngha-card" style="border-radius: var(--radius-xl);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">Extra Large Radius</h3>
+      <p class="mngha-card-description"><span>--radius-xl</span> for larger visual containers.</p>
+    </div>
+  </div>
+
+  <div class="mngha-card" style="border-radius: var(--radius-xl);">
+    <div class="mngha-card-content">
+      <h3 class="mngha-card-title">Full Radius</h3>
+      <p class="mngha-card-description"><span>--radius-full</span> is best for pills, badges, and circular controls.</p>
+      <button class="mngha-button mngha-button--primary mngha-button--md" type="button" style="border-radius: var(--radius-full);">
+        Pill Button
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="mngha-code-block" data-code-block="">
+  <div class="mngha-code-block-header">
+    <p class="mngha-code-block-title">Radius usage</p>
+    <button class="mngha-code-block-copy" data-code-copy="" type="button">Copy</button>
+  </div>
+  <pre class="mngha-code-block-body">border-radius: var(--radius-sm);
+border-radius: var(--radius-md);
+border-radius: var(--radius-lg);
+border-radius: var(--radius-full);</pre>
+</div>
+</section>
+
+<section class="mngha-section" id="width-system">
+<h2 class="mngha-section-title">Width System</h2>
+<p class="mngha-paragraph">
+  Width tokens control the maximum width of panels, forms, dialogs, content blocks, and wide page sections. Use them with <span>max-width</span> so content stays responsive.
+</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Width tokens" class="mngha-table"><thead><tr>
+<th scope="col">Token</th>
+<th scope="col">Value</th>
+<th scope="col">Recommended Usage</th>
+</tr></thead><tbody>
+<tr><td><span>--width-xxs</span></td><td><span>20rem</span></td><td>Very small panels and compact content.</td></tr>
+<tr><td><span>--width-xs</span></td><td><span>24rem</span></td><td>Small forms and narrow cards.</td></tr>
+<tr><td><span>--width-sm</span></td><td><span>30rem</span></td><td>Small dialogs and focused content blocks.</td></tr>
+<tr><td><span>--width-md</span></td><td><span>35rem</span></td><td>Medium forms and readable panels.</td></tr>
+<tr><td><span>--width-lg</span></td><td><span>40rem</span></td><td>Large forms and content cards.</td></tr>
+<tr><td><span>--width-xl</span></td><td><span>48rem</span></td><td>Article sections and wide content blocks.</td></tr>
+<tr><td><span>--width-2xl</span></td><td><span>64rem</span></td><td>Large sections and dashboard content.</td></tr>
+<tr><td><span>--width-3xl</span></td><td><span>80rem</span></td><td>Standard page max-width areas.</td></tr>
+<tr><td><span>--width-4xl</span></td><td><span>90rem</span></td><td>Extra-wide layouts.</td></tr>
+<tr><td><span>--width-5xl</span></td><td><span>100rem</span></td><td>Large application layouts.</td></tr>
+<tr><td><span>--width-6xl</span></td><td><span>120rem</span></td><td>Maximum wide layouts.</td></tr>
+</tbody></table></div></div>
+</section>
+
+<section class="mngha-section">
+<h2 class="mngha-section-title">Width Real Examples</h2>
+<p class="mngha-paragraph">
+  These examples use real width tokens with <span>width: 100%</span> and <span>max-width</span>. This keeps the element responsive on small screens while limiting its size on larger screens.
+</p>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Small Form Width</h3>
+    <p class="mngha-card-description">Uses <span>max-width: var(--width-xs)</span>.</p>
+
+    <div style="width: 100%; max-width: var(--width-xs, 24rem); padding: var(--spacing-xl); border: 1px solid var(--color-brand-primary); border-radius: var(--radius-md); background: var(--color-brand-very-light);">
+      <label class="mngha-label" for="width-example-input">Example input</label>
+      <input class="mngha-input" id="width-example-input" type="text" placeholder="Small form width">
+    </div>
+  </div>
+</div>
+
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Readable Content Width</h3>
+    <p class="mngha-card-description">Uses <span>.mngha-paragraph</span> and <span>--paragraph-max-width</span>.</p>
+
+    <p class="mngha-paragraph" style="padding: var(--spacing-xl); border: 1px dashed var(--color-brand-primary); border-radius: var(--radius-md); background: var(--color-brand-very-light);">
+      This paragraph is intentionally limited in width so long text remains readable. It should not stretch across the full page on large screens.
+    </p>
+  </div>
+</div>
+
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Wide Section Width</h3>
+    <p class="mngha-card-description">Uses <span>max-width: var(--width-xl)</span> for a wider content block.</p>
+
+    <div style="width: 100%; max-width: var(--width-xl, 48rem); padding: var(--spacing-xl); border: 1px solid var(--color-brand-primary); border-radius: var(--radius-lg); background: var(--color-brand-very-light);">
+      <h4 class="mngha-card-title">Wide content area</h4>
+      <p class="mngha-card-description">Good for article previews, grouped details, and wider documentation examples.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mngha-code-block" data-code-block="">
+  <div class="mngha-code-block-header">
+    <p class="mngha-code-block-title">Width usage</p>
+    <button class="mngha-code-block-copy" data-code-copy="" type="button">Copy</button>
+  </div>
+  <pre class="mngha-code-block-body">.example-panel {
+  width: 100%;
+  max-width: var(--width-md);
+}
+
+.example-paragraph {
+  max-width: var(--paragraph-max-width);
+}</pre>
+</div>
+</section>
+<section class="mngha-section" id="container-system">
+<h2 class="mngha-section-title">Container Foundation</h2>
+<p class="mngha-paragraph">Container utilities control page width, inline padding, and paragraph readability.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Container tokens" class="mngha-table"><thead><tr>
 <th scope="col">Token</th>
 <th scope="col">Value</th>
 <th scope="col">Usage</th>
@@ -1508,7 +1436,7 @@ color: var(--color-link);</code></pre>
 <td>Readable paragraph width.</td>
 </tr>
 </tbody></table></div></div>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Container classes"><thead><tr>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Container classes" class="mngha-table"><thead><tr>
 <th scope="col">Class</th>
 <th scope="col">Usage</th>
 </tr></thead><tbody>
@@ -1525,32 +1453,31 @@ color: var(--color-link);</code></pre>
 <td>Limits text width using --paragraph-max-width.</td>
 </tr>
 </tbody></table></div></div>
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">Container Example</h3>
-<div class="mngha-code-block" data-code-block>
-            <div class="mngha-code-block-header">
-              <p class="mngha-code-block-title">Container example</p>
 
-              <button class="mngha-code-block-copy" type="button" data-code-copy>
+ 
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Container Example</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Container example</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                 Copy
               </button>
-            </div>
-
-            <pre class="mngha-code-block-body"><code>&lt;main class="mngha-main"&gt;
+</div>
+<pre class="mngha-code-block-body">&lt;main class="mngha-main"&gt;
   &lt;div class="mngha-container"&gt;
     &lt;p class="mngha-paragraph"&gt;Readable content...&lt;/p&gt;
   &lt;/div&gt;
-&lt;/main&gt;</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mngha-section" id="grid-system">
-      <h2 class="mngha-section-title">Grid Foundation</h2>
-      <p class="mngha-paragraph">Grid utilities provide fixed equal-column layouts and a responsive grid that changes columns by breakpoint.</p>
-      <div class="mngha-table-container"><div class="mngha-table-wrapper"><table class="mngha-table" aria-label="Grid classes"><thead><tr>
+&lt;/main&gt;</pre>
+</div>
+</div>
+</div>
+</section>
+<section class="mngha-section" id="grid-system">
+<h2 class="mngha-section-title">Grid Foundation</h2>
+<p class="mngha-paragraph">Grid utilities provide fixed equal-column layouts and a responsive grid that changes columns by breakpoint.</p>
+<div class="mngha-table-container"><div class="mngha-table-wrapper"><table aria-label="Grid classes" class="mngha-table"><thead><tr>
 <th scope="col">Class</th>
 <th scope="col">Usage</th>
 </tr></thead><tbody>
@@ -1580,95 +1507,83 @@ color: var(--color-link);</code></pre>
 </tr>
 <tr>
 <td><span>.mngha-grid-responsive</span></td>
-<td>Responsive grid: 4 columns by default, 6 from 768px, 12 from 1024px.</td>
+<td>Responsive grid foundation: 4, 6, and 12 tracks across breakpoints. Items can span tracks to show 1, 2, or 4 items per row.</td>
 </tr>
 </tbody></table></div></div>
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">Grid Examples</h3>
-<div class="mngha-code-block" data-code-block>
-            <div class="mngha-code-block-header">
-              <p class="mngha-code-block-title">Grid examples</p>
-
-              <button class="mngha-code-block-copy" type="button" data-code-copy>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Grid Examples</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Grid examples</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                 Copy
               </button>
-            </div>
-
-            <pre class="mngha-code-block-body"><code>&lt;div class="mngha-grid mngha-grid-cols-2"&gt;...&lt;/div&gt;
+</div>
+<pre class="mngha-code-block-body">&lt;div class="mngha-grid mngha-grid-cols-2"&gt;...&lt;/div&gt;
 &lt;div class="mngha-grid mngha-grid-cols-3"&gt;...&lt;/div&gt;
 &lt;div class="mngha-grid mngha-grid-cols-5"&gt;...&lt;/div&gt;
 &lt;div class="mngha-grid mngha-grid-cols-6"&gt;...&lt;/div&gt;
 &lt;div class="mngha-grid mngha-grid-cols-12"&gt;...&lt;/div&gt;
-&lt;div class="mngha-grid-responsive"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Theme and Direction</h2>
-      <div class="mngha-grid mngha-grid-cols-2">
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Theme</h3>
-            <p class="mngha-card-description mngha-paragraph">The root element can store the current theme using <span>data-theme</span>. Your docs toggle already switches this value.</p>
-<div class="mngha-code-block" data-code-block>
-            <div class="mngha-code-block-header">
-              <p class="mngha-code-block-title">Theme attribute</p>
-
-              <button class="mngha-code-block-copy" type="button" data-code-copy>
+&lt;div class="mngha-grid-responsive"&gt;...&lt;/div&gt;</pre>
+</div>
+</div>
+</div>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Theme and Direction</h2>
+<div class="mngha-grid mngha-grid-cols-2">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Theme</h3>
+<p class="mngha-card-description mngha-paragraph">The root element can store the current theme using <span>data-theme</span>. Your docs toggle already switches this value.</p>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Theme attribute</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                 Copy
               </button>
-            </div>
-
-            <pre class="mngha-code-block-body"><code>&lt;html lang="en" dir="ltr" data-theme="external"&gt;
-&lt;html lang="en" dir="ltr" data-theme="internal"&gt;</code></pre>
-          </div>
-          </div>
-          <div class="mngha-card-actions">
-            <button class="mngha-button mngha-button--primary mngha-button--md" type="button" data-toggle-theme>Switch Theme</button>
-          </div>
-          
-        </div>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Direction</h3>
-            <p class="mngha-card-description mngha-paragraph">Direction is controlled by the root <span>dir</span> attribute. Your CSS should keep using logical properties like <span>margin-inline</span>, <span>padding-inline</span>, and <span>inset-inline</span>.</p>
-<div class="mngha-code-block" data-code-block>
-            <div class="mngha-code-block-header">
-              <p class="mngha-code-block-title">Direction attribute</p>
-
-              <button class="mngha-code-block-copy" type="button" data-code-copy>
+</div>
+<pre class="mngha-code-block-body">&lt;html lang="en" dir="ltr" data-theme="external"&gt;
+&lt;html lang="en" dir="ltr" data-theme="internal"&gt;</pre>
+</div>
+</div>
+<div class="mngha-card-actions">
+<button class="mngha-button mngha-button--primary mngha-button--md" data-toggle-theme="" type="button">Switch Theme</button>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Direction</h3>
+<p class="mngha-card-description mngha-paragraph">Direction is controlled by the root <span>dir</span> attribute. Your CSS should keep using logical properties like <span>margin-inline</span>, <span>padding-inline</span>, and <span>inset-inline</span>.</p>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Direction attribute</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                 Copy
               </button>
-            </div>
-
-            <pre class="mngha-code-block-body"><code>&lt;html lang="en" dir="ltr"&gt;
-&lt;html lang="ar" dir="rtl"&gt;</code></pre>
-          </div>
-          </div>
-          <div class="mngha-card-actions">
-            <button class="mngha-button mngha-button--secondary mngha-button--md" type="button" data-toggle-direction>Toggle Direction</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mngha-section">
-      <h2 class="mngha-section-title">Foundation Rules</h2>
-      <div class="mngha-grid mngha-grid-cols-3">
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use tokens</h3><p class="mngha-card-description">Do not add raw colors, font sizes, spacing, or radius values inside components.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use semantic meaning</h3><p class="mngha-card-description">Use semantic aliases when the token represents meaning, such as success, warning, error, info, or text.</p></div></div>
-        <div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use layout utilities</h3><p class="mngha-card-description">Use container and grid utilities for docs pages, templates, and component examples.</p></div></div>
-      </div>
-    </section>
-
-  </div>
-  </main>
-
-  <script src="./assets/docs.js"></script>
-  <script src="./assets/code-block-copy.js"></script>
+</div>
+<pre class="mngha-code-block-body">&lt;html lang="en" dir="ltr"&gt;
+&lt;html lang="ar" dir="rtl"&gt;</pre>
+</div>
+</div>
+<div class="mngha-card-actions">
+<button class="mngha-button mngha-button--secondary mngha-button--md" data-toggle-direction="" type="button">Toggle Direction</button>
+</div>
+</div>
+</div>
+</section>
+<section class="mngha-section">
+<h2 class="mngha-section-title">Foundation Rules</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use tokens</h3><p class="mngha-card-description">Do not add raw colors, font sizes, spacing, or radius values inside components.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use semantic meaning</h3><p class="mngha-card-description">Use semantic aliases when the token represents meaning, such as success, warning, error, info, or text.</p></div></div>
+<div class="mngha-card"><div class="mngha-card-content"><h3 class="mngha-card-title">Use layout utilities</h3><p class="mngha-card-description">Use container and grid utilities for docs pages, templates, and component examples.</p></div></div>
+</div>
+</section>
+</div>
+</main>
+<script src="./assets/docs.js"></script>
+<script src="./assets/code-block-copy.js"></script>
 </body>
 </html>

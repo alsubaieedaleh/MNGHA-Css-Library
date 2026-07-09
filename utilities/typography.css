@@ -1,0 +1,89 @@
+/**
+ * --------------------------------------------------------------------------
+ * Typography Utilities
+ * --------------------------------------------------------------------------
+ */
+
+/* Font Weight */
+.mngha-font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.mngha-font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.mngha-font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Text Sizes */
+.mngha-text-xs {
+  font-size: var(--text-xs-size);
+  line-height: var(--text-xs-line-height);
+}
+
+.mngha-text-sm {
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
+}
+
+.mngha-text-md {
+  font-size: var(--text-md-size);
+  line-height: var(--text-md-line-height);
+}
+
+.mngha-text-lg {
+  font-size: var(--text-lg-size);
+  line-height: var(--text-lg-line-height);
+}
+
+.mngha-text-xl {
+  font-size: var(--text-xl-size);
+  line-height: var(--text-xl-line-height);
+}
+
+/* Display Sizes */
+.mngha-display-xs {
+  font-size: var(--text-display-xs-size);
+  line-height: var(--text-display-xs-line-height);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-display-sm {
+  font-size: var(--text-display-sm-size);
+  line-height: var(--text-display-sm-line-height);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-display-md {
+  font-size: var(--text-display-md-size);
+  line-height: var(--text-display-md-line-height);
+  letter-spacing: var(--text-display-md-letter-spacing);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-display-lg {
+  font-size: var(--text-display-lg-size);
+  line-height: var(--text-display-lg-line-height);
+  letter-spacing: var(--text-display-lg-letter-spacing);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-display-xl {
+  font-size: var(--text-display-xl-size);
+  line-height: var(--text-display-xl-line-height);
+  letter-spacing: var(--text-display-xl-letter-spacing);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-display-2xl {
+  font-size: var(--text-display-2xl-size);
+  line-height: var(--text-display-2xl-line-height);
+  letter-spacing: var(--text-display-2xl-letter-spacing);
+  font-weight: var(--font-weight-semibold);
+}
