@@ -107,9 +107,62 @@
         </button>
       </div>
 
-      <button class="mngha-header-mobile-action" type="button" aria-label="Open menu">
-        ☰
-      </button>
+      <button
+  class="mngha-header-mobile-action"
+  type="button"
+  aria-label="Open menu"
+  aria-controls="mngha-mobile-menu"
+  aria-expanded="false"
+  data-mobile-menu-toggle
+>
+  ☰
+</button>
     </div>
   </div>
+
+ <div class="mngha-mobile-menu" id="mngha-mobile-menu" data-mobile-menu>
+  <div class="mngha-mobile-menu-tools">
+    <button class="mngha-mobile-tool" type="button">
+      <span aria-hidden="true">⌕</span>
+      <span>Search</span>
+    </button>
+
+    <button class="mngha-mobile-tool" type="button" data-toggle-direction>
+      <span aria-hidden="true">☼</span>
+      <span>العربية</span>
+    </button>
+  </div>
+
+  <nav class="mngha-mobile-menu-nav" aria-label="Mobile navigation">
+    <button class="mngha-mobile-menu-link" type="button">
+      <span>About MNGHA</span>
+      <span aria-hidden="true">⌄</span>
+    </button>
+
+    <a class="mngha-mobile-menu-link is-active" href="./services.html">
+      <span>E-Services</span>
+    </a>
+
+    <button class="mngha-mobile-menu-link" type="button">
+      <span>Campuses</span>
+      <span aria-hidden="true">⌄</span>
+    </button>
+
+    <button class="mngha-mobile-menu-link" type="button">
+      <span>Patients and Visitors</span>
+      <span aria-hidden="true">⌄</span>
+    </button>
+
+    <a class="mngha-mobile-menu-link" href="./professionals.html">
+      <span>Professionals</span>
+    </a>
+
+    <button class="mngha-mobile-menu-link" type="button">
+      <span>Media Center</span>
+      <span aria-hidden="true">⌄</span>
+    </button>
+  </nav>
+</div>
+
+<div class="mngha-mobile-menu-backdrop" data-mobile-menu-backdrop></div>
 </header>
