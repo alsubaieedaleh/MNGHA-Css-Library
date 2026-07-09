@@ -3,407 +3,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>mngha Universal CSS - Documentation</title>
+
   <link rel="stylesheet" href="./../mngha-ui.css">
 </head>
 
 <body>
+  <div id="docs-header"></div>
 
-<header class="mngha-header">
-  <div class="mngha-header-top">
-    <div class="mngha-container-fluid mngha-header-top-content">
-      <div class="mngha-header-meta">
-        <span>mngha Universal CSS</span>
-        <span>Documentation</span>
-      </div>
+  <main class="mngha-main">
+    <div class="mngha-container">
 
-      <div class="mngha-header-meta">
-        <span id="themeLabel">external</span>
-        <span id="directionLabel">ltr</span>
-      </div>
-    </div>
-  </div>
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">
+              mngha Universal CSS Documentation
+            </h1>
 
-  <div class="mngha-header-main">
-    <div class="mngha-container-fluid mngha-header-main-content">
-      <a href="./index.html" class="mngha-header-brand">
-        <img class="mngha-header-logo" src="../assets/mngha-logo.webp" alt="MNGHA logo">
-        <span class="mngha-header-title">
-          mngha Universal CSS<br>
-          Design System Docs
-        </span>
-      </a>
+            <p class="mngha-card-description">
+              A shared CSS design system for foundations, layout, themes, direction support, reusable components, and ready page templates.
+            </p>
+          </div>
 
-      <nav class="mngha-header-nav" aria-label="Documentation navigation">
-        <a href="./foundations.html" class="mngha-header-link">
-          Foundations
-        </a>
+          <div class="mngha-card-actions">
+            <a class="mngha-button mngha-button--primary mngha-button--md" href="./foundations.html">
+              Get Started
+            </a>
 
-        <div class="mngha-header-nav-item">
-          <button
-            class="mngha-header-link"
-            type="button"
-            aria-expanded="false"
-            data-header-menu-trigger
-          >
-            Components
+            <a class="mngha-button mngha-button--secondary mngha-button--md" href="./buttons.html">
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">
+          Documentation Sections
+        </h2>
 
-          <div class="mngha-header-menu">
-            <div class="mngha-header-menu-grid">
-              <div class="mngha-header-menu-group">
-                <h3 class="mngha-header-menu-label">Components</h3>
+        <div class="mngha-grid mngha-card-grid">
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Foundations
+              </h3>
 
-                <ul class="mngha-header-menu-list">
-                  <li><a href="./header.html" class="mngha-header-menu-link">Header</a></li>
-                  <li><a href="./buttons.html" class="mngha-header-menu-link">Buttons</a></li>
-                  <li><a href="./cards.html" class="mngha-header-menu-link">Cards</a></li>
-                  <li><a href="./forms.html" class="mngha-header-menu-link">Form Controls</a></li>
-                  <li><a href="./select.html" class="mngha-header-menu-link">Select</a></li>
-                  <li><a href="./radio.html" class="mngha-header-menu-link">Radio</a></li>
-                  <li><a href="./file-upload.html" class="mngha-header-menu-link">File Upload</a></li>
-                  <li><a href="./table.html" class="mngha-header-menu-link">Table</a></li>
-                  <li><a href="./pagination.html" class="mngha-header-menu-link">Pagination</a></li>
-                </ul>
-              </div>
+              <p class="mngha-card-description">
+                Colors, typography, spacing, radius, containers, grids, themes, and direction foundations.
+              </p>
+            </div>
 
-              <div class="mngha-header-menu-group">
-                <h3 class="mngha-header-menu-label">Templates</h3>
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./foundations.html">
+                Open
+              </a>
+            </div>
+          </div>
 
-                <ul class="mngha-header-menu-list">
-                  <li><a href="./templates-login.html" class="mngha-header-menu-link">Login Page</a></li>
-                  <li><a href="./templates-dashboard.html" class="mngha-header-menu-link">Dashboard Page</a></li>
-                  <li><a href="./templates-error.html" class="mngha-header-menu-link">Error Page</a></li>
-                </ul>
-              </div>
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Components
+              </h3>
 
-              <div class="mngha-header-menu-group">
-                <h3 class="mngha-header-menu-label">Utilities</h3>
+              <p class="mngha-card-description">
+                Buttons, cards, form controls, select, radio, file upload, tables, and pagination.
+              </p>
+            </div>
 
-                <ul class="mngha-header-menu-list">
-                  <li><a href="./layout.html" class="mngha-header-menu-link">Layout Grid</a></li>
-                  <li><a href="./theme.html" class="mngha-header-menu-link">Theme System</a></li>
-                  <li><a href="./direction.html" class="mngha-header-menu-link">Direction Support</a></li>
-                </ul>
-              </div>
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./buttons.html">
+                Open
+              </a>
+            </div>
+          </div>
+
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Layout
+              </h3>
+
+              <p class="mngha-card-description">
+                Containers, responsive grids, page sections, spacing rhythm, and layout structure.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./layout.html">
+                Open
+              </a>
+            </div>
+          </div>
+
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Theme System
+              </h3>
+
+              <p class="mngha-card-description">
+                External and internal theme switching controlled from the root data-theme attribute.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./theme.html">
+                Open
+              </a>
+            </div>
+          </div>
+
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Direction Support
+              </h3>
+
+              <p class="mngha-card-description">
+                LTR and RTL support using logical CSS properties, direction utilities, and the dir attribute.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./direction.html">
+                Open
+              </a>
+            </div>
+          </div>
+
+          <div class="mngha-card mngha-card--interactive">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Templates
+              </h3>
+
+              <p class="mngha-card-description">
+                Ready full-page examples such as login, dashboard, empty states, and error pages.
+              </p>
+            </div>
+
+            <div class="mngha-card-actions">
+              <a class="mngha-button mngha-button--primary mngha-button--md" href="./templates-login.html">
+                Open
+              </a>
             </div>
           </div>
         </div>
+      </section>
 
-        <a href="./layout.html" class="mngha-header-link">
-          Layout
-        </a>
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">
+          Quick Usage
+        </h2>
 
-        <a href="./theme.html" class="mngha-header-link">
-          Theme
-        </a>
+        <div class="mngha-grid mngha-card-grid">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Import the compiled CSS file
+              </h3>
 
-        <a href="./direction.html" class="mngha-header-link">
-          Direction
-        </a>
-      </nav>
+              <p class="mngha-card-description">
+                Add the compiled stylesheet once in the page. All components, tokens, themes, layout utilities, and direction support come from this file.
+              </p>
 
-      <div class="mngha-header-actions">
-        <button type="button" class="mngha-header-action" onclick="toggleTheme()">
-          <span>Switch Theme</span>
-        </button>
+              <p class="mngha-card-description">
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;./../mngha-ui.css&quot;&gt;
+              </p>
+            </div>
+          </div>
 
-        <button type="button" class="mngha-header-action" onclick="toggleDirection()">
-          <span>العربية</span>
-        </button>
-      </div>
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Use the shared docs header
+              </h3>
 
-      <button class="mngha-header-mobile-action" type="button" aria-label="Open menu">
-        ☰
-      </button>
+              <p class="mngha-card-description">
+                Documentation pages should load the common header from docs/partials/header.html instead of repeating the full header markup in every page.
+              </p>
+
+              <p class="mngha-card-description">
+                &lt;div id=&quot;docs-header&quot;&gt;&lt;/div&gt;
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Use the shared docs script
+              </h3>
+
+              <p class="mngha-card-description">
+                Theme switching, direction switching, active navigation, and header dropdown behavior should live in one shared docs JavaScript file.
+              </p>
+
+              <p class="mngha-card-description">
+                &lt;script src=&quot;./assets/docs.js&quot;&gt;&lt;/script&gt;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">
+          System Rules
+        </h2>
+
+        <div class="mngha-grid mngha-card-grid">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Use tokens
+              </h3>
+
+              <p class="mngha-card-description">
+                Do not introduce new colors, font sizes, spacing values, or radius values inside pages.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Use components
+              </h3>
+
+              <p class="mngha-card-description">
+                Build pages from existing components such as buttons, cards, forms, tables, and pagination.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Use templates
+              </h3>
+
+              <p class="mngha-card-description">
+                Full pages like login, dashboard, and error pages belong in templates, not components.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </div>
-</header>
-<main class="mngha-main">
-  <div class="mngha-container">
- 
-  <section class="mngha-section">
-    <div class="mngha-card">
-      <div class="mngha-card-content">
-        <h1 class="mngha-section-title">
-          mngha Universal CSS Documentation
-        </h1>
+  </main>
 
-        <p class="mngha-card-description">
-          A shared CSS design system for foundations, layout, themes, direction support, reusable components, and ready page templates.
-        </p>
-      </div>
-
-      <div class="mngha-card-actions">
-        <a class="mngha-button mngha-button--primary mngha-button--md" href="./foundations.html">
-          Get Started
-        </a>
-
-        <a class="mngha-button mngha-button--secondary mngha-button--md" href="./buttons.html">
-          View Components
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="mngha-section">
-    <h2 class="mngha-section-title">
-      Documentation Sections
-    </h2>
-
-    <div class="mngha-grid mngha-card-grid">
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Foundations
-          </h3>
-
-          <p class="mngha-card-description">
-            Colors, typography, spacing, radius, layout, theme, and direction tokens.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./foundations.html">
-            Open
-          </a>
-        </div>
-      </div>
-
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Components
-          </h3>
-
-          <p class="mngha-card-description">
-            Buttons, cards, forms, select, radio, file upload, tables, and pagination.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./buttons.html">
-            Open
-          </a>
-        </div>
-      </div>
-
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Layout
-          </h3>
-
-          <p class="mngha-card-description">
-            Containers, grids, responsive behavior, page spacing, and layout structure.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./layout.html">
-            Open
-          </a>
-        </div>
-      </div>
-
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Theme System
-          </h3>
-
-          <p class="mngha-card-description">
-            External and internal theme switching using the data-theme attribute.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./theme.html">
-            Open
-          </a>
-        </div>
-      </div>
-
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Direction Support
-          </h3>
-
-          <p class="mngha-card-description">
-            LTR and RTL support using logical CSS properties and direction utilities.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./direction.html">
-            Open
-          </a>
-        </div>
-      </div>
-
-      <div class="mngha-card mngha-card--interactive">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Templates
-          </h3>
-
-          <p class="mngha-card-description">
-            Ready page examples such as login, dashboard, empty states, and error pages.
-          </p>
-        </div>
-
-        <div class="mngha-card-actions">
-          <a class="mngha-button mngha-button--primary mngha-button--md" href="./templates-login.html">
-            Open
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mngha-section">
-    <h2 class="mngha-section-title">
-      Quick Usage
-    </h2>
-
-    <div class="mngha-card">
-      <div class="mngha-card-content">
-        <h3 class="mngha-card-title">
-          Import the compiled CSS file
-        </h3>
-
-        <p class="mngha-card-description">
-          Add the compiled stylesheet once in the page. All components, tokens, themes, layout utilities, and direction support come from this file.
-        </p>
-
-        <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./../mngha-ui.css&quot;&gt;</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <section class="mngha-section">
-    <h2 class="mngha-section-title">
-      System Rules
-    </h2>
-
-    <div class="mngha-grid mngha-card-grid">
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Use tokens
-          </h3>
-
-          <p class="mngha-card-description">
-            Do not introduce new colors, font sizes, spacing values, or radius values inside pages.
-          </p>
-        </div>
-      </div>
-
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Use components
-          </h3>
-
-          <p class="mngha-card-description">
-            Build pages from existing components such as buttons, cards, forms, tables, and pagination.
-          </p>
-        </div>
-      </div>
-
-      <div class="mngha-card">
-        <div class="mngha-card-content">
-          <h3 class="mngha-card-title">
-            Use templates
-          </h3>
-
-          <p class="mngha-card-description">
-            Full pages like login, dashboard, and error pages belong in templates, not components.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-    </div>
-</main>
-
-<script>
-  function toggleTheme() {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute("data-theme");
-    const nextTheme = currentTheme === "internal" ? "external" : "internal";
-
-    html.setAttribute("data-theme", nextTheme);
-
-    const themeLabel = document.getElementById("themeLabel");
-
-    if (themeLabel) {
-      themeLabel.textContent = nextTheme;
-    }
-  }
-
-  function toggleDirection() {
-    const html = document.documentElement;
-    const nextDirection = html.dir === "rtl" ? "ltr" : "rtl";
-
-    html.dir = nextDirection;
-    html.lang = nextDirection === "rtl" ? "ar" : "en";
-
-    const directionLabel = document.getElementById("directionLabel");
-
-    if (directionLabel) {
-      directionLabel.textContent = nextDirection;
-    }
-  }
-
-  const headerMenuTriggers = document.querySelectorAll("[data-header-menu-trigger]");
-
-  function closeHeaderMenus() {
-    document.querySelectorAll(".mngha-header-nav-item.is-open").forEach(function (item) {
-      item.classList.remove("is-open");
-
-      const trigger = item.querySelector("[data-header-menu-trigger]");
-
-      if (trigger) {
-        trigger.classList.remove("mngha-header-link--active");
-        trigger.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  headerMenuTriggers.forEach(function (trigger) {
-    trigger.addEventListener("click", function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const navItem = trigger.closest(".mngha-header-nav-item");
-      const isOpen = navItem.classList.contains("is-open");
-
-      closeHeaderMenus();
-
-      if (!isOpen) {
-        navItem.classList.add("is-open");
-        trigger.classList.add("mngha-header-link--active");
-        trigger.setAttribute("aria-expanded", "true");
-      }
-    });
-  });
-
-  document.addEventListener("click", function () {
-    closeHeaderMenus();
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeHeaderMenus();
-    }
-  });
-</script>
-
+  <script src="./assets/docs.js"></script>
 </body>
 </html>

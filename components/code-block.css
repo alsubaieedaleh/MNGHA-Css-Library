@@ -1,0 +1,98 @@
+/**
+ * --------------------------------------------------------------------------
+ * Code Block
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-code-block {
+  overflow: hidden;
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-md);
+  background: var(--color-gray-950);
+  color: var(--color-white);
+}
+
+.mngha-code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-block-end: 1px solid var(--color-gray-800);
+  background: var(--color-gray-900);
+}
+
+.mngha-code-block-title {
+  margin: 0;
+  color: var(--color-white-80);
+  font-family: var(--font-family-base);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
+  font-weight: var(--font-weight-medium);
+}
+
+.mngha-code-block-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--spacing-4xl);
+  padding-inline: var(--spacing-xl);
+  border: 1px solid var(--color-gray-700);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-family-base);
+  font-size: var(--text-xs-size);
+  line-height: var(--text-xs-line-height);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.mngha-code-block-copy:hover {
+  background: var(--color-gray-800);
+}
+
+.mngha-code-block-copy:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 2px;
+}
+
+.mngha-code-block-body {
+  margin: 0;
+  padding: var(--spacing-xl);
+  overflow-x: auto;
+  color: var(--color-white);
+  font-family: var(--font-family-base);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
+  font-weight: var(--font-weight-regular);
+  white-space: pre;
+}
+
+.mngha-code-block-body code {
+  color: inherit;
+  font-family: var(--font-family-base);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Code Block Direction Lock
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-code-block {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+.mngha-code-block-header {
+  direction: ltr;
+  text-align: left;
+}
+
+.mngha-code-block-body {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: plaintext;
+}
