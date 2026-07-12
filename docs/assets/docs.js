@@ -14,40 +14,68 @@ async function loadDocsHeader() {
   setActiveDocsLink();
   initCodeBlockCopy();
    initMobileMenu() ;
-  openMobileMenu();
+   initMobileSubmenus() ;
+   openMobileMenu();
   closeMobileMenu();
+  
+}
+function initMobileSubmenus() {
+  const submenuTriggers = document.querySelectorAll("[data-mobile-submenu-trigger]");
+
+  submenuTriggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      const submenuId = trigger.getAttribute("aria-controls");
+      const submenu = document.getElementById(submenuId);
+
+      if (!submenu) return;
+
+      const isOpen = trigger.getAttribute("aria-expanded") === "true";
+      const nextOpen = !isOpen;
+
+      trigger.setAttribute("aria-expanded", String(nextOpen));
+      submenu.hidden = !nextOpen;
+
+      trigger.classList.toggle("is-active", nextOpen);
+
+      const arrow = trigger.querySelector(".mngha-mobile-menu-arrow");
+
+      if (arrow) {
+        arrow.textContent = nextOpen ? "⌃" : "⌄";
+      }
+    });
+  });
 }
 function initMobileMenu() {
   const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
-  const mobileMenuClose = document.querySelector("[data-mobile-menu-close]");
-  const mobileMenuBackdrop = document.querySelector("[data-mobile-menu-backdrop]");
 
-  if (!mobileMenuToggle || !mobileMenu || !mobileMenuBackdrop) {
-    return;
+  if (!mobileMenuToggle || !mobileMenu) return;
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("is-open");
+    document.body.classList.remove("has-mobile-menu-open");
+
+    mobileMenuToggle.setAttribute("aria-expanded", "false");
+    mobileMenuToggle.setAttribute("aria-label", "Open menu");
   }
 
   function openMobileMenu() {
     mobileMenu.classList.add("is-open");
-    mobileMenuBackdrop.classList.add("is-open");
     document.body.classList.add("has-mobile-menu-open");
+
     mobileMenuToggle.setAttribute("aria-expanded", "true");
+    mobileMenuToggle.setAttribute("aria-label", "Close menu");
   }
 
-  function closeMobileMenu() {
-    mobileMenu.classList.remove("is-open");
-    mobileMenuBackdrop.classList.remove("is-open");
-    document.body.classList.remove("has-mobile-menu-open");
-    mobileMenuToggle.setAttribute("aria-expanded", "false");
-  }
+  mobileMenuToggle.addEventListener("click", function () {
+    const isOpen = mobileMenu.classList.contains("is-open");
 
-  mobileMenuToggle.addEventListener("click", openMobileMenu);
-
-  if (mobileMenuClose) {
-    mobileMenuClose.addEventListener("click", closeMobileMenu);
-  }
-
-  mobileMenuBackdrop.addEventListener("click", closeMobileMenu);
+    if (isOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {

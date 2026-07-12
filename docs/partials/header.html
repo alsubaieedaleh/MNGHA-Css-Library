@@ -120,48 +120,72 @@
     </div>
   </div>
 
- <div class="mngha-mobile-menu" id="mngha-mobile-menu" data-mobile-menu>
+  <div class="mngha-mobile-menu" id="mngha-mobile-menu" data-mobile-menu>
   <div class="mngha-mobile-menu-tools">
-    <button class="mngha-mobile-tool" type="button">
-      <span aria-hidden="true">⌕</span>
-      <span>Search</span>
+    <button class="mngha-mobile-tool" type="button" data-toggle-theme>
+      <span>Switch Theme</span>
     </button>
 
     <button class="mngha-mobile-tool" type="button" data-toggle-direction>
-      <span aria-hidden="true">☼</span>
       <span>العربية</span>
     </button>
   </div>
 
-  <nav class="mngha-mobile-menu-nav" aria-label="Mobile navigation">
-    <button class="mngha-mobile-menu-link" type="button">
-      <span>About MNGHA</span>
-      <span aria-hidden="true">⌄</span>
-    </button>
-
-    <a class="mngha-mobile-menu-link is-active" href="./services.html">
-      <span>E-Services</span>
+  <nav class="mngha-mobile-menu-nav" aria-label="Mobile documentation navigation">
+    <a class="mngha-mobile-menu-link" href="./foundations.html">
+      <span>Foundations</span>
     </a>
 
-    <button class="mngha-mobile-menu-link" type="button">
-      <span>Campuses</span>
-      <span aria-hidden="true">⌄</span>
+    <button
+      class="mngha-mobile-menu-link"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-components-menu"
+      data-mobile-submenu-trigger
+    >
+      <span>Components</span>
+      <span class="mngha-mobile-menu-arrow" aria-hidden="true">⌄</span>
     </button>
 
-    <button class="mngha-mobile-menu-link" type="button">
-      <span>Patients and Visitors</span>
-      <span aria-hidden="true">⌄</span>
-    </button>
+    <div class="mngha-mobile-submenu" id="mobile-components-menu" data-mobile-submenu hidden>
+    
 
-    <a class="mngha-mobile-menu-link" href="./professionals.html">
-      <span>Professionals</span>
+      <a class="mngha-mobile-submenu-link" href="./header.html">Header</a>
+      <a class="mngha-mobile-submenu-link" href="./buttons.html">Buttons</a>
+      <a class="mngha-mobile-submenu-link" href="./cards.html">Cards</a>
+      <a class="mngha-mobile-submenu-link" href="./forms.html">Form Controls</a>
+      <a class="mngha-mobile-submenu-link" href="./select.html">Select</a>
+      <a class="mngha-mobile-submenu-link" href="./radio.html">Radio</a>
+      <a class="mngha-mobile-submenu-link" href="./file-upload.html">File Upload</a>
+      <a class="mngha-mobile-submenu-link" href="./table.html">Table</a>
+      <a class="mngha-mobile-submenu-link" href="./pagination.html">Pagination</a>
+
+      <p class="mngha-mobile-submenu-label">Templates</p>
+
+      <a class="mngha-mobile-submenu-link" href="./templates-login.html">Login Page</a>
+      <a class="mngha-mobile-submenu-link" href="./templates-dashboard.html">Dashboard Page</a>
+      <a class="mngha-mobile-submenu-link" href="./templates-error.html">Error Page</a>
+
+      <p class="mngha-mobile-submenu-label">Utilities</p>
+
+      <a class="mngha-mobile-submenu-link" href="./layout.html">Layout Grid</a>
+      <a class="mngha-mobile-submenu-link" href="./theme.html">Theme System</a>
+      <a class="mngha-mobile-submenu-link" href="./direction.html">Direction Support</a>
+    </div>
+
+    <a class="mngha-mobile-menu-link" href="./layout.html">
+      <span>Layout</span>
     </a>
 
-    <button class="mngha-mobile-menu-link" type="button">
-      <span>Media Center</span>
-      <span aria-hidden="true">⌄</span>
-    </button>
+    <a class="mngha-mobile-menu-link" href="./theme.html">
+      <span>Theme</span>
+    </a>
+
+    <a class="mngha-mobile-menu-link" href="./direction.html">
+      <span>Direction</span>
+    </a>
   </nav>
+</div>
 </div>
 
 <div class="mngha-mobile-menu-backdrop" data-mobile-menu-backdrop></div>

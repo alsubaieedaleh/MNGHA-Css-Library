@@ -3,14 +3,21 @@
  * Pagination
  * --------------------------------------------------------------------------
  */
+.mngha-pagination-wrapper {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
 
 .mngha-pagination {
+  width: max-content;
+  min-width: 0;
+
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-md);
-  min-width: 0;
 
-   font-size: var(--text-sm-size);
+  font-size: var(--text-sm-size);
   font-weight: var(--font-weight-regular);
   line-height: var(--text-sm-line-height);
 }
@@ -46,17 +53,21 @@
 }
 
 .mngha-pagination-item:focus-visible,
-.mngha-pagination-arrow:focus-visible {
-  outline: none;
-  background: var(--color-gray-100);
+.mngha-pagination-arrow:focus-visible,
+.mngha-pagination-more:focus-visible,
+.mngha-pagination-menu-item:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
 }
 
 .mngha-pagination-item.is-active {
   color: var(--color-gray-950);
+  cursor: default;
 }
 
 .mngha-pagination-item.is-active::after {
   content: "";
+
   position: absolute;
   inset-inline-start: 50%;
   inset-block-end: var(--spacing-none);
@@ -70,24 +81,39 @@
   transform: translateX(-50%);
 }
 
-.mngha-pagination-more {
-  min-width: var(--spacing-4xl);
-  height: var(--spacing-4xl);
-  padding-inline: var(--spacing-md);
+html[dir="rtl"] .mngha-pagination-item.is-active::after {
+  transform: translateX(50%);
+}
 
+.mngha-pagination-item:disabled,
+.mngha-pagination-arrow:disabled,
+.mngha-pagination-more:disabled {
+  color: var(--color-gray-400);
+
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * More-pages trigger
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-pagination-more {
   border: 1px solid var(--color-gray-950);
   border-radius: var(--radius-sm);
   background: var(--color-white);
 }
 
-.mngha-pagination-more:hover,
-.mngha-pagination-more:focus-visible {
-  outline: none;
+.mngha-pagination-more:hover {
   background: var(--color-gray-50);
 }
 
 /**
- * Pagination Dropdown
+ * --------------------------------------------------------------------------
+ * Pagination dropdown
+ * --------------------------------------------------------------------------
  */
 
 .mngha-pagination-dropdown {
@@ -146,9 +172,7 @@
   cursor: pointer;
 }
 
-.mngha-pagination-menu-item:hover,
-.mngha-pagination-menu-item:focus-visible {
-  outline: none;
+.mngha-pagination-menu-item:hover {
   background: var(--color-gray-50);
 }
 
@@ -161,4 +185,43 @@
   font-size: var(--text-xs-size);
   font-weight: var(--font-weight-medium);
   line-height: var(--text-xs-line-height);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Table integration
+ * Move these rules to table.css if the table component owns its footer.
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-table-container {
+  width: 100%;
+}
+
+.mngha-table-container .mngha-table-wrapper {
+  border-block-end: 0;
+}
+
+.mngha-table-footer {
+  width: 100%;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: 1px solid var(--color-gray-300);
+  border-block-start: 0;
+  background: var(--color-white);
+}
+
+.mngha-table-footer .mngha-pagination-wrapper {
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .mngha-table-footer {
+    justify-content: flex-start;
+   }
 }

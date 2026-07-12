@@ -49,13 +49,15 @@
 .mngha-table th {
   height: var(--spacing-6xl);
   width: var(--spacing-10xl);
-  background: var(--color-gray-100);
   color: var(--color-gray-700);
   font-size: var(--text-xs-size);
   line-height: var(--text-xs-line-height);
   font-weight: var(--font-weight-medium);
 }
-
+.mngha-table thead {
+  background: var(--color-gray-100);
+  
+}
 /* Header vertical lines only */
 .mngha-table th:not(:last-child) {
   border-inline-end: 1px solid var(--color-gray-300);
@@ -74,9 +76,6 @@
   border-block-end: var(--spacing-none);
 }
 
-.mngha-table tbody tr:hover td {
-  /* background: var(--color-gray-50); */
-}
 
 .mngha-table tbody tr.is-selected td,
 .mngha-table tbody tr.mngha-table-row--selected td {
@@ -230,26 +229,46 @@
 .mngha-table-checkbox:disabled::before {
   background-color: var(--color-gray-400);
 }
+/**
+ * --------------------------------------------------------------------------
+ * Table Container and Footer
+ * --------------------------------------------------------------------------
+ */
 
 .mngha-table-container {
   width: 100%;
   min-width: 0;
 }
 
-.mngha-table-wrapper {
+.mngha-table-container .mngha-table-wrapper {
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+
+  border-block-end: 0;
 }
 
 .mngha-table-footer {
+  width: 100%;
+  padding-block: var(--spacing-lg);
+  padding-inline: var(--spacing-lg);
+
   display: flex;
   align-items: center;
-  padding-block-start: var(--spacing-xl);
+  justify-content: flex-start;
+
   overflow: visible;
+
+  border: 1px solid var(--color-gray-300);
+  border-block-start: 0;
+  background: var(--color-white);
 }
 
+.mngha-table-footer .mngha-pagination-wrapper {
+  width: auto;
+  max-width: 100%;
+}
 .mngha-pagination {
   position: relative;
   overflow: visible;

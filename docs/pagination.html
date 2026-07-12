@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pagination - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Pagination</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Pagination helps users move between multiple pages of content.
+              Use it independently or inside a table footer.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Numbered navigation</h3>
+
+              <p class="mngha-card-description">
+                Page items allow direct navigation to a specific page.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Previous and next</h3>
+
+              <p class="mngha-card-description">
+                Arrow controls move one page backward or forward.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">More pages</h3>
+
+              <p class="mngha-card-description">
+                The dropdown gives access to page numbers that are not displayed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Standalone Pagination</h2>
+
+        <p class="mngha-paragraph">
+          Use this pattern below lists, cards, search results, and other paged
+          content that is not presented in a table.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-pagination-wrapper">
+              <nav
+  class="mngha-pagination"
+  aria-label="Pagination"
+>
+  <button
+    class="mngha-pagination-arrow"
+    type="button"
+    aria-label="Previous page"
+    disabled
+  >
+    <span aria-hidden="true">‹</span>
+  </button>
+
+  <button
+    class="mngha-pagination-item is-active"
+    type="button"
+    aria-current="page"
+  >
+    1
+  </button>
+
+  <button
+    class="mngha-pagination-item"
+    type="button"
+    aria-label="Go to page 2"
+  >
+    2
+  </button>
+
+  <button
+    class="mngha-pagination-item"
+    type="button"
+    aria-label="Go to page 3"
+  >
+    3
+  </button>
+
+  <div class="mngha-pagination-dropdown">
+    <button
+      class="mngha-pagination-more"
+      type="button"
+      aria-label="Show more pages"
+      aria-expanded="false"
+      aria-haspopup="menu"
+    >
+      …
+    </button>
+
+    <div
+      class="mngha-pagination-menu"
+      role="menu"
+      aria-label="More pages"
+    >
+      <button
+        class="mngha-pagination-menu-item is-selected"
+        type="button"
+        role="menuitem"
+        data-page="4"
+      >
+        <span>4</span>
+      </button>
+
+      <button
+        class="mngha-pagination-menu-item"
+        type="button"
+        role="menuitem"
+        data-page="5"
+      >
+        <span>5</span>
+      </button>
+
+      <button
+        class="mngha-pagination-menu-item"
+        type="button"
+        role="menuitem"
+        data-page="6"
+      >
+        <span>6</span>
+      </button>
+
+      <button
+        class="mngha-pagination-menu-item"
+        type="button"
+        role="menuitem"
+        data-page="7"
+      >
+        <span>7</span>
+      </button>
+    </div>
+  </div>
+
+  <button
+    class="mngha-pagination-item"
+    type="button"
+    aria-label="Go to page 999"
+  >
+    999
+  </button>
+
+  <button
+    class="mngha-pagination-arrow"
+    type="button"
+    aria-label="Next page"
+  >
+    <span aria-hidden="true">›</span>
+  </button>
+</nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Standalone pagination</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;nav
+  class=&quot;mngha-pagination&quot;
+  aria-label=&quot;Pagination&quot;
+&gt;
+  &lt;button
+    class=&quot;mngha-pagination-arrow&quot;
+    type=&quot;button&quot;
+    aria-label=&quot;Previous page&quot;
+    disabled
+  &gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;‹&lt;/span&gt;
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-pagination-item is-active&quot;
+    type=&quot;button&quot;
+    aria-current=&quot;page&quot;
+  &gt;
+    1
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-pagination-item&quot;
+    type=&quot;button&quot;
+    aria-label=&quot;Go to page 2&quot;
+  &gt;
+    2
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-pagination-item&quot;
+    type=&quot;button&quot;
+    aria-label=&quot;Go to page 3&quot;
+  &gt;
+    3
+  &lt;/button&gt;
+
+  &lt;div class=&quot;mngha-pagination-dropdown&quot;&gt;
+    &lt;button
+      class=&quot;mngha-pagination-more&quot;
+      type=&quot;button&quot;
+      aria-label=&quot;Show more pages&quot;
+      aria-expanded=&quot;false&quot;
+      aria-haspopup=&quot;menu&quot;
+    &gt;
+      …
+    &lt;/button&gt;
+
+    &lt;div
+      class=&quot;mngha-pagination-menu&quot;
+      role=&quot;menu&quot;
+      aria-label=&quot;More pages&quot;
+    &gt;
+      &lt;button
+        class=&quot;mngha-pagination-menu-item is-selected&quot;
+        type=&quot;button&quot;
+        role=&quot;menuitem&quot;
+        data-page=&quot;4&quot;
+      &gt;
+        &lt;span&gt;4&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;button
+        class=&quot;mngha-pagination-menu-item&quot;
+        type=&quot;button&quot;
+        role=&quot;menuitem&quot;
+        data-page=&quot;5&quot;
+      &gt;
+        &lt;span&gt;5&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;button
+        class=&quot;mngha-pagination-menu-item&quot;
+        type=&quot;button&quot;
+        role=&quot;menuitem&quot;
+        data-page=&quot;6&quot;
+      &gt;
+        &lt;span&gt;6&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;button
+        class=&quot;mngha-pagination-menu-item&quot;
+        type=&quot;button&quot;
+        role=&quot;menuitem&quot;
+        data-page=&quot;7&quot;
+      &gt;
+        &lt;span&gt;7&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button
+    class=&quot;mngha-pagination-item&quot;
+    type=&quot;button&quot;
+    aria-label=&quot;Go to page 999&quot;
+  &gt;
+    999
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-pagination-arrow&quot;
+    type=&quot;button&quot;
+    aria-label=&quot;Next page&quot;
+  &gt;
+    &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Pagination with a Table</h2>
+
+        <p class="mngha-paragraph">
+          Place the table wrapper and footer inside
+          <strong>mngha-table-container</strong>. The footer keeps pagination
+          aligned and visually connected to the table.
+        </p>
+
+        <div class="mngha-table-container">
+  <div class="mngha-table-wrapper">
+    <table
+      class="mngha-table"
+      aria-label="Employees"
+    >
+      <thead  >
+        <tr  >
+          <th scope="col">Employee</th>
+          <th scope="col">Department</th>
+          <th scope="col">Role</th>
+          <th scope="col">Status</th> 
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Ahmed Alqahtani</td>
+          <td>Digital Services</td>
+          <td>Software Engineer</td>
+          <td>Active</td>
+        </tr>
+
+        <tr>
+          <td>Sarah Alharbi</td>
+          <td>User Experience</td>
+          <td>Product Designer</td>
+          <td>Active</td>
+        </tr>
+
+        <tr>
+          <td>Fahad Alotaibi</td>
+          <td>Data Management</td>
+          <td>Data Analyst</td>
+          <td>Active</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mngha-table-footer">
+    <div class="mngha-pagination-wrapper">
+      <nav
+        class="mngha-pagination"
+        aria-label="Employees table pagination"
+      >
+        <button
+          class="mngha-pagination-arrow"
+          type="button"
+          aria-label="Previous page"
+          disabled
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <button
+          class="mngha-pagination-item is-active"
+          type="button"
+          aria-current="page"
+        >
+          1
+        </button>
+
+        <button
+          class="mngha-pagination-item"
+          type="button"
+          aria-label="Go to page 2"
+        >
+          2
+        </button>
+
+        <button
+          class="mngha-pagination-item"
+          type="button"
+          aria-label="Go to page 3"
+        >
+          3
+        </button>
+
+        <div class="mngha-pagination-dropdown">
+          <button
+            class="mngha-pagination-more"
+            type="button"
+            aria-label="Show more pages"
+            aria-expanded="false"
+            aria-haspopup="menu"
+          >
+            …
+          </button>
+
+          <div
+            class="mngha-pagination-menu"
+            role="menu"
+            aria-label="More pages"
+          >
+            <button
+              class="mngha-pagination-menu-item is-selected"
+              type="button"
+              role="menuitem"
+              data-page="4"
+            >
+              <span>4</span>
+            </button>
+
+            <button
+              class="mngha-pagination-menu-item"
+              type="button"
+              role="menuitem"
+              data-page="5"
+            >
+              <span>5</span>
+            </button>
+
+            <button
+              class="mngha-pagination-menu-item"
+              type="button"
+              role="menuitem"
+              data-page="6"
+            >
+              <span>6</span>
+            </button>
+
+            <button
+              class="mngha-pagination-menu-item"
+              type="button"
+              role="menuitem"
+              data-page="7"
+            >
+              <span>7</span>
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="mngha-pagination-item"
+          type="button"
+          aria-label="Go to page 999"
+        >
+          999
+        </button>
+
+        <button
+          class="mngha-pagination-arrow"
+          type="button"
+          aria-label="Next page"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Table with pagination</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-container&quot;&gt;
+  &lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+    &lt;table
+      class=&quot;mngha-table&quot;
+      aria-label=&quot;Employees&quot;
+    &gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;col&quot;&gt;Employee&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Ahmed Alqahtani&lt;/td&gt;
+          &lt;td&gt;Digital Services&lt;/td&gt;
+          &lt;td&gt;Software Engineer&lt;/td&gt;
+          &lt;td&gt;Active&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;Sarah Alharbi&lt;/td&gt;
+          &lt;td&gt;User Experience&lt;/td&gt;
+          &lt;td&gt;Product Designer&lt;/td&gt;
+          &lt;td&gt;Active&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;Fahad Alotaibi&lt;/td&gt;
+          &lt;td&gt;Data Management&lt;/td&gt;
+          &lt;td&gt;Data Analyst&lt;/td&gt;
+          &lt;td&gt;Active&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-table-footer&quot;&gt;
+    &lt;div class=&quot;mngha-pagination-wrapper&quot;&gt;
+      &lt;nav
+        class=&quot;mngha-pagination&quot;
+        aria-label=&quot;Employees table pagination&quot;
+      &gt;
+        &lt;button
+          class=&quot;mngha-pagination-arrow&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Previous page&quot;
+          disabled
+        &gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;‹&lt;/span&gt;
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item is-active&quot;
+          type=&quot;button&quot;
+          aria-current=&quot;page&quot;
+        &gt;
+          1
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Go to page 2&quot;
+        &gt;
+          2
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Go to page 3&quot;
+        &gt;
+          3
+        &lt;/button&gt;
+
+        &lt;div class=&quot;mngha-pagination-dropdown&quot;&gt;
+          &lt;button
+            class=&quot;mngha-pagination-more&quot;
+            type=&quot;button&quot;
+            aria-label=&quot;Show more pages&quot;
+            aria-expanded=&quot;false&quot;
+            aria-haspopup=&quot;menu&quot;
+          &gt;
+            …
+          &lt;/button&gt;
+
+          &lt;div
+            class=&quot;mngha-pagination-menu&quot;
+            role=&quot;menu&quot;
+            aria-label=&quot;More pages&quot;
+          &gt;
+            &lt;button
+              class=&quot;mngha-pagination-menu-item is-selected&quot;
+              type=&quot;button&quot;
+              role=&quot;menuitem&quot;
+              data-page=&quot;4&quot;
+            &gt;
+              &lt;span&gt;4&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              class=&quot;mngha-pagination-menu-item&quot;
+              type=&quot;button&quot;
+              role=&quot;menuitem&quot;
+              data-page=&quot;5&quot;
+            &gt;
+              &lt;span&gt;5&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              class=&quot;mngha-pagination-menu-item&quot;
+              type=&quot;button&quot;
+              role=&quot;menuitem&quot;
+              data-page=&quot;6&quot;
+            &gt;
+              &lt;span&gt;6&lt;/span&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              class=&quot;mngha-pagination-menu-item&quot;
+              type=&quot;button&quot;
+              role=&quot;menuitem&quot;
+              data-page=&quot;7&quot;
+            &gt;
+              &lt;span&gt;7&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Go to page 999&quot;
+        &gt;
+          999
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-arrow&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Next page&quot;
+        &gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">States</h2>
+
+        <p class="mngha-paragraph">
+          Use these classes and attributes to represent pagination states.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Pagination states">
+              <thead>
+                <tr>
+                  <th scope="col">State</th>
+                  <th scope="col">Class or attribute</th>
+                  <th scope="col">Usage</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Default page</td>
+                  <td><span>.mngha-pagination-item</span></td>
+                  <td>A selectable page item.</td>
+                </tr>
+
+                <tr>
+                  <td>Current page</td>
+                  <td><span>.is-active + aria-current="page"</span></td>
+                  <td>Marks the page currently being displayed.</td>
+                </tr>
+
+                <tr>
+                  <td>Disabled control</td>
+                  <td><span>disabled</span></td>
+                  <td>Use when previous or next navigation is unavailable.</td>
+                </tr>
+
+                <tr>
+                  <td>Open menu</td>
+                  <td><span>.mngha-pagination-dropdown.is-open</span></td>
+                  <td>Displays the more-pages menu.</td>
+                </tr>
+
+                <tr>
+                  <td>Selected menu item</td>
+                  <td><span>.mngha-pagination-menu-item.is-selected</span></td>
+                  <td>Marks the selected page in the menu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <p class="mngha-paragraph">
+          These are the public pagination classes used by the examples.
+        </p>
+
+        <div class="mngha-table-container">
+          <div class="mngha-table-wrapper">
+            <table class="mngha-table" aria-label="Pagination class reference">
+              <thead>
+                <tr>
+                  <th scope="col">Class</th>
+                  <th scope="col">Purpose</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><span>.mngha-pagination-wrapper</span></td>
+                  <td>Provides horizontal overflow protection.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination</span></td>
+                  <td>The main pagination navigation container.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-item</span></td>
+                  <td>A numbered page button.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-arrow</span></td>
+                  <td>A previous or next page control.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-dropdown</span></td>
+                  <td>Contains the more-pages trigger and menu.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-more</span></td>
+                  <td>Opens the hidden page menu.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-menu</span></td>
+                  <td>The list of additional page options.</td>
+                </tr>
+
+                <tr>
+                  <td><span>.mngha-pagination-menu-item</span></td>
+                  <td>A selectable page inside the menu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidelines</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Mark one current page</h3>
+
+              <p class="mngha-card-description">
+                Apply <strong>is-active</strong> and
+                <strong>aria-current="page"</strong> to one item only.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Disable unavailable arrows</h3>
+
+              <p class="mngha-card-description">
+                Disable the previous control on the first page and the next
+                control on the last page.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep labels accessible</h3>
+
+              <p class="mngha-card-description">
+                Give the navigation, arrows, and more-pages control clear
+                accessible labels.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Dropdown JavaScript</h2>
+
+        <p class="mngha-paragraph">
+          Numbered pagination can be connected to any application logic.
+          This script only manages the more-pages menu.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">JavaScript</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Pagination dropdown JavaScript</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>function initPaginationDropdowns() {
+  const dropdowns = document.querySelectorAll(
+    &quot;.mngha-pagination-dropdown&quot;
+  );
+
+  dropdowns.forEach(function (dropdown) {
+    const trigger = dropdown.querySelector(
+      &quot;.mngha-pagination-more&quot;
+    );
+
+    const items = dropdown.querySelectorAll(
+      &quot;.mngha-pagination-menu-item&quot;
+    );
+
+    if (!trigger) return;
+
+    trigger.addEventListener(&quot;click&quot;, function (event) {
+      event.stopPropagation();
+
+      const shouldOpen = !dropdown.classList.contains(&quot;is-open&quot;);
+
+      closePaginationDropdowns();
+
+      if (shouldOpen) {
+        dropdown.classList.add(&quot;is-open&quot;);
+        trigger.setAttribute(&quot;aria-expanded&quot;, &quot;true&quot;);
+      }
+    });
+
+    items.forEach(function (item) {
+      item.addEventListener(&quot;click&quot;, function () {
+        items.forEach(function (menuItem) {
+          menuItem.classList.remove(&quot;is-selected&quot;);
+        });
+
+        item.classList.add(&quot;is-selected&quot;);
+
+        closePaginationDropdowns();
+        trigger.focus();
+      });
+    });
+  });
+
+  document.addEventListener(&quot;click&quot;, closePaginationDropdowns);
+
+  document.addEventListener(&quot;keydown&quot;, function (event) {
+    if (event.key === &quot;Escape&quot;) {
+      closePaginationDropdowns();
+    }
+  });
+}
+
+function closePaginationDropdowns() {
+  const openDropdowns = document.querySelectorAll(
+    &quot;.mngha-pagination-dropdown.is-open&quot;
+  );
+
+  openDropdowns.forEach(function (dropdown) {
+    dropdown.classList.remove(&quot;is-open&quot;);
+
+    const trigger = dropdown.querySelector(
+      &quot;.mngha-pagination-more&quot;
+    );
+
+    if (trigger) {
+      trigger.setAttribute(&quot;aria-expanded&quot;, &quot;false&quot;);
+    }
+  });
+}
+
+initPaginationDropdowns();</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+
+  <script>
+function initPaginationDropdowns() {
+  const dropdowns = document.querySelectorAll(
+    ".mngha-pagination-dropdown"
+  );
+
+  dropdowns.forEach(function (dropdown) {
+    const trigger = dropdown.querySelector(
+      ".mngha-pagination-more"
+    );
+
+    const items = dropdown.querySelectorAll(
+      ".mngha-pagination-menu-item"
+    );
+
+    if (!trigger) return;
+
+    trigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      const shouldOpen = !dropdown.classList.contains("is-open");
+
+      closePaginationDropdowns();
+
+      if (shouldOpen) {
+        dropdown.classList.add("is-open");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    items.forEach(function (item) {
+      item.addEventListener("click", function () {
+        items.forEach(function (menuItem) {
+          menuItem.classList.remove("is-selected");
+        });
+
+        item.classList.add("is-selected");
+
+        closePaginationDropdowns();
+        trigger.focus();
+      });
+    });
+  });
+
+  document.addEventListener("click", closePaginationDropdowns);
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closePaginationDropdowns();
+    }
+  });
+}
+
+function closePaginationDropdowns() {
+  const openDropdowns = document.querySelectorAll(
+    ".mngha-pagination-dropdown.is-open"
+  );
+
+  openDropdowns.forEach(function (dropdown) {
+    dropdown.classList.remove("is-open");
+
+    const trigger = dropdown.querySelector(
+      ".mngha-pagination-more"
+    );
+
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+initPaginationDropdowns();
+  </script>
+</body>
+</html>
