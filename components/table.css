@@ -12,6 +12,11 @@
 }
 
 .mngha-table {
+
+    --mngha-table-header-background: var(--color-gray-100);
+  --mngha-table-header-color: var(--color-gray-700);
+  --mngha-table-header-border-color: var(--color-gray-100);
+
   width: 100%;
   min-width: 900px;
   border-collapse: separate;
@@ -46,21 +51,23 @@
 }
 
 /* Header */
+.mngha-table thead {
+  background: var(--mngha-table-header-background);
+  color: var(--mngha-table-header-color);
+}
 .mngha-table th {
   height: var(--spacing-6xl);
   width: var(--spacing-10xl);
-  color: var(--color-gray-700);
+  border: 1px solid var(--mngha-table-header-border-color);
+  color: inherit;
   font-size: var(--text-xs-size);
   line-height: var(--text-xs-line-height);
   font-weight: var(--font-weight-medium);
 }
-.mngha-table thead {
-  background: var(--color-gray-100);
-  
-}
+
 /* Header vertical lines only */
 .mngha-table th:not(:last-child) {
-  border-inline-end: 1px solid var(--color-gray-300);
+  border-inline-end-color: var(--mngha-table-header-border-color);
 }
 
 /* Body rows */
@@ -273,3 +280,25 @@
   position: relative;
   overflow: visible;
 }
+
+/**
+ * --------------------------------------------------------------------------
+ * Table Header Variants
+ * --------------------------------------------------------------------------
+ */
+
+/* Theme brand header */
+.mngha-table--header-brand {
+  --mngha-table-header-background: var(--color-brand-primary);
+  --mngha-table-header-color: var(--color-action-primary-text);
+  --mngha-table-header-border-color: var(--color-brand-primary-hover);
+}
+
+/* Dark neutral header */
+.mngha-table--header-dark {
+  --mngha-table-header-background: var(--color-gray-900);
+  --mngha-table-header-color: var(--color-white);
+  --mngha-table-header-border-color: var(--color-gray-700);
+}
+
+ 
