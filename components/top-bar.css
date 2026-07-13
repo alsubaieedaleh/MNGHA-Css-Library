@@ -1,0 +1,73 @@
+/**
+ * --------------------------------------------------------------------------
+ * Top Bar (Date, Time and Tools)
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-government-toolbar {
+  width: 100%;
+  background: var(--color-brand-primary);
+  color: var(--color-white);
+}
+
+.mngha-government-toolbar-content {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.mngha-government-date-time {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  white-space: nowrap;
+}
+
+.mngha-government-date-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-sm-line-height);
+}
+
+.mngha-government-tools {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.mngha-government-tool {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.mngha-government-tool:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .mngha-government-toolbar-content {
+    overflow-x: auto;
+  }
+
+  .mngha-government-date-time {
+    gap: var(--spacing-lg);
+  }
+
+  .mngha-government-date-item {
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-line-height);
+  }
+}

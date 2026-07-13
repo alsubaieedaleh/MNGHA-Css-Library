@@ -1,128 +1,112 @@
+/**
+ * --------------------------------------------------------------------------
+ * Load the Existing Documentation Header Only
+ * --------------------------------------------------------------------------
+ *
+ * This file does not load or initialize any government component.
+ */
+
+async function fetchHeaderPartial(path) {
+  const cacheBuster = Date.now();
+  const fetchOptions = { cache: "no-store" };
+
+  try {
+    const response = await fetch(
+      `${path}?v=${cacheBuster}`,
+      fetchOptions
+    );
+
+    if (!response.ok) {
+      throw new Error(`Status ${response.status}`);
+    }
+
+    return await response.text();
+  } catch (firstError) {
+    const fallbackResponse = await fetch(
+      path,
+      fetchOptions
+    );
+
+    if (!fallbackResponse.ok) {
+      throw new Error(
+        `Header failed: ${fallbackResponse.status} ${fallbackResponse.statusText}`
+      );
+    }
+
+    return await fallbackResponse.text();
+  }
+}
+
 async function loadDocsHeader() {
-  const headerTarget = document.getElementById("docs-header");
+  const headerTarget =
+    document.getElementById("docs-header");
 
-  if (!headerTarget) return;
+  if (!headerTarget) {
+    console.error(
+      'Missing <div id="docs-header"></div>'
+    );
 
-  const response = await fetch("./partials/header.html");
-  const headerHtml = await response.text();
-
-  headerTarget.innerHTML = headerHtml;
-
-  initDocsHeader();
-  initDocsTheme();
-  initDocsDirection();
-  setActiveDocsLink();
-  initCodeBlockCopy();
-   initMobileMenu() ;
-   initMobileSubmenus() ;
-   openMobileMenu();
-  closeMobileMenu();
-  
-}
-function initMobileSubmenus() {
-  const submenuTriggers = document.querySelectorAll("[data-mobile-submenu-trigger]");
-
-  submenuTriggers.forEach(function (trigger) {
-    trigger.addEventListener("click", function () {
-      const submenuId = trigger.getAttribute("aria-controls");
-      const submenu = document.getElementById(submenuId);
-
-      if (!submenu) return;
-
-      const isOpen = trigger.getAttribute("aria-expanded") === "true";
-      const nextOpen = !isOpen;
-
-      trigger.setAttribute("aria-expanded", String(nextOpen));
-      submenu.hidden = !nextOpen;
-
-      trigger.classList.toggle("is-active", nextOpen);
-
-      const arrow = trigger.querySelector(".mngha-mobile-menu-arrow");
-
-      if (arrow) {
-        arrow.textContent = nextOpen ? "⌃" : "⌄";
-      }
-    });
-  });
-}
-function initMobileMenu() {
-  const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
-  const mobileMenu = document.querySelector("[data-mobile-menu]");
-
-  if (!mobileMenuToggle || !mobileMenu) return;
-
-  function closeMobileMenu() {
-    mobileMenu.classList.remove("is-open");
-    document.body.classList.remove("has-mobile-menu-open");
-
-    mobileMenuToggle.setAttribute("aria-expanded", "false");
-    mobileMenuToggle.setAttribute("aria-label", "Open menu");
+    return;
   }
 
-  function openMobileMenu() {
-    mobileMenu.classList.add("is-open");
-    document.body.classList.add("has-mobile-menu-open");
+  try {
+    const headerHtml = await fetchHeaderPartial(
+      "./partials/header.html"
+    );
 
-    mobileMenuToggle.setAttribute("aria-expanded", "true");
-    mobileMenuToggle.setAttribute("aria-label", "Close menu");
+    headerTarget.innerHTML = headerHtml;
+
+    initDocsHeader();
+    initDocsTheme();
+    initDocsDirection();
+    setActiveDocsLink();
+    initMobileMenu();
+    initMobileSubmenus();
+    initCodeBlockCopy();
+  } catch (error) {
+    console.error(
+      "Failed to load documentation header:",
+      error
+    );
+
+    headerTarget.innerHTML = `
+      <p>Unable to load the documentation header.</p>
+    `;
   }
-
-  mobileMenuToggle.addEventListener("click", function () {
-    const isOpen = mobileMenu.classList.contains("is-open");
-
-    if (isOpen) {
-      closeMobileMenu();
-    } else {
-      openMobileMenu();
-    }
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeMobileMenu();
-    }
-  });
-
-  const mobileMenuLinks = mobileMenu.querySelectorAll("a");
-
-  mobileMenuLinks.forEach(function (link) {
-    link.addEventListener("click", closeMobileMenu);
-  });
 }
-function initCodeBlockCopy() {
-  const copyButtons = document.querySelectorAll("[data-code-copy]");
 
-  copyButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const codeBlock = button.closest(".mngha-code-block");
-      const codeBody = codeBlock.querySelector(".mngha-code-block-body");
+/**
+ * --------------------------------------------------------------------------
+ * Desktop Header Navigation
+ * --------------------------------------------------------------------------
+ */
 
-      if (!codeBody) return;
-
-      navigator.clipboard.writeText(codeBody.innerText).then(function () {
-        const originalText = button.textContent;
-
-        button.textContent = "Copied";
-
-        setTimeout(function () {
-          button.textContent = originalText;
-        }, 1500);
-      });
-    });
-  });
-}
 function initDocsHeader() {
-  const headerMenuTriggers = document.querySelectorAll("[data-header-menu-trigger]");
+  const headerMenuTriggers = document.querySelectorAll(
+    "[data-header-menu-trigger]"
+  );
 
   function closeHeaderMenus() {
-    document.querySelectorAll(".mngha-header-nav-item.is-open").forEach(function (item) {
+    const openItems = document.querySelectorAll(
+      ".mngha-header-nav-item.is-open"
+    );
+
+    openItems.forEach(function (item) {
       item.classList.remove("is-open");
 
-      const trigger = item.querySelector("[data-header-menu-trigger]");
+      const trigger = item.querySelector(
+        "[data-header-menu-trigger]"
+      );
 
       if (trigger) {
-        trigger.classList.remove("mngha-header-link--active");
-        trigger.setAttribute("aria-expanded", "false");
+        trigger.classList.remove(
+          "mngha-header-link--active"
+        );
+
+        trigger.setAttribute(
+          "aria-expanded",
+          "false"
+        );
       }
     });
   }
@@ -132,22 +116,33 @@ function initDocsHeader() {
       event.preventDefault();
       event.stopPropagation();
 
-      const navItem = trigger.closest(".mngha-header-nav-item");
-      const isOpen = navItem.classList.contains("is-open");
+      const navItem = trigger.closest(
+        ".mngha-header-nav-item"
+      );
+
+      if (!navItem) return;
+
+      const isOpen =
+        navItem.classList.contains("is-open");
 
       closeHeaderMenus();
 
       if (!isOpen) {
         navItem.classList.add("is-open");
-        trigger.classList.add("mngha-header-link--active");
-        trigger.setAttribute("aria-expanded", "true");
+
+        trigger.classList.add(
+          "mngha-header-link--active"
+        );
+
+        trigger.setAttribute(
+          "aria-expanded",
+          "true"
+        );
       }
     });
   });
 
-  document.addEventListener("click", function () {
-    closeHeaderMenus();
-  });
+  document.addEventListener("click", closeHeaderMenus);
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
@@ -156,13 +151,26 @@ function initDocsHeader() {
   });
 }
 
+/**
+ * --------------------------------------------------------------------------
+ * Theme
+ * --------------------------------------------------------------------------
+ */
+
 function initDocsTheme() {
   const html = document.documentElement;
-  const themeLabel = document.getElementById("themeLabel");
-  const themeButtons = document.querySelectorAll("[data-toggle-theme]");
+
+  const themeLabel = document.getElementById(
+    "themeLabel"
+  );
+
+  const themeButtons = document.querySelectorAll(
+    "[data-toggle-theme]"
+  );
 
   function updateThemeLabel() {
-    const currentTheme = html.getAttribute("data-theme") || "external";
+    const currentTheme =
+      html.getAttribute("data-theme") || "external";
 
     if (themeLabel) {
       themeLabel.textContent = currentTheme;
@@ -171,10 +179,19 @@ function initDocsTheme() {
 
   themeButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      const currentTheme = html.getAttribute("data-theme") || "external";
-      const nextTheme = currentTheme === "internal" ? "external" : "internal";
+      const currentTheme =
+        html.getAttribute("data-theme") || "external";
 
-      html.setAttribute("data-theme", nextTheme);
+      const nextTheme =
+        currentTheme === "internal"
+          ? "external"
+          : "internal";
+
+      html.setAttribute(
+        "data-theme",
+        nextTheme
+      );
+
       updateThemeLabel();
     });
   });
@@ -182,23 +199,54 @@ function initDocsTheme() {
   updateThemeLabel();
 }
 
+/**
+ * --------------------------------------------------------------------------
+ * Direction
+ * --------------------------------------------------------------------------
+ */
+
 function initDocsDirection() {
   const html = document.documentElement;
-  const directionLabel = document.getElementById("directionLabel");
-  const directionButtons = document.querySelectorAll("[data-toggle-direction]");
+
+  const directionLabel = document.getElementById(
+    "directionLabel"
+  );
+
+  const directionButtons = document.querySelectorAll(
+    "[data-toggle-direction]"
+  );
 
   function updateDirectionLabel() {
+    const currentDirection = html.dir || "ltr";
+
     if (directionLabel) {
-      directionLabel.textContent = html.dir || "ltr";
+      directionLabel.textContent =
+        currentDirection;
     }
+
+    directionButtons.forEach(function (button) {
+      const buttonText = button.querySelector("span");
+
+      if (!buttonText) return;
+
+      buttonText.textContent =
+        currentDirection === "rtl"
+          ? "English"
+          : "العربية";
+    });
   }
 
   directionButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      const nextDirection = html.dir === "rtl" ? "ltr" : "rtl";
+      const nextDirection =
+        html.dir === "rtl" ? "ltr" : "rtl";
 
       html.dir = nextDirection;
-      html.lang = nextDirection === "rtl" ? "ar" : "en";
+
+      html.lang =
+        nextDirection === "rtl"
+          ? "ar"
+          : "en";
 
       updateDirectionLabel();
     });
@@ -207,8 +255,16 @@ function initDocsDirection() {
   updateDirectionLabel();
 }
 
+/**
+ * --------------------------------------------------------------------------
+ * Active Documentation Link
+ * --------------------------------------------------------------------------
+ */
+
 function setActiveDocsLink() {
-  const currentPage = window.location.pathname.split("/").pop();
+  const currentPage =
+    window.location.pathname.split("/").pop() ||
+    "index.html";
 
   const pageMap = {
     "foundations.html": "foundations",
@@ -221,50 +277,239 @@ function setActiveDocsLink() {
 
   if (!activeKey) return;
 
-  const activeLink = document.querySelector('[data-docs-link="' + activeKey + '"]');
+  const activeLink = document.querySelector(
+    `[data-docs-link="${activeKey}"]`
+  );
 
   if (activeLink) {
-    activeLink.classList.add("mngha-header-link--active");
+    activeLink.classList.add(
+      "mngha-header-link--active"
+    );
+
+    activeLink.setAttribute(
+      "aria-current",
+      "page"
+    );
   }
 }
-const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
-const mobileMenu = document.querySelector("[data-mobile-menu]");
-const mobileMenuClose = document.querySelector("[data-mobile-menu-close]");
-const mobileMenuBackdrop = document.querySelector("[data-mobile-menu-backdrop]");
 
-function openMobileMenu() {
-  if (!mobileMenu || !mobileMenuToggle || !mobileMenuBackdrop) return;
+/**
+ * --------------------------------------------------------------------------
+ * Mobile Menu
+ * --------------------------------------------------------------------------
+ */
 
-  mobileMenu.classList.add("is-open");
-  mobileMenuBackdrop.classList.add("is-open");
-  document.body.classList.add("has-mobile-menu-open");
-  mobileMenuToggle.setAttribute("aria-expanded", "true");
-}
+function initMobileMenu() {
+  const toggle = document.querySelector(
+    "[data-mobile-menu-toggle]"
+  );
 
-function closeMobileMenu() {
-  if (!mobileMenu || !mobileMenuToggle || !mobileMenuBackdrop) return;
+  const menu = document.querySelector(
+    "[data-mobile-menu]"
+  );
 
-  mobileMenu.classList.remove("is-open");
-  mobileMenuBackdrop.classList.remove("is-open");
-  document.body.classList.remove("has-mobile-menu-open");
-  mobileMenuToggle.setAttribute("aria-expanded", "false");
-}
+  const backdrop = document.querySelector(
+    "[data-mobile-menu-backdrop]"
+  );
 
-if (mobileMenuToggle) {
-  mobileMenuToggle.addEventListener("click", openMobileMenu);
-}
+  const closeButton = document.querySelector(
+    "[data-mobile-menu-close]"
+  );
 
-if (mobileMenuClose) {
-  mobileMenuClose.addEventListener("click", closeMobileMenu);
-}
+  if (!toggle || !menu) return;
 
-if (mobileMenuBackdrop) {
-  mobileMenuBackdrop.addEventListener("click", closeMobileMenu);
-}
+  function openMenu() {
+    menu.classList.add("is-open");
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeMobileMenu();
+    if (backdrop) {
+      backdrop.classList.add("is-open");
+    }
+
+    document.body.classList.add(
+      "has-mobile-menu-open"
+    );
+
+    toggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    toggle.setAttribute(
+      "aria-label",
+      "Close menu"
+    );
   }
-});
-loadDocsHeader();
+
+  function closeMenu() {
+    menu.classList.remove("is-open");
+
+    if (backdrop) {
+      backdrop.classList.remove("is-open");
+    }
+
+    document.body.classList.remove(
+      "has-mobile-menu-open"
+    );
+
+    toggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    toggle.setAttribute(
+      "aria-label",
+      "Open menu"
+    );
+  }
+
+  toggle.addEventListener("click", function () {
+    const isOpen =
+      menu.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  if (closeButton) {
+    closeButton.addEventListener(
+      "click",
+      closeMenu
+    );
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener(
+      "click",
+      closeMenu
+    );
+  }
+
+  const menuLinks = menu.querySelectorAll("a");
+
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Mobile Submenus
+ * --------------------------------------------------------------------------
+ */
+
+function initMobileSubmenus() {
+  const submenuTriggers = document.querySelectorAll(
+    "[data-mobile-submenu-trigger]"
+  );
+
+  submenuTriggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      const submenuId =
+        trigger.getAttribute("aria-controls");
+
+      const submenu =
+        document.getElementById(submenuId);
+
+      if (!submenu) return;
+
+      const isOpen =
+        trigger.getAttribute("aria-expanded") ===
+        "true";
+
+      const nextOpen = !isOpen;
+
+      trigger.setAttribute(
+        "aria-expanded",
+        String(nextOpen)
+      );
+
+      submenu.hidden = !nextOpen;
+
+      trigger.classList.toggle(
+        "is-active",
+        nextOpen
+      );
+
+      const arrow = trigger.querySelector(
+        ".mngha-mobile-menu-arrow"
+      );
+
+      if (arrow) {
+        arrow.textContent =
+          nextOpen ? "⌃" : "⌄";
+      }
+    });
+  });
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Code Block Copy
+ * --------------------------------------------------------------------------
+ */
+
+function initCodeBlockCopy() {
+  const copyButtons = document.querySelectorAll(
+    "[data-code-copy]"
+  );
+
+  copyButtons.forEach(function (button) {
+    button.addEventListener("click", async function () {
+      const codeBlock = button.closest(
+        ".mngha-code-block"
+      );
+
+      if (!codeBlock) return;
+
+      const codeBody = codeBlock.querySelector(
+        ".mngha-code-block-body"
+      );
+
+      if (!codeBody) return;
+
+      try {
+        await navigator.clipboard.writeText(
+          codeBody.innerText
+        );
+
+        const originalText =
+          button.textContent.trim();
+
+        button.textContent = "Copied";
+
+        window.setTimeout(function () {
+          button.textContent = originalText;
+        }, 1500);
+      } catch (error) {
+        console.error(
+          "Unable to copy code:",
+          error
+        );
+      }
+    });
+  });
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Start Documentation Header
+ * --------------------------------------------------------------------------
+ */
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    loadDocsHeader
+  );
+} else {
+  loadDocsHeader();
+}
