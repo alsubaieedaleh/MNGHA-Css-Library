@@ -22,7 +22,18 @@
 .mngha-grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+@media (max-width: 1024px) {
+  .mngha-grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 
+/* Mobile */
+@media (max-width: 640px) {
+  .mngha-grid-cols-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .mngha-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }

@@ -22,11 +22,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-@media (max-width: 640px) {
-  .mngha-card-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 .mngha-card-icon {
   width: 3rem;
   height: 3rem;
@@ -117,4 +113,25 @@
 .mngha-card-toggle:disabled {
   color: var(--color-gray-400);
   cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .mngha-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mngha-card {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-xl);
+  }
+
+  .mngha-card-title {
+    font-size: var(--text-md-size);
+    line-height: var(--text-md-line-height);
+  }
+
+  .mngha-card-description {
+    font-size: var(--text-sm-size);
+    line-height: var(--text-sm-line-height);
+  }
 }

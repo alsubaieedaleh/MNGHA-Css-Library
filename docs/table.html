@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tables - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!--
+        ----------------------------------------------------------------------
+        Introduction
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Tables</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Tables organize structured data into rows and columns. The mngha
+              table component supports responsive horizontal scrolling,
+              theme-aware header variants, selectable rows, links, tags,
+              statuses, actions, and pagination.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Overview
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Responsive by default</h3>
+
+              <p class="mngha-card-description">
+                Place the table inside <strong>mngha-table-wrapper</strong>.
+                Wide tables scroll horizontally instead of exceeding the page.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Theme-aware headers</h3>
+
+              <p class="mngha-card-description">
+                Add one modifier class to the table to use the active theme's
+                brand color or a neutral dark header.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Accessible structure</h3>
+
+              <p class="mngha-card-description">
+                Use a caption or accessible label, column scopes, descriptive
+                control labels, and native table elements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Basic Table
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="default-table">
+        <h2 class="mngha-section-title">Default Table</h2>
+
+        <p class="mngha-paragraph">
+          The default table uses a light neutral header. Always wrap the table
+          with <strong>mngha-table-wrapper</strong> so it remains contained on
+          smaller screens.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-table-wrapper">
+  <table class="mngha-table" aria-label="Employees">
+    <thead>
+      <tr>
+        <th scope="col">Employee</th>
+        <th scope="col">Department</th>
+        <th scope="col">Role</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Ahmed Alqahtani</td>
+        <td>Digital Services</td>
+        <td>Software Engineer</td>
+        <td>Active</td>
+      </tr>
+
+      <tr>
+        <td>Sarah Alharbi</td>
+        <td>User Experience</td>
+        <td>Product Designer</td>
+        <td>Active</td>
+      </tr>
+
+      <tr>
+        <td>Fahad Alotaibi</td>
+        <td>Data Management</td>
+        <td>Data Analyst</td>
+        <td>On leave</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Default table</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+  &lt;table class=&quot;mngha-table&quot; aria-label=&quot;Employees&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Employee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Ahmed Alqahtani&lt;/td&gt;
+        &lt;td&gt;Digital Services&lt;/td&gt;
+        &lt;td&gt;Software Engineer&lt;/td&gt;
+        &lt;td&gt;Active&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td&gt;Sarah Alharbi&lt;/td&gt;
+        &lt;td&gt;User Experience&lt;/td&gt;
+        &lt;td&gt;Product Designer&lt;/td&gt;
+        &lt;td&gt;Active&lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td&gt;Fahad Alotaibi&lt;/td&gt;
+        &lt;td&gt;Data Management&lt;/td&gt;
+        &lt;td&gt;Data Analyst&lt;/td&gt;
+        &lt;td&gt;On leave&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Header Variants
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="header-variants">
+        <h2 class="mngha-section-title">Header Variants</h2>
+
+        <p class="mngha-paragraph">
+          Header variants are applied to <strong>mngha-table</strong>, not to
+          individual rows or header cells. This keeps the entire header
+          consistent and allows theme tokens to control its colors.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Brand header</h3>
+
+              <p class="mngha-card-description">
+                Uses the active theme's primary brand and primary action text
+                tokens.
+              </p>
+
+              <div class="mngha-table-wrapper">
+  <table
+    class="mngha-table mngha-table--header-brand"
+    aria-label="Employees with brand header"
+  >
+    <thead>
+      <tr>
+        <th scope="col">Employee</th>
+        <th scope="col">Department</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Ahmed Alqahtani</td>
+        <td>Digital Services</td>
+        <td>Software Engineer</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Dark header</h3>
+
+              <p class="mngha-card-description">
+                Uses a neutral dark surface and white text independently of the
+                current brand theme.
+              </p>
+
+              <div class="mngha-table-wrapper">
+  <table
+    class="mngha-table mngha-table--header-dark"
+    aria-label="Employees with dark header"
+  >
+    <thead>
+      <tr>
+        <th scope="col">Employee</th>
+        <th scope="col">Department</th>
+        <th scope="col">Role</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Sarah Alharbi</td>
+        <td>User Experience</td>
+        <td>Product Designer</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Brand header</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+  &lt;table
+    class=&quot;mngha-table mngha-table--header-brand&quot;
+    aria-label=&quot;Employees with brand header&quot;
+  &gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Employee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Ahmed Alqahtani&lt;/td&gt;
+        &lt;td&gt;Digital Services&lt;/td&gt;
+        &lt;td&gt;Software Engineer&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Dark header</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+  &lt;table
+    class=&quot;mngha-table mngha-table--header-dark&quot;
+    aria-label=&quot;Employees with dark header&quot;
+  &gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Employee&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Sarah Alharbi&lt;/td&gt;
+        &lt;td&gt;User Experience&lt;/td&gt;
+        &lt;td&gt;Product Designer&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Complete Feature Example
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="complete-example">
+        <h2 class="mngha-section-title">Complete Table Example</h2>
+
+        <p class="mngha-paragraph">
+          This example combines the checkbox column, selected-row state, table
+          link, tag, status, and action column. Use only the features required
+          by the data and task.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-table-wrapper">
+  <table class="mngha-table" aria-label="Projects">
+    <thead>
+      <tr>
+        <th class="mngha-table-checkbox-cell" scope="col">
+          <input
+            class="mngha-table-checkbox"
+            type="checkbox"
+            aria-label="Select all projects"
+          >
+        </th>
+        <th scope="col">Project</th>
+        <th scope="col">Owner</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th class="mngha-table-action-cell" scope="col">
+          <span>Action</span>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="mngha-table-row--selected">
+        <td class="mngha-table-checkbox-cell">
+          <input
+            class="mngha-table-checkbox"
+            type="checkbox"
+            checked
+            aria-label="Select National Portal"
+          >
+        </td>
+        <td>
+          <a class="mngha-table-link" href="#">
+            National Portal
+          </a>
+        </td>
+        <td>Ahmed Alqahtani</td>
+        <td><span class="mngha-table-tag">Digital</span></td>
+        <td><span class="mngha-table-status">Active</span></td>
+        <td class="mngha-table-action-cell">
+          <button
+            class="mngha-table-action"
+            type="button"
+            aria-label="Open National Portal"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="mngha-table-checkbox-cell">
+          <input
+            class="mngha-table-checkbox"
+            type="checkbox"
+            aria-label="Select Employee Services"
+          >
+        </td>
+        <td>
+          <a class="mngha-table-link" href="#">
+            Employee Services
+          </a>
+        </td>
+        <td>Sarah Alharbi</td>
+        <td><span class="mngha-table-tag">Internal</span></td>
+        <td><span class="mngha-table-status">In review</span></td>
+        <td class="mngha-table-action-cell">
+          <button
+            class="mngha-table-action"
+            type="button"
+            aria-label="Open Employee Services"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="mngha-table-checkbox-cell">
+          <input
+            class="mngha-table-checkbox"
+            type="checkbox"
+            disabled
+            aria-label="Data Platform cannot be selected"
+          >
+        </td>
+        <td>Data Platform</td>
+        <td>Fahad Alotaibi</td>
+        <td><span class="mngha-table-tag">Data</span></td>
+        <td><span class="mngha-table-status">Archived</span></td>
+        <td class="mngha-table-action-cell">
+          <button
+            class="mngha-table-action"
+            type="button"
+            aria-label="Open Data Platform"
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Complete table</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+  &lt;table class=&quot;mngha-table&quot; aria-label=&quot;Projects&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;mngha-table-checkbox-cell&quot; scope=&quot;col&quot;&gt;
+          &lt;input
+            class=&quot;mngha-table-checkbox&quot;
+            type=&quot;checkbox&quot;
+            aria-label=&quot;Select all projects&quot;
+          &gt;
+        &lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Project&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Owner&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Type&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;th class=&quot;mngha-table-action-cell&quot; scope=&quot;col&quot;&gt;
+          &lt;span&gt;Action&lt;/span&gt;
+        &lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+
+    &lt;tbody&gt;
+      &lt;tr class=&quot;mngha-table-row--selected&quot;&gt;
+        &lt;td class=&quot;mngha-table-checkbox-cell&quot;&gt;
+          &lt;input
+            class=&quot;mngha-table-checkbox&quot;
+            type=&quot;checkbox&quot;
+            checked
+            aria-label=&quot;Select National Portal&quot;
+          &gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a class=&quot;mngha-table-link&quot; href=&quot;#&quot;&gt;
+            National Portal
+          &lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;Ahmed Alqahtani&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-tag&quot;&gt;Digital&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;mngha-table-action-cell&quot;&gt;
+          &lt;button
+            class=&quot;mngha-table-action&quot;
+            type=&quot;button&quot;
+            aria-label=&quot;Open National Portal&quot;
+          &gt;
+            &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td class=&quot;mngha-table-checkbox-cell&quot;&gt;
+          &lt;input
+            class=&quot;mngha-table-checkbox&quot;
+            type=&quot;checkbox&quot;
+            aria-label=&quot;Select Employee Services&quot;
+          &gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          &lt;a class=&quot;mngha-table-link&quot; href=&quot;#&quot;&gt;
+            Employee Services
+          &lt;/a&gt;
+        &lt;/td&gt;
+        &lt;td&gt;Sarah Alharbi&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-tag&quot;&gt;Internal&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;In review&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;mngha-table-action-cell&quot;&gt;
+          &lt;button
+            class=&quot;mngha-table-action&quot;
+            type=&quot;button&quot;
+            aria-label=&quot;Open Employee Services&quot;
+          &gt;
+            &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+
+      &lt;tr&gt;
+        &lt;td class=&quot;mngha-table-checkbox-cell&quot;&gt;
+          &lt;input
+            class=&quot;mngha-table-checkbox&quot;
+            type=&quot;checkbox&quot;
+            disabled
+            aria-label=&quot;Data Platform cannot be selected&quot;
+          &gt;
+        &lt;/td&gt;
+        &lt;td&gt;Data Platform&lt;/td&gt;
+        &lt;td&gt;Fahad Alotaibi&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-tag&quot;&gt;Data&lt;/span&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;Archived&lt;/span&gt;&lt;/td&gt;
+        &lt;td class=&quot;mngha-table-action-cell&quot;&gt;
+          &lt;button
+            class=&quot;mngha-table-action&quot;
+            type=&quot;button&quot;
+            aria-label=&quot;Open Data Platform&quot;
+          &gt;
+            &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Table with Pagination
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="table-pagination">
+        <h2 class="mngha-section-title">Table with Pagination</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-table-container</strong> when a table has a footer.
+          It groups the scrollable table wrapper and pagination footer into one
+          visual component.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-table-container">
+  <div class="mngha-table-wrapper">
+    <table
+      class="mngha-table mngha-table--header-brand"
+      aria-label="Employees"
+    >
+      <thead>
+        <tr>
+          <th scope="col">Employee</th>
+          <th scope="col">Department</th>
+          <th scope="col">Role</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Ahmed Alqahtani</td>
+          <td>Digital Services</td>
+          <td>Software Engineer</td>
+          <td><span class="mngha-table-status">Active</span></td>
+        </tr>
+
+        <tr>
+          <td>Sarah Alharbi</td>
+          <td>User Experience</td>
+          <td>Product Designer</td>
+          <td><span class="mngha-table-status">Active</span></td>
+        </tr>
+
+        <tr>
+          <td>Fahad Alotaibi</td>
+          <td>Data Management</td>
+          <td>Data Analyst</td>
+          <td><span class="mngha-table-status">On leave</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mngha-table-footer">
+    <div class="mngha-pagination-wrapper">
+      <nav
+        class="mngha-pagination"
+        aria-label="Employees table pagination"
+      >
+        <button
+          class="mngha-pagination-arrow"
+          type="button"
+          aria-label="Previous page"
+          disabled
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <button
+          class="mngha-pagination-item is-active"
+          type="button"
+          aria-current="page"
+        >
+          1
+        </button>
+
+        <button
+          class="mngha-pagination-item"
+          type="button"
+          aria-label="Go to page 2"
+        >
+          2
+        </button>
+
+        <button
+          class="mngha-pagination-item"
+          type="button"
+          aria-label="Go to page 3"
+        >
+          3
+        </button>
+
+        <button
+          class="mngha-pagination-arrow"
+          type="button"
+          aria-label="Next page"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Table with pagination</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-table-container&quot;&gt;
+  &lt;div class=&quot;mngha-table-wrapper&quot;&gt;
+    &lt;table
+      class=&quot;mngha-table mngha-table--header-brand&quot;
+      aria-label=&quot;Employees&quot;
+    &gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th scope=&quot;col&quot;&gt;Employee&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Department&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Role&lt;/th&gt;
+          &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Ahmed Alqahtani&lt;/td&gt;
+          &lt;td&gt;Digital Services&lt;/td&gt;
+          &lt;td&gt;Software Engineer&lt;/td&gt;
+          &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;Sarah Alharbi&lt;/td&gt;
+          &lt;td&gt;User Experience&lt;/td&gt;
+          &lt;td&gt;Product Designer&lt;/td&gt;
+          &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;Active&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;Fahad Alotaibi&lt;/td&gt;
+          &lt;td&gt;Data Management&lt;/td&gt;
+          &lt;td&gt;Data Analyst&lt;/td&gt;
+          &lt;td&gt;&lt;span class=&quot;mngha-table-status&quot;&gt;On leave&lt;/span&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-table-footer&quot;&gt;
+    &lt;div class=&quot;mngha-pagination-wrapper&quot;&gt;
+      &lt;nav
+        class=&quot;mngha-pagination&quot;
+        aria-label=&quot;Employees table pagination&quot;
+      &gt;
+        &lt;button
+          class=&quot;mngha-pagination-arrow&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Previous page&quot;
+          disabled
+        &gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;‹&lt;/span&gt;
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item is-active&quot;
+          type=&quot;button&quot;
+          aria-current=&quot;page&quot;
+        &gt;
+          1
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Go to page 2&quot;
+        &gt;
+          2
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-item&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Go to page 3&quot;
+        &gt;
+          3
+        &lt;/button&gt;
+
+        &lt;button
+          class=&quot;mngha-pagination-arrow&quot;
+          type=&quot;button&quot;
+          aria-label=&quot;Next page&quot;
+        &gt;
+          &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Class Reference
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Table class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-table-wrapper</strong></td>
+                <td>Container</td>
+                <td>Contains wide tables and enables horizontal scrolling.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table</strong></td>
+                <td>table</td>
+                <td>Applies the base table layout, typography, and tokens.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table--header-brand</strong></td>
+                <td>table</td>
+                <td>Uses the active theme's brand header colors.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table--header-dark</strong></td>
+                <td>table</td>
+                <td>Uses a neutral dark header with inverse text.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-checkbox-cell</strong></td>
+                <td>th or td</td>
+                <td>Sets the fixed width and spacing for checkbox columns.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-checkbox</strong></td>
+                <td>input</td>
+                <td>Styles the table selection checkbox.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-link</strong></td>
+                <td>a</td>
+                <td>Styles a primary link inside a table cell.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-tag</strong></td>
+                <td>span</td>
+                <td>Displays a compact neutral data label.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-status</strong></td>
+                <td>span</td>
+                <td>Displays a compact status pill with an indicator dot.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-action-cell</strong></td>
+                <td>th or td</td>
+                <td>Sets the fixed width and alignment of the action column.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-action</strong></td>
+                <td>a or button</td>
+                <td>Styles an icon-only row action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.is-selected</strong></td>
+                <td>tr</td>
+                <td>Applies the selected-row background.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-row--selected</strong></td>
+                <td>tr</td>
+                <td>Explicit component modifier for a selected row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-container</strong></td>
+                <td>Container</td>
+                <td>Groups a table wrapper with its footer.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-table-footer</strong></td>
+                <td>Container</td>
+                <td>Visually connects pagination or controls below a table.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Variant Usage
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Header Variant Usage</h2>
+
+        <div class="mngha-table-wrapper">
+          <table class="mngha-table" aria-label="Header variant guidance">
+            <thead>
+              <tr>
+                <th scope="col">Variant</th>
+                <th scope="col">Class</th>
+                <th scope="col">Recommended use</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Default</td>
+                <td><strong>.mngha-table</strong></td>
+                <td>General data tables and documentation tables.</td>
+              </tr>
+
+              <tr>
+                <td>Brand</td>
+                <td>
+                  <strong>
+                    mngha-table mngha-table--header-brand
+                  </strong>
+                </td>
+                <td>
+                  Prominent application tables that should follow the active
+                  external or internal theme.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dark</td>
+                <td>
+                  <strong>
+                    mngha-table mngha-table--header-dark
+                  </strong>
+                </td>
+                <td>
+                  High-contrast neutral tables where brand color is not needed.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Accessibility
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Identify the table</h3>
+
+              <p class="mngha-card-description">
+                Use a visible <strong>caption</strong> when useful, or provide a
+                concise <strong>aria-label</strong> when the surrounding heading
+                already supplies the visible title.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Define header scope</h3>
+
+              <p class="mngha-card-description">
+                Add <strong>scope="col"</strong> to column headers. Use
+                <strong>scope="row"</strong> when the first cell identifies its
+                row.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Label icon controls</h3>
+
+              <p class="mngha-card-description">
+                Give checkboxes and icon-only action controls descriptive
+                accessible labels that identify the affected row.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep native semantics</h3>
+
+              <p class="mngha-card-description">
+                Use real table, thead, tbody, tr, th, and td elements. Do not
+                recreate a data table using generic div elements.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do not rely on color</h3>
+
+              <p class="mngha-card-description">
+                Status text must remain understandable without its dot or
+                background color.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve keyboard access</h3>
+
+              <p class="mngha-card-description">
+                Use links and buttons for interactive cells so controls remain
+                focusable and operable from the keyboard.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Usage Guidance
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Keep column labels short, align data consistently, place row
+                actions at the end, and wrap every table for responsive
+                overflow.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not apply theme color classes directly to individual header
+                rows or cells. Use the approved table header modifier classes.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use selection intentionally</h3>
+
+              <p class="mngha-card-description">
+                Add checkboxes only when the application supports bulk actions
+                or explicit row selection.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep actions clear</h3>
+
+              <p class="mngha-card-description">
+                Use one clear primary row action or open a menu when several
+                actions are available.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+</body>
+</html>
