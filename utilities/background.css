@@ -117,27 +117,6 @@
 
 /**
  * --------------------------------------------------------------------------
- * Theme Background Utilities
- * --------------------------------------------------------------------------
- */
-
-.mngha-bg-brand-primary {
-  background: var(--color-brand-primary);
-}
-
-.mngha-bg-brand-surface {
-  background: var(--color-brand-surface);
-}
-
-.mngha-bg-brand-very-light {
-  background: var(--color-brand-very-light);
-}
-
-.mngha-bg-brand-light {
-  background: var(--color-brand-light);
-}
-/**
- * --------------------------------------------------------------------------
  * Semantic Background Utilities
  * --------------------------------------------------------------------------
  */

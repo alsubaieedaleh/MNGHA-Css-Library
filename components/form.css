@@ -575,78 +575,7 @@
   gap: var(--spacing-md);
 }
 
-.mngha-file-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
 
-  width: 100%;
-  max-width: 22.5rem;
-  min-height: var(--spacing-5xl);
-  box-sizing: border-box;
-
-  padding: var(--spacing-md);
-
-  border: 1px solid var(--color-gray-300);
-  border-radius: var(--radius-sm);
-  background: var(--color-gray-100);
-}
-
-.mngha-file-status {
-  width: 1.25rem;
-  height: 1.25rem;
-  flex-shrink: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: var(--radius-full);
-  background: var(--color-brand-primary);
-  color: var(--color-white);
-
-  font-size: var(--text-sm-size);
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-}
-
-.mngha-file-name {
-  flex: 1;
-  min-width: 0;
-
-  color: var(--color-gray-950);
-  font-size: var(--text-md-size);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--text-md-line-height);
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.mngha-file-remove {
-  flex-shrink: 0;
-
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 0;
-  background: transparent;
-  color: var(--color-gray-950);
-
-  font-size: var(--text-xl-size);
-  line-height: 1;
-  cursor: pointer;
-}
-
-.mngha-file-remove:hover {
-  color: var(--color-error-600);
-}
 /**
  * File Upload - Dropzone Variant
  */
@@ -795,6 +724,8 @@
   justify-content: center;
 
   border-radius: var(--radius-full);
+  background: var(--color-brand-primary);
+  color: var(--color-white);
 
   font-size: var(--text-sm-size);
   font-weight: var(--font-weight-bold);

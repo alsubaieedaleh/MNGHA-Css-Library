@@ -186,42 +186,4 @@ html[dir="rtl"] .mngha-pagination-item.is-active::after {
   font-weight: var(--font-weight-medium);
   line-height: var(--text-xs-line-height);
 }
-
-/**
- * --------------------------------------------------------------------------
- * Table integration
- * Move these rules to table.css if the table component owns its footer.
- * --------------------------------------------------------------------------
- */
-
-.mngha-table-container {
-  width: 100%;
-}
-
-.mngha-table-container .mngha-table-wrapper {
-  border-block-end: 0;
-}
-
-.mngha-table-footer {
-  width: 100%;
-  padding: var(--spacing-lg);
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  border: 1px solid var(--color-gray-300);
-  border-block-start: 0;
-  background: var(--color-white);
-}
-
-.mngha-table-footer .mngha-pagination-wrapper {
-  width: auto;
-  max-width: 100%;
-}
-
-@media (max-width: 640px) {
-  .mngha-table-footer {
-    justify-content: flex-start;
-   }
-}
+

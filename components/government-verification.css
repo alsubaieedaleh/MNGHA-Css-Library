@@ -214,10 +214,6 @@
 
   .mngha-government-registration {
     grid-column: auto;
-    align-items: flex-start;
-    padding: var(--spacing-lg);
-  }
-    .mngha-government-registration {
     display: grid;
     grid-template-columns: 2rem minmax(0, 1fr);
     column-gap: var(--spacing-lg);
@@ -247,9 +243,7 @@
     transition: none;
   }
 }
-.mngha-government-details[hidden] {
-  display: none !important;
-}
+
 #docs-government-bar,
 #docs-government-verification {
   display: block;

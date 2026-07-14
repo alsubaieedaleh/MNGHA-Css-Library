@@ -1,4 +1,7 @@
 {
+  "name": "mngha-ui",
+  "version": "1.0.0",
+  "description": "MNGHA UI Design System – CSS component library",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
