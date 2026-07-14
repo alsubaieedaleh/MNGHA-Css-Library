@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Radio - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Radio</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Radio controls allow users to select exactly one option from a
+              related group. The mngha radio component supports labels,
+              descriptions, checked states, disabled states, validation errors,
+              keyboard focus, and responsive form layouts.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">One choice per group</h3>
+
+              <p class="mngha-card-description">
+                Give related radio inputs the same name so the browser allows
+                only one option to remain selected.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Native behavior</h3>
+
+              <p class="mngha-card-description">
+                The component keeps native radio semantics while replacing only
+                the visual appearance.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Optional descriptions</h3>
+
+              <p class="mngha-card-description">
+                Add supporting descriptions when users need more context to
+                understand the difference between options.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="basic-radio">
+        <h2 class="mngha-section-title">Basic Radio Group</h2>
+
+        <p class="mngha-paragraph">
+          Use a fieldset and legend to identify the group, then place each
+          native radio input inside <strong>mngha-radio-option</strong>.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <fieldset class="mngha-field">
+  <legend class="mngha-label">
+    Preferred contact method
+  </legend>
+
+  <div class="mngha-radio-group">
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="contact-method"
+        value="email"
+        checked
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Email
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="contact-method"
+        value="phone"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Phone
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="contact-method"
+        value="sms"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          SMS
+        </span>
+      </span>
+    </label>
+  </div>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Basic radio group</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset class=&quot;mngha-field&quot;&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Preferred contact method
+  &lt;/legend&gt;
+
+  &lt;div class=&quot;mngha-radio-group&quot;&gt;
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;contact-method&quot;
+        value=&quot;email&quot;
+        checked
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Email
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;contact-method&quot;
+        value=&quot;phone&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Phone
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;contact-method&quot;
+        value=&quot;sms&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          SMS
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="radio-descriptions">
+        <h2 class="mngha-section-title">Radio Options with Descriptions</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-radio-content</strong> to group the main label and
+          optional supporting description.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <fieldset class="mngha-field">
+  <legend class="mngha-label">
+    Request type
+  </legend>
+
+  <div class="mngha-radio-group">
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="request-type"
+        value="standard"
+        checked
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Standard request
+        </span>
+
+        <span class="mngha-radio-description">
+          Use the normal review and approval process.
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="request-type"
+        value="urgent"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Urgent request
+        </span>
+
+        <span class="mngha-radio-description">
+          Use only when immediate processing is required.
+        </span>
+      </span>
+    </label>
+  </div>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Radio options with descriptions</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset class=&quot;mngha-field&quot;&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Request type
+  &lt;/legend&gt;
+
+  &lt;div class=&quot;mngha-radio-group&quot;&gt;
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;request-type&quot;
+        value=&quot;standard&quot;
+        checked
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Standard request
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          Use the normal review and approval process.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;request-type&quot;
+        value=&quot;urgent&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Urgent request
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          Use only when immediate processing is required.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="disabled-radio">
+        <h2 class="mngha-section-title">Disabled States</h2>
+
+        <p class="mngha-paragraph">
+          Apply the native disabled attribute to unavailable options. The
+          component also supports a disabled checked state.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <fieldset class="mngha-field">
+  <legend class="mngha-label">
+    Delivery method
+  </legend>
+
+  <div class="mngha-radio-group">
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="delivery-method"
+        value="digital"
+        checked
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Digital delivery
+        </span>
+
+        <span class="mngha-radio-description">
+          Receive the document through the portal.
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="delivery-method"
+        value="courier"
+        disabled
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Courier delivery
+        </span>
+
+        <span class="mngha-radio-description">
+          This option is not available for the selected region.
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="delivery-method"
+        value="branch"
+        checked
+        disabled
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Branch pickup
+        </span>
+
+        <span class="mngha-radio-description">
+          This previously selected option is now unavailable.
+        </span>
+      </span>
+    </label>
+  </div>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Disabled radio options</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset class=&quot;mngha-field&quot;&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Delivery method
+  &lt;/legend&gt;
+
+  &lt;div class=&quot;mngha-radio-group&quot;&gt;
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;delivery-method&quot;
+        value=&quot;digital&quot;
+        checked
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Digital delivery
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          Receive the document through the portal.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;delivery-method&quot;
+        value=&quot;courier&quot;
+        disabled
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Courier delivery
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          This option is not available for the selected region.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;delivery-method&quot;
+        value=&quot;branch&quot;
+        checked
+        disabled
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Branch pickup
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          This previously selected option is now unavailable.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="radio-error">
+        <h2 class="mngha-section-title">Error State</h2>
+
+        <p class="mngha-paragraph">
+          Add <strong>mngha-radio-group--error</strong> to the containing field
+          and connect the visible error message with aria-describedby.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <fieldset
+  class="mngha-field mngha-radio-group--error"
+  aria-describedby="notification-error"
+>
+  <legend class="mngha-label">
+    Notification preference
+  </legend>
+
+  <div class="mngha-radio-group">
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="notification-preference"
+        value="all"
+        aria-invalid="true"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          All notifications
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="notification-preference"
+        value="important"
+        aria-invalid="true"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Important notifications only
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="notification-preference"
+        value="none"
+        aria-invalid="true"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          No notifications
+        </span>
+      </span>
+    </label>
+  </div>
+
+  <p class="mngha-error-text" id="notification-error">
+    Select a notification preference.
+  </p>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Radio group error</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset
+  class=&quot;mngha-field mngha-radio-group--error&quot;
+  aria-describedby=&quot;notification-error&quot;
+&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Notification preference
+  &lt;/legend&gt;
+
+  &lt;div class=&quot;mngha-radio-group&quot;&gt;
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;notification-preference&quot;
+        value=&quot;all&quot;
+        aria-invalid=&quot;true&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          All notifications
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;notification-preference&quot;
+        value=&quot;important&quot;
+        aria-invalid=&quot;true&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Important notifications only
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;notification-preference&quot;
+        value=&quot;none&quot;
+        aria-invalid=&quot;true&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          No notifications
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;mngha-error-text&quot; id=&quot;notification-error&quot;&gt;
+    Select a notification preference.
+  &lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="radio-grid">
+        <h2 class="mngha-section-title">Radio Groups in a Form Grid</h2>
+
+        <p class="mngha-paragraph">
+          Place several radio fields inside <strong>mngha-form-grid</strong>.
+          The grid displays three columns and collapses to one on small screens.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-form-grid">
+  <fieldset class="mngha-field">
+    <legend class="mngha-label">
+      Account type
+    </legend>
+
+    <div class="mngha-radio-group">
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="account-type"
+          value="individual"
+          checked
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            Individual
+          </span>
+        </span>
+      </label>
+
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="account-type"
+          value="organization"
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            Organization
+          </span>
+        </span>
+      </label>
+    </div>
+  </fieldset>
+
+  <fieldset class="mngha-field">
+    <legend class="mngha-label">
+      Language
+    </legend>
+
+    <div class="mngha-radio-group">
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="language"
+          value="english"
+          checked
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            English
+          </span>
+        </span>
+      </label>
+
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="language"
+          value="arabic"
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            Arabic
+          </span>
+        </span>
+      </label>
+    </div>
+  </fieldset>
+
+  <fieldset class="mngha-field">
+    <legend class="mngha-label">
+      Visibility
+    </legend>
+
+    <div class="mngha-radio-group">
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="visibility"
+          value="private"
+          checked
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            Private
+          </span>
+        </span>
+      </label>
+
+      <label class="mngha-radio-option">
+        <input
+          class="mngha-radio-input"
+          type="radio"
+          name="visibility"
+          value="public"
+        >
+
+        <span class="mngha-radio-content">
+          <span class="mngha-radio-label">
+            Public
+          </span>
+        </span>
+      </label>
+    </div>
+  </fieldset>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Radio groups in a form grid</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;fieldset class=&quot;mngha-field&quot;&gt;
+    &lt;legend class=&quot;mngha-label&quot;&gt;
+      Account type
+    &lt;/legend&gt;
+
+    &lt;div class=&quot;mngha-radio-group&quot;&gt;
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;account-type&quot;
+          value=&quot;individual&quot;
+          checked
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            Individual
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;account-type&quot;
+          value=&quot;organization&quot;
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            Organization
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset class=&quot;mngha-field&quot;&gt;
+    &lt;legend class=&quot;mngha-label&quot;&gt;
+      Language
+    &lt;/legend&gt;
+
+    &lt;div class=&quot;mngha-radio-group&quot;&gt;
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;language&quot;
+          value=&quot;english&quot;
+          checked
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            English
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;language&quot;
+          value=&quot;arabic&quot;
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            Arabic
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset class=&quot;mngha-field&quot;&gt;
+    &lt;legend class=&quot;mngha-label&quot;&gt;
+      Visibility
+    &lt;/legend&gt;
+
+    &lt;div class=&quot;mngha-radio-group&quot;&gt;
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;visibility&quot;
+          value=&quot;private&quot;
+          checked
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            Private
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+
+      &lt;label class=&quot;mngha-radio-option&quot;&gt;
+        &lt;input
+          class=&quot;mngha-radio-input&quot;
+          type=&quot;radio&quot;
+          name=&quot;visibility&quot;
+          value=&quot;public&quot;
+        &gt;
+
+        &lt;span class=&quot;mngha-radio-content&quot;&gt;
+          &lt;span class=&quot;mngha-radio-label&quot;&gt;
+            Public
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="complete-example">
+        <h2 class="mngha-section-title">Complete Radio Example</h2>
+
+        <p class="mngha-paragraph">
+          This example combines a legend, helper text, checked option,
+          descriptions, and a disabled option.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <fieldset
+  class="mngha-field"
+  aria-describedby="approval-method-help"
+>
+  <legend class="mngha-label">
+    Approval method
+  </legend>
+
+  <p class="mngha-helper-text" id="approval-method-help">
+    Select how this request should be reviewed.
+  </p>
+
+  <div class="mngha-radio-group">
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="approval-method"
+        value="manager"
+        checked
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Manager approval
+        </span>
+
+        <span class="mngha-radio-description">
+          Send the request to the direct manager first.
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="approval-method"
+        value="department"
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Department approval
+        </span>
+
+        <span class="mngha-radio-description">
+          Send the request directly to the responsible department.
+        </span>
+      </span>
+    </label>
+
+    <label class="mngha-radio-option">
+      <input
+        class="mngha-radio-input"
+        type="radio"
+        name="approval-method"
+        value="automatic"
+        disabled
+      >
+
+      <span class="mngha-radio-content">
+        <span class="mngha-radio-label">
+          Automatic approval
+        </span>
+
+        <span class="mngha-radio-description">
+          This option is unavailable for the current request type.
+        </span>
+      </span>
+    </label>
+  </div>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Complete radio group</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset
+  class=&quot;mngha-field&quot;
+  aria-describedby=&quot;approval-method-help&quot;
+&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Approval method
+  &lt;/legend&gt;
+
+  &lt;p class=&quot;mngha-helper-text&quot; id=&quot;approval-method-help&quot;&gt;
+    Select how this request should be reviewed.
+  &lt;/p&gt;
+
+  &lt;div class=&quot;mngha-radio-group&quot;&gt;
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;approval-method&quot;
+        value=&quot;manager&quot;
+        checked
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Manager approval
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          Send the request to the direct manager first.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;approval-method&quot;
+        value=&quot;department&quot;
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Department approval
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          Send the request directly to the responsible department.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class=&quot;mngha-radio-option&quot;&gt;
+      &lt;input
+        class=&quot;mngha-radio-input&quot;
+        type=&quot;radio&quot;
+        name=&quot;approval-method&quot;
+        value=&quot;automatic&quot;
+        disabled
+      &gt;
+
+      &lt;span class=&quot;mngha-radio-content&quot;&gt;
+        &lt;span class=&quot;mngha-radio-label&quot;&gt;
+          Automatic approval
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-radio-description&quot;&gt;
+          This option is unavailable for the current request type.
+        &lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Radio class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              
+              <tr>
+                <td><strong>.mngha-radio-group</strong></td>
+                <td>Container</td>
+                <td>Arranges related radio options vertically.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-option</strong></td>
+                <td>label</td>
+                <td>Groups the native input with its visible text.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-input</strong></td>
+                <td>input[type=&quot;radio&quot;]</td>
+                <td>Applies the custom radio appearance and states.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-content</strong></td>
+                <td>Container</td>
+                <td>Groups the option label and optional description.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-label</strong></td>
+                <td>Text</td>
+                <td>Applies the main option-label typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-description</strong></td>
+                <td>Text</td>
+                <td>Displays supporting information under an option.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-radio-group--error</strong></td>
+                <td>Field or group</td>
+                <td>Applies the error color to all radio inputs in the group.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-field</strong></td>
+                <td>fieldset or container</td>
+                <td>Groups the legend, radio group, and feedback.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-label</strong></td>
+                <td>legend or label</td>
+                <td>Applies the field-label typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-helper-text</strong></td>
+                <td>Text</td>
+                <td>Displays supporting field guidance.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-error-text</strong></td>
+                <td>Text</td>
+                <td>Displays the validation message.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-grid</strong></td>
+                <td>Container</td>
+                <td>Arranges multiple radio fields responsively.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Group with fieldset</h3>
+
+              <p class="mngha-card-description">
+                Use fieldset and legend so assistive technologies announce the
+                question before each radio option.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Share the same name</h3>
+
+              <p class="mngha-card-description">
+                All radio inputs in one group must use the same name value so
+                only one option can be selected.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep labels clickable</h3>
+
+              <p class="mngha-card-description">
+                Wrap each input and its text inside a label so the complete
+                option remains easy to activate.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve keyboard focus</h3>
+
+              <p class="mngha-card-description">
+                Do not remove the focus-visible outline. Keyboard users need a
+                clear indication of the active radio control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Connect validation</h3>
+
+              <p class="mngha-card-description">
+                Associate the group with its error message using
+                aria-describedby and keep the message visible in text.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Explain disabled options</h3>
+
+              <p class="mngha-card-description">
+                When useful, provide a description explaining why an option is
+                unavailable instead of relying on the disabled appearance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Use radio groups when all options can be shown at once and the
+                user must choose exactly one.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not use radios for multiple selections, unrelated choices,
+                or a very long list that would be easier to scan in another
+                control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Set a default carefully</h3>
+
+              <p class="mngha-card-description">
+                Preselect an option only when there is a safe and sensible
+                default. Avoid defaults that may cause an unintended action.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep option text distinct</h3>
+
+              <p class="mngha-card-description">
+                Use concise labels and descriptions that clearly explain how
+                the options differ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+
+</body>
+</html>

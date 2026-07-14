@@ -1,0 +1,105 @@
+/**
+ * --------------------------------------------------------------------------
+ * Error Template
+ * --------------------------------------------------------------------------
+ *
+ * Layout-only styles. Colors, typography, spacing, buttons, and responsive
+ * behavior use the existing mngha design-system tokens and components.
+ */
+
+ /**
+ * --------------------------------------------------------------------------
+ * Error Template
+ * --------------------------------------------------------------------------
+ *
+ * Layout styles for reusable error pages such as:
+ * - 404 Page Not Found
+ * - 403 Access Denied
+ * - 500 Server Error
+ */
+
+.mngha-error-page {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8xl);
+}
+
+.mngha-error-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3xl);
+}
+
+.mngha-error-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+}
+
+.mngha-error-title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--text-xl-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--text-xl-line-height);
+}
+
+.mngha-error-description {
+  margin: 0;
+  max-width: var(--width-md);
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-lg-line-height);
+}
+
+.mngha-error-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mngha-error-illustration svg,
+.mngha-error-illustration img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.mngha-error-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.mngha-error-feedback .mngha-container {
+  min-height: 3.25rem;
+}
+
+@media (max-width: 600px) {
+  .mngha-error-page {
+    min-height: auto;
+    margin: var(--spacing-xl);
+    margin-block-start: var(--spacing-5xl);
+    gap: var(--spacing-4xl);
+  }
+
+  .mngha-error-body {
+    flex-direction: column;
+    padding-inline: var(--spacing-lg);
+  }
+
+  .mngha-error-illustration svg,
+  .mngha-error-illustration img {
+    width: 100%;
+    max-width: 20.75rem;
+  }
+}

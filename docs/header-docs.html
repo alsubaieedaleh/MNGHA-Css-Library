@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html data-theme="external" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Header - MNGHA Universal CSS</title>
+<link href="./../mngha-ui.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="docs-government-bar">
+<div id="docs-government-verification"></div>
+<div id="docs-government-toolbar"></div>
+</div>
+<div id="docs-header"></div>
+<main class="mngha-main">
+<div class="mngha-container">
+<!-- Introduction -->
+<section class="mngha-section">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h1 class="mngha-section-title">Header</h1>
+<p class="mngha-card-description mngha-paragraph">
+              The header provides branding, primary navigation, dropdown
+              navigation, utility actions, active states, and a responsive
+              mobile menu using one shared semantic structure.
+            </p>
+</div>
+<div class="mngha-card-actions">
+<button class="mngha-button mngha-button--primary mngha-button--md" data-toggle-theme="" type="button">
+              Switch Theme
+            </button>
+<button class="mngha-button mngha-button--secondary mngha-button--md" data-toggle-direction="" type="button">
+              Toggle Direction
+            </button>
+<a class="mngha-button mngha-button--secondary mngha-button--md" href="./components.html">
+              View Components
+            </a>
+</div>
+</div>
+</section>
+<!-- Live example -->
+<section class="mngha-section" id="live-example">
+<h2 class="mngha-section-title">Complete Header</h2>
+<p class="mngha-paragraph">The example below includes the MNGHA brand, desktop links, active state, dropdown navigation, desktop actions, mobile Search and Arabic actions, a mobile trigger, and a collapsible mobile submenu. Resize the browser to 768px or less and open the menu to test the responsive layout.</p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Interactive example</h3>
+</div>
+<header class="mngha-header" data-header-demo="">
+<div class="mngha-header-main">
+<div class="mngha-header-main-content">
+<a aria-label="MNGHA home" class="mngha-header-brand" href="#">
+<img alt="" class="mngha-header-logo" src="../assets/mngha-logo.webp"/>
+<span class="mngha-header-title">Ministry of National Guard Health Affairs (MNGHA)</span>
+</a>
+<nav aria-label="Primary navigation" class="mngha-header-nav">
+<div class="mngha-header-nav-item">
+<a aria-current="page" class="mngha-header-link mngha-header-link--active" href="#">
+            Home
+          </a>
+</div>
+<div class="mngha-header-nav-item">
+<a class="mngha-header-link" href="#">
+            Foundations
+          </a>
+</div>
+<div class="mngha-header-nav-item" data-header-dropdown-item="">
+<button aria-controls="header-components-menu" aria-expanded="false" class="mngha-header-link" data-header-dropdown-toggle="" type="button">
+<span>Components</span>
+<svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20">
+<path d="M6 9L12 15L18 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="mngha-header-menu" id="header-components-menu">
+<div class="mngha-header-menu-grid">
+<section class="mngha-header-menu-group">
+<h2 class="mngha-header-menu-label">
+                  Forms
+                </h2>
+<ul class="mngha-header-menu-list">
+<li>
+<a class="mngha-header-menu-link" href="./forms.html">
+                      Form controls
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./select.html">
+                      Select
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./radio.html">
+                      Radio
+                    </a>
+</li>
+</ul>
+</section>
+<section class="mngha-header-menu-group">
+<h2 class="mngha-header-menu-label">
+                  Content
+                </h2>
+<ul class="mngha-header-menu-list">
+<li>
+<a class="mngha-header-menu-link" href="./card.html">
+                      Cards
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./table.html">
+                      Tables
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./pagination.html">
+                      Pagination
+                    </a>
+</li>
+</ul>
+</section>
+<section class="mngha-header-menu-group">
+<h2 class="mngha-header-menu-label">
+                  Resources
+                </h2>
+<ul class="mngha-header-menu-list">
+<li>
+<a class="mngha-header-menu-link" href="./theme.html">
+                      Themes
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./direction.html">
+                      Direction
+                    </a>
+</li>
+<li>
+<a class="mngha-header-menu-link" href="./accessibility.html">
+                      Accessibility
+                    </a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<div class="mngha-header-nav-item">
+<a class="mngha-header-link" href="#">
+            Templates
+          </a>
+</div>
+</nav>
+<div class="mngha-header-actions">
+<button class="mngha-header-action" data-toggle-theme="" type="button">
+<svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M12 3V5M12 19V21M3 12H5M19 12H21M5.64 5.64L7.05 7.05M16.95 16.95L18.36 18.36M18.36 5.64L16.95 7.05M7.05 16.95L5.64 18.36" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+</svg>
+<span>Theme</span>
+</button>
+<button class="mngha-header-action" data-toggle-direction="" type="button">
+<svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
+<path d="M4 6H20M4 12H15M4 18H11" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+<span>Direction</span>
+</button>
+</div>
+<button aria-controls="header-mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mngha-header-mobile-action" data-header-mobile-toggle="" type="button">
+<svg aria-hidden="true" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<div class="mngha-mobile-menu" data-header-mobile-menu="" id="header-mobile-menu">
+<nav aria-label="Mobile navigation" class="mngha-mobile-menu-nav"><div aria-label="Mobile utility actions" class="mngha-grid mngha-grid-cols-2">
+<a class="mngha-mobile-menu-link" href="#search">
+<span class="mngha-header-action">
+<svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22">
+<circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle>
+<path d="M16.5 16.5L21 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+<span>Search</span>
+</span>
+</a>
+<button class="mngha-mobile-menu-link" data-toggle-direction="" type="button">
+<span class="mngha-header-action">
+<svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22">
+<rect height="18" rx="4" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="3"></rect>
+<path d="M7 8H13M10 6V8M8 8C8.6 10.2 10.2 11.9 12.5 13M12 8C11.4 10.5 9.8 12.5 7 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M14.5 16L17 10L19.5 16M15.4 14H18.6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+<span dir="rtl" lang="ar">العربية</span>
+</span>
+</button>
+</div>
+<a aria-current="page" class="mngha-mobile-menu-link is-active" href="#">
+        Home
+      </a>
+<a class="mngha-mobile-menu-link" href="#">
+        Foundations
+      </a>
+<button aria-controls="header-mobile-components" aria-expanded="false" class="mngha-mobile-menu-link" data-header-submenu-toggle="" type="button">
+<span>Components</span>
+<span aria-hidden="true" class="mngha-mobile-menu-arrow" data-header-submenu-arrow=""><svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20">
+<path d="M6 9L12 15L18 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg></span>
+</button>
+<div class="mngha-mobile-submenu" data-header-submenu="" hidden="" id="header-mobile-components">
+<p class="mngha-mobile-submenu-label">
+          Forms
+        </p>
+<a class="mngha-mobile-submenu-link" href="./forms.html">
+          Form controls
+        </a>
+<a class="mngha-mobile-submenu-link" href="./select.html">
+          Select
+        </a>
+<a class="mngha-mobile-submenu-link" href="./radio.html">
+          Radio
+        </a>
+<p class="mngha-mobile-submenu-label">
+          Content
+        </p>
+<a aria-current="page" class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested is-current" href="./header.html">
+          Header
+        </a>
+<a class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested" href="./card.html">
+          Cards
+        </a>
+</div>
+<a class="mngha-mobile-menu-link" href="#">
+        Templates
+      </a>
+</nav>
+</div>
+</header>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Complete header markup</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;header class="mngha-header" data-header-demo=""&gt;
+ &lt;div class="mngha-header-main"&gt;
+  &lt;div class="mngha-header-main-content"&gt;
+   &lt;a aria-label="MNGHA home" class="mngha-header-brand" href="#"&gt;
+    &lt;img alt="" class="mngha-header-logo" src="./assets/mngha-logo.web"/&gt;
+    &lt;span class="mngha-header-title"&gt;
+     Ministry of National Guard Health Affairs (MNGHA)
+    &lt;/span&gt;
+   &lt;/a&gt;
+   &lt;nav aria-label="Primary navigation" class="mngha-header-nav"&gt;
+    &lt;div class="mngha-header-nav-item"&gt;
+     &lt;a aria-current="page" class="mngha-header-link mngha-header-link--active" href="#"&gt;
+      Home
+     &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="mngha-header-nav-item"&gt;
+     &lt;a class="mngha-header-link" href="#"&gt;
+      Foundations
+     &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="mngha-header-nav-item" data-header-dropdown-item=""&gt;
+     &lt;button aria-controls="header-components-menu" aria-expanded="false" class="mngha-header-link" data-header-dropdown-toggle="" type="button"&gt;
+      &lt;span&gt;
+       Components
+      &lt;/span&gt;
+      &lt;svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20"&gt;
+       &lt;path d="M6 9L12 15L18 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"&gt;
+       &lt;/path&gt;
+      &lt;/svg&gt;
+     &lt;/button&gt;
+     &lt;div class="mngha-header-menu" id="header-components-menu"&gt;
+      &lt;div class="mngha-header-menu-grid"&gt;
+       &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+         Forms
+        &lt;/h2&gt;
+        &lt;ul class="mngha-header-menu-list"&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./forms.html"&gt;
+           Form controls
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./select.html"&gt;
+           Select
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./radio.html"&gt;
+           Radio
+          &lt;/a&gt;
+         &lt;/li&gt;
+        &lt;/ul&gt;
+       &lt;/section&gt;
+       &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+         Content
+        &lt;/h2&gt;
+        &lt;ul class="mngha-header-menu-list"&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./card.html"&gt;
+           Cards
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./table.html"&gt;
+           Tables
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./pagination.html"&gt;
+           Pagination
+          &lt;/a&gt;
+         &lt;/li&gt;
+        &lt;/ul&gt;
+       &lt;/section&gt;
+       &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+         Resources
+        &lt;/h2&gt;
+        &lt;ul class="mngha-header-menu-list"&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./theme.html"&gt;
+           Themes
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./direction.html"&gt;
+           Direction
+          &lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li&gt;
+          &lt;a class="mngha-header-menu-link" href="./accessibility.html"&gt;
+           Accessibility
+          &lt;/a&gt;
+         &lt;/li&gt;
+        &lt;/ul&gt;
+       &lt;/section&gt;
+      &lt;/div&gt;
+     &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="mngha-header-nav-item"&gt;
+     &lt;a class="mngha-header-link" href="#"&gt;
+      Templates
+     &lt;/a&gt;
+    &lt;/div&gt;
+   &lt;/nav&gt;
+   &lt;div class="mngha-header-actions"&gt;
+    &lt;button class="mngha-header-action" data-toggle-theme="" type="button"&gt;
+     &lt;svg aria-hidden="true" fill="none" viewbox="0 0 24 24"&gt;
+      &lt;path d="M12 3V5M12 19V21M3 12H5M19 12H21M5.64 5.64L7.05 7.05M16.95 16.95L18.36 18.36M18.36 5.64L16.95 7.05M7.05 16.95L5.64 18.36" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"&gt;
+      &lt;/path&gt;
+      &lt;circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"&gt;
+      &lt;/circle&gt;
+     &lt;/svg&gt;
+     &lt;span&gt;
+      Theme
+     &lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="mngha-header-action" data-toggle-direction="" type="button"&gt;
+     &lt;svg aria-hidden="true" fill="none" viewbox="0 0 24 24"&gt;
+      &lt;path d="M4 6H20M4 12H15M4 18H11" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"&gt;
+      &lt;/path&gt;
+     &lt;/svg&gt;
+     &lt;span&gt;
+      Direction
+     &lt;/span&gt;
+    &lt;/button&gt;
+   &lt;/div&gt;
+   &lt;button aria-controls="header-mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mngha-header-mobile-action" data-header-mobile-toggle="" type="button"&gt;
+    &lt;svg aria-hidden="true" fill="none" height="24" viewbox="0 0 24 24" width="24"&gt;
+     &lt;path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"&gt;
+     &lt;/path&gt;
+    &lt;/svg&gt;
+   &lt;/button&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="mngha-mobile-menu" data-header-mobile-menu="" id="header-mobile-menu"&gt;
+  &lt;nav aria-label="Mobile navigation" class="mngha-mobile-menu-nav"&gt;
+   &lt;div aria-label="Mobile utility actions" class="mngha-grid mngha-grid-cols-2"&gt;
+    &lt;a class="mngha-mobile-menu-link" href="#search"&gt;
+     &lt;span class="mngha-header-action"&gt;
+      &lt;svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22"&gt;
+       &lt;circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"&gt;
+       &lt;/circle&gt;
+       &lt;path d="M16.5 16.5L21 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"&gt;
+       &lt;/path&gt;
+      &lt;/svg&gt;
+      &lt;span&gt;
+       Search
+      &lt;/span&gt;
+     &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;button class="mngha-mobile-menu-link" data-toggle-direction="" type="button"&gt;
+     &lt;span class="mngha-header-action"&gt;
+      &lt;svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22"&gt;
+       &lt;rect height="18" rx="4" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="3"&gt;
+       &lt;/rect&gt;
+       &lt;path d="M7 8H13M10 6V8M8 8C8.6 10.2 10.2 11.9 12.5 13M12 8C11.4 10.5 9.8 12.5 7 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"&gt;
+       &lt;/path&gt;
+       &lt;path d="M14.5 16L17 10L19.5 16M15.4 14H18.6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"&gt;
+       &lt;/path&gt;
+      &lt;/svg&gt;
+      &lt;span dir="rtl" lang="ar"&gt;
+       العربية
+      &lt;/span&gt;
+     &lt;/span&gt;
+    &lt;/button&gt;
+   &lt;/div&gt;
+   &lt;a aria-current="page" class="mngha-mobile-menu-link is-active" href="#"&gt;
+    Home
+   &lt;/a&gt;
+   &lt;a class="mngha-mobile-menu-link" href="#"&gt;
+    Foundations
+   &lt;/a&gt;
+   &lt;button aria-controls="header-mobile-components" aria-expanded="false" class="mngha-mobile-menu-link" data-header-submenu-toggle="" type="button"&gt;
+    &lt;span&gt;
+     Components
+    &lt;/span&gt;
+    &lt;span aria-hidden="true" class="mngha-mobile-menu-arrow" data-header-submenu-arrow=""&gt;
+     &lt;svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20"&gt;
+      &lt;path d="M6 9L12 15L18 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"&gt;
+      &lt;/path&gt;
+     &lt;/svg&gt;
+    &lt;/span&gt;
+   &lt;/button&gt;
+   &lt;div class="mngha-mobile-submenu" data-header-submenu="" hidden="" id="header-mobile-components"&gt;
+    &lt;p class="mngha-mobile-submenu-label"&gt;
+     Forms
+    &lt;/p&gt;
+    &lt;a class="mngha-mobile-submenu-link" href="./forms.html"&gt;
+     Form controls
+    &lt;/a&gt;
+    &lt;a class="mngha-mobile-submenu-link" href="./select.html"&gt;
+     Select
+    &lt;/a&gt;
+    &lt;a class="mngha-mobile-submenu-link" href="./radio.html"&gt;
+     Radio
+    &lt;/a&gt;
+    &lt;p class="mngha-mobile-submenu-label"&gt;
+     Content
+    &lt;/p&gt;
+    &lt;a aria-current="page" class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested is-current" href="./header.html"&gt;
+     Header
+    &lt;/a&gt;
+    &lt;a class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested" href="./card.html"&gt;
+     Cards
+    &lt;/a&gt;
+   &lt;/div&gt;
+   &lt;a class="mngha-mobile-menu-link" href="#"&gt;
+    Templates
+   &lt;/a&gt;
+  &lt;/nav&gt;
+ &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Structure -->
+<section class="mngha-section" id="structure">
+<h2 class="mngha-section-title">Header Structure</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Header root</h3>
+<p class="mngha-card-description">
+                Use mngha-header as the positioned root for the main header,
+                desktop dropdown menu, and responsive mobile menu.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Main content</h3>
+<p class="mngha-card-description">
+                mngha-header-main-content aligns the brand, desktop navigation,
+                actions, and mobile trigger in one row.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Responsive menu</h3>
+<p class="mngha-card-description">
+                Desktop navigation is hidden at 768px and below while the
+                mobile action and mngha-mobile-menu become available.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand -->
+<section class="mngha-section" id="brand">
+<h2 class="mngha-section-title">Brand</h2>
+<p class="mngha-paragraph">
+          The brand is an anchor containing the logo and title. Give the link
+          an accessible name that describes its destination.
+        </p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Example</h3>
+<a aria-label="MNGHA home" class="mngha-header-brand" href="/">
+<img alt="" class="mngha-header-logo" src="./assets/mngha-logo.web"/>
+<span class="mngha-header-title">Ministry of National Guard Health Affairs (MNGHA)</span>
+</a>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Brand markup</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;a aria-label="MNGHA home" class="mngha-header-brand" href="/"&gt;
+ &lt;img alt="" class="mngha-header-logo" src="./assets/mngha-logo.web"/&gt;
+ &lt;span class="mngha-header-title"&gt;
+  Ministry of National Guard Health Affairs (MNGHA)
+ &lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation states -->
+<section class="mngha-section" id="navigation-states">
+<h2 class="mngha-section-title">Navigation States</h2>
+<p class="mngha-paragraph">
+          Apply mngha-header-link--active to the current page and include
+          aria-current="page". JavaScript adds is-open to a navigation item
+          while its dropdown is expanded.
+        </p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Examples</h3>
+<nav aria-label="Example navigation" class="mngha-header-nav">
+<div class="mngha-header-nav-item">
+<a class="mngha-header-link" href="#">
+      Default
+    </a>
+</div>
+<div class="mngha-header-nav-item">
+<a aria-current="page" class="mngha-header-link mngha-header-link--active" href="#">
+      Active
+    </a>
+</div>
+<div class="mngha-header-nav-item is-open">
+<button aria-expanded="true" class="mngha-header-link" type="button">
+      Open menu
+    </button>
+</div>
+</nav>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Navigation states</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;nav
+  class="mngha-header-nav"
+  aria-label="Example navigation"
+&gt;
+  &lt;div class="mngha-header-nav-item"&gt;
+    &lt;a class="mngha-header-link" href="#"&gt;
+      Default
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mngha-header-nav-item"&gt;
+    &lt;a
+      class="mngha-header-link mngha-header-link--active"
+      href="#"
+      aria-current="page"
+    &gt;
+      Active
+    &lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class="mngha-header-nav-item is-open"
+  &gt;
+    &lt;button
+      class="mngha-header-link"
+      type="button"
+      aria-expanded="true"
+    &gt;
+      Open menu
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Dropdown -->
+<section class="mngha-section" id="dropdown-menu">
+<h2 class="mngha-section-title">Dropdown Menu</h2>
+<p class="mngha-paragraph">
+          The desktop dropdown spans the full header width. Place its groups
+          inside mngha-header-menu-grid and toggle is-open on the parent
+          mngha-header-nav-item.
+        </p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Dropdown menu structure</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;div
+  class="mngha-header-nav-item"
+  data-header-dropdown-item
+&gt;
+  &lt;button
+    class="mngha-header-link"
+    type="button"
+    aria-expanded="false"
+    aria-controls="components-menu"
+    data-header-dropdown-toggle
+  &gt;
+    &lt;span&gt;Components&lt;/span&gt;
+    &lt;svg
+  viewBox="0 0 24 24"
+  width="20"
+  height="20"
+  fill="none"
+  aria-hidden="true"
+&gt;
+  &lt;path
+    d="M6 9L12 15L18 9"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  &gt;&lt;/path&gt;
+&lt;/svg&gt;
+  &lt;/button&gt;
+
+  &lt;div
+    class="mngha-header-menu"
+    id="components-menu"
+  &gt;
+    &lt;div class="mngha-header-menu-grid"&gt;
+      &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+          Forms
+        &lt;/h2&gt;
+
+        &lt;ul class="mngha-header-menu-list"&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Inputs
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Select
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+
+      &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+          Content
+        &lt;/h2&gt;
+
+        &lt;ul class="mngha-header-menu-list"&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Cards
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Tables
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+
+      &lt;section class="mngha-header-menu-group"&gt;
+        &lt;h2 class="mngha-header-menu-label"&gt;
+          Resources
+        &lt;/h2&gt;
+
+        &lt;ul class="mngha-header-menu-list"&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Themes
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a
+              class="mngha-header-menu-link"
+              href="#"
+            &gt;
+              Accessibility
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<section class="mngha-section" id="header-items">
+<h2 class="mngha-section-title">Reusable Header Items</h2>
+<p class="mngha-paragraph">
+          Use mngha-header-item for compact header actions. Modifier classes
+          provide filled, outline, ghost, active, disabled, and icon-only
+          presentations.
+        </p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Examples</h3>
+<div class="mngha-header-actions">
+<a class="mngha-header-item" href="#">
+    Default
+  </a>
+<a class="mngha-header-item mngha-header-item--filled" href="#">
+    Filled
+  </a>
+<a class="mngha-header-item mngha-header-item--outline" href="#">
+    Outline
+  </a>
+<button class="mngha-header-item mngha-header-item--ghost" type="button">
+    Ghost
+  </button>
+<a aria-current="page" class="mngha-header-item mngha-header-item--filled mngha-header-item--active" href="#">
+    Active
+  </a>
+<button class="mngha-header-item" disabled="" type="button">
+    Disabled
+  </button>
+</div>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Reusable header items</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;div class="mngha-header-actions"&gt;
+  &lt;a class="mngha-header-item" href="#"&gt;
+    Default
+  &lt;/a&gt;
+
+  &lt;a
+    class="mngha-header-item mngha-header-item--filled"
+    href="#"
+  &gt;
+    Filled
+  &lt;/a&gt;
+
+  &lt;a
+    class="mngha-header-item mngha-header-item--outline"
+    href="#"
+  &gt;
+    Outline
+  &lt;/a&gt;
+
+  &lt;button
+    class="mngha-header-item mngha-header-item--ghost"
+    type="button"
+  &gt;
+    Ghost
+  &lt;/button&gt;
+
+  &lt;a
+    class="mngha-header-item mngha-header-item--filled mngha-header-item--active"
+    href="#"
+    aria-current="page"
+  &gt;
+    Active
+  &lt;/a&gt;
+
+  &lt;button
+    class="mngha-header-item"
+    type="button"
+    disabled
+  &gt;
+    Disabled
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile -->
+<section class="mngha-section" id="mobile-header">
+<h2 class="mngha-section-title">Mobile Header</h2>
+<p class="mngha-paragraph">On screens up to 768px, desktop navigation and actions are hidden. The mobile trigger opens a responsive menu whose first row contains Search and Arabic actions. Nested groups use SVG chevrons and the hidden attribute.</p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Mobile menu structure</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">HTML</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>&lt;button aria-controls="header-mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="mngha-header-mobile-action" data-header-mobile-toggle="" type="button"&gt;
+ &lt;svg aria-hidden="true" fill="none" height="24" viewbox="0 0 24 24" width="24"&gt;
+  &lt;path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-linecap="round" stroke-width="2"&gt;
+  &lt;/path&gt;
+ &lt;/svg&gt;
+&lt;/button&gt;
+
+
+&lt;div class="mngha-mobile-menu" data-header-mobile-menu="" id="header-mobile-menu"&gt;
+ &lt;nav aria-label="Mobile navigation" class="mngha-mobile-menu-nav"&gt;
+  &lt;div aria-label="Mobile utility actions" class="mngha-grid mngha-grid-cols-2"&gt;
+   &lt;a class="mngha-mobile-menu-link" href="#search"&gt;
+    &lt;span class="mngha-header-action"&gt;
+     &lt;svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22"&gt;
+      &lt;circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"&gt;
+      &lt;/circle&gt;
+      &lt;path d="M16.5 16.5L21 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"&gt;
+      &lt;/path&gt;
+     &lt;/svg&gt;
+     &lt;span&gt;
+      Search
+     &lt;/span&gt;
+    &lt;/span&gt;
+   &lt;/a&gt;
+   &lt;button class="mngha-mobile-menu-link" data-toggle-direction="" type="button"&gt;
+    &lt;span class="mngha-header-action"&gt;
+     &lt;svg aria-hidden="true" fill="none" height="22" viewbox="0 0 24 24" width="22"&gt;
+      &lt;rect height="18" rx="4" stroke="currentColor" stroke-width="1.6" width="18" x="3" y="3"&gt;
+      &lt;/rect&gt;
+      &lt;path d="M7 8H13M10 6V8M8 8C8.6 10.2 10.2 11.9 12.5 13M12 8C11.4 10.5 9.8 12.5 7 14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"&gt;
+      &lt;/path&gt;
+      &lt;path d="M14.5 16L17 10L19.5 16M15.4 14H18.6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"&gt;
+      &lt;/path&gt;
+     &lt;/svg&gt;
+     &lt;span dir="rtl" lang="ar"&gt;
+      العربية
+     &lt;/span&gt;
+    &lt;/span&gt;
+   &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;a aria-current="page" class="mngha-mobile-menu-link is-active" href="#"&gt;
+   Home
+  &lt;/a&gt;
+  &lt;a class="mngha-mobile-menu-link" href="#"&gt;
+   Foundations
+  &lt;/a&gt;
+  &lt;button aria-controls="header-mobile-components" aria-expanded="false" class="mngha-mobile-menu-link" data-header-submenu-toggle="" type="button"&gt;
+   &lt;span&gt;
+    Components
+   &lt;/span&gt;
+   &lt;span aria-hidden="true" class="mngha-mobile-menu-arrow" data-header-submenu-arrow=""&gt;
+    &lt;svg aria-hidden="true" fill="none" height="20" viewbox="0 0 24 24" width="20"&gt;
+     &lt;path d="M6 9L12 15L18 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"&gt;
+     &lt;/path&gt;
+    &lt;/svg&gt;
+   &lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="mngha-mobile-submenu" data-header-submenu="" hidden="" id="header-mobile-components"&gt;
+   &lt;p class="mngha-mobile-submenu-label"&gt;
+    Forms
+   &lt;/p&gt;
+   &lt;a class="mngha-mobile-submenu-link" href="./forms.html"&gt;
+    Form controls
+   &lt;/a&gt;
+   &lt;a class="mngha-mobile-submenu-link" href="./select.html"&gt;
+    Select
+   &lt;/a&gt;
+   &lt;a class="mngha-mobile-submenu-link" href="./radio.html"&gt;
+    Radio
+   &lt;/a&gt;
+   &lt;p class="mngha-mobile-submenu-label"&gt;
+    Content
+   &lt;/p&gt;
+   &lt;a aria-current="page" class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested is-current" href="./header.html"&gt;
+    Header
+   &lt;/a&gt;
+   &lt;a class="mngha-mobile-submenu-link mngha-mobile-submenu-link--nested" href="./card.html"&gt;
+    Cards
+   &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;a class="mngha-mobile-menu-link" href="#"&gt;
+   Templates
+  &lt;/a&gt;
+ &lt;/nav&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- JavaScript -->
+<section class="mngha-section" id="behavior">
+<h2 class="mngha-section-title">JavaScript Behavior</h2>
+<p class="mngha-paragraph">
+          CSS controls presentation, while JavaScript synchronizes is-open,
+          hidden, and aria-expanded. Escape closes open menus and clicking
+          outside closes the desktop dropdown.
+        </p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Header behavior</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">JAVASCRIPT</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
+                  Copy
+                </button>
+</div>
+<pre class="mngha-code-block-body"><code>document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("[data-header-demo]");
+
+  if (!header) return;
+
+  const dropdownItem = header.querySelector(
+    "[data-header-dropdown-item]"
+  );
+
+  const dropdownToggle = header.querySelector(
+    "[data-header-dropdown-toggle]"
+  );
+
+  const mobileToggle = header.querySelector(
+    "[data-header-mobile-toggle]"
+  );
+
+  const mobileMenu = header.querySelector(
+    "[data-header-mobile-menu]"
+  );
+
+  const submenuToggle = header.querySelector(
+    "[data-header-submenu-toggle]"
+  );
+
+  const submenu = header.querySelector(
+    "[data-header-submenu]"
+  );
+
+  const submenuArrow = header.querySelector(
+    "[data-header-submenu-arrow]"
+  );
+
+  function closeDesktopMenu() {
+    if (!dropdownItem || !dropdownToggle) return;
+
+    dropdownItem.classList.remove("is-open");
+    dropdownToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileMenu() {
+    if (!mobileMenu || !mobileToggle) return;
+
+    mobileMenu.classList.remove("is-open");
+    mobileToggle.setAttribute("aria-expanded", "false");
+    mobileToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+  }
+
+  dropdownToggle?.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    const nextOpen =
+      !dropdownItem.classList.contains("is-open");
+
+    closeDesktopMenu();
+
+    if (nextOpen) {
+      dropdownItem.classList.add("is-open");
+      dropdownToggle.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  mobileToggle?.addEventListener("click", function () {
+    const nextOpen =
+      !mobileMenu.classList.contains("is-open");
+
+    mobileMenu.classList.toggle("is-open", nextOpen);
+    mobileToggle.setAttribute(
+      "aria-expanded",
+      String(nextOpen)
+    );
+
+    mobileToggle.setAttribute(
+      "aria-label",
+      nextOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+  });
+
+  submenuToggle?.addEventListener("click", function () {
+    const nextOpen =
+      submenuToggle.getAttribute("aria-expanded") !== "true";
+
+    submenuToggle.setAttribute(
+      "aria-expanded",
+      String(nextOpen)
+    );
+
+    submenu.hidden = !nextOpen;
+
+    if (submenuArrow) {
+      submenuArrow.style.transition = "transform 160ms ease";
+      submenuArrow.style.transform =
+        nextOpen ? "rotate(180deg)" : "rotate(0deg)";
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      dropdownItem &amp;&amp;
+      !dropdownItem.contains(event.target)
+    ) {
+      closeDesktopMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+
+    closeDesktopMenu();
+    closeMobileMenu();
+  });
+});</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Class reference -->
+<section class="mngha-section" id="class-reference">
+<h2 class="mngha-section-title">Class Reference</h2>
+<div class="mngha-table-wrapper">
+<table aria-label="Header class reference" class="mngha-table mngha-table--header-dark">
+<thead>
+<tr>
+<th scope="col">Class</th>
+<th scope="col">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>.mngha-header</strong></td>
+<td>Root container for the complete header component.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-main</strong></td>
+<td>Full-width white main header surface.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-main-content</strong></td>
+<td>Aligns brand, navigation, actions, and mobile trigger.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-brand</strong></td>
+<td>Groups the linked logo and product or system title.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-logo</strong></td>
+<td>Provides the standard responsive logo dimensions.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-title</strong></td>
+<td>Applies the header title typography and mobile truncation.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-nav</strong></td>
+<td>Desktop primary navigation container.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-nav-item</strong></td>
+<td>Wraps one navigation link or dropdown trigger.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-link</strong></td>
+<td>Base desktop navigation link or button.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-link--active</strong></td>
+<td>Marks the current top-level navigation destination.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-actions</strong></td>
+<td>Aligns utility actions at the end of the header.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-action</strong></td>
+<td>Text and icon utility action with no filled background.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-menu</strong></td>
+<td>Full-width desktop dropdown surface.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-menu-grid</strong></td>
+<td>Creates the three-column dropdown layout.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-menu-group</strong></td>
+<td>Groups one dropdown heading and its links.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-item</strong></td>
+<td>Reusable compact action or navigation item.</td>
+</tr>
+<tr>
+<td><strong>.mngha-header-mobile-action</strong></td>
+<td>Mobile menu trigger shown at 768px and below.</td>
+</tr>
+<tr>
+<td><strong>.mngha-mobile-menu</strong></td>
+<td>Responsive menu opened by adding is-open.</td>
+</tr>
+<tr>
+<td><strong>.mngha-mobile-menu-link</strong></td>
+<td>Top-level link or submenu trigger inside the mobile menu.</td>
+</tr>
+<tr>
+<td><strong>.mngha-mobile-submenu</strong></td>
+<td>Nested mobile navigation group controlled with hidden.</td>
+</tr>
+<tr>
+<td><strong>.is-open</strong></td>
+<td>Displays a desktop dropdown or responsive mobile menu.</td>
+</tr>
+<tr>
+<td><strong>.is-active</strong></td>
+<td>Marks the active top-level mobile navigation link.</td>
+</tr>
+<tr>
+<td><strong>.is-current</strong></td>
+<td>Marks the current link inside a mobile submenu.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Accessibility -->
+<section class="mngha-section" id="accessibility">
+<h2 class="mngha-section-title">Accessibility</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Label navigation</h3>
+<p class="mngha-card-description">
+                Give each navigation element a concise aria-label when the page
+                contains more than one navigation region.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Identify the current page</h3>
+<p class="mngha-card-description">
+                Add aria-current="page" to the active desktop and mobile link,
+                not only a visual active class.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Use buttons for toggles</h3>
+<p class="mngha-card-description">
+                Dropdown and mobile menu triggers should be buttons because
+                they change interface state rather than navigate.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Synchronize state</h3>
+<p class="mngha-card-description">
+                Keep aria-expanded synchronized with is-open and the hidden
+                attribute whenever a menu changes state.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Support Escape</h3>
+<p class="mngha-card-description">
+                Allow keyboard users to close open dropdown and mobile menus
+                with the Escape key.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Describe icon buttons</h3>
+<p class="mngha-card-description">
+                Provide aria-label text for icon-only controls and hide purely
+                decorative SVG elements with aria-hidden.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Usage -->
+<section class="mngha-section" id="usage-guidance">
+<h2 class="mngha-section-title">Usage Guidance</h2>
+<div class="mngha-grid mngha-grid-cols-2">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Do</h3>
+<p class="mngha-card-description">
+                Keep the brand concise, use a small number of top-level links,
+                place related links in labeled dropdown groups, and preserve
+                the same information architecture on mobile.
+              </p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Avoid</h3>
+<p class="mngha-card-description">
+                Do not use anchor elements as menu toggles, omit active page
+                semantics, duplicate IDs, leave aria-expanded outdated, or
+                remove the visible keyboard focus indicator.
+              </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script src="./assets/docs.js"></script>
+<script src="./assets/code-block-copy.js"></script>
+<script src="./assets/government-sections.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("[data-header-demo]");
+
+  if (!header) return;
+
+  const dropdownItem = header.querySelector(
+    "[data-header-dropdown-item]"
+  );
+
+  const dropdownToggle = header.querySelector(
+    "[data-header-dropdown-toggle]"
+  );
+
+  const mobileToggle = header.querySelector(
+    "[data-header-mobile-toggle]"
+  );
+
+  const mobileMenu = header.querySelector(
+    "[data-header-mobile-menu]"
+  );
+
+  const submenuToggle = header.querySelector(
+    "[data-header-submenu-toggle]"
+  );
+
+  const submenu = header.querySelector(
+    "[data-header-submenu]"
+  );
+
+  const submenuArrow = header.querySelector(
+    "[data-header-submenu-arrow]"
+  );
+
+  function closeDesktopMenu() {
+    if (!dropdownItem || !dropdownToggle) return;
+
+    dropdownItem.classList.remove("is-open");
+    dropdownToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileMenu() {
+    if (!mobileMenu || !mobileToggle) return;
+
+    mobileMenu.classList.remove("is-open");
+    mobileToggle.setAttribute("aria-expanded", "false");
+    mobileToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+  }
+
+  dropdownToggle?.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    const nextOpen =
+      !dropdownItem.classList.contains("is-open");
+
+    closeDesktopMenu();
+
+    if (nextOpen) {
+      dropdownItem.classList.add("is-open");
+      dropdownToggle.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  mobileToggle?.addEventListener("click", function () {
+    const nextOpen =
+      !mobileMenu.classList.contains("is-open");
+
+    mobileMenu.classList.toggle("is-open", nextOpen);
+    mobileToggle.setAttribute(
+      "aria-expanded",
+      String(nextOpen)
+    );
+
+    mobileToggle.setAttribute(
+      "aria-label",
+      nextOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+  });
+
+  submenuToggle?.addEventListener("click", function () {
+    const nextOpen =
+      submenuToggle.getAttribute("aria-expanded") !== "true";
+
+    submenuToggle.setAttribute(
+      "aria-expanded",
+      String(nextOpen)
+    );
+
+    submenu.hidden = !nextOpen;
+
+    if (submenuArrow) {
+      submenuArrow.style.transition = "transform 160ms ease";
+      submenuArrow.style.transform =
+        nextOpen ? "rotate(180deg)" : "rotate(0deg)";
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      dropdownItem &&
+      !dropdownItem.contains(event.target)
+    ) {
+      closeDesktopMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape") return;
+
+    closeDesktopMenu();
+    closeMobileMenu();
+  });
+});
+</script>
+</body>
+</html>

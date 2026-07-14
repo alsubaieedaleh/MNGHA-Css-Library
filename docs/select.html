@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Select - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Select</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              All select controls in this documentation use the custom mngha
+              select. It provides consistent styling, a selected check icon,
+              controlled hover behavior, responsive layout, and theme support.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Consistent appearance</h3>
+
+              <p class="mngha-card-description">
+                Every select uses the same trigger, listbox, option, selected
+                check icon, and theme-aware colors.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Form compatible</h3>
+
+              <p class="mngha-card-description">
+                A hidden input stores the selected value so regular form
+                submission can include it.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keyboard support</h3>
+
+              <p class="mngha-card-description">
+                The supporting JavaScript handles opening, selection, arrows,
+                Home, End, Enter, Space, Escape, and outside clicks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="default-select">
+        <h2 class="mngha-section-title">Default Select</h2>
+
+        <p class="mngha-paragraph">
+          Use the custom select structure for every regular single-value
+          selection field.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-field">
+  <span class="mngha-label" id="department-label">
+    Department
+  </span>
+
+  <div class="mngha-custom-select" data-custom-select>
+    <button
+      class="mngha-custom-select-trigger"
+      type="button"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-labelledby="department-label department-value"
+      data-custom-select-trigger
+    >
+      <span id="department-value" data-custom-select-value>
+        Select a department
+      </span>
+
+      <span class="mngha-custom-select-arrow" aria-hidden="true">
+        ⌄
+      </span>
+    </button>
+
+    <ul
+      class="mngha-custom-select-menu"
+      role="listbox"
+      aria-labelledby="department-label"
+      data-custom-select-menu
+    >
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="0"
+        data-custom-select-option
+        data-value="digital-services"
+      >
+        Digital Services
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="user-experience"
+      >
+        User Experience
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="data-management"
+      >
+        Data Management
+      </li>
+    </ul>
+
+    <input
+      type="hidden"
+      name="department"
+      value=""
+      data-custom-select-input
+    >
+  </div>
+
+  <p class="mngha-helper-text">
+    Choose the department responsible for this request.
+  </p>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Default custom select</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-field&quot;&gt;
+  &lt;span class=&quot;mngha-label&quot; id=&quot;department-label&quot;&gt;
+    Department
+  &lt;/span&gt;
+
+  &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+    &lt;button
+      class=&quot;mngha-custom-select-trigger&quot;
+      type=&quot;button&quot;
+      aria-haspopup=&quot;listbox&quot;
+      aria-expanded=&quot;false&quot;
+      aria-labelledby=&quot;department-label department-value&quot;
+      data-custom-select-trigger
+    &gt;
+      &lt;span id=&quot;department-value&quot; data-custom-select-value&gt;
+        Select a department
+      &lt;/span&gt;
+
+      &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+        ⌄
+      &lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;ul
+      class=&quot;mngha-custom-select-menu&quot;
+      role=&quot;listbox&quot;
+      aria-labelledby=&quot;department-label&quot;
+      data-custom-select-menu
+    &gt;
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;0&quot;
+        data-custom-select-option
+        data-value=&quot;digital-services&quot;
+      &gt;
+        Digital Services
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;user-experience&quot;
+      &gt;
+        User Experience
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;data-management&quot;
+      &gt;
+        Data Management
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;input
+      type=&quot;hidden&quot;
+      name=&quot;department&quot;
+      value=&quot;&quot;
+      data-custom-select-input
+    &gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;mngha-helper-text&quot;&gt;
+    Choose the department responsible for this request.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="selected-value">
+        <h2 class="mngha-section-title">Initial Selected Value</h2>
+
+        <p class="mngha-paragraph">
+          Keep the visible value, selected option, aria-selected state,
+          tabindex, and hidden input value synchronized.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-field">
+  <span class="mngha-label" id="priority-label">
+    Request priority
+  </span>
+
+  <div class="mngha-custom-select" data-custom-select>
+    <button
+      class="mngha-custom-select-trigger"
+      type="button"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-labelledby="priority-label priority-value"
+      data-custom-select-trigger
+    >
+      <span id="priority-value" data-custom-select-value>
+        Normal
+      </span>
+
+      <span class="mngha-custom-select-arrow" aria-hidden="true">
+        ⌄
+      </span>
+    </button>
+
+    <ul
+      class="mngha-custom-select-menu"
+      role="listbox"
+      aria-labelledby="priority-label"
+      data-custom-select-menu
+    >
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="low"
+      >
+        Low
+      </li>
+
+      <li
+        class="mngha-custom-select-option is-selected"
+        role="option"
+        aria-selected="true"
+        tabindex="0"
+        data-custom-select-option
+        data-value="normal"
+      >
+        Normal
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="high"
+      >
+        High
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="urgent"
+      >
+        Urgent
+      </li>
+    </ul>
+
+    <input
+      type="hidden"
+      name="priority"
+      value="normal"
+      data-custom-select-input
+    >
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Custom select with initial value</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-field&quot;&gt;
+  &lt;span class=&quot;mngha-label&quot; id=&quot;priority-label&quot;&gt;
+    Request priority
+  &lt;/span&gt;
+
+  &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+    &lt;button
+      class=&quot;mngha-custom-select-trigger&quot;
+      type=&quot;button&quot;
+      aria-haspopup=&quot;listbox&quot;
+      aria-expanded=&quot;false&quot;
+      aria-labelledby=&quot;priority-label priority-value&quot;
+      data-custom-select-trigger
+    &gt;
+      &lt;span id=&quot;priority-value&quot; data-custom-select-value&gt;
+        Normal
+      &lt;/span&gt;
+
+      &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+        ⌄
+      &lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;ul
+      class=&quot;mngha-custom-select-menu&quot;
+      role=&quot;listbox&quot;
+      aria-labelledby=&quot;priority-label&quot;
+      data-custom-select-menu
+    &gt;
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;low&quot;
+      &gt;
+        Low
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option is-selected&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;true&quot;
+        tabindex=&quot;0&quot;
+        data-custom-select-option
+        data-value=&quot;normal&quot;
+      &gt;
+        Normal
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;high&quot;
+      &gt;
+        High
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;urgent&quot;
+      &gt;
+        Urgent
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;input
+      type=&quot;hidden&quot;
+      name=&quot;priority&quot;
+      value=&quot;normal&quot;
+      data-custom-select-input
+    &gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="select-states">
+        <h2 class="mngha-section-title">Error and Disabled States</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Error</h3>
+              <div class="mngha-field">
+  <span class="mngha-label" id="category-label">
+    Service category
+  </span>
+
+  <div
+    class="mngha-custom-select mngha-custom-select--error"
+    data-custom-select
+  >
+    <button
+      class="mngha-custom-select-trigger"
+      type="button"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-invalid="true"
+      aria-describedby="category-error"
+      aria-labelledby="category-label category-value"
+      data-custom-select-trigger
+    >
+      <span id="category-value" data-custom-select-value>
+        Select a category
+      </span>
+
+      <span class="mngha-custom-select-arrow" aria-hidden="true">
+        ⌄
+      </span>
+    </button>
+
+    <ul
+      class="mngha-custom-select-menu"
+      role="listbox"
+      aria-labelledby="category-label"
+      data-custom-select-menu
+    >
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="0"
+        data-custom-select-option
+        data-value="medical"
+      >
+        Medical
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="administrative"
+      >
+        Administrative
+      </li>
+
+      <li
+        class="mngha-custom-select-option"
+        role="option"
+        aria-selected="false"
+        tabindex="-1"
+        data-custom-select-option
+        data-value="technical"
+      >
+        Technical
+      </li>
+    </ul>
+
+    <input
+      type="hidden"
+      name="service-category"
+      value=""
+      data-custom-select-input
+    >
+  </div>
+
+  <p class="mngha-error-text" id="category-error">
+    Select a service category.
+  </p>
+</div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Disabled</h3>
+              <div class="mngha-field">
+  <span class="mngha-label" id="region-label">
+    Assigned region
+  </span>
+
+  <div class="mngha-custom-select">
+    <button
+      class="mngha-custom-select-trigger"
+      type="button"
+      disabled
+      aria-labelledby="region-label region-value"
+    >
+      <span id="region-value">
+        Riyadh
+      </span>
+
+      <span class="mngha-custom-select-arrow" aria-hidden="true">
+        ⌄
+      </span>
+    </button>
+
+    <input
+      type="hidden"
+      name="region"
+      value="riyadh"
+    >
+  </div>
+
+  <p class="mngha-helper-text">
+    The region is assigned automatically.
+  </p>
+</div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Custom select error</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-field&quot;&gt;
+  &lt;span class=&quot;mngha-label&quot; id=&quot;category-label&quot;&gt;
+    Service category
+  &lt;/span&gt;
+
+  &lt;div
+    class=&quot;mngha-custom-select mngha-custom-select--error&quot;
+    data-custom-select
+  &gt;
+    &lt;button
+      class=&quot;mngha-custom-select-trigger&quot;
+      type=&quot;button&quot;
+      aria-haspopup=&quot;listbox&quot;
+      aria-expanded=&quot;false&quot;
+      aria-invalid=&quot;true&quot;
+      aria-describedby=&quot;category-error&quot;
+      aria-labelledby=&quot;category-label category-value&quot;
+      data-custom-select-trigger
+    &gt;
+      &lt;span id=&quot;category-value&quot; data-custom-select-value&gt;
+        Select a category
+      &lt;/span&gt;
+
+      &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+        ⌄
+      &lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;ul
+      class=&quot;mngha-custom-select-menu&quot;
+      role=&quot;listbox&quot;
+      aria-labelledby=&quot;category-label&quot;
+      data-custom-select-menu
+    &gt;
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;0&quot;
+        data-custom-select-option
+        data-value=&quot;medical&quot;
+      &gt;
+        Medical
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;administrative&quot;
+      &gt;
+        Administrative
+      &lt;/li&gt;
+
+      &lt;li
+        class=&quot;mngha-custom-select-option&quot;
+        role=&quot;option&quot;
+        aria-selected=&quot;false&quot;
+        tabindex=&quot;-1&quot;
+        data-custom-select-option
+        data-value=&quot;technical&quot;
+      &gt;
+        Technical
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;input
+      type=&quot;hidden&quot;
+      name=&quot;service-category&quot;
+      value=&quot;&quot;
+      data-custom-select-input
+    &gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;mngha-error-text&quot; id=&quot;category-error&quot;&gt;
+    Select a service category.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Disabled custom select</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-field&quot;&gt;
+  &lt;span class=&quot;mngha-label&quot; id=&quot;region-label&quot;&gt;
+    Assigned region
+  &lt;/span&gt;
+
+  &lt;div class=&quot;mngha-custom-select&quot;&gt;
+    &lt;button
+      class=&quot;mngha-custom-select-trigger&quot;
+      type=&quot;button&quot;
+      disabled
+      aria-labelledby=&quot;region-label region-value&quot;
+    &gt;
+      &lt;span id=&quot;region-value&quot;&gt;
+        Riyadh
+      &lt;/span&gt;
+
+      &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+        ⌄
+      &lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;input
+      type=&quot;hidden&quot;
+      name=&quot;region&quot;
+      value=&quot;riyadh&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;p class=&quot;mngha-helper-text&quot;&gt;
+    The region is assigned automatically.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="form-grid">
+        <h2 class="mngha-section-title">Custom Select Form Grid</h2>
+
+        <p class="mngha-paragraph">
+          Custom selects work inside the existing responsive form grid and
+          collapse to one column on small screens.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-form-grid">
+  <div class="mngha-field">
+    <span class="mngha-label" id="grid-department-label">
+      Department
+    </span>
+
+    <div class="mngha-custom-select" data-custom-select>
+      <button
+        class="mngha-custom-select-trigger"
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-labelledby="grid-department-label grid-department-value"
+        data-custom-select-trigger
+      >
+        <span id="grid-department-value" data-custom-select-value>
+          Select department
+        </span>
+
+        <span class="mngha-custom-select-arrow" aria-hidden="true">
+          ⌄
+        </span>
+      </button>
+
+      <ul
+        class="mngha-custom-select-menu"
+        role="listbox"
+        aria-labelledby="grid-department-label"
+        data-custom-select-menu
+      >
+        <li
+          class="mngha-custom-select-option"
+          role="option"
+          aria-selected="false"
+          tabindex="0"
+          data-custom-select-option
+          data-value="digital-services"
+        >
+          Digital Services
+        </li>
+
+        <li
+          class="mngha-custom-select-option"
+          role="option"
+          aria-selected="false"
+          tabindex="-1"
+          data-custom-select-option
+          data-value="data-management"
+        >
+          Data Management
+        </li>
+      </ul>
+
+      <input
+        type="hidden"
+        name="grid-department"
+        value=""
+        data-custom-select-input
+      >
+    </div>
+  </div>
+
+  <div class="mngha-field">
+    <span class="mngha-label" id="grid-priority-label">
+      Priority
+    </span>
+
+    <div class="mngha-custom-select" data-custom-select>
+      <button
+        class="mngha-custom-select-trigger"
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-labelledby="grid-priority-label grid-priority-value"
+        data-custom-select-trigger
+      >
+        <span id="grid-priority-value" data-custom-select-value>
+          Normal
+        </span>
+
+        <span class="mngha-custom-select-arrow" aria-hidden="true">
+          ⌄
+        </span>
+      </button>
+
+      <ul
+        class="mngha-custom-select-menu"
+        role="listbox"
+        aria-labelledby="grid-priority-label"
+        data-custom-select-menu
+      >
+        <li
+          class="mngha-custom-select-option is-selected"
+          role="option"
+          aria-selected="true"
+          tabindex="0"
+          data-custom-select-option
+          data-value="normal"
+        >
+          Normal
+        </li>
+
+        <li
+          class="mngha-custom-select-option"
+          role="option"
+          aria-selected="false"
+          tabindex="-1"
+          data-custom-select-option
+          data-value="high"
+        >
+          High
+        </li>
+      </ul>
+
+      <input
+        type="hidden"
+        name="grid-priority"
+        value="normal"
+        data-custom-select-input
+      >
+    </div>
+  </div>
+
+  <div class="mngha-field">
+    <span class="mngha-label" id="grid-status-label">
+      Status
+    </span>
+
+    <div class="mngha-custom-select" data-custom-select>
+      <button
+        class="mngha-custom-select-trigger"
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-labelledby="grid-status-label grid-status-value"
+        data-custom-select-trigger
+      >
+        <span id="grid-status-value" data-custom-select-value>
+          Draft
+        </span>
+
+        <span class="mngha-custom-select-arrow" aria-hidden="true">
+          ⌄
+        </span>
+      </button>
+
+      <ul
+        class="mngha-custom-select-menu"
+        role="listbox"
+        aria-labelledby="grid-status-label"
+        data-custom-select-menu
+      >
+        <li
+          class="mngha-custom-select-option is-selected"
+          role="option"
+          aria-selected="true"
+          tabindex="0"
+          data-custom-select-option
+          data-value="draft"
+        >
+          Draft
+        </li>
+
+        <li
+          class="mngha-custom-select-option"
+          role="option"
+          aria-selected="false"
+          tabindex="-1"
+          data-custom-select-option
+          data-value="submitted"
+        >
+          Submitted
+        </li>
+      </ul>
+
+      <input
+        type="hidden"
+        name="grid-status"
+        value="draft"
+        data-custom-select-input
+      >
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Custom selects in a form grid</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;span class=&quot;mngha-label&quot; id=&quot;grid-department-label&quot;&gt;
+      Department
+    &lt;/span&gt;
+
+    &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+      &lt;button
+        class=&quot;mngha-custom-select-trigger&quot;
+        type=&quot;button&quot;
+        aria-haspopup=&quot;listbox&quot;
+        aria-expanded=&quot;false&quot;
+        aria-labelledby=&quot;grid-department-label grid-department-value&quot;
+        data-custom-select-trigger
+      &gt;
+        &lt;span id=&quot;grid-department-value&quot; data-custom-select-value&gt;
+          Select department
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+          ⌄
+        &lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;ul
+        class=&quot;mngha-custom-select-menu&quot;
+        role=&quot;listbox&quot;
+        aria-labelledby=&quot;grid-department-label&quot;
+        data-custom-select-menu
+      &gt;
+        &lt;li
+          class=&quot;mngha-custom-select-option&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;false&quot;
+          tabindex=&quot;0&quot;
+          data-custom-select-option
+          data-value=&quot;digital-services&quot;
+        &gt;
+          Digital Services
+        &lt;/li&gt;
+
+        &lt;li
+          class=&quot;mngha-custom-select-option&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;false&quot;
+          tabindex=&quot;-1&quot;
+          data-custom-select-option
+          data-value=&quot;data-management&quot;
+        &gt;
+          Data Management
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;input
+        type=&quot;hidden&quot;
+        name=&quot;grid-department&quot;
+        value=&quot;&quot;
+        data-custom-select-input
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;span class=&quot;mngha-label&quot; id=&quot;grid-priority-label&quot;&gt;
+      Priority
+    &lt;/span&gt;
+
+    &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+      &lt;button
+        class=&quot;mngha-custom-select-trigger&quot;
+        type=&quot;button&quot;
+        aria-haspopup=&quot;listbox&quot;
+        aria-expanded=&quot;false&quot;
+        aria-labelledby=&quot;grid-priority-label grid-priority-value&quot;
+        data-custom-select-trigger
+      &gt;
+        &lt;span id=&quot;grid-priority-value&quot; data-custom-select-value&gt;
+          Normal
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+          ⌄
+        &lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;ul
+        class=&quot;mngha-custom-select-menu&quot;
+        role=&quot;listbox&quot;
+        aria-labelledby=&quot;grid-priority-label&quot;
+        data-custom-select-menu
+      &gt;
+        &lt;li
+          class=&quot;mngha-custom-select-option is-selected&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;true&quot;
+          tabindex=&quot;0&quot;
+          data-custom-select-option
+          data-value=&quot;normal&quot;
+        &gt;
+          Normal
+        &lt;/li&gt;
+
+        &lt;li
+          class=&quot;mngha-custom-select-option&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;false&quot;
+          tabindex=&quot;-1&quot;
+          data-custom-select-option
+          data-value=&quot;high&quot;
+        &gt;
+          High
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;input
+        type=&quot;hidden&quot;
+        name=&quot;grid-priority&quot;
+        value=&quot;normal&quot;
+        data-custom-select-input
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;span class=&quot;mngha-label&quot; id=&quot;grid-status-label&quot;&gt;
+      Status
+    &lt;/span&gt;
+
+    &lt;div class=&quot;mngha-custom-select&quot; data-custom-select&gt;
+      &lt;button
+        class=&quot;mngha-custom-select-trigger&quot;
+        type=&quot;button&quot;
+        aria-haspopup=&quot;listbox&quot;
+        aria-expanded=&quot;false&quot;
+        aria-labelledby=&quot;grid-status-label grid-status-value&quot;
+        data-custom-select-trigger
+      &gt;
+        &lt;span id=&quot;grid-status-value&quot; data-custom-select-value&gt;
+          Draft
+        &lt;/span&gt;
+
+        &lt;span class=&quot;mngha-custom-select-arrow&quot; aria-hidden=&quot;true&quot;&gt;
+          ⌄
+        &lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;ul
+        class=&quot;mngha-custom-select-menu&quot;
+        role=&quot;listbox&quot;
+        aria-labelledby=&quot;grid-status-label&quot;
+        data-custom-select-menu
+      &gt;
+        &lt;li
+          class=&quot;mngha-custom-select-option is-selected&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;true&quot;
+          tabindex=&quot;0&quot;
+          data-custom-select-option
+          data-value=&quot;draft&quot;
+        &gt;
+          Draft
+        &lt;/li&gt;
+
+        &lt;li
+          class=&quot;mngha-custom-select-option&quot;
+          role=&quot;option&quot;
+          aria-selected=&quot;false&quot;
+          tabindex=&quot;-1&quot;
+          data-custom-select-option
+          data-value=&quot;submitted&quot;
+        &gt;
+          Submitted
+        &lt;/li&gt;
+      &lt;/ul&gt;
+
+      &lt;input
+        type=&quot;hidden&quot;
+        name=&quot;grid-status&quot;
+        value=&quot;draft&quot;
+        data-custom-select-input
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="javascript">
+        <h2 class="mngha-section-title">Required JavaScript</h2>
+
+        <p class="mngha-paragraph">
+          All custom selects require JavaScript. Add this once to the project;
+          it initializes every element using
+          <strong>data-custom-select</strong>.
+        </p>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">JavaScript</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Custom select behavior</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>function initCustomSelects() {
+  const selects = document.querySelectorAll(
+    &quot;[data-custom-select]&quot;
+  );
+
+  selects.forEach(function (select) {
+    const trigger = select.querySelector(
+      &quot;[data-custom-select-trigger]&quot;
+    );
+
+    const menu = select.querySelector(
+      &quot;[data-custom-select-menu]&quot;
+    );
+
+    const value = select.querySelector(
+      &quot;[data-custom-select-value]&quot;
+    );
+
+    const input = select.querySelector(
+      &quot;[data-custom-select-input]&quot;
+    );
+
+    const options = Array.from(
+      select.querySelectorAll(
+        &quot;[data-custom-select-option]&quot;
+      )
+    );
+
+    if (
+      !trigger ||
+      !menu ||
+      !value ||
+      !input ||
+      options.length === 0
+    ) {
+      return;
+    }
+
+    function openSelect() {
+      select.classList.add(&quot;is-open&quot;);
+      trigger.setAttribute(&quot;aria-expanded&quot;, &quot;true&quot;);
+
+      const selected =
+        options.find(function (option) {
+          return (
+            option.getAttribute(&quot;aria-selected&quot;) ===
+            &quot;true&quot;
+          );
+        }) || options[0];
+
+      selected.focus();
+    }
+
+    function closeSelect() {
+      select.classList.remove(&quot;is-open&quot;);
+      trigger.setAttribute(&quot;aria-expanded&quot;, &quot;false&quot;);
+    }
+
+    function chooseOption(option) {
+      options.forEach(function (item) {
+        const isSelected = item === option;
+
+        item.classList.toggle(
+          &quot;is-selected&quot;,
+          isSelected
+        );
+
+        item.setAttribute(
+          &quot;aria-selected&quot;,
+          String(isSelected)
+        );
+
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+
+      value.textContent =
+        option.textContent.trim();
+
+      input.value =
+        option.dataset.value || &quot;&quot;;
+
+      select.classList.remove(
+        &quot;mngha-custom-select--error&quot;
+      );
+
+      trigger.removeAttribute(&quot;aria-invalid&quot;);
+
+      closeSelect();
+      trigger.focus();
+    }
+
+    trigger.addEventListener(
+      &quot;click&quot;,
+      function () {
+        if (
+          select.classList.contains(&quot;is-open&quot;)
+        ) {
+          closeSelect();
+        } else {
+          openSelect();
+        }
+      }
+    );
+
+    trigger.addEventListener(
+      &quot;keydown&quot;,
+      function (event) {
+        if (
+          event.key === &quot;ArrowDown&quot; ||
+          event.key === &quot;ArrowUp&quot; ||
+          event.key === &quot;Enter&quot; ||
+          event.key === &quot; &quot;
+        ) {
+          event.preventDefault();
+          openSelect();
+        }
+
+        if (event.key === &quot;Escape&quot;) {
+          closeSelect();
+        }
+      }
+    );
+
+    options.forEach(function (option, index) {
+      option.addEventListener(
+        &quot;click&quot;,
+        function () {
+          chooseOption(option);
+        }
+      );
+
+      option.addEventListener(
+        &quot;keydown&quot;,
+        function (event) {
+          if (
+            event.key === &quot;Enter&quot; ||
+            event.key === &quot; &quot;
+          ) {
+            event.preventDefault();
+            chooseOption(option);
+          }
+
+          if (event.key === &quot;ArrowDown&quot;) {
+            event.preventDefault();
+
+            options[
+              (index + 1) % options.length
+            ].focus();
+          }
+
+          if (event.key === &quot;ArrowUp&quot;) {
+            event.preventDefault();
+
+            options[
+              (
+                index -
+                1 +
+                options.length
+              ) % options.length
+            ].focus();
+          }
+
+          if (event.key === &quot;Home&quot;) {
+            event.preventDefault();
+            options[0].focus();
+          }
+
+          if (event.key === &quot;End&quot;) {
+            event.preventDefault();
+            options[options.length - 1].focus();
+          }
+
+          if (event.key === &quot;Escape&quot;) {
+            closeSelect();
+            trigger.focus();
+          }
+        }
+      );
+    });
+
+    document.addEventListener(
+      &quot;click&quot;,
+      function (event) {
+        if (!select.contains(event.target)) {
+          closeSelect();
+        }
+      }
+    );
+  });
+}
+
+if (document.readyState === &quot;loading&quot;) {
+  document.addEventListener(
+    &quot;DOMContentLoaded&quot;,
+    initCustomSelects
+  );
+} else {
+  initCustomSelects();
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Custom select class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              
+              <tr>
+                <td><strong>.mngha-custom-select</strong></td>
+                <td>Container</td>
+                <td>Provides positioning and open-state control.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-custom-select-trigger</strong></td>
+                <td>button</td>
+                <td>Displays the current value and opens the option list.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-custom-select-arrow</strong></td>
+                <td>span</td>
+                <td>Displays and rotates the dropdown arrow.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-custom-select-menu</strong></td>
+                <td>ul</td>
+                <td>Displays the custom listbox menu.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-custom-select-option</strong></td>
+                <td>li</td>
+                <td>Displays one selectable option.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.is-open</strong></td>
+                <td>Select container</td>
+                <td>Shows the menu and rotates the arrow.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.is-selected</strong></td>
+                <td>Option</td>
+                <td>Marks the selected option and shows its check icon.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-custom-select--error</strong></td>
+                <td>Select container</td>
+                <td>Applies the error border and error focus state.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-field</strong></td>
+                <td>Container</td>
+                <td>Groups the label, select, and supporting message.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-label</strong></td>
+                <td>Text</td>
+                <td>Applies the field label typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-helper-text</strong></td>
+                <td>Text</td>
+                <td>Displays supporting guidance.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-error-text</strong></td>
+                <td>Text</td>
+                <td>Displays validation feedback.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-grid</strong></td>
+                <td>Container</td>
+                <td>Arranges three fields and collapses on small screens.</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use a real trigger</h3>
+
+              <p class="mngha-card-description">
+                The trigger must be a button with aria-haspopup="listbox" and
+                an updated aria-expanded state.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Label the field</h3>
+
+              <p class="mngha-card-description">
+                Connect the visible field label and selected value to the
+                trigger using aria-labelledby.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Expose selection</h3>
+
+              <p class="mngha-card-description">
+                Keep aria-selected synchronized with the visible selected check
+                icon and the hidden input value.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Support the keyboard</h3>
+
+              <p class="mngha-card-description">
+                Users must be able to open, move through, select, and close the
+                options without a pointer.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Connect errors</h3>
+
+              <p class="mngha-card-description">
+                Use aria-invalid and aria-describedby to associate validation
+                feedback with the trigger.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use unique IDs</h3>
+
+              <p class="mngha-card-description">
+                Every label, selected-value element, and error message must have
+                a unique id on the page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Keep labels concise, order options logically, use unique IDs,
+                and initialize the component once after the page content loads.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not mix native and custom select markup, omit keyboard
+                handling, or forget to synchronize the hidden form value.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Initial value</h3>
+
+              <p class="mngha-card-description">
+                When a value is preselected, update the visible text, option
+                class, aria-selected, tabindex, and hidden input together.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Validation</h3>
+
+              <p class="mngha-card-description">
+                Remove the error modifier after a valid selection and validate
+                the hidden value again before processing the form.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+
+  <script>
+function initCustomSelects() {
+  const selects = document.querySelectorAll(
+    "[data-custom-select]"
+  );
+
+  selects.forEach(function (select) {
+    const trigger = select.querySelector(
+      "[data-custom-select-trigger]"
+    );
+
+    const menu = select.querySelector(
+      "[data-custom-select-menu]"
+    );
+
+    const value = select.querySelector(
+      "[data-custom-select-value]"
+    );
+
+    const input = select.querySelector(
+      "[data-custom-select-input]"
+    );
+
+    const options = Array.from(
+      select.querySelectorAll(
+        "[data-custom-select-option]"
+      )
+    );
+
+    if (
+      !trigger ||
+      !menu ||
+      !value ||
+      !input ||
+      options.length === 0
+    ) {
+      return;
+    }
+
+    function openSelect() {
+      select.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+
+      const selected =
+        options.find(function (option) {
+          return (
+            option.getAttribute("aria-selected") ===
+            "true"
+          );
+        }) || options[0];
+
+      selected.focus();
+    }
+
+    function closeSelect() {
+      select.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+
+    function chooseOption(option) {
+      options.forEach(function (item) {
+        const isSelected = item === option;
+
+        item.classList.toggle(
+          "is-selected",
+          isSelected
+        );
+
+        item.setAttribute(
+          "aria-selected",
+          String(isSelected)
+        );
+
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+
+      value.textContent =
+        option.textContent.trim();
+
+      input.value =
+        option.dataset.value || "";
+
+      select.classList.remove(
+        "mngha-custom-select--error"
+      );
+
+      trigger.removeAttribute("aria-invalid");
+
+      closeSelect();
+      trigger.focus();
+    }
+
+    trigger.addEventListener(
+      "click",
+      function () {
+        if (
+          select.classList.contains("is-open")
+        ) {
+          closeSelect();
+        } else {
+          openSelect();
+        }
+      }
+    );
+
+    trigger.addEventListener(
+      "keydown",
+      function (event) {
+        if (
+          event.key === "ArrowDown" ||
+          event.key === "ArrowUp" ||
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+          event.preventDefault();
+          openSelect();
+        }
+
+        if (event.key === "Escape") {
+          closeSelect();
+        }
+      }
+    );
+
+    options.forEach(function (option, index) {
+      option.addEventListener(
+        "click",
+        function () {
+          chooseOption(option);
+        }
+      );
+
+      option.addEventListener(
+        "keydown",
+        function (event) {
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+            event.preventDefault();
+            chooseOption(option);
+          }
+
+          if (event.key === "ArrowDown") {
+            event.preventDefault();
+
+            options[
+              (index + 1) % options.length
+            ].focus();
+          }
+
+          if (event.key === "ArrowUp") {
+            event.preventDefault();
+
+            options[
+              (
+                index -
+                1 +
+                options.length
+              ) % options.length
+            ].focus();
+          }
+
+          if (event.key === "Home") {
+            event.preventDefault();
+            options[0].focus();
+          }
+
+          if (event.key === "End") {
+            event.preventDefault();
+            options[options.length - 1].focus();
+          }
+
+          if (event.key === "Escape") {
+            closeSelect();
+            trigger.focus();
+          }
+        }
+      );
+    });
+
+    document.addEventListener(
+      "click",
+      function (event) {
+        if (!select.contains(event.target)) {
+          closeSelect();
+        }
+      }
+    );
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initCustomSelects
+  );
+} else {
+  initCustomSelects();
+}
+  </script>
+</body>
+</html>

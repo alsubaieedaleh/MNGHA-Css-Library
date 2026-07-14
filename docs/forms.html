@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Form Controls - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!-- Introduction -->
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Form Controls</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Form controls collect text-based information using consistent
+              labels, inputs, textareas, helper messages, validation feedback,
+              responsive grids, and accessible field grouping.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Field structure</h3>
+
+              <p class="mngha-card-description">
+                Use mngha-field to arrange a label, form control, and supporting
+                or validation message as one logical field.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Shared states</h3>
+
+              <p class="mngha-card-description">
+                Inputs and textareas support default, filled, focus, readonly,
+                disabled, placeholder, and error states.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Responsive layout</h3>
+
+              <p class="mngha-card-description">
+                Use mngha-form-grid for three-column forms that collapse to one
+                column on small screens.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Basic input -->
+      <section class="mngha-section" id="basic-input">
+        <h2 class="mngha-section-title">Basic Input</h2>
+
+        <p class="mngha-paragraph">
+          Place each input inside <strong>mngha-field</strong>. Connect the
+          visible label using matching <strong>for</strong> and
+          <strong>id</strong> values.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-field">
+  <label class="mngha-label" for="full-name">
+    Full name
+  </label>
+
+  <input
+    class="mngha-input"
+    id="full-name"
+    name="full-name"
+    type="text"
+    placeholder="Enter your full name"
+    aria-describedby="full-name-help"
+  >
+
+  <p class="mngha-helper-text" id="full-name-help">
+    Use the name shown on your official documents.
+  </p>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Basic input</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-field&quot;&gt;
+  &lt;label class=&quot;mngha-label&quot; for=&quot;full-name&quot;&gt;
+    Full name
+  &lt;/label&gt;
+
+  &lt;input
+    class=&quot;mngha-input&quot;
+    id=&quot;full-name&quot;
+    name=&quot;full-name&quot;
+    type=&quot;text&quot;
+    placeholder=&quot;Enter your full name&quot;
+    aria-describedby=&quot;full-name-help&quot;
+  &gt;
+
+  &lt;p class=&quot;mngha-helper-text&quot; id=&quot;full-name-help&quot;&gt;
+    Use the name shown on your official documents.
+  &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Input types -->
+      <section class="mngha-section" id="input-types">
+        <h2 class="mngha-section-title">Input Types</h2>
+
+        <p class="mngha-paragraph">
+          The same <strong>mngha-input</strong> class can be used with suitable
+          native input types such as text, email, telephone, password, number,
+          URL, and date.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form-grid">
+  <div class="mngha-field">
+    <label class="mngha-label" for="work-email">
+      Work email
+    </label>
+
+    <input
+      class="mngha-input"
+      id="work-email"
+      name="work-email"
+      type="email"
+      autocomplete="email"
+      placeholder="name@example.com"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="mobile-number">
+      Mobile number
+    </label>
+
+    <input
+      class="mngha-input"
+      id="mobile-number"
+      name="mobile-number"
+      type="tel"
+      autocomplete="tel"
+      placeholder="05xxxxxxxx"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="account-password">
+      Password
+    </label>
+
+    <input
+      class="mngha-input"
+      id="account-password"
+      name="account-password"
+      type="password"
+      autocomplete="new-password"
+      placeholder="Enter a password"
+    >
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Common input types</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;work-email&quot;&gt;
+      Work email
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;work-email&quot;
+      name=&quot;work-email&quot;
+      type=&quot;email&quot;
+      autocomplete=&quot;email&quot;
+      placeholder=&quot;name@example.com&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;mobile-number&quot;&gt;
+      Mobile number
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;mobile-number&quot;
+      name=&quot;mobile-number&quot;
+      type=&quot;tel&quot;
+      autocomplete=&quot;tel&quot;
+      placeholder=&quot;05xxxxxxxx&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;account-password&quot;&gt;
+      Password
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;account-password&quot;
+      name=&quot;account-password&quot;
+      type=&quot;password&quot;
+      autocomplete=&quot;new-password&quot;
+      placeholder=&quot;Enter a password&quot;
+    &gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Input states -->
+      <section class="mngha-section" id="input-states">
+        <h2 class="mngha-section-title">Input States</h2>
+
+        <p class="mngha-paragraph">
+          Use native attributes for readonly and disabled behavior. Add
+          <strong>mngha-input--error</strong> only when the field contains a
+          validation error.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form-grid">
+  <div class="mngha-field">
+    <label class="mngha-label" for="default-input">
+      Default input
+    </label>
+
+    <input
+      class="mngha-input"
+      id="default-input"
+      type="text"
+      placeholder="Enter a value"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="filled-input">
+      Filled input
+    </label>
+
+    <input
+      class="mngha-input"
+      id="filled-input"
+      type="text"
+      value="Entered value"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="readonly-input">
+      Readonly input
+    </label>
+
+    <input
+      class="mngha-input"
+      id="readonly-input"
+      type="text"
+      value="Generated automatically"
+      readonly
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="disabled-input">
+      Disabled input
+    </label>
+
+    <input
+      class="mngha-input"
+      id="disabled-input"
+      type="text"
+      value="Unavailable"
+      disabled
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="error-input">
+      Error input
+    </label>
+
+    <input
+      class="mngha-input mngha-input--error"
+      id="error-input"
+      type="email"
+      value="invalid-email"
+      aria-invalid="true"
+      aria-describedby="error-input-message"
+    >
+
+    <p class="mngha-error-text" id="error-input-message">
+      Enter a valid email address.
+    </p>
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Input states</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;default-input&quot;&gt;
+      Default input
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;default-input&quot;
+      type=&quot;text&quot;
+      placeholder=&quot;Enter a value&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;filled-input&quot;&gt;
+      Filled input
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;filled-input&quot;
+      type=&quot;text&quot;
+      value=&quot;Entered value&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;readonly-input&quot;&gt;
+      Readonly input
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;readonly-input&quot;
+      type=&quot;text&quot;
+      value=&quot;Generated automatically&quot;
+      readonly
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;disabled-input&quot;&gt;
+      Disabled input
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;disabled-input&quot;
+      type=&quot;text&quot;
+      value=&quot;Unavailable&quot;
+      disabled
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;error-input&quot;&gt;
+      Error input
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input mngha-input--error&quot;
+      id=&quot;error-input&quot;
+      type=&quot;email&quot;
+      value=&quot;invalid-email&quot;
+      aria-invalid=&quot;true&quot;
+      aria-describedby=&quot;error-input-message&quot;
+    &gt;
+
+    &lt;p class=&quot;mngha-error-text&quot; id=&quot;error-input-message&quot;&gt;
+      Enter a valid email address.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Textarea -->
+      <section class="mngha-section" id="textarea">
+        <h2 class="mngha-section-title">Textarea</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-textarea</strong> for multi-line content. The
+          textarea supports the same helper, disabled, readonly, focus, and
+          error patterns as the input component.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form-grid">
+  <div class="mngha-field">
+    <label class="mngha-label" for="request-description">
+      Request description
+    </label>
+
+    <textarea
+      class="mngha-textarea"
+      id="request-description"
+      name="request-description"
+      placeholder="Describe your request"
+      aria-describedby="request-description-help"
+    ></textarea>
+
+    <p
+      class="mngha-helper-text"
+      id="request-description-help"
+    >
+      Include the important details needed to process the request.
+    </p>
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="rejection-reason">
+      Rejection reason
+    </label>
+
+    <textarea
+      class="mngha-textarea mngha-textarea--error"
+      id="rejection-reason"
+      name="rejection-reason"
+      aria-invalid="true"
+      aria-describedby="rejection-reason-error"
+    >Too short</textarea>
+
+    <p
+      class="mngha-error-text"
+      id="rejection-reason-error"
+    >
+      Enter at least 20 characters.
+    </p>
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Textarea states</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;request-description&quot;&gt;
+      Request description
+    &lt;/label&gt;
+
+    &lt;textarea
+      class=&quot;mngha-textarea&quot;
+      id=&quot;request-description&quot;
+      name=&quot;request-description&quot;
+      placeholder=&quot;Describe your request&quot;
+      aria-describedby=&quot;request-description-help&quot;
+    &gt;&lt;/textarea&gt;
+
+    &lt;p
+      class=&quot;mngha-helper-text&quot;
+      id=&quot;request-description-help&quot;
+    &gt;
+      Include the important details needed to process the request.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;rejection-reason&quot;&gt;
+      Rejection reason
+    &lt;/label&gt;
+
+    &lt;textarea
+      class=&quot;mngha-textarea mngha-textarea--error&quot;
+      id=&quot;rejection-reason&quot;
+      name=&quot;rejection-reason&quot;
+      aria-invalid=&quot;true&quot;
+      aria-describedby=&quot;rejection-reason-error&quot;
+    &gt;Too short&lt;/textarea&gt;
+
+    &lt;p
+      class=&quot;mngha-error-text&quot;
+      id=&quot;rejection-reason-error&quot;
+    &gt;
+      Enter at least 20 characters.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Fieldset -->
+      <section class="mngha-section" id="fieldset">
+        <h2 class="mngha-section-title">Fieldset and Legend</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>fieldset.mngha-field</strong> with
+          <strong>legend.mngha-label</strong> when multiple fields belong to
+          one named group. The form CSS removes the browser's default fieldset
+          border and spacing while preserving its semantic meaning.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <fieldset class="mngha-field">
+  <legend class="mngha-label">
+    Contact details
+  </legend>
+
+  <div class="mngha-form-grid">
+    <div class="mngha-field">
+      <label class="mngha-label" for="contact-name">
+        Contact name
+      </label>
+
+      <input
+        class="mngha-input"
+        id="contact-name"
+        name="contact-name"
+        type="text"
+      >
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="contact-email">
+        Contact email
+      </label>
+
+      <input
+        class="mngha-input"
+        id="contact-email"
+        name="contact-email"
+        type="email"
+      >
+    </div>
+  </div>
+</fieldset>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Grouped fields with fieldset</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;fieldset class=&quot;mngha-field&quot;&gt;
+  &lt;legend class=&quot;mngha-label&quot;&gt;
+    Contact details
+  &lt;/legend&gt;
+
+  &lt;div class=&quot;mngha-form-grid&quot;&gt;
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;contact-name&quot;&gt;
+        Contact name
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;contact-name&quot;
+        name=&quot;contact-name&quot;
+        type=&quot;text&quot;
+      &gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;contact-email&quot;&gt;
+        Contact email
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;contact-email&quot;
+        name=&quot;contact-email&quot;
+        type=&quot;email&quot;
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/fieldset&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Form grid -->
+      <section class="mngha-section" id="form-grid">
+        <h2 class="mngha-section-title">Responsive Form Grid</h2>
+
+        <p class="mngha-paragraph">
+          Place independent fields inside <strong>mngha-form-grid</strong>.
+          Each field keeps a minimum width of zero so long content does not
+          force the page beyond its container.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form-grid">
+  <div class="mngha-field">
+    <label class="mngha-label" for="employee-name">
+      Employee name
+    </label>
+
+    <input
+      class="mngha-input"
+      id="employee-name"
+      name="employee-name"
+      type="text"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="employee-number">
+      Employee number
+    </label>
+
+    <input
+      class="mngha-input"
+      id="employee-number"
+      name="employee-number"
+      type="text"
+    >
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="employee-email">
+      Email
+    </label>
+
+    <input
+      class="mngha-input"
+      id="employee-email"
+      name="employee-email"
+      type="email"
+    >
+  </div>
+</div>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Responsive form grid</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form-grid&quot;&gt;
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;employee-name&quot;&gt;
+      Employee name
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;employee-name&quot;
+      name=&quot;employee-name&quot;
+      type=&quot;text&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;employee-number&quot;&gt;
+      Employee number
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;employee-number&quot;
+      name=&quot;employee-number&quot;
+      type=&quot;text&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;employee-email&quot;&gt;
+      Email
+    &lt;/label&gt;
+
+    &lt;input
+      class=&quot;mngha-input&quot;
+      id=&quot;employee-email&quot;
+      name=&quot;employee-email&quot;
+      type=&quot;email&quot;
+    &gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Complete form -->
+      <section class="mngha-section" id="complete-form">
+        <h2 class="mngha-section-title">Complete Form Example</h2>
+
+        <p class="mngha-paragraph">
+          This example combines the field structure, responsive grid, helper
+          text, multiple native input types, a textarea, and form actions.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <form action="#" method="post">
+  <div class="mngha-form-grid">
+    <div class="mngha-field">
+      <label class="mngha-label" for="service-name">
+        Service name
+      </label>
+
+      <input
+        class="mngha-input"
+        id="service-name"
+        name="service-name"
+        type="text"
+        required
+        aria-describedby="service-name-help"
+      >
+
+      <p class="mngha-helper-text" id="service-name-help">
+        Use a concise and recognizable name.
+      </p>
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="service-owner">
+        Service owner
+      </label>
+
+      <input
+        class="mngha-input"
+        id="service-owner"
+        name="service-owner"
+        type="text"
+        required
+      >
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="owner-email">
+        Owner email
+      </label>
+
+      <input
+        class="mngha-input"
+        id="owner-email"
+        name="owner-email"
+        type="email"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="mngha-field">
+    <label class="mngha-label" for="service-description">
+      Service description
+    </label>
+
+    <textarea
+      class="mngha-textarea"
+      id="service-description"
+      name="service-description"
+      required
+    ></textarea>
+  </div>
+
+  <div class="mngha-card-actions">
+    <button
+      class="mngha-button mngha-button--primary mngha-button--md"
+      type="submit"
+    >
+      Save service
+    </button>
+
+    <button
+      class="mngha-button mngha-button--secondary mngha-button--md"
+      type="reset"
+    >
+      Reset
+    </button>
+  </div>
+</form>
+          </div>
+        </div>
+
+        
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Complete form</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+  &lt;div class=&quot;mngha-form-grid&quot;&gt;
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;service-name&quot;&gt;
+        Service name
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;service-name&quot;
+        name=&quot;service-name&quot;
+        type=&quot;text&quot;
+        required
+        aria-describedby=&quot;service-name-help&quot;
+      &gt;
+
+      &lt;p class=&quot;mngha-helper-text&quot; id=&quot;service-name-help&quot;&gt;
+        Use a concise and recognizable name.
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;service-owner&quot;&gt;
+        Service owner
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;service-owner&quot;
+        name=&quot;service-owner&quot;
+        type=&quot;text&quot;
+        required
+      &gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;owner-email&quot;&gt;
+        Owner email
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;owner-email&quot;
+        name=&quot;owner-email&quot;
+        type=&quot;email&quot;
+        required
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-field&quot;&gt;
+    &lt;label class=&quot;mngha-label&quot; for=&quot;service-description&quot;&gt;
+      Service description
+    &lt;/label&gt;
+
+    &lt;textarea
+      class=&quot;mngha-textarea&quot;
+      id=&quot;service-description&quot;
+      name=&quot;service-description&quot;
+      required
+    &gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-card-actions&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;submit&quot;
+    &gt;
+      Save service
+    &lt;/button&gt;
+
+    &lt;button
+      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+      type=&quot;reset&quot;
+    &gt;
+      Reset
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Validation -->
+      <section class="mngha-section" id="validation">
+        <h2 class="mngha-section-title">Validation Pattern</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Apply the error class</h3>
+
+              <p class="mngha-card-description">
+                Add mngha-input--error or mngha-textarea--error to the invalid
+                control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Expose the invalid state</h3>
+
+              <p class="mngha-card-description">
+                Set aria-invalid to true after validation determines that the
+                current value is invalid.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Connect the message</h3>
+
+              <p class="mngha-card-description">
+                Give the error message an id and reference it from the control
+                using aria-describedby.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class reference -->
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Form control class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-field</strong></td>
+                <td>div or fieldset</td>
+                <td>Arranges a label, control, and feedback vertically.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-label</strong></td>
+                <td>label or legend</td>
+                <td>Applies the standard form-label typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-input</strong></td>
+                <td>input</td>
+                <td>Applies the base single-line form-control appearance.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-input--error</strong></td>
+                <td>input</td>
+                <td>Applies the input error border and focus indicator.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-textarea</strong></td>
+                <td>textarea</td>
+                <td>Applies the base multi-line form-control appearance.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-textarea--error</strong></td>
+                <td>textarea</td>
+                <td>Applies the textarea error border and focus indicator.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-helper-text</strong></td>
+                <td>Text</td>
+                <td>Displays guidance or supporting information.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-error-text</strong></td>
+                <td>Text</td>
+                <td>Displays validation feedback using the error color.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-grid</strong></td>
+                <td>Container</td>
+                <td>Creates the responsive three-column form layout.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Accessibility -->
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use visible labels</h3>
+
+              <p class="mngha-card-description">
+                Every input and textarea should have a clear visible label
+                connected with matching for and id values.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do not rely on placeholders</h3>
+
+              <p class="mngha-card-description">
+                Placeholder text may provide an example, but it must not replace
+                the field label.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Describe feedback</h3>
+
+              <p class="mngha-card-description">
+                Connect helper and error messages with aria-describedby so they
+                are announced with the control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use native attributes</h3>
+
+              <p class="mngha-card-description">
+                Use required, disabled, readonly, autocomplete, and suitable
+                input types instead of recreating their behavior.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Group related fields</h3>
+
+              <p class="mngha-card-description">
+                Use fieldset and legend when multiple controls belong to the
+                same named section or question.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve focus behavior</h3>
+
+              <p class="mngha-card-description">
+                Keep the component focus state visible for keyboard users and
+                do not remove it with page-specific CSS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage guidance -->
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Use concise labels, appropriate native input types, unique IDs,
+                connected helper messages, and clear validation feedback.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not use placeholders as labels, mark readonly fields as
+                disabled, display errors without explanation, or place unrelated
+                fields inside one fieldset.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+</body>
+</html>

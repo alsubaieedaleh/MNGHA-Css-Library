@@ -64,7 +64,6 @@
   gap: var(--spacing-md);
   color: var(--color-gray-950);
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .mngha-header-logo {
@@ -75,10 +74,18 @@
 }
 
 .mngha-header-title {
+  display: block;
+  inline-size:var(--spacing-12xl);
+  min-inline-size: 0;
+
   color: var(--color-gray-950);
   font-size: var(--text-md-size);
   font-weight: var(--font-weight-medium);
   line-height: var(--text-sm-line-height);
+
+  white-space: normal;
+  overflow-wrap: normal;
+ 
 }
 
 /**
@@ -179,9 +186,10 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-.mngha-header-action:hover {
-  color: var(--color-link);
+@media (max-width: 768px) {
+ .mngha-header-action{
+  font-size: var(--text-sm-size);
+ }
 }
 
 .mngha-header-action svg {
@@ -433,7 +441,7 @@
   .mngha-header-title {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    
   }
 
   .mngha-header-nav,

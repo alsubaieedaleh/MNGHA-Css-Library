@@ -8,6 +8,7 @@
   display: grid;
   gap: var(--spacing-md);
   min-width: 0;
+  margin-block: var(--spacing-lg);
 }
 
 .mngha-label {
@@ -870,4 +871,9 @@
   background: var(--color-error-600);
   color: var(--color-white);
 }
- 
+ fieldset.mngha-field {
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

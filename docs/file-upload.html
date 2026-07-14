@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload - mngha Universal CSS</title>
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">File Upload</h1>
+            <p class="mngha-card-description mngha-paragraph">
+              File upload controls allow users to select supporting documents
+              and review loading, success, and validation states.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button class="mngha-button mngha-button--primary mngha-button--md"
+              type="button" data-toggle-theme>Switch Theme</button>
+            <button class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button" data-toggle-direction>Toggle Direction</button>
+            <a class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html">View Components</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+        <div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Simple upload</h3>
+    <p class="mngha-card-description">Use a compact browse control for regular forms.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Dropzone upload</h3>
+    <p class="mngha-card-description">Use a larger upload area when attaching files is a primary task.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">File states</h3>
+    <p class="mngha-card-description">Show loading, success, and error feedback for each file.</p>
+  </div>
+</div></div>
+      </section>
+
+      <section class="mngha-section" id="simple-upload">
+        <h2 class="mngha-section-title">Simple File Upload</h2>
+        <p class="mngha-paragraph">
+          Use the simple layout for a title, guidance, and compact browse control.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-file-upload">
+  <div class="mngha-file-upload-content">
+    <p class="mngha-file-upload-title">Upload supporting document</p>
+    <p
+      class="mngha-file-upload-description"
+      id="supporting-document-description"
+    >
+      Maximum file size is 2MB. Supported formats are PDF, JPG, and PNG.
+    </p>
+  </div>
+
+  <input
+    class="mngha-file-upload-input"
+    id="supporting-document"
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png"
+    aria-describedby="supporting-document-description"
+  >
+
+  <label
+    class="mngha-file-upload-button"
+    for="supporting-document"
+  >
+    Browse Files
+  </label>
+</div>
+          </div>
+        </div>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">HTML</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">Simple file upload</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-file-upload&quot;&gt;
+  &lt;div class=&quot;mngha-file-upload-content&quot;&gt;
+    &lt;p class=&quot;mngha-file-upload-title&quot;&gt;Upload supporting document&lt;/p&gt;
+    &lt;p
+      class=&quot;mngha-file-upload-description&quot;
+      id=&quot;supporting-document-description&quot;
+    &gt;
+      Maximum file size is 2MB. Supported formats are PDF, JPG, and PNG.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;input
+    class=&quot;mngha-file-upload-input&quot;
+    id=&quot;supporting-document&quot;
+    type=&quot;file&quot;
+    accept=&quot;.pdf,.jpg,.jpeg,.png&quot;
+    aria-describedby=&quot;supporting-document-description&quot;
+  &gt;
+
+  &lt;label
+    class=&quot;mngha-file-upload-button&quot;
+    for=&quot;supporting-document&quot;
+  &gt;
+    Browse Files
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="uploaded-file">
+        <h2 class="mngha-section-title">Uploaded File</h2>
+        <p class="mngha-paragraph">
+          Render selected files inside <strong>mngha-file-list</strong>.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-file-list" aria-live="polite">
+  <div class="mngha-file-item mngha-file-item--success">
+    <span class="mngha-file-status" aria-hidden="true">✓</span>
+    <span class="mngha-file-name">national-id.pdf</span>
+
+    <button
+      class="mngha-file-remove"
+      type="button"
+      aria-label="Remove national-id.pdf"
+    >
+      ×
+    </button>
+  </div>
+</div>
+          </div>
+        </div>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">HTML</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">Uploaded file item</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-file-list&quot; aria-live=&quot;polite&quot;&gt;
+  &lt;div class=&quot;mngha-file-item mngha-file-item--success&quot;&gt;
+    &lt;span class=&quot;mngha-file-status&quot; aria-hidden=&quot;true&quot;&gt;✓&lt;/span&gt;
+    &lt;span class=&quot;mngha-file-name&quot;&gt;national-id.pdf&lt;/span&gt;
+
+    &lt;button
+      class=&quot;mngha-file-remove&quot;
+      type=&quot;button&quot;
+      aria-label=&quot;Remove national-id.pdf&quot;
+    &gt;
+      ×
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="dropzone-upload">
+        <h2 class="mngha-section-title">Dropzone Variant</h2>
+        <p class="mngha-paragraph">
+          The CSS provides the dropzone appearance. Processing files dropped
+          with the pointer requires JavaScript.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-file-upload mngha-file-upload--dropzone">
+  <input
+    class="mngha-file-upload-input"
+    id="dropzone-documents"
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png"
+    multiple
+    aria-describedby="dropzone-documents-description"
+  >
+
+  <label
+    class="mngha-file-upload-dropzone"
+    for="dropzone-documents"
+  >
+    <span class="mngha-file-upload-icon" aria-hidden="true">↥</span>
+
+    <span class="mngha-file-upload-dropzone-content">
+      <span class="mngha-file-upload-title">
+        Drag and drop files here to upload
+      </span>
+
+      <span
+        class="mngha-file-upload-description"
+        id="dropzone-documents-description"
+      >
+        Maximum file size is 2MB. Supported formats are PDF, JPG, and PNG.
+      </span>
+    </span>
+
+    <span class="mngha-file-upload-button">Browse Files</span>
+  </label>
+</div>
+          </div>
+        </div>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">HTML</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">Dropzone file upload</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-file-upload mngha-file-upload--dropzone&quot;&gt;
+  &lt;input
+    class=&quot;mngha-file-upload-input&quot;
+    id=&quot;dropzone-documents&quot;
+    type=&quot;file&quot;
+    accept=&quot;.pdf,.jpg,.jpeg,.png&quot;
+    multiple
+    aria-describedby=&quot;dropzone-documents-description&quot;
+  &gt;
+
+  &lt;label
+    class=&quot;mngha-file-upload-dropzone&quot;
+    for=&quot;dropzone-documents&quot;
+  &gt;
+    &lt;span class=&quot;mngha-file-upload-icon&quot; aria-hidden=&quot;true&quot;&gt;↥&lt;/span&gt;
+
+    &lt;span class=&quot;mngha-file-upload-dropzone-content&quot;&gt;
+      &lt;span class=&quot;mngha-file-upload-title&quot;&gt;
+        Drag and drop files here to upload
+      &lt;/span&gt;
+
+      &lt;span
+        class=&quot;mngha-file-upload-description&quot;
+        id=&quot;dropzone-documents-description&quot;
+      &gt;
+        Maximum file size is 2MB. Supported formats are PDF, JPG, and PNG.
+      &lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;span class=&quot;mngha-file-upload-button&quot;&gt;Browse Files&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="file-states">
+        <h2 class="mngha-section-title">File Item States</h2>
+        <p class="mngha-paragraph">
+          Apply one state modifier per item and include text feedback for errors.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Loading, success, and error</h3>
+            <div class="mngha-file-list" aria-live="polite">
+  <div class="mngha-file-item mngha-file-item--loading">
+    <span class="mngha-file-status" aria-hidden="true">…</span>
+    <span class="mngha-file-name">medical-report.pdf</span>
+    <button class="mngha-file-remove" type="button"
+      aria-label="Cancel medical-report.pdf upload">×</button>
+  </div>
+
+  <div class="mngha-file-item mngha-file-item--success">
+    <span class="mngha-file-status" aria-hidden="true">✓</span>
+    <span class="mngha-file-name">request-form.pdf</span>
+    <button class="mngha-file-remove" type="button"
+      aria-label="Remove request-form.pdf">×</button>
+  </div>
+
+  <div class="mngha-file-item mngha-file-item--error">
+    <span class="mngha-file-status" aria-hidden="true">!</span>
+    <span class="mngha-file-name">large-document.pdf</span>
+    <button class="mngha-file-remove" type="button"
+      aria-label="Remove large-document.pdf">×</button>
+    <p class="mngha-file-helper">
+      File exceeds the maximum size of 2MB.
+    </p>
+  </div>
+</div>
+          </div>
+        </div>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">HTML</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">File item states</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-file-list&quot; aria-live=&quot;polite&quot;&gt;
+  &lt;div class=&quot;mngha-file-item mngha-file-item--loading&quot;&gt;
+    &lt;span class=&quot;mngha-file-status&quot; aria-hidden=&quot;true&quot;&gt;…&lt;/span&gt;
+    &lt;span class=&quot;mngha-file-name&quot;&gt;medical-report.pdf&lt;/span&gt;
+    &lt;button class=&quot;mngha-file-remove&quot; type=&quot;button&quot;
+      aria-label=&quot;Cancel medical-report.pdf upload&quot;&gt;×&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-file-item mngha-file-item--success&quot;&gt;
+    &lt;span class=&quot;mngha-file-status&quot; aria-hidden=&quot;true&quot;&gt;✓&lt;/span&gt;
+    &lt;span class=&quot;mngha-file-name&quot;&gt;request-form.pdf&lt;/span&gt;
+    &lt;button class=&quot;mngha-file-remove&quot; type=&quot;button&quot;
+      aria-label=&quot;Remove request-form.pdf&quot;&gt;×&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-file-item mngha-file-item--error&quot;&gt;
+    &lt;span class=&quot;mngha-file-status&quot; aria-hidden=&quot;true&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;mngha-file-name&quot;&gt;large-document.pdf&lt;/span&gt;
+    &lt;button class=&quot;mngha-file-remove&quot; type=&quot;button&quot;
+      aria-label=&quot;Remove large-document.pdf&quot;&gt;×&lt;/button&gt;
+    &lt;p class=&quot;mngha-file-helper&quot;&gt;
+      File exceeds the maximum size of 2MB.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="complete-example">
+        <h2 class="mngha-section-title">Complete Dropzone Example</h2>
+        <p class="mngha-paragraph">
+          Combine the dropzone and file list when users need to review selected
+          files before submission.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+            <div class="mngha-file-upload mngha-file-upload--dropzone">
+  <input
+    class="mngha-file-upload-input"
+    id="complete-upload"
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png"
+    multiple
+    aria-describedby="complete-upload-description"
+  >
+
+  <label class="mngha-file-upload-dropzone" for="complete-upload">
+    <span class="mngha-file-upload-icon" aria-hidden="true">↥</span>
+
+    <span class="mngha-file-upload-dropzone-content">
+      <span class="mngha-file-upload-title">
+        Upload request attachments
+      </span>
+
+      <span
+        class="mngha-file-upload-description"
+        id="complete-upload-description"
+      >
+        Drag files here or browse your device. Maximum size is 2MB per file.
+      </span>
+    </span>
+
+    <span class="mngha-file-upload-button">Browse Files</span>
+  </label>
+
+  <div class="mngha-file-list" aria-live="polite">
+  <div class="mngha-file-item mngha-file-item--success">
+    <span class="mngha-file-status" aria-hidden="true">✓</span>
+    <span class="mngha-file-name">national-id.pdf</span>
+
+    <button
+      class="mngha-file-remove"
+      type="button"
+      aria-label="Remove national-id.pdf"
+    >
+      ×
+    </button>
+  </div>
+</div>
+</div>
+          </div>
+        </div>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">HTML</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">Complete dropzone</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-file-upload mngha-file-upload--dropzone&quot;&gt;
+  &lt;input
+    class=&quot;mngha-file-upload-input&quot;
+    id=&quot;complete-upload&quot;
+    type=&quot;file&quot;
+    accept=&quot;.pdf,.jpg,.jpeg,.png&quot;
+    multiple
+    aria-describedby=&quot;complete-upload-description&quot;
+  &gt;
+
+  &lt;label class=&quot;mngha-file-upload-dropzone&quot; for=&quot;complete-upload&quot;&gt;
+    &lt;span class=&quot;mngha-file-upload-icon&quot; aria-hidden=&quot;true&quot;&gt;↥&lt;/span&gt;
+
+    &lt;span class=&quot;mngha-file-upload-dropzone-content&quot;&gt;
+      &lt;span class=&quot;mngha-file-upload-title&quot;&gt;
+        Upload request attachments
+      &lt;/span&gt;
+
+      &lt;span
+        class=&quot;mngha-file-upload-description&quot;
+        id=&quot;complete-upload-description&quot;
+      &gt;
+        Drag files here or browse your device. Maximum size is 2MB per file.
+      &lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;span class=&quot;mngha-file-upload-button&quot;&gt;Browse Files&lt;/span&gt;
+  &lt;/label&gt;
+
+  &lt;div class=&quot;mngha-file-list&quot; aria-live=&quot;polite&quot;&gt;
+  &lt;div class=&quot;mngha-file-item mngha-file-item--success&quot;&gt;
+    &lt;span class=&quot;mngha-file-status&quot; aria-hidden=&quot;true&quot;&gt;✓&lt;/span&gt;
+    &lt;span class=&quot;mngha-file-name&quot;&gt;national-id.pdf&lt;/span&gt;
+
+    &lt;button
+      class=&quot;mngha-file-remove&quot;
+      type=&quot;button&quot;
+      aria-label=&quot;Remove national-id.pdf&quot;
+    &gt;
+      ×
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="basic-javascript">
+        <h2 class="mngha-section-title">Basic JavaScript</h2>
+        <p class="mngha-paragraph">
+          CSS does not create file items automatically. This minimal example
+          displays one selected file and allows it to be removed.
+        </p>
+        
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">JavaScript</h3>
+    <div class="mngha-code-block" data-code-block>
+      <div class="mngha-code-block-header">
+        <p class="mngha-code-block-title">Render one selected file</p>
+        <button class="mngha-code-block-copy" type="button" data-code-copy>Copy</button>
+      </div>
+      <pre class="mngha-code-block-body"><code>document
+  .querySelectorAll(&quot;[data-file-upload]&quot;)
+  .forEach(function (upload) {
+    const input = upload.querySelector(&quot;.mngha-file-upload-input&quot;);
+    const list = upload.querySelector(&quot;.mngha-file-list&quot;);
+
+    if (!input || !list) return;
+
+    input.addEventListener(&quot;change&quot;, function () {
+      list.replaceChildren();
+
+      const file = input.files[0];
+      if (!file) return;
+
+      const item = document.createElement(&quot;div&quot;);
+      item.className =
+        &quot;mngha-file-item mngha-file-item--success&quot;;
+
+      const status = document.createElement(&quot;span&quot;);
+      status.className = &quot;mngha-file-status&quot;;
+      status.setAttribute(&quot;aria-hidden&quot;, &quot;true&quot;);
+      status.textContent = &quot;✓&quot;;
+
+      const name = document.createElement(&quot;span&quot;);
+      name.className = &quot;mngha-file-name&quot;;
+      name.textContent = file.name;
+
+      const remove = document.createElement(&quot;button&quot;);
+      remove.className = &quot;mngha-file-remove&quot;;
+      remove.type = &quot;button&quot;;
+      remove.textContent = &quot;×&quot;;
+      remove.setAttribute(&quot;aria-label&quot;, `Remove ${file.name}`);
+
+      remove.addEventListener(&quot;click&quot;, function () {
+        input.value = &quot;&quot;;
+        list.replaceChildren();
+      });
+
+      item.append(status, name, remove);
+      list.append(item);
+    });
+  });</code></pre>
+    </div>
+  </div>
+</div>
+
+      </section>
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+        <div class="mngha-table-wrapper">
+          <table class="mngha-table mngha-table--header-dark"
+            aria-label="File upload class reference">
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+            <tbody><tr><td><strong>.mngha-file-upload</strong></td><td>Container</td><td>Groups upload content, input, trigger, and file list.</td></tr><tr><td><strong>.mngha-file-upload-content</strong></td><td>Container</td><td>Groups the upload title and description.</td></tr><tr><td><strong>.mngha-file-upload-title</strong></td><td>Text</td><td>Styles the upload title or instruction.</td></tr><tr><td><strong>.mngha-file-upload-description</strong></td><td>Text</td><td>Styles format and size guidance.</td></tr><tr><td><strong>.mngha-file-upload-input</strong></td><td>input[type=&quot;file&quot;]</td><td>Visually hides the native input while preserving access.</td></tr><tr><td><strong>.mngha-file-upload-button</strong></td><td>label or span</td><td>Displays the visible Browse Files control.</td></tr><tr><td><strong>.mngha-file-list</strong></td><td>Container</td><td>Arranges one or more file items.</td></tr><tr><td><strong>.mngha-file-item</strong></td><td>Container</td><td>Displays status, name, remove control, and helper text.</td></tr><tr><td><strong>.mngha-file-status</strong></td><td>span</td><td>Displays the compact status indicator.</td></tr><tr><td><strong>.mngha-file-name</strong></td><td>span</td><td>Displays and truncates long file names.</td></tr><tr><td><strong>.mngha-file-remove</strong></td><td>button</td><td>Removes or cancels a file.</td></tr><tr><td><strong>.mngha-file-helper</strong></td><td>Text</td><td>Displays file validation feedback.</td></tr><tr><td><strong>.mngha-file-upload--dropzone</strong></td><td>Upload root</td><td>Enables the dropzone layout.</td></tr><tr><td><strong>.mngha-file-upload-dropzone</strong></td><td>label</td><td>Creates the large dashed upload surface.</td></tr><tr><td><strong>.mngha-file-upload-dropzone-content</strong></td><td>Container</td><td>Centers dropzone text.</td></tr><tr><td><strong>.mngha-file-upload-icon</strong></td><td>span</td><td>Displays the upload icon.</td></tr><tr><td><strong>.mngha-file-item--loading</strong></td><td>File item</td><td>Applies loading status styling.</td></tr><tr><td><strong>.mngha-file-item--success</strong></td><td>File item</td><td>Applies success status styling.</td></tr><tr><td><strong>.mngha-file-item--error</strong></td><td>File item</td><td>Applies error border and status styling.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+        <div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Connect labels and inputs</h3>
+    <p class="mngha-card-description">The label for value must match the native file input id.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Describe restrictions</h3>
+    <p class="mngha-card-description">State formats, size limits, and quantity limits before selection.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Announce updates</h3>
+    <p class="mngha-card-description">Use aria-live=&quot;polite&quot; on the file list when JavaScript updates it.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Label removal controls</h3>
+    <p class="mngha-card-description">Include the affected file name in every remove button label.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Validate beyond accept</h3>
+    <p class="mngha-card-description">The accept attribute guides the picker but does not securely validate files.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Explain errors</h3>
+    <p class="mngha-card-description">Provide a text reason and corrective action instead of relying on color.</p>
+  </div>
+</div></div>
+      </section>
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+        <div class="mngha-grid mngha-grid-cols-2">
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Do</h3>
+    <p class="mngha-card-description">Validate every file, show progress when needed, and allow removal before submission.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Avoid</h3>
+    <p class="mngha-card-description">Do not hide file restrictions or expose raw technical error messages.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Choose the right variant</h3>
+    <p class="mngha-card-description">Use simple upload in compact forms and dropzone for prominent upload tasks.</p>
+  </div>
+</div>
+<div class="mngha-card">
+  <div class="mngha-card-content">
+    <h3 class="mngha-card-title">Validate securely</h3>
+    <p class="mngha-card-description">Check type, size, content, and permissions again on the server.</p>
+  </div>
+</div></div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+</body>
+</html>
