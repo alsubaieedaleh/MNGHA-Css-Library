@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cards - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!--
+        ----------------------------------------------------------------------
+        Introduction
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Cards</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Cards group related content and actions inside a contained visual
+              surface. The mngha card component supports icons, titles,
+              descriptions, actions, responsive grids, interactive states,
+              selection, disabled states, checkboxes, and header controls.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Overview
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Structured content</h3>
+
+              <p class="mngha-card-description">
+                Combine a card with content, title, description, icon, header,
+                and action classes according to the information it contains.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Responsive grid</h3>
+
+              <p class="mngha-card-description">
+                The card grid displays three columns on larger screens and
+                automatically changes to one column on small screens.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">State support</h3>
+
+              <p class="mngha-card-description">
+                Interactive, selected, and disabled modifiers communicate the
+                current behavior and state of a card.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Basic Card
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="basic-card">
+        <h2 class="mngha-section-title">Basic Card</h2>
+
+        <p class="mngha-paragraph">
+          Use the base card with a content wrapper, title, and description for
+          a simple contained content block.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Digital services</h3>
+
+            <p class="mngha-card-description">
+              Manage the organization's digital services, platforms, and
+              integration channels from one location.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Basic card</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Digital services&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Manage the organization&#x27;s digital services, platforms, and
+      integration channels from one location.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!--
+        ----------------------------------------------------------------------
+        Background Variants
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-backgrounds">
+        <h2 class="mngha-section-title">Background Variants</h2>
+
+        <p class="mngha-paragraph">
+          Cards use a white background by default. Use the muted modifier for a
+          neutral secondary surface or the brand-soft modifier for a light,
+          theme-aware brand surface.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Default background</h3>
+
+              <p class="mngha-card-description">
+                The standard card uses the white surface.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card mngha-card--muted">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Muted background</h3>
+
+              <p class="mngha-card-description">
+                Use for secondary information or visually grouped content.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card mngha-card--brand-soft">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Brand-soft background</h3>
+
+              <p class="mngha-card-description">
+                Uses the active theme's light brand surface.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card backgrounds</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Default background&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;White surface.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class=&quot;mngha-card mngha-card--muted&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Muted background&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;Neutral secondary surface.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class=&quot;mngha-card mngha-card--brand-soft&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Brand-soft background&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;Theme-aware brand surface.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Card Grid
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-grid">
+        <h2 class="mngha-section-title">Card Grid</h2>
+
+        <p class="mngha-paragraph">
+          Place related cards inside <strong>mngha-card-grid</strong>. The grid
+          uses three equal columns and collapses to one column below 640 pixels.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Users</h3>
+
+              <p class="mngha-card-description">
+                Manage user profiles, access levels, and account status.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Services</h3>
+
+              <p class="mngha-card-description">
+                Review available services and maintain their published details.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Reports</h3>
+
+              <p class="mngha-card-description">
+                Access operational reports and service performance summaries.
+              </p>
+            </div>
+          </article>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Responsive card grid</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-card-grid&quot;&gt;
+  &lt;article class=&quot;mngha-card&quot;&gt;
+    &lt;div class=&quot;mngha-card-content&quot;&gt;
+      &lt;h3 class=&quot;mngha-card-title&quot;&gt;Users&lt;/h3&gt;
+
+      &lt;p class=&quot;mngha-card-description&quot;&gt;
+        Manage user profiles, access levels, and account status.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;mngha-card&quot;&gt;
+    &lt;div class=&quot;mngha-card-content&quot;&gt;
+      &lt;h3 class=&quot;mngha-card-title&quot;&gt;Services&lt;/h3&gt;
+
+      &lt;p class=&quot;mngha-card-description&quot;&gt;
+        Review available services and maintain their published details.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&quot;mngha-card&quot;&gt;
+    &lt;div class=&quot;mngha-card-content&quot;&gt;
+      &lt;h3 class=&quot;mngha-card-title&quot;&gt;Reports&lt;/h3&gt;
+
+      &lt;p class=&quot;mngha-card-description&quot;&gt;
+        Access operational reports and service performance summaries.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Card with Icon
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-icon">
+        <h2 class="mngha-section-title">Card with Icon</h2>
+
+        <p class="mngha-paragraph">
+          Add <strong>mngha-card-icon</strong> before the content to provide a
+          recognizable visual symbol. Decorative icons should be hidden from
+          assistive technology.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card">
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M12 3L20 7V12C20 17 16.6 20.7 12 22C7.4 20.7 4 17 4 12V7L12 3Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                ></path>
+
+                <path
+                  d="M9 12L11 14L15 10"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Secure access</h3>
+
+              <p class="mngha-card-description">
+                Protect services using approved authentication and permission
+                controls.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 19V10M10 19V5M16 19V13M22 19V8"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Performance</h3>
+
+              <p class="mngha-card-description">
+                Monitor service performance and compare current operational
+                indicators.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="8"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                ></circle>
+
+                <path
+                  d="M12 8V12L15 14"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Recent activity</h3>
+
+              <p class="mngha-card-description">
+                Review the latest changes made across services and user
+                accounts.
+              </p>
+            </div>
+          </article>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card with icon</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;span class=&quot;mngha-card-icon&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;svg
+      width=&quot;24&quot;
+      height=&quot;24&quot;
+      viewBox=&quot;0 0 24 24&quot;
+      fill=&quot;none&quot;
+    &gt;
+      &lt;path
+        d=&quot;M12 3L20 7V12C20 17 16.6 20.7 12 22C7.4 20.7 4 17 4 12V7L12 3Z&quot;
+        stroke=&quot;currentColor&quot;
+        stroke-width=&quot;1.6&quot;
+        stroke-linejoin=&quot;round&quot;
+      &gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/span&gt;
+
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Secure access&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Protect services using approved authentication and permission
+      controls.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Card with Actions
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-actions">
+        <h2 class="mngha-section-title">Card with Actions</h2>
+
+        <p class="mngha-paragraph">
+          Add <strong>mngha-card-actions</strong> after the content to arrange
+          related buttons or links. Keep the primary action clear and limit the
+          number of competing actions.
+        </p>
+
+        <article class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Service request</h3>
+
+            <p class="mngha-card-description">
+              Review the service details before beginning a new request.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+            >
+              Start request
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="#"
+            >
+              View requirements
+            </a>
+          </div>
+        </article>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card with actions</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Service request&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Review the service details before beginning a new request.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-card-actions&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;button&quot;
+    &gt;
+      Start request
+    &lt;/button&gt;
+
+    &lt;a
+      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+      href=&quot;#&quot;
+    &gt;
+      View requirements
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Interactive Card
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="interactive-card">
+        <h2 class="mngha-section-title">Interactive Card</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-card--interactive</strong> when the complete card
+          opens a destination or performs one clear action. Do not place nested
+          buttons or links inside a fully interactive card.
+        </p>
+
+        <div class="mngha-card-grid">
+          <a
+            class="mngha-card mngha-card--interactive"
+            href="#"
+            aria-label="Open employee services"
+          >
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 6H20V18H4V6Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                ></path>
+
+                <path
+                  d="M8 10H16M8 14H13"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Employee services</h3>
+
+              <p class="mngha-card-description">
+                Open employee self-service tools and related requests.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="mngha-card mngha-card--interactive"
+            href="#"
+            aria-label="Open medical services"
+          >
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 4H15V9H20V15H15V20H9V15H4V9H9V4Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Medical services</h3>
+
+              <p class="mngha-card-description">
+                Open appointments, referrals, and other medical services.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="mngha-card mngha-card--interactive"
+            href="#"
+            aria-label="Open reports"
+          >
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6 3H15L19 7V21H6V3Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                ></path>
+
+                <path
+                  d="M15 3V8H19M9 12H16M9 16H16"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Reports</h3>
+
+              <p class="mngha-card-description">
+                Open service reports and operational performance summaries.
+              </p>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Interactive card</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;a
+  class=&quot;mngha-card mngha-card--interactive&quot;
+  href=&quot;/employee-services&quot;
+  aria-label=&quot;Open employee services&quot;
+&gt;
+  &lt;span class=&quot;mngha-card-icon&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;!-- Icon --&gt;
+  &lt;/span&gt;
+
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Employee services&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Open employee self-service tools and related requests.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Selected and Disabled States
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-states">
+        <h2 class="mngha-section-title">Selected and Disabled States</h2>
+
+        <p class="mngha-paragraph">
+          Use the selected modifier to communicate a current choice. Use the
+          disabled modifier when a card is unavailable and ensure interactive
+          controls inside it are also disabled.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Default card</h3>
+
+              <p class="mngha-card-description">
+                This card is available but has not been selected.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="mngha-card mngha-card--selected"
+            aria-label="Selected service option"
+          >
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Selected card</h3>
+
+              <p class="mngha-card-description">
+                The stronger border identifies the current selection.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="mngha-card mngha-card--disabled"
+            aria-disabled="true"
+          >
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <rect
+                  x="5"
+                  y="10"
+                  width="14"
+                  height="10"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                ></rect>
+
+                <path
+                  d="M8 10V7C8 4.8 9.8 3 12 3C14.2 3 16 4.8 16 7V10"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Disabled card</h3>
+
+              <p class="mngha-card-description">
+                This option is currently unavailable.
+              </p>
+            </div>
+          </article>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card states</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Default card&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;Available option.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article
+  class=&quot;mngha-card mngha-card--selected&quot;
+  aria-label=&quot;Selected service option&quot;
+&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Selected card&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;Current selection.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article
+  class=&quot;mngha-card mngha-card--disabled&quot;
+  aria-disabled=&quot;true&quot;
+&gt;
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Disabled card&lt;/h3&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;Unavailable option.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Card Header and Checkbox
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-header">
+        <h2 class="mngha-section-title">Card Header and Checkbox</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-card-header</strong> to align a heading area with a
+          checkbox or another compact control. The checkbox should have a clear
+          accessible label.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card mngha-card--selected">
+            <div class="mngha-card-header">
+              <span class="mngha-card-icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M5 5H19V19H5V5Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  ></path>
+
+                  <path
+                    d="M8 12L11 15L16 9"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+
+              <input
+                class="mngha-card-checkbox"
+                type="checkbox"
+                checked
+                aria-label="Select digital services"
+              >
+            </div>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Digital services</h3>
+
+              <p class="mngha-card-description">
+                Include digital service management in the selected package.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-header">
+              <span class="mngha-card-icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M4 7H20M7 4V10M17 4V10M6 11H18V20H6V11Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+
+              <input
+                class="mngha-card-checkbox"
+                type="checkbox"
+                aria-label="Select scheduling services"
+              >
+            </div>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Scheduling</h3>
+
+              <p class="mngha-card-description">
+                Include scheduling and appointment tools in the package.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card mngha-card--disabled" aria-disabled="true">
+            <div class="mngha-card-header">
+              <span class="mngha-card-icon" aria-hidden="true">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M4 19V10M10 19V5M16 19V13M22 19V8"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                  ></path>
+                </svg>
+              </span>
+
+              <input
+                class="mngha-card-checkbox"
+                type="checkbox"
+                disabled
+                aria-label="Analytics package is unavailable"
+              >
+            </div>
+
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Analytics</h3>
+
+              <p class="mngha-card-description">
+                This package is not currently available.
+              </p>
+            </div>
+          </article>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card with checkbox</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card mngha-card--selected&quot;&gt;
+  &lt;div class=&quot;mngha-card-header&quot;&gt;
+    &lt;span class=&quot;mngha-card-icon&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;!-- Icon --&gt;
+    &lt;/span&gt;
+
+    &lt;input
+      class=&quot;mngha-card-checkbox&quot;
+      type=&quot;checkbox&quot;
+      checked
+      aria-label=&quot;Select digital services&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;Digital services&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Include digital service management in the selected package.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Card Toggle
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="card-toggle">
+        <h2 class="mngha-section-title">Card Toggle Control</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-card-toggle</strong> for a compact header control
+          such as expand, collapse, show details, or hide details. JavaScript
+          should update its expanded state and the related content.
+        </p>
+
+        <div class="mngha-card-grid">
+          <article class="mngha-card">
+            <div class="mngha-card-header">
+              <div class="mngha-card-content">
+                <h3 class="mngha-card-title">Request details</h3>
+              </div>
+
+              <button
+                class="mngha-card-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="request-details"
+              >
+                Show details
+              </button>
+            </div>
+
+            <p class="mngha-card-description" id="request-details">
+              The control can be connected to expandable content using
+              aria-expanded and aria-controls.
+            </p>
+          </article>
+
+          <article class="mngha-card mngha-card--disabled" aria-disabled="true">
+            <div class="mngha-card-header">
+              <div class="mngha-card-content">
+                <h3 class="mngha-card-title">Unavailable details</h3>
+              </div>
+
+              <button
+                class="mngha-card-toggle"
+                type="button"
+                disabled
+              >
+                Show details
+              </button>
+            </div>
+
+            <p class="mngha-card-description">
+              The toggle becomes unavailable when the related card is disabled.
+            </p>
+          </article>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Card toggle control</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card&quot;&gt;
+  &lt;div class=&quot;mngha-card-header&quot;&gt;
+    &lt;div class=&quot;mngha-card-content&quot;&gt;
+      &lt;h3 class=&quot;mngha-card-title&quot;&gt;Request details&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;button
+      class=&quot;mngha-card-toggle&quot;
+      type=&quot;button&quot;
+      aria-expanded=&quot;false&quot;
+      aria-controls=&quot;request-details&quot;
+    &gt;
+      Show details
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;request-details&quot;&gt;
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Additional request information.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Complete Example
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="complete-example">
+        <h2 class="mngha-section-title">Complete Card Example</h2>
+
+        <p class="mngha-paragraph">
+          This example combines the header, icon, checkbox, content, and actions.
+          Use only the card parts needed by the task.
+        </p>
+
+        <article class="mngha-card mngha-card--selected">
+          <div class="mngha-card-header">
+            <span class="mngha-card-icon" aria-hidden="true">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M4 5H20V19H4V5Z"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"
+                ></path>
+
+                <path
+                  d="M8 9H16M8 13H16M8 17H13"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+
+            <input
+              class="mngha-card-checkbox"
+              type="checkbox"
+              checked
+              aria-label="Select service management package"
+            >
+          </div>
+
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Service management package</h3>
+
+            <p class="mngha-card-description">
+              Manage service information, requests, owners, publication status,
+              and operational reporting.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+            >
+              Configure package
+            </button>
+
+            <button
+              class="mngha-button mngha-button--ghost mngha-button--md"
+              type="button"
+            >
+              View details
+            </button>
+          </div>
+        </article>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Complete card</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;article class=&quot;mngha-card mngha-card--selected&quot;&gt;
+  &lt;div class=&quot;mngha-card-header&quot;&gt;
+    &lt;span class=&quot;mngha-card-icon&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;!-- Icon --&gt;
+    &lt;/span&gt;
+
+    &lt;input
+      class=&quot;mngha-card-checkbox&quot;
+      type=&quot;checkbox&quot;
+      checked
+      aria-label=&quot;Select service management package&quot;
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-card-content&quot;&gt;
+    &lt;h3 class=&quot;mngha-card-title&quot;&gt;
+      Service management package
+    &lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-card-description&quot;&gt;
+      Manage service information, requests, owners, publication status,
+      and operational reporting.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-card-actions&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;button&quot;
+    &gt;
+      Configure package
+    &lt;/button&gt;
+
+    &lt;button
+      class=&quot;mngha-button mngha-button--ghost mngha-button--md&quot;
+      type=&quot;button&quot;
+    &gt;
+      View details
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Class Reference
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Card class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-card</strong></td>
+                <td>Container</td>
+                <td>Applies the card surface, border, radius, shadow, and spacing.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-grid</strong></td>
+                <td>Container</td>
+                <td>Arranges cards in a responsive three-column grid.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-icon</strong></td>
+                <td>span or container</td>
+                <td>Displays an icon inside a circular brand surface.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-content</strong></td>
+                <td>Container</td>
+                <td>Groups a card title, description, and related content.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-title</strong></td>
+                <td>Heading</td>
+                <td>Applies the card heading typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-description</strong></td>
+                <td>Text</td>
+                <td>Applies the card supporting-text typography.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-actions</strong></td>
+                <td>Container</td>
+                <td>Arranges card buttons and links in a wrapping action row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card--muted</strong></td>
+                <td>Card</td>
+                <td>Uses a neutral secondary card background.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card--brand-soft</strong></td>
+                <td>Card</td>
+                <td>Uses the active theme's light brand card background.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card--interactive</strong></td>
+                <td>Card</td>
+                <td>Adds an interactive cursor and hover border behavior.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card--selected</strong></td>
+                <td>Card</td>
+                <td>Applies the selected-state border.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card--disabled</strong></td>
+                <td>Card</td>
+                <td>Applies disabled colors, removes the shadow, and changes the cursor.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-header</strong></td>
+                <td>Container</td>
+                <td>Aligns heading content with a checkbox or toggle control.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-checkbox</strong></td>
+                <td>input[type="checkbox"]</td>
+                <td>Styles a card selection checkbox using the brand color.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-card-toggle</strong></td>
+                <td>button</td>
+                <td>Styles a compact text control inside the card header.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Accessibility
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use meaningful structure</h3>
+
+              <p class="mngha-card-description">
+                Use article, section, list item, or another semantic container
+                that matches the role of the card content.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve heading order</h3>
+
+              <p class="mngha-card-description">
+                Select heading levels according to the surrounding page
+                structure rather than choosing a level only for appearance.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid nested interaction</h3>
+
+              <p class="mngha-card-description">
+                Do not place buttons or links inside a card when the complete
+                card is already one interactive link or control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Label controls</h3>
+
+              <p class="mngha-card-description">
+                Give checkboxes and compact toggle controls clear accessible
+                names describing the affected card or content.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Communicate selection</h3>
+
+              <p class="mngha-card-description">
+                Use a checkbox, radio control, text, or another semantic state
+                in addition to the selected border.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Disable real controls</h3>
+
+              <p class="mngha-card-description">
+                A disabled card style does not disable nested controls by
+                itself. Apply disabled or aria-disabled to the actual controls.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Usage Guidance
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Keep each card focused on one subject, use concise titles, and
+                place related cards together inside the responsive card grid.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not place unrelated content, too many actions, or long page
+                sections inside a single card.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use states consistently</h3>
+
+              <p class="mngha-card-description">
+                Apply interactive, selected, and disabled modifiers only when
+                the card behavior genuinely matches the state.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep actions predictable</h3>
+
+              <p class="mngha-card-description">
+                Use a fully interactive card for one destination, or use
+                separate action controls inside a non-interactive card.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+
+</body>
+</html>

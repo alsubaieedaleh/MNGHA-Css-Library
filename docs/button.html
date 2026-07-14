@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Buttons - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!--
+        ----------------------------------------------------------------------
+        Introduction
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Buttons</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Buttons allow users to trigger actions or navigate to another
+              destination. The mngha button component supports three sizes,
+              eight visual variants, disabled states, links styled as buttons,
+              and optional leading or trailing icons.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Overview
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Composable classes</h3>
+
+              <p class="mngha-card-description">
+                Combine the base <strong>mngha-button</strong> class with one
+                size modifier and one visual variant.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Theme-aware actions</h3>
+
+              <p class="mngha-card-description">
+                Primary, outline, secondary, and ghost buttons use semantic
+                theme tokens and adapt to the active external or internal theme.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Native semantics</h3>
+
+              <p class="mngha-card-description">
+                Use a real button for actions and an anchor styled as a button
+                only when the control navigates to another page or resource.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Basic Button
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="basic-button">
+        <h2 class="mngha-section-title">Basic Button</h2>
+
+        <p class="mngha-paragraph">
+          Every button requires the base class, one visual variant, and one size
+          modifier.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--primary mngha-button--md"
+                type="button"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Basic button</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Continue
+&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Variants
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="button-variants">
+        <h2 class="mngha-section-title">Button Variants</h2>
+
+        <p class="mngha-paragraph">
+          Select a variant according to the action's importance and meaning.
+          Avoid using several visually dominant actions in the same group.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Primary</h3>
+
+              <p class="mngha-card-description">
+                Use for the main action on a page or inside a focused task.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--primary mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--primary mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--primary mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Secondary</h3>
+
+              <p class="mngha-card-description">
+                Use for a supporting action that should remain visually prominent.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--secondary mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--secondary mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--secondary mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Outline</h3>
+
+              <p class="mngha-card-description">
+                Use for an alternative action with a lighter visual weight.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--outline mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--outline mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--outline mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Ghost</h3>
+
+              <p class="mngha-card-description">
+                Use for low-emphasis actions placed near related content.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--ghost mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--ghost mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--ghost mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Danger</h3>
+
+              <p class="mngha-card-description">
+                Use for destructive or irreversible actions.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--danger mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--danger mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--danger mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Warning</h3>
+
+              <p class="mngha-card-description">
+                Use for actions requiring caution or confirmation.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--warning mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--warning mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--warning mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Success</h3>
+
+              <p class="mngha-card-description">
+                Use for positive completion or confirmation actions.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--success mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--success mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--success mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Info</h3>
+
+              <p class="mngha-card-description">
+                Use for informational actions or supporting details.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--info mngha-button--sm"
+                  type="button"
+                >
+                  Small
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--info mngha-button--md"
+                  type="button"
+                >
+                  Medium
+                </button>
+
+                <button
+                  class="mngha-button mngha-button--info mngha-button--lg"
+                  type="button"
+                >
+                  Large
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Button variants</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Primary
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Secondary
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--outline mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Outline
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--ghost mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Ghost
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--danger mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Danger
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--warning mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Warning
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--success mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Success
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--info mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Info
+&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Sizes
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="button-sizes">
+        <h2 class="mngha-section-title">Button Sizes</h2>
+
+        <p class="mngha-paragraph">
+          Use small buttons for compact controls, medium buttons as the default,
+          and large buttons for prominent actions or spacious interfaces.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Primary button sizes</h3>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--primary mngha-button--sm"
+                type="button"
+              >
+                Small button
+              </button>
+
+              <button
+                class="mngha-button mngha-button--primary mngha-button--md"
+                type="button"
+              >
+                Medium button
+              </button>
+
+              <button
+                class="mngha-button mngha-button--primary mngha-button--lg"
+                type="button"
+              >
+                Large button
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Button sizes</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--sm&quot;
+  type=&quot;button&quot;
+&gt;
+  Small button
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Medium button
+&lt;/button&gt;
+
+&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--lg&quot;
+  type=&quot;button&quot;
+&gt;
+  Large button
+&lt;/button&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Element Types
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="element-types">
+        <h2 class="mngha-section-title">Button and Link Elements</h2>
+
+        <p class="mngha-paragraph">
+          Match the HTML element to the behavior. Buttons perform actions;
+          anchors navigate to another destination.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Action button</h3>
+
+              <p class="mngha-card-description">
+                Use a native button for submitting, saving, opening a dialog,
+                toggling content, or changing application state.
+              </p>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--primary mngha-button--md"
+                  type="button"
+                >
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Navigation link</h3>
+
+              <p class="mngha-card-description">
+                Use an anchor with button classes when the destination has a
+                URL and should support normal link behavior.
+              </p>
+
+              <div class="mngha-card-actions">
+                <a
+                  class="mngha-button mngha-button--secondary mngha-button--md"
+                  href="./foundations.html"
+                >
+                  View foundations
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Button and link elements</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  Save changes
+&lt;/button&gt;
+
+&lt;a
+  class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+  href=&quot;./foundations.html&quot;
+&gt;
+  View foundations
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Disabled States
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="disabled-buttons">
+        <h2 class="mngha-section-title">Disabled States</h2>
+
+        <p class="mngha-paragraph">
+          Use the native disabled attribute on button elements. For links that
+          must appear unavailable, add <strong>aria-disabled="true"</strong>,
+          remove the destination, and prevent activation in application logic.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Examples</h3>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--primary mngha-button--md"
+                type="button"
+                disabled
+              >
+                Disabled button
+              </button>
+
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--md"
+                type="button"
+                disabled
+              >
+                Disabled secondary
+              </button>
+
+              <a
+                class="mngha-button mngha-button--outline mngha-button--md"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                Unavailable link
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Disabled buttons</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+  disabled
+&gt;
+  Disabled button
+&lt;/button&gt;
+
+&lt;a
+  class=&quot;mngha-button mngha-button--outline mngha-button--md&quot;
+  aria-disabled=&quot;true&quot;
+  tabindex=&quot;-1&quot;
+&gt;
+  Unavailable link
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Buttons with Icons
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="button-icons">
+        <h2 class="mngha-section-title">Buttons with Icons</h2>
+
+        <p class="mngha-paragraph">
+          The base button gap supports leading and trailing icons. Decorative
+          icons should use <strong>aria-hidden="true"</strong>; the visible
+          button text remains the accessible name.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Leading icon</h3>
+
+              <div class="mngha-card-actions">
+                <button
+                  class="mngha-button mngha-button--primary mngha-button--md"
+                  type="button"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8 3V13M3 8H13"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+
+                  Add item
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Trailing icon</h3>
+
+              <div class="mngha-card-actions">
+                <a
+                  class="mngha-button mngha-button--secondary mngha-button--md"
+                  href="./components.html"
+                >
+                  View components
+
+                  <span aria-hidden="true">›</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Buttons with icons</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;button
+  class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+  type=&quot;button&quot;
+&gt;
+  &lt;svg
+    width=&quot;16&quot;
+    height=&quot;16&quot;
+    viewBox=&quot;0 0 16 16&quot;
+    fill=&quot;none&quot;
+    aria-hidden=&quot;true&quot;
+  &gt;
+    &lt;path
+      d=&quot;M8 3V13M3 8H13&quot;
+      stroke=&quot;currentColor&quot;
+      stroke-width=&quot;1.5&quot;
+      stroke-linecap=&quot;round&quot;
+    &gt;&lt;/path&gt;
+  &lt;/svg&gt;
+
+  Add item
+&lt;/button&gt;
+
+&lt;a
+  class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+  href=&quot;./components.html&quot;
+&gt;
+  View components
+  &lt;span aria-hidden=&quot;true&quot;&gt;›&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Action Group
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="action-group">
+        <h2 class="mngha-section-title">Action Group</h2>
+
+        <p class="mngha-paragraph">
+          Place the main action first and use secondary or ghost variants for
+          supporting actions. Destructive actions should be clearly separated
+          by context and wording.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Form actions</h3>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--primary mngha-button--md"
+                type="submit"
+              >
+                Save
+              </button>
+
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--md"
+                type="button"
+              >
+                Save draft
+              </button>
+
+              <button
+                class="mngha-button mngha-button--ghost mngha-button--md"
+                type="button"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Action group</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-card-actions&quot;&gt;
+  &lt;button
+    class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+    type=&quot;submit&quot;
+  &gt;
+    Save
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+    type=&quot;button&quot;
+  &gt;
+    Save draft
+  &lt;/button&gt;
+
+  &lt;button
+    class=&quot;mngha-button mngha-button--ghost mngha-button--md&quot;
+    type=&quot;button&quot;
+  &gt;
+    Cancel
+  &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Class Reference
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Button class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class or attribute</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-button</strong></td>
+                <td>button or a</td>
+                <td>Applies the shared button structure and interaction styles.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--sm</strong></td>
+                <td>button or a</td>
+                <td>Applies the small button height, spacing, and type size.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--md</strong></td>
+                <td>button or a</td>
+                <td>Applies the default medium button size.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--lg</strong></td>
+                <td>button or a</td>
+                <td>Applies the large button height, spacing, and type size.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--primary</strong></td>
+                <td>button or a</td>
+                <td>Displays the main theme-aware action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--secondary</strong></td>
+                <td>button or a</td>
+                <td>Displays a bordered supporting action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--outline</strong></td>
+                <td>button or a</td>
+                <td>Displays a transparent alternative action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--ghost</strong></td>
+                <td>button or a</td>
+                <td>Displays a low-emphasis action without a visible border.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--danger</strong></td>
+                <td>button or a</td>
+                <td>Identifies a destructive or irreversible action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--warning</strong></td>
+                <td>button or a</td>
+                <td>Identifies an action that requires caution.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--success</strong></td>
+                <td>button or a</td>
+                <td>Identifies a positive completion or confirmation action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-button--info</strong></td>
+                <td>button or a</td>
+                <td>Identifies an informational action.</td>
+              </tr>
+
+              <tr>
+                <td><strong>disabled</strong></td>
+                <td>button</td>
+                <td>Disables a native button and removes pointer interaction.</td>
+              </tr>
+
+              <tr>
+                <td><strong>aria-disabled="true"</strong></td>
+                <td>a or custom control</td>
+                <td>Communicates that a non-button control is unavailable.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Accessibility
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use the correct element</h3>
+
+              <p class="mngha-card-description">
+                Use button elements for actions and anchor elements for
+                navigation. Do not use generic div or span elements as buttons.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Write clear labels</h3>
+
+              <p class="mngha-card-description">
+                Describe the action directly with labels such as Save changes,
+                Download report, or Delete account.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve focus</h3>
+
+              <p class="mngha-card-description">
+                Do not remove the component's focus-visible outline. Keyboard
+                users need a clear indication of the active control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Label icon-only controls</h3>
+
+              <p class="mngha-card-description">
+                When a button contains no visible text, provide a descriptive
+                aria-label and hide decorative icons from assistive technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do not rely on color</h3>
+
+              <p class="mngha-card-description">
+                The visible label must explain the action. Color alone should
+                not be the only indication of danger, success, or warning.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use disabled states carefully</h3>
+
+              <p class="mngha-card-description">
+                When possible, explain why an action is unavailable instead of
+                leaving users with an unexplained disabled control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ----------------------------------------------------------------------
+        Usage Guidance
+        ----------------------------------------------------------------------
+      -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Use one primary action in a focused area, keep labels concise,
+                and use consistent sizes inside the same action group.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not place several primary, danger, or warning buttons
+                together unless every action genuinely has equal importance.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Match meaning to variant</h3>
+
+              <p class="mngha-card-description">
+                Reserve semantic variants for actions with that meaning. Do not
+                use danger or success colors only for decoration.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep text readable</h3>
+
+              <p class="mngha-card-description">
+                Prefer short verb-led labels and avoid wrapping long sentences
+                inside buttons.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+
+</body>
+</html>

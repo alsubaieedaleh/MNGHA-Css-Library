@@ -135,3 +135,27 @@
     line-height: var(--text-sm-line-height);
   }
 }
+/**
+ * --------------------------------------------------------------------------
+ * Card Background Support
+ * --------------------------------------------------------------------------
+ *
+ * Add the custom property to the existing .mngha-card rule, then add the
+ * two modifier classes below.
+ */
+
+/* Replace the existing background declaration inside .mngha-card: */
+.mngha-card {
+  --mngha-card-background: var(--color-white);
+  background: var(--mngha-card-background);
+}
+
+/* Neutral secondary surface */
+.mngha-card--muted {
+  --mngha-card-background: var(--color-gray-100);
+}
+
+/* Light theme-aware brand surface */
+.mngha-card--brand-soft {
+  --mngha-card-background: var(--color-brand-very-light);
+}
