@@ -28,7 +28,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  font-size: var(--text-sm-size);
+  font-size: var(--text-md-size);
   font-weight: var(--font-weight-medium);
   line-height: var(--text-sm-line-height);
 }
@@ -37,12 +37,12 @@
   margin-inline-start: auto;
   display: flex;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xs);
 }
 
 .mngha-government-tool {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;

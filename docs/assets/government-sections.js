@@ -43,7 +43,77 @@ async function fetchGovernmentPartial(path) {
     return await fallbackResponse.text();
   }
 }
+/**
+ * --------------------------------------------------------------------------
+ * Government Toolbar Date and Time
+ * --------------------------------------------------------------------------
+ */
 
+function initGovernmentDateTime() {
+  const dateEl = document.querySelector(
+    "[data-government-date]"
+  );
+
+  const timeEl = document.querySelector(
+    "[data-government-time]"
+  );
+
+  if (!dateEl && !timeEl) return;
+
+  function update() {
+    const now = new Date();
+
+    if (dateEl) {
+      dateEl.textContent = now.toLocaleDateString(
+        "en-US",
+        {
+          day: "2-digit",
+          month: "long",
+          year: "numeric"
+        }
+      ).replace(/(\w+)\s(\d+),\s(\d+)/, "$2-$1-$3");
+    }
+
+    if (timeEl) {
+      timeEl.textContent = now.toLocaleTimeString(
+        "en-US",
+        {
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true
+        }
+      );
+    }
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+async function loadGovernmentToolbar() {
+  const toolbarTarget = document.getElementById(
+    "docs-government-toolbar"
+  );
+
+  if (!toolbarTarget) return;
+
+  try {
+    const toolbarHtml = await fetchGovernmentPartial(
+      "./partials/government-toolbar.html"
+    );
+
+    toolbarTarget.innerHTML = toolbarHtml;
+
+    initGovernmentDateTime();
+  } catch (error) {
+    console.error(
+      "Failed to load government toolbar:",
+      error
+    );
+
+    toolbarTarget.innerHTML = "";
+  }
+}
 function initGovernmentVerification(root) {
   if (!root) return;
 
@@ -109,7 +179,7 @@ async function loadGovernmentVerification() {
   try {
     const verificationHtml =
       await fetchGovernmentPartial(
-        "./partials/government-verification.txt"
+        "./partials/government-verification.html"
       );
 
     verificationTarget.innerHTML =
@@ -128,11 +198,13 @@ async function loadGovernmentVerification() {
   }
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener(
-    "DOMContentLoaded",
-    loadGovernmentVerification
-  );
-} else {
+function loadGovernmentSections() {
+  loadGovernmentToolbar();
   loadGovernmentVerification();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadGovernmentSections);
+} else {
+  loadGovernmentSections();
 }

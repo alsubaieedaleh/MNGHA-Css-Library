@@ -41,37 +41,43 @@ async function loadDocsHeader() {
   const headerTarget =
     document.getElementById("docs-header");
 
-  if (!headerTarget) {
-    console.error(
-      'Missing <div id="docs-header"></div>'
-    );
-
-    return;
-  }
+  if (!headerTarget) return;
 
   try {
-    const headerHtml = await fetchHeaderPartial(
-      "./partials/header.html"
+    const response = await fetch(
+      "./partials/header.html",
+      {
+        cache: "no-store"
+      }
     );
 
-    headerTarget.innerHTML = headerHtml;
+    if (!response.ok) {
+      throw new Error(
+        `Header request failed: ${response.status}`
+      );
+    }
+
+    const headerHtml =
+      await response.text();
+
+    headerTarget.innerHTML =
+      headerHtml;
 
     initDocsHeader();
     initDocsTheme();
     initDocsDirection();
     setActiveDocsLink();
+    initCodeBlockCopy();
     initMobileMenu();
     initMobileSubmenus();
-    initCodeBlockCopy();
   } catch (error) {
     console.error(
-      "Failed to load documentation header:",
+      "Unable to load the documentation header:",
       error
     );
 
-    headerTarget.innerHTML = `
-      <p>Unable to load the documentation header.</p>
-    `;
+    headerTarget.innerHTML =
+      "<p>Unable to load the documentation header.</p>";
   }
 }
 

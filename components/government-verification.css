@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  font-size: var(--text-xs-size);
+  font-size: var(--text-sm-size);
   font-weight: var(--font-weight-medium);
   line-height: var(--text-xs-line-height);
 }
@@ -121,9 +121,9 @@
 .mngha-government-verification-title {
   margin: 0;
   color: var(--color-gray-950);
-  font-size: var(--text-md-size);
+  font-size: var(--text-lg-size);
   font-weight: var(--font-weight-bold);
-  line-height: var(--text-md-line-height);
+  line-height: var(--text-lg-line-height);
 }
 
 .mngha-government-verification-title strong {
@@ -133,9 +133,9 @@
 .mngha-government-verification-description {
   margin: 0;
   color: var(--color-gray-900);
-  font-size: var(--text-sm-size);
+  font-size: var(--text-md-size);
   font-weight: var(--font-weight-regular);
-  line-height: var(--text-sm-line-height);
+  line-height: var(--text-md-line-height);
 }
 
 .mngha-government-registration {
@@ -160,8 +160,8 @@
 .mngha-government-registration-text {
   margin: 0;
   color: var(--color-gray-900);
-  font-size: var(--text-sm-size);
-  line-height: var(--text-sm-line-height);
+  font-size: var(--text-md-size);
+  line-height: var(--text-md-line-height);
 }
 
 .mngha-government-registration-link {
