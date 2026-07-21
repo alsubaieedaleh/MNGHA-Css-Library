@@ -1,0 +1,3255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Date Picker - MNGHA Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!-- =====================================================
+           INTRODUCTION
+           ===================================================== -->
+
+      <section class="mngha-section">
+        <div class="mngha-card">
+
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">
+              Date Picker
+            </h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Date pickers let users type or select a single date or a date
+              range. The calendar opens directly below its input and includes
+              working month and year menus, navigation, input synchronization,
+              range selection, disabled dates, outside-month dates, keyboard
+              navigation, and accessible state updates.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           INCLUDED FEATURES
+           ===================================================== -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">
+          Included Features
+        </h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Single date
+              </h3>
+
+              <p class="mngha-card-description">
+                Select one date, type a value using DD/MM/YYYY, clear the
+                value, or return to today.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Date range
+              </h3>
+
+              <p class="mngha-card-description">
+                The first and last dates use the solid brand color. Dates
+                between them use the light brand range background.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Month and year menus
+              </h3>
+
+              <p class="mngha-card-description">
+                The calendar menus reuse the pagination menu behavior with a
+                wider, scrollable surface and a selected check mark.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           INTERACTIVE SINGLE DATE PICKER
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="single-date-picker"
+      >
+        <h2 class="mngha-section-title">
+          Interactive Single Date Picker
+        </h2>
+
+        <p class="mngha-paragraph">
+          The calendar opens as an overlay directly below the input. No helper
+          text is required; use the input placeholder for the expected format.
+        </p>
+
+        <!-- Example -->
+
+        <div class="mngha-card">
+          <div
+            class="mngha-card-content"
+            data-mngha-date-picker
+            data-mode="single"
+            data-view-date="2026-07-01"
+            data-selected-date="2026-07-24"
+            data-disabled-dates="2026-07-17,2026-07-30"
+            data-year-start="2020"
+            data-year-end="2032"
+          >
+            <div class="mngha-field">
+              <label
+                class="mngha-label"
+                for="appointment-date"
+              >
+                Appointment date
+              </label>
+
+              <div class="mngha-date-picker-anchor">
+                <input
+                  class="mngha-input mngha-date-picker-input"
+                  id="appointment-date"
+                  name="appointment-date"
+                  type="text"
+                  value="24/07/2026"
+                  placeholder="DD/MM/YYYY"
+                  autocomplete="off"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                  aria-controls="appointment-calendar"
+                  data-date-picker-input
+                >
+
+                <div
+                  class="mngha-date-picker"
+                  id="appointment-calendar"
+                  role="dialog"
+                  aria-label="Choose appointment date"
+                  data-date-picker-calendar
+                  hidden
+                >
+                  <div class="mngha-date-picker-header">
+
+                    <div class="mngha-date-picker-period">
+
+                      <!-- Month menu -->
+
+                      <div
+                        class="mngha-date-picker-dropdown"
+                        data-date-picker-dropdown="month"
+                      >
+                        <button
+                          class="mngha-date-picker-period-button"
+                          type="button"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="appointment-month-menu"
+                          data-date-picker-month-trigger
+                        >
+                          <span data-date-picker-month-label>
+                            July
+                          </span>
+
+                          <span
+                            class="mngha-date-picker-period-chevron"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+
+                        <div
+                          class="mngha-date-picker-menu"
+                          id="appointment-month-menu"
+                          role="listbox"
+                          aria-label="Choose month"
+                          data-date-picker-month-menu
+                        ></div>
+                      </div>
+
+                      <!-- Year menu -->
+
+                      <div
+                        class="mngha-date-picker-dropdown"
+                        data-date-picker-dropdown="year"
+                      >
+                        <button
+                          class="mngha-date-picker-period-button"
+                          type="button"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="appointment-year-menu"
+                          data-date-picker-year-trigger
+                        >
+                          <span data-date-picker-year-label>
+                            2026
+                          </span>
+
+                          <span
+                            class="mngha-date-picker-period-chevron"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+
+                        <div
+                          class="mngha-date-picker-menu"
+                          id="appointment-year-menu"
+                          role="listbox"
+                          aria-label="Choose year"
+                          data-date-picker-year-menu
+                        ></div>
+                      </div>
+
+                    </div>
+
+                    <!-- Previous and next month -->
+
+                    <div
+                      class="mngha-date-picker-navigation"
+                      role="group"
+                      aria-label="Calendar navigation"
+                    >
+                      <button
+                        class="mngha-date-picker-navigation-button"
+                        type="button"
+                        aria-label="Previous month"
+                        data-date-picker-previous
+                      >
+                        <svg
+                          class="mngha-date-picker-icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          aria-hidden="true"
+                        >
+                          <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                      </button>
+
+                      <button
+                        class="mngha-date-picker-navigation-button"
+                        type="button"
+                        aria-label="Next month"
+                        data-date-picker-next
+                      >
+                        <svg
+                          class="mngha-date-picker-icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          aria-hidden="true"
+                        >
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <!-- Weekdays -->
+
+                  <ul
+                    class="mngha-date-picker-weekdays"
+                    aria-hidden="true"
+                  >
+                    <li class="mngha-date-picker-weekday">Sun</li>
+                    <li class="mngha-date-picker-weekday">Mon</li>
+                    <li class="mngha-date-picker-weekday">Tue</li>
+                    <li class="mngha-date-picker-weekday">Wed</li>
+                    <li class="mngha-date-picker-weekday">Thu</li>
+                    <li class="mngha-date-picker-weekday">Fri</li>
+                    <li class="mngha-date-picker-weekday">Sat</li>
+                  </ul>
+
+                  <!-- Days generated by JavaScript -->
+
+                  <ul
+                    class="mngha-date-picker-days"
+                    role="grid"
+                    aria-label="July 2026"
+                    data-date-picker-days
+                  ></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--sm"
+                type="button"
+                data-date-picker-today
+              >
+                Today
+              </button>
+
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--sm"
+                type="button"
+                data-date-picker-clear
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete single-date code -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Code
+            </h3>
+
+            <div
+              class="mngha-code-block"
+              data-code-block
+            >
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Complete single date picker
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div
+  data-mngha-date-picker
+  data-mode="single"
+  data-view-date="2026-07-01"
+  data-selected-date="2026-07-24"
+  data-disabled-dates="2026-07-17,2026-07-30"
+  data-year-start="2020"
+  data-year-end="2032"
+&gt;
+  &lt;div class="mngha-field"&gt;
+    &lt;label
+      class="mngha-label"
+      for="appointment-date"
+    &gt;
+      Appointment date
+    &lt;/label&gt;
+
+    &lt;div class="mngha-date-picker-anchor"&gt;
+      &lt;input
+        class="mngha-input mngha-date-picker-input"
+        id="appointment-date"
+        name="appointment-date"
+        type="text"
+        value="24/07/2026"
+        placeholder="DD/MM/YYYY"
+        autocomplete="off"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="appointment-calendar"
+        data-date-picker-input
+      &gt;
+
+      &lt;div
+        class="mngha-date-picker"
+        id="appointment-calendar"
+        role="dialog"
+        aria-label="Choose appointment date"
+        data-date-picker-calendar
+        hidden
+      &gt;
+        &lt;div class="mngha-date-picker-header"&gt;
+          &lt;div class="mngha-date-picker-period"&gt;
+            &lt;div
+              class="mngha-date-picker-dropdown"
+              data-date-picker-dropdown="month"
+            &gt;
+              &lt;button
+                class="mngha-date-picker-period-button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="appointment-month-menu"
+                data-date-picker-month-trigger
+              &gt;
+                &lt;span data-date-picker-month-label&gt;
+                  July
+                &lt;/span&gt;
+
+                &lt;span
+                  class="mngha-date-picker-period-chevron"
+                  aria-hidden="true"
+                &gt;&lt;/span&gt;
+              &lt;/button&gt;
+
+              &lt;div
+                class="mngha-date-picker-menu"
+                id="appointment-month-menu"
+                role="listbox"
+                aria-label="Choose month"
+                data-date-picker-month-menu
+              &gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div
+              class="mngha-date-picker-dropdown"
+              data-date-picker-dropdown="year"
+            &gt;
+              &lt;button
+                class="mngha-date-picker-period-button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="appointment-year-menu"
+                data-date-picker-year-trigger
+              &gt;
+                &lt;span data-date-picker-year-label&gt;
+                  2026
+                &lt;/span&gt;
+
+                &lt;span
+                  class="mngha-date-picker-period-chevron"
+                  aria-hidden="true"
+                &gt;&lt;/span&gt;
+              &lt;/button&gt;
+
+              &lt;div
+                class="mngha-date-picker-menu"
+                id="appointment-year-menu"
+                role="listbox"
+                aria-label="Choose year"
+                data-date-picker-year-menu
+              &gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div
+            class="mngha-date-picker-navigation"
+            role="group"
+            aria-label="Calendar navigation"
+          &gt;
+            &lt;button
+              class="mngha-date-picker-navigation-button"
+              type="button"
+              aria-label="Previous month"
+              data-date-picker-previous
+            &gt;
+              &lt;svg
+                class="mngha-date-picker-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              &gt;
+                &lt;path d="m15 18-6-6 6-6"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              class="mngha-date-picker-navigation-button"
+              type="button"
+              aria-label="Next month"
+              data-date-picker-next
+            &gt;
+              &lt;svg
+                class="mngha-date-picker-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              &gt;
+                &lt;path d="m9 18 6-6-6-6"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ul
+          class="mngha-date-picker-weekdays"
+          aria-hidden="true"
+        &gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Sun&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Mon&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Tue&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Wed&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Thu&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Fri&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Sat&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul
+          class="mngha-date-picker-days"
+          role="grid"
+          aria-label="July 2026"
+          data-date-picker-days
+        &gt;&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mngha-card-actions"&gt;
+    &lt;button
+      class="mngha-button mngha-button--secondary mngha-button--sm"
+      type="button"
+      data-date-picker-today
+    &gt;
+      Today
+    &lt;/button&gt;
+
+    &lt;button
+      class="mngha-button mngha-button--secondary mngha-button--sm"
+      type="button"
+      data-date-picker-clear
+    &gt;
+      Clear
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Include the JavaScript from Part 3 once at the end of the page. --&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           INTERACTIVE DATE RANGE
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="date-range-picker"
+      >
+        <h2 class="mngha-section-title">
+          Interactive Date Range
+        </h2>
+
+        <p class="mngha-paragraph">
+          Select the first date and then the last date. Only the range
+          endpoints receive the solid brand circle. Middle dates use
+          <strong>is-in-range</strong> and the light brand color.
+        </p>
+
+        <!-- Example -->
+
+        <div class="mngha-card">
+          <div
+            class="mngha-card-content"
+            data-mngha-date-picker
+            data-mode="range"
+            data-view-date="2026-07-01"
+            data-range-start="2026-07-08"
+            data-range-end="2026-07-14"
+            data-disabled-dates="2026-07-17"
+            data-year-start="2020"
+            data-year-end="2032"
+          >
+            <div class="mngha-field">
+              <label
+                class="mngha-label"
+                for="leave-range"
+              >
+                Leave period
+              </label>
+
+              <div class="mngha-date-picker-anchor">
+                <input
+                  class="mngha-input mngha-date-picker-input"
+                  id="leave-range"
+                  name="leave-range"
+                  type="text"
+                  value="08/07/2026 – 14/07/2026"
+                  placeholder="DD/MM/YYYY – DD/MM/YYYY"
+                  autocomplete="off"
+                  aria-haspopup="dialog"
+                  aria-expanded="false"
+                  aria-controls="leave-calendar"
+                  data-date-picker-input
+                >
+
+                <div
+                  class="mngha-date-picker"
+                  id="leave-calendar"
+                  role="dialog"
+                  aria-label="Choose leave period"
+                  data-date-picker-calendar
+                  hidden
+                >
+                  <div class="mngha-date-picker-header">
+
+                    <div class="mngha-date-picker-period">
+
+                      <div
+                        class="mngha-date-picker-dropdown"
+                        data-date-picker-dropdown="month"
+                      >
+                        <button
+                          class="mngha-date-picker-period-button"
+                          type="button"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="leave-month-menu"
+                          data-date-picker-month-trigger
+                        >
+                          <span data-date-picker-month-label>
+                            July
+                          </span>
+
+                          <span
+                            class="mngha-date-picker-period-chevron"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+
+                        <div
+                          class="mngha-date-picker-menu"
+                          id="leave-month-menu"
+                          role="listbox"
+                          aria-label="Choose month"
+                          data-date-picker-month-menu
+                        ></div>
+                      </div>
+
+                      <div
+                        class="mngha-date-picker-dropdown"
+                        data-date-picker-dropdown="year"
+                      >
+                        <button
+                          class="mngha-date-picker-period-button"
+                          type="button"
+                          aria-haspopup="listbox"
+                          aria-expanded="false"
+                          aria-controls="leave-year-menu"
+                          data-date-picker-year-trigger
+                        >
+                          <span data-date-picker-year-label>
+                            2026
+                          </span>
+
+                          <span
+                            class="mngha-date-picker-period-chevron"
+                            aria-hidden="true"
+                          ></span>
+                        </button>
+
+                        <div
+                          class="mngha-date-picker-menu"
+                          id="leave-year-menu"
+                          role="listbox"
+                          aria-label="Choose year"
+                          data-date-picker-year-menu
+                        ></div>
+                      </div>
+
+                    </div>
+
+                    <div
+                      class="mngha-date-picker-navigation"
+                      role="group"
+                      aria-label="Calendar navigation"
+                    >
+                      <button
+                        class="mngha-date-picker-navigation-button"
+                        type="button"
+                        aria-label="Previous month"
+                        data-date-picker-previous
+                      >
+                        <svg
+                          class="mngha-date-picker-icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          aria-hidden="true"
+                        >
+                          <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                      </button>
+
+                      <button
+                        class="mngha-date-picker-navigation-button"
+                        type="button"
+                        aria-label="Next month"
+                        data-date-picker-next
+                      >
+                        <svg
+                          class="mngha-date-picker-icon"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          aria-hidden="true"
+                        >
+                          <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                  </div>
+
+                  <ul
+                    class="mngha-date-picker-weekdays"
+                    aria-hidden="true"
+                  >
+                    <li class="mngha-date-picker-weekday">Sun</li>
+                    <li class="mngha-date-picker-weekday">Mon</li>
+                    <li class="mngha-date-picker-weekday">Tue</li>
+                    <li class="mngha-date-picker-weekday">Wed</li>
+                    <li class="mngha-date-picker-weekday">Thu</li>
+                    <li class="mngha-date-picker-weekday">Fri</li>
+                    <li class="mngha-date-picker-weekday">Sat</li>
+                  </ul>
+
+                  <ul
+                    class="mngha-date-picker-days"
+                    role="grid"
+                    aria-label="July 2026"
+                    data-date-picker-days
+                  ></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mngha-card-actions">
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--sm"
+                type="button"
+                data-date-picker-today
+              >
+                Start from today
+              </button>
+
+              <button
+                class="mngha-button mngha-button--secondary mngha-button--sm"
+                type="button"
+                data-date-picker-clear
+              >
+                Clear range
+              </button>
+            </div>
+          </div>
+        </div>
+        
+             <!-- Complete date-range code -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Code
+            </h3>
+
+            <div
+              class="mngha-code-block"
+              data-code-block
+            >
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Complete date range picker
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div
+  data-mngha-date-picker
+  data-mode="range"
+  data-view-date="2026-07-01"
+  data-range-start="2026-07-08"
+  data-range-end="2026-07-14"
+  data-disabled-dates="2026-07-17"
+  data-year-start="2020"
+  data-year-end="2032"
+&gt;
+  &lt;div class="mngha-field"&gt;
+    &lt;label
+      class="mngha-label"
+      for="leave-range"
+    &gt;
+      Leave period
+    &lt;/label&gt;
+
+    &lt;div class="mngha-date-picker-anchor"&gt;
+      &lt;input
+        class="mngha-input mngha-date-picker-input"
+        id="leave-range"
+        name="leave-range"
+        type="text"
+        value="08/07/2026 – 14/07/2026"
+        placeholder="DD/MM/YYYY – DD/MM/YYYY"
+        autocomplete="off"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="leave-calendar"
+        data-date-picker-input
+      &gt;
+
+      &lt;div
+        class="mngha-date-picker"
+        id="leave-calendar"
+        role="dialog"
+        aria-label="Choose leave period"
+        data-date-picker-calendar
+        hidden
+      &gt;
+        &lt;div class="mngha-date-picker-header"&gt;
+          &lt;div class="mngha-date-picker-period"&gt;
+
+            &lt;div
+              class="mngha-date-picker-dropdown"
+              data-date-picker-dropdown="month"
+            &gt;
+              &lt;button
+                class="mngha-date-picker-period-button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="leave-month-menu"
+                data-date-picker-month-trigger
+              &gt;
+                &lt;span data-date-picker-month-label&gt;
+                  July
+                &lt;/span&gt;
+
+                &lt;span
+                  class="mngha-date-picker-period-chevron"
+                  aria-hidden="true"
+                &gt;&lt;/span&gt;
+              &lt;/button&gt;
+
+              &lt;div
+                class="mngha-date-picker-menu"
+                id="leave-month-menu"
+                role="listbox"
+                aria-label="Choose month"
+                data-date-picker-month-menu
+              &gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div
+              class="mngha-date-picker-dropdown"
+              data-date-picker-dropdown="year"
+            &gt;
+              &lt;button
+                class="mngha-date-picker-period-button"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="leave-year-menu"
+                data-date-picker-year-trigger
+              &gt;
+                &lt;span data-date-picker-year-label&gt;
+                  2026
+                &lt;/span&gt;
+
+                &lt;span
+                  class="mngha-date-picker-period-chevron"
+                  aria-hidden="true"
+                &gt;&lt;/span&gt;
+              &lt;/button&gt;
+
+              &lt;div
+                class="mngha-date-picker-menu"
+                id="leave-year-menu"
+                role="listbox"
+                aria-label="Choose year"
+                data-date-picker-year-menu
+              &gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+          &lt;div
+            class="mngha-date-picker-navigation"
+            role="group"
+            aria-label="Calendar navigation"
+          &gt;
+            &lt;button
+              class="mngha-date-picker-navigation-button"
+              type="button"
+              aria-label="Previous month"
+              data-date-picker-previous
+            &gt;
+              &lt;svg
+                class="mngha-date-picker-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              &gt;
+                &lt;path d="m15 18-6-6 6-6"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+
+            &lt;button
+              class="mngha-date-picker-navigation-button"
+              type="button"
+              aria-label="Next month"
+              data-date-picker-next
+            &gt;
+              &lt;svg
+                class="mngha-date-picker-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              &gt;
+                &lt;path d="m9 18 6-6-6-6"&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ul
+          class="mngha-date-picker-weekdays"
+          aria-hidden="true"
+        &gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Sun&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Mon&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Tue&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Wed&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Thu&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Fri&lt;/li&gt;
+          &lt;li class="mngha-date-picker-weekday"&gt;Sat&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;ul
+          class="mngha-date-picker-days"
+          role="grid"
+          aria-label="July 2026"
+          data-date-picker-days
+        &gt;&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mngha-card-actions"&gt;
+    &lt;button
+      class="mngha-button mngha-button--secondary mngha-button--sm"
+      type="button"
+      data-date-picker-today
+    &gt;
+      Start from today
+    &lt;/button&gt;
+
+    &lt;button
+      class="mngha-button mngha-button--secondary mngha-button--sm"
+      type="button"
+      data-date-picker-clear
+    &gt;
+      Clear range
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Include the JavaScript from Part 3 once at the end of the page. --&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           DAY STATE REFERENCE
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="day-states"
+      >
+        <h2 class="mngha-section-title">
+          Day State Reference
+        </h2>
+
+        <!-- Example -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <div
+              class="mngha-date-picker"
+              role="group"
+              aria-label="Date picker state examples"
+            >
+              <div class="mngha-date-picker-header">
+                <strong>State examples</strong>
+              </div>
+
+              <ul
+                class="mngha-date-picker-weekdays"
+                aria-hidden="true"
+              >
+                <li class="mngha-date-picker-weekday">Default</li>
+                <li class="mngha-date-picker-weekday">Today</li>
+                <li class="mngha-date-picker-weekday">Selected</li>
+                <li class="mngha-date-picker-weekday">Outside</li>
+                <li class="mngha-date-picker-weekday">Disabled</li>
+                <li class="mngha-date-picker-weekday">Start</li>
+                <li class="mngha-date-picker-weekday">End</li>
+              </ul>
+
+              <ul class="mngha-date-picker-days">
+                <li>
+                  <button
+                    class="mngha-date-picker-day"
+                    type="button"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      20
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-today"
+                    type="button"
+                    aria-current="date"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      21
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-selected"
+                    type="button"
+                    aria-selected="true"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      22
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-outside"
+                    type="button"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      23
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-disabled"
+                    type="button"
+                    aria-disabled="true"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      24
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-range-start is-selected"
+                    type="button"
+                    aria-selected="true"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      25
+                    </span>
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="mngha-date-picker-day is-range-end is-selected"
+                    type="button"
+                    aria-selected="true"
+                  >
+                    <span class="mngha-date-picker-day-number">
+                      26
+                    </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete day-state code -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Code
+            </h3>
+
+            <div
+              class="mngha-code-block"
+              data-code-block
+            >
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Complete day state reference
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div
+  class="mngha-date-picker"
+  role="group"
+  aria-label="Date picker state examples"
+&gt;
+  &lt;div class="mngha-date-picker-header"&gt;
+    &lt;strong&gt;State examples&lt;/strong&gt;
+  &lt;/div&gt;
+
+  &lt;ul
+    class="mngha-date-picker-weekdays"
+    aria-hidden="true"
+  &gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Default&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Today&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Selected&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Outside&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Disabled&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;Start&lt;/li&gt;
+    &lt;li class="mngha-date-picker-weekday"&gt;End&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ul class="mngha-date-picker-days"&gt;
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day"
+        type="button"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          20
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-today"
+        type="button"
+        aria-current="date"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          21
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-selected"
+        type="button"
+        aria-selected="true"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          22
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-outside"
+        type="button"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          23
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-disabled"
+        type="button"
+        aria-disabled="true"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          24
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-range-start is-selected"
+        type="button"
+        aria-selected="true"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          25
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;button
+        class="mngha-date-picker-day is-range-end is-selected"
+        type="button"
+        aria-selected="true"
+      &gt;
+        &lt;span class="mngha-date-picker-day-number"&gt;
+          26
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           INPUT STATES
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="input-states"
+      >
+        <h2 class="mngha-section-title">
+          Input States
+        </h2>
+
+        <!-- Example -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <div class="mngha-form-grid">
+
+              <div class="mngha-field">
+                <label
+                  class="mngha-label"
+                  for="disabled-date"
+                >
+                  Disabled date
+                </label>
+
+                <input
+                  class="mngha-input mngha-date-picker-input"
+                  id="disabled-date"
+                  type="text"
+                  value="24/07/2026"
+                  disabled
+                >
+              </div>
+
+              <div class="mngha-field">
+                <label
+                  class="mngha-label"
+                  for="invalid-date"
+                >
+                  Invalid date
+                </label>
+
+                <input
+                  class="mngha-input mngha-input--error mngha-date-picker-input"
+                  id="invalid-date"
+                  type="text"
+                  value="40/07/2026"
+                  aria-invalid="true"
+                  aria-describedby="invalid-date-error"
+                >
+
+                <p
+                  class="mngha-error-text"
+                  id="invalid-date-error"
+                >
+                  Enter a valid date.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete input-state code -->
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Code
+            </h3>
+
+            <div
+              class="mngha-code-block"
+              data-code-block
+            >
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Complete input state examples
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class="mngha-form-grid"&gt;
+
+  &lt;div class="mngha-field"&gt;
+    &lt;label
+      class="mngha-label"
+      for="disabled-date"
+    &gt;
+      Disabled date
+    &lt;/label&gt;
+
+    &lt;input
+      class="mngha-input mngha-date-picker-input"
+      id="disabled-date"
+      type="text"
+      value="24/07/2026"
+      disabled
+    &gt;
+  &lt;/div&gt;
+
+  &lt;div class="mngha-field"&gt;
+    &lt;label
+      class="mngha-label"
+      for="invalid-date"
+    &gt;
+      Invalid date
+    &lt;/label&gt;
+
+    &lt;input
+      class="mngha-input mngha-input--error mngha-date-picker-input"
+      id="invalid-date"
+      type="text"
+      value="40/07/2026"
+      aria-invalid="true"
+      aria-describedby="invalid-date-error"
+    &gt;
+
+    &lt;p
+      class="mngha-error-text"
+      id="invalid-date-error"
+    &gt;
+      Enter a valid date.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           IMPLEMENTED BEHAVIOR
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="behavior"
+      >
+        <h2 class="mngha-section-title">
+          Implemented Behavior
+        </h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Mouse and touch
+              </h3>
+
+              <p class="mngha-card-description">
+                Open from the input, select dates, use month and year menus,
+                navigate months, select today, clear, and close outside.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Keyboard
+              </h3>
+
+              <p class="mngha-card-description">
+                Arrow keys move by day or week. Home and End move within a
+                week. Page Up and Page Down change the month. Enter and Space
+                select. Escape closes.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Accessible updates
+              </h3>
+
+              <p class="mngha-card-description">
+                The script synchronizes aria-expanded, aria-selected,
+                aria-current, aria-disabled, labels, grid names, and roving
+                tabindex.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           CLASS REFERENCE
+           ===================================================== -->
+
+      <section
+        class="mngha-section"
+        id="class-reference"
+      >
+        <h2 class="mngha-section-title">
+          Class Reference
+        </h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Date picker class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>.mngha-date-picker</td>
+                <td>Container</td>
+                <td>Creates the calendar surface and layout.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-anchor</td>
+                <td>Container</td>
+                <td>Positions the calendar directly below its input.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-dropdown</td>
+                <td>Container</td>
+                <td>Positions a month or year menu.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-menu</td>
+                <td>Listbox</td>
+                <td>Creates the wider scrollable calendar menu.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-menu-item</td>
+                <td>Button</td>
+                <td>Creates a selectable month or year option.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-days</td>
+                <td>List</td>
+                <td>Creates the seven-column date grid.</td>
+              </tr>
+
+              <tr>
+                <td>.mngha-date-picker-day</td>
+                <td>Button</td>
+                <td>Provides the interactive date cell.</td>
+              </tr>
+
+              <tr>
+                <td>.is-selected</td>
+                <td>Date button</td>
+                <td>Marks one selected date or a range endpoint.</td>
+              </tr>
+
+              <tr>
+                <td>.is-range-start</td>
+                <td>Date button</td>
+                <td>Marks the solid first date in a range.</td>
+              </tr>
+
+              <tr>
+                <td>.is-in-range</td>
+                <td>Date button</td>
+                <td>Marks middle dates using the light brand background.</td>
+              </tr>
+
+              <tr>
+                <td>.is-range-end</td>
+                <td>Date button</td>
+                <td>Marks the solid last date in a range.</td>
+              </tr>
+
+              <tr>
+                <td>.is-today</td>
+                <td>Date button</td>
+                <td>Marks the current date.</td>
+              </tr>
+
+              <tr>
+                <td>.is-outside</td>
+                <td>Date button</td>
+                <td>Marks a date outside the visible month.</td>
+              </tr>
+
+              <tr>
+                <td>.is-disabled</td>
+                <td>Date button</td>
+                <td>Marks an unavailable date.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           USAGE GUIDANCE
+           ===================================================== -->
+
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">
+          Usage Guidance
+        </h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Do
+              </h3>
+
+              <p class="mngha-card-description">
+                Keep typed input available, use a clear placeholder, preserve
+                keyboard access, provide full date labels, and use disabled
+                state only for dates that cannot be selected.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Avoid
+              </h3>
+
+              <p class="mngha-card-description">
+                Do not mark every range date as is-selected. Use is-selected
+                only on the first and last dates, and use is-in-range for the
+                dates between them.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+    <!-- =========================================================
+       DATE PICKER JAVASCRIPT
+       ========================================================= -->
+
+  <script>
+    (() => {
+      "use strict";
+
+      function createLocalDate(year, month, day) {
+        return new Date(
+          year,
+          month,
+          day,
+          12,
+          0,
+          0,
+          0
+        );
+      }
+
+      function normalizeDate(date) {
+        return createLocalDate(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate()
+        );
+      }
+
+      function parseIsoDate(value) {
+        if (!value) {
+          return null;
+        }
+
+        const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(
+          value.trim()
+        );
+
+        if (!match) {
+          return null;
+        }
+
+        const year = Number(match[1]);
+        const month = Number(match[2]) - 1;
+        const day = Number(match[3]);
+
+        const date = createLocalDate(
+          year,
+          month,
+          day
+        );
+
+        if (
+          date.getFullYear() !== year ||
+          date.getMonth() !== month ||
+          date.getDate() !== day
+        ) {
+          return null;
+        }
+
+        return date;
+      }
+
+      function toIsoDate(date) {
+        const year = date.getFullYear();
+
+        const month = String(
+          date.getMonth() + 1
+        ).padStart(2, "0");
+
+        const day = String(
+          date.getDate()
+        ).padStart(2, "0");
+
+        return `${year}-${month}-${day}`;
+      }
+
+      function parseDisplayDate(value) {
+        if (!value) {
+          return null;
+        }
+
+        const match = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(
+          value.trim()
+        );
+
+        if (!match) {
+          return null;
+        }
+
+        const day = Number(match[1]);
+        const month = Number(match[2]) - 1;
+        const year = Number(match[3]);
+
+        const date = createLocalDate(
+          year,
+          month,
+          day
+        );
+
+        if (
+          date.getFullYear() !== year ||
+          date.getMonth() !== month ||
+          date.getDate() !== day
+        ) {
+          return null;
+        }
+
+        return date;
+      }
+
+      function formatDisplayDate(date) {
+        const day = String(
+          date.getDate()
+        ).padStart(2, "0");
+
+        const month = String(
+          date.getMonth() + 1
+        ).padStart(2, "0");
+
+        const year = date.getFullYear();
+
+        return `${day}/${month}/${year}`;
+      }
+
+      function addDays(date, amount) {
+        return createLocalDate(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate() + amount
+        );
+      }
+
+      function addMonths(date, amount) {
+        const requiredDay = date.getDate();
+
+        const target = createLocalDate(
+          date.getFullYear(),
+          date.getMonth() + amount,
+          1
+        );
+
+        const lastDay = new Date(
+          target.getFullYear(),
+          target.getMonth() + 1,
+          0
+        ).getDate();
+
+        target.setDate(
+          Math.min(requiredDay, lastDay)
+        );
+
+        return normalizeDate(target);
+      }
+
+      function sameDate(first, second) {
+        return Boolean(
+          first &&
+          second &&
+          first.getFullYear() === second.getFullYear() &&
+          first.getMonth() === second.getMonth() &&
+          first.getDate() === second.getDate()
+        );
+      }
+
+      function isBefore(first, second) {
+        return (
+          normalizeDate(first).getTime() <
+          normalizeDate(second).getTime()
+        );
+      }
+
+      function isAfter(first, second) {
+        return (
+          normalizeDate(first).getTime() >
+          normalizeDate(second).getTime()
+        );
+      }
+
+
+      class MnghaDatePicker {
+        constructor(root) {
+          this.root = root;
+
+          this.mode =
+            root.dataset.mode === "range"
+              ? "range"
+              : "single";
+
+          this.input = root.querySelector(
+            "[data-date-picker-input]"
+          );
+
+          this.calendar = root.querySelector(
+            "[data-date-picker-calendar]"
+          );
+
+          this.daysGrid = root.querySelector(
+            "[data-date-picker-days]"
+          );
+
+          this.monthLabel = root.querySelector(
+            "[data-date-picker-month-label]"
+          );
+
+          this.yearLabel = root.querySelector(
+            "[data-date-picker-year-label]"
+          );
+
+          this.monthTrigger = root.querySelector(
+            "[data-date-picker-month-trigger]"
+          );
+
+          this.yearTrigger = root.querySelector(
+            "[data-date-picker-year-trigger]"
+          );
+
+          this.monthMenu = root.querySelector(
+            "[data-date-picker-month-menu]"
+          );
+
+          this.yearMenu = root.querySelector(
+            "[data-date-picker-year-menu]"
+          );
+
+          this.previousButton = root.querySelector(
+            "[data-date-picker-previous]"
+          );
+
+          this.nextButton = root.querySelector(
+            "[data-date-picker-next]"
+          );
+
+          this.todayButton = root.querySelector(
+            "[data-date-picker-today]"
+          );
+
+          this.clearButton = root.querySelector(
+            "[data-date-picker-clear]"
+          );
+
+          this.monthNames = Array.from(
+            { length: 12 },
+            (_, month) => {
+              return new Intl.DateTimeFormat(
+                "en",
+                { month: "long" }
+              ).format(
+                createLocalDate(2026, month, 1)
+              );
+            }
+          );
+
+          this.longDateFormatter =
+            new Intl.DateTimeFormat(
+              "en-GB",
+              {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+              }
+            );
+
+          this.today = normalizeDate(
+            new Date()
+          );
+
+          this.disabledDates = new Set(
+            (root.dataset.disabledDates || "")
+              .split(",")
+              .map(value => value.trim())
+              .filter(Boolean)
+          );
+
+          this.minimumDate = parseIsoDate(
+            root.dataset.minDate
+          );
+
+          this.maximumDate = parseIsoDate(
+            root.dataset.maxDate
+          );
+
+          this.yearStart =
+            Number(root.dataset.yearStart) || 2000;
+
+          this.yearEnd =
+            Number(root.dataset.yearEnd) || 2100;
+
+          this.selectedDate = parseIsoDate(
+            root.dataset.selectedDate
+          );
+
+          this.rangeStart = parseIsoDate(
+            root.dataset.rangeStart
+          );
+
+          this.rangeEnd = parseIsoDate(
+            root.dataset.rangeEnd
+          );
+
+          const initialView =
+            parseIsoDate(root.dataset.viewDate) ||
+            this.selectedDate ||
+            this.rangeStart ||
+            this.today;
+
+          this.viewDate = createLocalDate(
+            initialView.getFullYear(),
+            initialView.getMonth(),
+            1
+          );
+
+          this.focusedDate =
+            this.selectedDate ||
+            this.rangeEnd ||
+            this.rangeStart ||
+            this.today;
+
+          this.bindEvents();
+          this.render();
+          this.syncInput();
+        }
+
+
+        bindEvents() {
+          this.input?.addEventListener(
+            "click",
+            () => {
+              this.toggleCalendar();
+            }
+          );
+
+          this.input?.addEventListener(
+            "change",
+            () => {
+              this.applyTypedValue();
+            }
+          );
+
+          this.input?.addEventListener(
+            "keydown",
+            event => {
+              if (event.key === "ArrowDown") {
+                event.preventDefault();
+                this.openCalendar(true);
+                return;
+              }
+
+              if (event.key === "Enter") {
+                event.preventDefault();
+                this.applyTypedValue();
+                return;
+              }
+
+              if (event.key === "Escape") {
+                this.closeCalendar();
+              }
+            }
+          );
+
+          this.previousButton?.addEventListener(
+            "click",
+            () => {
+              this.changeMonth(-1);
+            }
+          );
+
+          this.nextButton?.addEventListener(
+            "click",
+            () => {
+              this.changeMonth(1);
+            }
+          );
+
+          this.monthTrigger?.addEventListener(
+            "click",
+            event => {
+              event.stopPropagation();
+              this.toggleDropdown("month");
+            }
+          );
+
+          this.yearTrigger?.addEventListener(
+            "click",
+            event => {
+              event.stopPropagation();
+              this.toggleDropdown("year");
+            }
+          );
+
+          this.daysGrid?.addEventListener(
+            "click",
+            event => {
+              const dayButton = event.target.closest(
+                ".mngha-date-picker-day"
+              );
+
+              if (
+                !dayButton ||
+                dayButton.getAttribute(
+                  "aria-disabled"
+                ) === "true"
+              ) {
+                return;
+              }
+
+              const date = parseIsoDate(
+                dayButton.dataset.date
+              );
+
+              if (date) {
+                this.selectDate(date);
+              }
+            }
+          );
+
+          this.daysGrid?.addEventListener(
+            "keydown",
+            event => {
+              this.handleDayKeydown(event);
+            }
+          );
+
+          this.todayButton?.addEventListener(
+            "click",
+            () => {
+              if (
+                this.isDateDisabled(this.today)
+              ) {
+                return;
+              }
+
+              this.viewDate = createLocalDate(
+                this.today.getFullYear(),
+                this.today.getMonth(),
+                1
+              );
+
+              this.focusedDate = this.today;
+
+              if (this.mode === "range") {
+                this.rangeStart = this.today;
+                this.rangeEnd = null;
+              } else {
+                this.selectedDate = this.today;
+              }
+
+              this.clearValidation();
+              this.syncInput();
+              this.render();
+              this.openCalendar(true);
+              this.emitChange();
+            }
+          );
+
+          this.clearButton?.addEventListener(
+            "click",
+            () => {
+              this.clearSelection();
+            }
+          );
+
+          document.addEventListener(
+            "click",
+            event => {
+              if (
+                !this.root.contains(event.target)
+              ) {
+                this.closeDropdowns();
+                this.closeCalendar();
+              }
+            }
+          );
+        }
+
+
+        isCalendarOpen() {
+          return Boolean(
+            this.calendar &&
+            !this.calendar.hidden
+          );
+        }
+
+
+        toggleCalendar() {
+          if (this.isCalendarOpen()) {
+            this.closeCalendar();
+          } else {
+            this.openCalendar(false);
+          }
+        }
+
+
+        openCalendar(focusDay = false) {
+          if (!this.calendar) {
+            return;
+          }
+
+          this.calendar.hidden = false;
+
+          this.input?.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
+          this.render();
+
+          if (focusDay) {
+            requestAnimationFrame(() => {
+              this.focusCurrentDayButton();
+            });
+          }
+        }
+
+
+        closeCalendar() {
+          if (!this.calendar) {
+            return;
+          }
+
+          this.calendar.hidden = true;
+
+          this.input?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          this.closeDropdowns();
+        }
+
+
+        toggleDropdown(type) {
+          const dropdown = this.root.querySelector(
+            `[data-date-picker-dropdown="${type}"]`
+          );
+
+          if (!dropdown) {
+            return;
+          }
+
+          const wasOpen =
+            dropdown.classList.contains("is-open");
+
+          this.closeDropdowns();
+
+          if (!wasOpen) {
+            dropdown.classList.add("is-open");
+
+            const trigger =
+              type === "month"
+                ? this.monthTrigger
+                : this.yearTrigger;
+
+            trigger?.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+
+            requestAnimationFrame(() => {
+              const selected =
+                dropdown.querySelector(
+                  ".mngha-date-picker-menu-item.is-selected"
+                );
+
+              selected?.scrollIntoView({
+                block: "nearest"
+              });
+            });
+          }
+        }
+
+
+        closeDropdowns() {
+          this.root
+            .querySelectorAll(
+              "[data-date-picker-dropdown]"
+            )
+            .forEach(dropdown => {
+              dropdown.classList.remove(
+                "is-open"
+              );
+
+              dropdown
+                .querySelector(
+                  ".mngha-date-picker-period-button"
+                )
+                ?.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+            });
+        }
+
+
+        changeMonth(amount) {
+          this.viewDate = addMonths(
+            this.viewDate,
+            amount
+          );
+
+          this.focusedDate = createLocalDate(
+            this.viewDate.getFullYear(),
+            this.viewDate.getMonth(),
+            1
+          );
+
+          this.closeDropdowns();
+          this.render();
+        }
+
+
+        render() {
+          this.renderPeriod();
+          this.renderMonthMenu();
+          this.renderYearMenu();
+          this.renderDays();
+        }
+
+
+        renderPeriod() {
+          if (this.monthLabel) {
+            this.monthLabel.textContent =
+              this.monthNames[
+                this.viewDate.getMonth()
+              ];
+          }
+
+          if (this.yearLabel) {
+            this.yearLabel.textContent =
+              String(
+                this.viewDate.getFullYear()
+              );
+          }
+
+          this.daysGrid?.setAttribute(
+            "aria-label",
+            `${
+              this.monthNames[
+                this.viewDate.getMonth()
+              ]
+            } ${this.viewDate.getFullYear()}`
+          );
+        }
+
+
+        renderMonthMenu() {
+          if (!this.monthMenu) {
+            return;
+          }
+
+          this.monthMenu.replaceChildren();
+
+          this.monthNames.forEach(
+            (monthName, monthIndex) => {
+              const item =
+                document.createElement("button");
+
+              const selected =
+                monthIndex ===
+                this.viewDate.getMonth();
+
+              item.type = "button";
+
+              item.className =
+                "mngha-date-picker-menu-item";
+
+              item.textContent = monthName;
+
+              item.setAttribute(
+                "role",
+                "option"
+              );
+
+              item.setAttribute(
+                "aria-selected",
+                String(selected)
+              );
+
+              if (selected) {
+                item.classList.add(
+                  "is-selected"
+                );
+              }
+
+              item.addEventListener(
+                "click",
+                event => {
+                  event.stopPropagation();
+
+                  this.viewDate =
+                    createLocalDate(
+                      this.viewDate.getFullYear(),
+                      monthIndex,
+                      1
+                    );
+
+                  this.focusedDate =
+                    this.viewDate;
+
+                  this.closeDropdowns();
+                  this.render();
+                  this.monthTrigger?.focus();
+                }
+              );
+
+              this.monthMenu.append(item);
+            }
+          );
+        }
+
+
+        renderYearMenu() {
+          if (!this.yearMenu) {
+            return;
+          }
+
+          this.yearMenu.replaceChildren();
+
+          for (
+            let year = this.yearStart;
+            year <= this.yearEnd;
+            year += 1
+          ) {
+            const item =
+              document.createElement("button");
+
+            const selected =
+              year ===
+              this.viewDate.getFullYear();
+
+            item.type = "button";
+
+            item.className =
+              "mngha-date-picker-menu-item";
+
+            item.textContent = String(year);
+
+            item.setAttribute(
+              "role",
+              "option"
+            );
+
+            item.setAttribute(
+              "aria-selected",
+              String(selected)
+            );
+
+            if (selected) {
+              item.classList.add(
+                "is-selected"
+              );
+            }
+
+            item.addEventListener(
+              "click",
+              event => {
+                event.stopPropagation();
+
+                this.viewDate =
+                  createLocalDate(
+                    year,
+                    this.viewDate.getMonth(),
+                    1
+                  );
+
+                this.focusedDate =
+                  this.viewDate;
+
+                this.closeDropdowns();
+                this.render();
+                this.yearTrigger?.focus();
+              }
+            );
+
+            this.yearMenu.append(item);
+          }
+        }
+
+
+        renderDays() {
+          if (!this.daysGrid) {
+            return;
+          }
+
+          const year =
+            this.viewDate.getFullYear();
+
+          const month =
+            this.viewDate.getMonth();
+
+          const firstOfMonth =
+            createLocalDate(
+              year,
+              month,
+              1
+            );
+
+          const gridStart = addDays(
+            firstOfMonth,
+            -firstOfMonth.getDay()
+          );
+
+          this.daysGrid.replaceChildren();
+
+          for (
+            let index = 0;
+            index < 42;
+            index += 1
+          ) {
+            const date = addDays(
+              gridStart,
+              index
+            );
+
+            const listItem =
+              document.createElement("li");
+
+            const button =
+              document.createElement("button");
+
+            const number =
+              document.createElement("span");
+
+            const outside =
+              date.getMonth() !== month;
+
+            const disabled =
+              this.isDateDisabled(date);
+
+            const today =
+              sameDate(date, this.today);
+
+            const selected =
+              sameDate(
+                date,
+                this.selectedDate
+              );
+
+            const rangeStart =
+              sameDate(
+                date,
+                this.rangeStart
+              );
+
+            const rangeEnd =
+              sameDate(
+                date,
+                this.rangeEnd
+              );
+
+            const inRange = Boolean(
+              this.rangeStart &&
+              this.rangeEnd &&
+              isAfter(
+                date,
+                this.rangeStart
+              ) &&
+              isBefore(
+                date,
+                this.rangeEnd
+              )
+            );
+
+            listItem.setAttribute(
+              "role",
+              "gridcell"
+            );
+
+            button.type = "button";
+
+            button.className =
+              "mngha-date-picker-day";
+
+            button.dataset.date =
+              toIsoDate(date);
+
+            button.setAttribute(
+              "aria-label",
+              this.createDayLabel(
+                date,
+                {
+                  disabled,
+                  today,
+                  selected,
+                  rangeStart,
+                  rangeEnd,
+                  inRange
+                }
+              )
+            );
+
+            if (outside) {
+              button.classList.add(
+                "is-outside"
+              );
+            }
+
+            if (disabled) {
+              button.classList.add(
+                "is-disabled"
+              );
+
+              button.setAttribute(
+                "aria-disabled",
+                "true"
+              );
+            }
+
+            if (today) {
+              button.classList.add(
+                "is-today"
+              );
+
+              button.setAttribute(
+                "aria-current",
+                "date"
+              );
+            }
+
+            if (
+              this.mode === "single" &&
+              selected
+            ) {
+              button.classList.add(
+                "is-selected"
+              );
+
+              button.setAttribute(
+                "aria-selected",
+                "true"
+              );
+            }
+
+            if (this.mode === "range") {
+              if (rangeStart) {
+                button.classList.add(
+                  "is-range-start",
+                  "is-selected"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+
+              if (inRange) {
+                button.classList.add(
+                  "is-in-range"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+
+              if (rangeEnd) {
+                button.classList.add(
+                  "is-range-end",
+                  "is-selected"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+            }
+
+            const focused =
+              sameDate(
+                date,
+                this.focusedDate
+              );
+
+            const focusFirstDay =
+              !this.isDateInVisibleGrid(
+                this.focusedDate,
+                gridStart
+              ) &&
+              sameDate(
+                date,
+                firstOfMonth
+              );
+
+            button.tabIndex =
+              focused || focusFirstDay
+                ? 0
+                : -1;
+
+            number.className =
+              "mngha-date-picker-day-number";
+
+            number.textContent =
+              String(date.getDate());
+
+            button.append(number);
+            listItem.append(button);
+            this.daysGrid.append(listItem);
+          }
+        }
+
+
+        createDayLabel(date, states) {
+          const labels = [
+            this.longDateFormatter.format(date)
+          ];
+
+          if (states.today) {
+            labels.push("today");
+          }
+
+          if (states.disabled) {
+            labels.push("unavailable");
+          }
+
+          if (
+            this.mode === "single" &&
+            states.selected
+          ) {
+            labels.push("selected");
+          }
+
+          if (
+            states.rangeStart &&
+            states.rangeEnd
+          ) {
+            labels.push(
+              "range start and end"
+            );
+          } else if (states.rangeStart) {
+            labels.push("range start");
+          } else if (states.rangeEnd) {
+            labels.push("range end");
+          } else if (states.inRange) {
+            labels.push(
+              "in selected range"
+            );
+          }
+
+          return labels.join(", ");
+        }
+
+
+        isDateInVisibleGrid(
+          date,
+          gridStart
+        ) {
+          if (!date) {
+            return false;
+          }
+
+          const gridEnd = addDays(
+            gridStart,
+            41
+          );
+
+          return (
+            !isBefore(date, gridStart) &&
+            !isAfter(date, gridEnd)
+          );
+        }
+
+
+        isDateDisabled(date) {
+          const isoDate =
+            toIsoDate(date);
+
+          if (
+            this.disabledDates.has(isoDate)
+          ) {
+            return true;
+          }
+
+          if (
+            this.minimumDate &&
+            isBefore(
+              date,
+              this.minimumDate
+            )
+          ) {
+            return true;
+          }
+
+          if (
+            this.maximumDate &&
+            isAfter(
+              date,
+              this.maximumDate
+            )
+          ) {
+            return true;
+          }
+
+          return false;
+        }
+
+
+        selectDate(date) {
+          if (
+            this.isDateDisabled(date)
+          ) {
+            return;
+          }
+
+          this.focusedDate = date;
+
+          this.viewDate =
+            createLocalDate(
+              date.getFullYear(),
+              date.getMonth(),
+              1
+            );
+
+          if (this.mode === "single") {
+            this.selectedDate = date;
+
+            this.clearValidation();
+            this.syncInput();
+            this.render();
+            this.emitChange();
+            this.closeCalendar();
+            this.input?.focus();
+
+            return;
+          }
+
+          if (
+            !this.rangeStart ||
+            this.rangeEnd
+          ) {
+            this.rangeStart = date;
+            this.rangeEnd = null;
+          } else if (
+            isBefore(
+              date,
+              this.rangeStart
+            )
+          ) {
+            this.rangeEnd =
+              this.rangeStart;
+
+            this.rangeStart = date;
+          } else {
+            this.rangeEnd = date;
+          }
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+
+          if (
+            this.rangeStart &&
+            this.rangeEnd
+          ) {
+            this.closeCalendar();
+            this.input?.focus();
+          }
+        }
+
+
+        clearSelection() {
+          this.selectedDate = null;
+          this.rangeStart = null;
+          this.rangeEnd = null;
+          this.focusedDate = this.today;
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+
+          this.input?.focus();
+        }
+
+
+        syncInput() {
+          if (!this.input) {
+            return;
+          }
+
+          if (this.mode === "single") {
+            this.input.value =
+              this.selectedDate
+                ? formatDisplayDate(
+                    this.selectedDate
+                  )
+                : "";
+
+            return;
+          }
+
+          if (
+            this.rangeStart &&
+            this.rangeEnd
+          ) {
+            this.input.value =
+              `${formatDisplayDate(
+                this.rangeStart
+              )} – ${formatDisplayDate(
+                this.rangeEnd
+              )}`;
+          } else if (this.rangeStart) {
+            this.input.value =
+              `${formatDisplayDate(
+                this.rangeStart
+              )} – `;
+          } else {
+            this.input.value = "";
+          }
+        }
+
+
+        applyTypedValue() {
+          if (!this.input) {
+            return;
+          }
+
+          const value =
+            this.input.value.trim();
+
+          if (!value) {
+            this.clearSelection();
+            return;
+          }
+
+          if (this.mode === "single") {
+            const date =
+              parseDisplayDate(value);
+
+            if (
+              !date ||
+              this.isDateDisabled(date)
+            ) {
+              this.showValidation(
+                "Enter an available date using DD/MM/YYYY."
+              );
+
+              return;
+            }
+
+            this.selectedDate = date;
+            this.focusedDate = date;
+
+            this.viewDate =
+              createLocalDate(
+                date.getFullYear(),
+                date.getMonth(),
+                1
+              );
+
+            this.clearValidation();
+            this.syncInput();
+            this.render();
+            this.emitChange();
+
+            return;
+          }
+
+          const parts = value
+            .split(/\s*(?:–|—|-)\s*/)
+            .filter(Boolean);
+
+          if (parts.length !== 2) {
+            this.showValidation(
+              "Enter a start and end date using DD/MM/YYYY – DD/MM/YYYY."
+            );
+
+            return;
+          }
+
+          let start =
+            parseDisplayDate(parts[0]);
+
+          let end =
+            parseDisplayDate(parts[1]);
+
+          if (
+            !start ||
+            !end ||
+            this.isDateDisabled(start) ||
+            this.isDateDisabled(end)
+          ) {
+            this.showValidation(
+              "Enter two available dates using DD/MM/YYYY – DD/MM/YYYY."
+            );
+
+            return;
+          }
+
+          if (isAfter(start, end)) {
+            [start, end] = [end, start];
+          }
+
+          this.rangeStart = start;
+          this.rangeEnd = end;
+          this.focusedDate = end;
+
+          this.viewDate =
+            createLocalDate(
+              end.getFullYear(),
+              end.getMonth(),
+              1
+            );
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+        }
+
+
+        showValidation(message) {
+          if (!this.input) {
+            return;
+          }
+
+          this.input.classList.add(
+            "mngha-input--error"
+          );
+
+          this.input.setAttribute(
+            "aria-invalid",
+            "true"
+          );
+
+          this.input.setCustomValidity(
+            message
+          );
+
+          this.input.reportValidity();
+        }
+
+
+        clearValidation() {
+          if (!this.input) {
+            return;
+          }
+
+          this.input.classList.remove(
+            "mngha-input--error"
+          );
+
+          this.input.removeAttribute(
+            "aria-invalid"
+          );
+
+          this.input.setCustomValidity("");
+        }
+
+
+        emitChange() {
+          this.root.dispatchEvent(
+            new CustomEvent(
+              "mngha:date-change",
+              {
+                bubbles: true,
+
+                detail: {
+                  mode: this.mode,
+
+                  value:
+                    this.input?.value || "",
+
+                  selectedDate:
+                    this.selectedDate
+                      ? toIsoDate(
+                          this.selectedDate
+                        )
+                      : null,
+
+                  rangeStart:
+                    this.rangeStart
+                      ? toIsoDate(
+                          this.rangeStart
+                        )
+                      : null,
+
+                  rangeEnd:
+                    this.rangeEnd
+                      ? toIsoDate(
+                          this.rangeEnd
+                        )
+                      : null
+                }
+              }
+            )
+          );
+        }
+
+
+        handleDayKeydown(event) {
+          const currentButton =
+            event.target.closest(
+              ".mngha-date-picker-day"
+            );
+
+          if (!currentButton) {
+            return;
+          }
+
+          const currentDate =
+            parseIsoDate(
+              currentButton.dataset.date
+            );
+
+          if (!currentDate) {
+            return;
+          }
+
+          const isRtl =
+            document.documentElement
+              .getAttribute("dir") === "rtl";
+
+          let targetDate = null;
+
+          switch (event.key) {
+            case "ArrowLeft":
+              targetDate = addDays(
+                currentDate,
+                isRtl ? 1 : -1
+              );
+              break;
+
+            case "ArrowRight":
+              targetDate = addDays(
+                currentDate,
+                isRtl ? -1 : 1
+              );
+              break;
+
+            case "ArrowUp":
+              targetDate = addDays(
+                currentDate,
+                -7
+              );
+              break;
+
+            case "ArrowDown":
+              targetDate = addDays(
+                currentDate,
+                7
+              );
+              break;
+
+            case "Home":
+              targetDate = addDays(
+                currentDate,
+                -currentDate.getDay()
+              );
+              break;
+
+            case "End":
+              targetDate = addDays(
+                currentDate,
+                6 - currentDate.getDay()
+              );
+              break;
+
+            case "PageUp":
+              targetDate = addMonths(
+                currentDate,
+                event.shiftKey ? -12 : -1
+              );
+              break;
+
+            case "PageDown":
+              targetDate = addMonths(
+                currentDate,
+                event.shiftKey ? 12 : 1
+              );
+              break;
+
+            case "Enter":
+            case " ":
+              event.preventDefault();
+              this.selectDate(currentDate);
+              return;
+
+            case "Escape":
+              event.preventDefault();
+              this.closeCalendar();
+              this.input?.focus();
+              return;
+
+            default:
+              return;
+          }
+
+          event.preventDefault();
+
+          this.moveFocus(targetDate);
+        }
+
+
+        moveFocus(targetDate) {
+          let availableDate = targetDate;
+          let attempts = 0;
+
+          const movingForward =
+            !this.focusedDate ||
+            !isBefore(
+              targetDate,
+              this.focusedDate
+            );
+
+          const step =
+            movingForward ? 1 : -1;
+
+          while (
+            this.isDateDisabled(
+              availableDate
+            ) &&
+            attempts < 366
+          ) {
+            availableDate = addDays(
+              availableDate,
+              step
+            );
+
+            attempts += 1;
+          }
+
+          this.focusedDate =
+            availableDate;
+
+          this.viewDate =
+            createLocalDate(
+              availableDate.getFullYear(),
+              availableDate.getMonth(),
+              1
+            );
+
+          this.render();
+
+          requestAnimationFrame(() => {
+            this.focusCurrentDayButton();
+          });
+        }
+
+
+        focusCurrentDayButton() {
+          if (
+            !this.daysGrid ||
+            !this.focusedDate
+          ) {
+            return;
+          }
+
+          const button =
+            this.daysGrid.querySelector(
+              `[data-date="${toIsoDate(
+                this.focusedDate
+              )}"]`
+            );
+
+          button?.focus();
+        }
+      }
+
+
+      const instances = [];
+
+      document
+        .querySelectorAll(
+          "[data-mngha-date-picker]"
+        )
+        .forEach(root => {
+          instances.push(
+            new MnghaDatePicker(root)
+          );
+        });
+
+      window.MnghaDatePicker =
+        MnghaDatePicker;
+
+      window.mnghaDatePickerInstances =
+        instances;
+    })();
+
+
+    /*
+     * Listen for changes anywhere in the page.
+     *
+     * event.detail contains:
+     * - mode
+     * - value
+     * - selectedDate
+     * - rangeStart
+     * - rangeEnd
+     */
+
+    document.addEventListener(
+      "mngha:date-change",
+      event => {
+        console.log(event.detail);
+      }
+    );
+  </script>
+
+
+  <!-- =========================================================
+       DOCUMENTATION JAVASCRIPT
+       ========================================================= -->
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+
+</body>
+</html>
