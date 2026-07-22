@@ -1,0 +1,378 @@
+/**
+ * --------------------------------------------------------------------------
+ * Footer
+ * --------------------------------------------------------------------------
+ *
+ * Responsive application footer with neutral, primary-brand, and
+ * secondary-brand background variants.
+ *
+ * All visual values use the existing mngha design-system tokens.
+ */
+
+mngha-footer {
+  display: block;
+}
+
+.mngha-footer,
+.mngha-footer * {
+  box-sizing: border-box;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Base and Background Variants
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer,
+.mngha-footer--gray {
+  width: 100%;
+  background: var(--color-gray-100);
+  color: var(--color-heading-brand);
+  font-family: var(--font-family-base);
+}
+
+.mngha-footer--brand-primary {
+  background: var( --color-link-hover);
+  color: var(--color-text-inverse-primary);
+}
+
+.mngha-footer--brand-secondary {
+  background: var(--color-brand-secondary);
+  color: var(--color-text-inverse-primary);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Container
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer-container {
+  width: 100%;
+  max-width: var(--width-3xl);
+  margin-inline: auto;
+  padding-block-start: var(--spacing-5xl);
+  padding-block-end: var(--spacing-3xl);
+  padding-inline: var(--spacing-4xl);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Main Navigation
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--spacing-12xl);
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+.mngha-footer-navigation {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--spacing-10xl), 1fr));
+  gap: var(--spacing-3xl);
+}
+
+.mngha-footer-group,
+.mngha-footer-tool-group {
+  min-width: 0;
+}
+
+.mngha-footer-heading {
+  margin: var(--spacing-none);
+  padding-block-end: var(--spacing-md);
+  border-block-end: thin solid var(--color-gray-300);
+  color: inherit;
+  font-size: var(--text-md-size);
+  line-height: var(--text-md-line-height);
+  font-weight: var(--font-weight-medium);
+  text-align: start;
+}
+
+.mngha-footer-list {
+  display: grid;
+  gap: var(--spacing-xs);
+  margin-block: var(--spacing-md) var(--spacing-none);
+  margin-inline: var(--spacing-none);
+  padding: var(--spacing-none);
+  list-style: none;
+}
+
+.mngha-footer-link,
+.mngha-footer-meta-link,
+.mngha-footer-policy-link,
+.mngha-footer-note {
+  color: var(--color-body-brand);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
+  font-weight: var(--font-weight-regular);
+  text-underline-offset: var(--spacing-xs);
+}
+
+.mngha-footer-link {
+  text-decoration: none;
+}
+
+.mngha-footer-meta-link,
+.mngha-footer-policy-link {
+  text-decoration: underline;
+}
+
+.mngha-footer-link:hover,
+.mngha-footer-meta-link:hover,
+.mngha-footer-policy-link:hover {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+.mngha-footer-link:focus-visible,
+.mngha-footer-meta-link:focus-visible,
+.mngha-footer-policy-link:focus-visible,
+.mngha-footer-action:focus-visible,
+.mngha-footer-logo:focus-visible {
+  outline: medium solid currentColor;
+  outline-offset: var(--spacing-xs);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Social Media and Accessibility Tools
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer-tools {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-4xl);
+}
+
+.mngha-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-block-start: var(--spacing-md);
+}
+
+.mngha-footer-action {
+  flex: 0 0 auto;
+  width: var(--spacing-4xl);
+  height: var(--spacing-4xl);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-none);
+  border: thin solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  background: var(--color-gray-50);
+  color: var(--color-heading-brand);
+  font-family: inherit;
+  font-size: var(--text-xl-size);
+  line-height: var(--text-xl-line-height);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mngha-footer-action:hover {
+  border-color: var(--color-gray-400);
+  background: var(--color-gray-200);
+  color: var(--color-heading-brand);
+}
+
+.mngha-footer-action svg,
+.mngha-footer-action img {
+  width: var(--spacing-2xl);
+  height: var(--spacing-2xl);
+  display: block;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Secondary Links
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer-meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-xl);
+  margin-block-start: var(--spacing-6xl);
+  margin-inline: var(--spacing-none);
+  padding: var(--spacing-none);
+  list-style: none;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Legal Information and Platform Logos
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--spacing-3xl);
+  margin-block-start: var(--spacing-4xl);
+}
+
+.mngha-footer-legal {
+  min-width: 0;
+}
+
+.mngha-footer-copyright {
+  margin: var(--spacing-none);
+  color: inherit;
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line-height);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mngha-footer-policy-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  margin-block-start: var(--spacing-md);
+  margin-inline: var(--spacing-none);
+  padding: var(--spacing-none);
+  list-style: none;
+}
+
+.mngha-footer-branding {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  gap: var(--spacing-xl);
+}
+
+.mngha-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  background: var(--color-white);
+  color: var(--color-body-brand);
+  text-decoration: none;
+}
+
+.mngha-footer-logo img,
+.mngha-footer-logo svg {
+  width: auto;
+  max-width: 100%;
+  max-height: var(--spacing-5xl);
+  display: block;
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Inverse Content for Brand Backgrounds
+ * --------------------------------------------------------------------------
+ */
+
+.mngha-footer--brand-primary .mngha-footer-heading,
+.mngha-footer--brand-secondary .mngha-footer-heading {
+  border-block-end-color: var(--color-text-inverse-tertiary);
+}
+
+.mngha-footer--brand-primary .mngha-footer-link,
+.mngha-footer--brand-primary .mngha-footer-meta-link,
+.mngha-footer--brand-primary .mngha-footer-policy-link,
+.mngha-footer--brand-primary .mngha-footer-note,
+.mngha-footer--brand-secondary .mngha-footer-link,
+.mngha-footer--brand-secondary .mngha-footer-meta-link,
+.mngha-footer--brand-secondary .mngha-footer-policy-link,
+.mngha-footer--brand-secondary .mngha-footer-note {
+  color: var(--color-text-inverse-secondary);
+}
+
+.mngha-footer--brand-primary .mngha-footer-link:hover,
+.mngha-footer--brand-primary .mngha-footer-meta-link:hover,
+.mngha-footer--brand-primary .mngha-footer-policy-link:hover,
+.mngha-footer--brand-secondary .mngha-footer-link:hover,
+.mngha-footer--brand-secondary .mngha-footer-meta-link:hover,
+.mngha-footer--brand-secondary .mngha-footer-policy-link:hover {
+  color: var(--color-text-inverse-primary);
+}
+
+.mngha-footer--brand-primary .mngha-footer-action,
+.mngha-footer--brand-secondary .mngha-footer-action {
+  border-color: var(--color-text-inverse-tertiary);
+  background: transparent;
+  color: var(--color-text-inverse-primary);
+}
+
+.mngha-footer--brand-primary .mngha-footer-action:hover,
+.mngha-footer--brand-secondary .mngha-footer-action:hover {
+  border-color: var(--color-text-inverse-primary);
+  background: transparent;
+  color: var(--color-text-inverse-primary);
+}
+
+.mngha-footer--brand-primary .mngha-footer-logo,
+.mngha-footer--brand-secondary .mngha-footer-logo {
+  background: transparent;
+  color: var(--color-text-inverse-primary);
+}
+
+/**
+ * --------------------------------------------------------------------------
+ * Responsive Layout
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 1024px) {
+  .mngha-footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--spacing-5xl);
+  }
+
+  .mngha-footer-navigation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: var(--spacing-4xl);
+  }
+
+  .mngha-footer-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-4xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .mngha-footer-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--spacing-3xl);
+    row-gap: var(--spacing-4xl);
+  }
+
+  .mngha-footer-meta-links {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .mngha-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mngha-footer-legal {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mngha-footer-policy-links,
+  .mngha-footer-branding {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mngha-footer-branding {
+    justify-content: space-between;
+  }
+}
