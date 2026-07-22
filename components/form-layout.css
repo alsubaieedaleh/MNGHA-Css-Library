@@ -122,10 +122,7 @@
   gap: var(--spacing-md);
 }
 
-.mngha-required-marker {
-  color: var(--color-error-700);
-  font-weight: var(--font-weight-bold);
-}
+
 
 .mngha-optional-text {
   flex-shrink: 0;
@@ -134,7 +131,6 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--text-sm-line-height);
 }
-
 .mngha-form-actions {
   min-width: 0;
   display: flex;

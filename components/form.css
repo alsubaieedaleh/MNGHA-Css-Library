@@ -17,6 +17,11 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--text-sm-line-height);
   min-width: 0;
+
+
+  > .mngha-required-marker {
+  color: var(--color-error-700) ;
+}
 }
 
 .mngha-input,

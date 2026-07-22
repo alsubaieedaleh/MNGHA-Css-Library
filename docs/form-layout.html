@@ -1,998 +1,2462 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="external">
+
+<html data-theme="external" dir="ltr" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Form Layouts - mngha Universal CSS</title>
-
-  <link rel="stylesheet" href="./../mngha-ui.css">
-  <link rel="stylesheet" href="./assets/form-control.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Form Layouts - mngha Universal CSS</title>
+<link href="./../mngha-ui.css" rel="stylesheet"/>
+<link href="./assets/form-control.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <div id="docs-government-bar">
-    <div id="docs-government-verification"></div>
-    <div id="docs-government-toolbar"></div>
-  </div>
-
-  <div id="docs-header"></div>
-
-  <main class="mngha-main">
-    <div class="mngha-container">
-
-      <!-- Introduction -->
-      <section class="mngha-section">
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h1 class="mngha-section-title">Form Layouts</h1>
-
-            <p class="mngha-card-description mngha-paragraph">
+<div id="docs-government-bar">
+<div id="docs-government-verification"></div>
+<div id="docs-government-toolbar"></div>
+</div>
+<div id="docs-header"></div>
+<main class="mngha-main">
+<div class="mngha-container">
+<!-- Introduction -->
+<section class="mngha-section">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h1 class="mngha-section-title">Form Layouts</h1>
+<p class="mngha-card-description mngha-paragraph">
               Form layout classes combine the existing MNGHA fields, inputs,
               textareas, selects, radio controls, and buttons into complete,
               structured, responsive, and accessible forms.
             </p>
-          </div>
-
-          <div class="mngha-card-actions">
-            <button
-              class="mngha-button mngha-button--primary mngha-button--md"
-              type="button"
-              data-toggle-theme
-            >
+</div>
+<div class="mngha-card-actions">
+<button class="mngha-button mngha-button--primary mngha-button--md" data-toggle-theme="" type="button">
               Switch Theme
             </button>
-
-            <button
-              class="mngha-button mngha-button--secondary mngha-button--md"
-              type="button"
-              data-toggle-direction
-            >
+<button class="mngha-button mngha-button--secondary mngha-button--md" data-toggle-direction="" type="button">
               Toggle Direction
             </button>
-
-            <a
-              class="mngha-button mngha-button--secondary mngha-button--md"
-              href="./components.html"
-            >
+<a class="mngha-button mngha-button--secondary mngha-button--md" href="./components.html">
               View Components
             </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Overview -->
-      <section class="mngha-section">
-        <h2 class="mngha-section-title">Overview</h2>
-
-        <div class="mngha-grid mngha-grid-cols-3">
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Complete structure</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+</section>
+<!-- Overview -->
+<section class="mngha-section">
+<h2 class="mngha-section-title">Overview</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Complete structure</h3>
+<p class="mngha-card-description">
                 Use a form header, body, related sections, and an action area to
                 create a predictable complete-form structure.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Responsive rows</h3>
-
-              <p class="mngha-card-description">
-                Use one column by default and place only closely related fields
-                inside the optional two- or three-column rows.
-              </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Validation support</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Mixed components</h3>
+<p class="mngha-card-description">Combine inputs, custom selects, date pickers, and textareas inside the same responsive form without changing each component.</p>
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Validation support</h3>
+<p class="mngha-card-description">
                 Combine existing inline error states with the form-level error
                 summary to help users find and correct invalid fields.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Basic form layout -->
-      <section class="mngha-section" id="basic-form-layout">
-        <h2 class="mngha-section-title">Basic Form Layout</h2>
-
-        <p class="mngha-paragraph">
-          Start with <strong>mngha-form</strong>. Add
-          <strong>mngha-form--contained</strong> when the form needs its own
-          bordered surface. Controls continue to use the existing form classes.
-        </p>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Example</h3>
-
-            <form class="mngha-form mngha-form--contained" action="#" method="post">
-  <header class="mngha-form-header">
-    <h3 class="mngha-form-title">Create department</h3>
-
-    <p class="mngha-form-description">
-      Enter the basic department information.
+</div>
+</div>
+</div>
+</section>
+<!-- Basic form layout -->
+<section class="mngha-section" id="basic-form-layout">
+<h2 class="mngha-section-title">Basic Form Layout</h2>
+<p class="mngha-paragraph">This responsive example combines regular inputs, the exact MNGHA custom select, the agreed date picker, textarea, helper text, and actions in one complete form. The layout collapses naturally without changing component markup.</p>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Example</h3><form action="#" class="mngha-form mngha-form--contained" method="post">
+<header class="mngha-form-header">
+<h3 class="mngha-form-title">Create department</h3>
+<p class="mngha-form-description">
+      Enter the department details and select its operational settings.
     </p>
-  </header>
-
-  <div class="mngha-form-body">
-    <section class="mngha-form-section" aria-labelledby="department-details-title">
-      <header class="mngha-form-section-header">
-        <h4
-          class="mngha-form-section-title"
-          id="department-details-title"
-        >
+</header>
+<div class="mngha-form-body">
+<section aria-labelledby="department-details-title" class="mngha-form-section">
+<header class="mngha-form-section-header">
+<h4 class="mngha-form-section-title" id="department-details-title">
           Department details
         </h4>
-      </header>
-
-      <div class="mngha-form-row">
-        <div class="mngha-field">
-          <label class="mngha-label" for="department-name">
+<p class="mngha-form-section-description">
+          Fields in the same row should be closely related.
+        </p>
+</header>
+<div class="mngha-form-row mngha-form-row--2">
+<div class="mngha-field">
+<label class="mngha-label" for="department-name">
             Department name
-            <span class="mngha-required-marker" aria-hidden="true">*</span>
-          </label>
-
-          <input
-            class="mngha-input"
-            id="department-name"
-            name="department-name"
-            type="text"
-            required
-          >
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer class="mngha-form-actions">
-    <button
-      class="mngha-button mngha-button--primary mngha-button--md"
-      type="submit"
-    >
+            <span aria-hidden="true" class="mngha-required-marker">*</span>
+</label>
+<input autocomplete="organization" class="mngha-input" id="department-name" name="department-name" required="" type="text"/>
+</div>
+<div class="mngha-field">
+<label class="mngha-label" for="department-code">
+            Department code
+            <span aria-hidden="true" class="mngha-required-marker">*</span>
+</label>
+<input class="mngha-input" id="department-code" name="department-code" placeholder="Example: IT-01" required="" type="text"/>
+</div>
+<div class="mngha-field"><span class="mngha-label" id="department-type-label">Department type</span><div class="mngha-custom-select" data-custom-select=""><button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="department-type-label department-type-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"><span data-custom-select-value="" id="department-type-value">Select type</span><span aria-hidden="true" class="mngha-custom-select-arrow">⌄</span></button><ul aria-labelledby="department-type-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="clinical" role="option" tabindex="0">Clinical</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="administrative" role="option" tabindex="-1">Administrative</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="technical" role="option" tabindex="-1">Technical</li></ul><input data-custom-select-input="" name="department-type" type="hidden" value=""/></div></div>
+<div data-mngha-date-picker="" data-mode="single" data-selected-date="2026-07-24" data-view-date="2026-07-01" data-year-end="2032" data-year-start="2020">
+<div class="mngha-field">
+<label class="mngha-label" for="department-opening-input">
+      Opening date
+    </label>
+<div class="mngha-date-picker-anchor">
+<input aria-controls="department-opening-calendar" aria-expanded="false" aria-haspopup="dialog" autocomplete="off" class="mngha-input mngha-date-picker-input" data-date-picker-input="" id="department-opening-input" name="opening-date" placeholder="DD/MM/YYYY" type="text" value="24/07/2026"/>
+<div aria-label="Choose opening date" class="mngha-date-picker" data-date-picker-calendar="" hidden="" id="department-opening-calendar" role="dialog">
+<div class="mngha-date-picker-header">
+<div class="mngha-date-picker-period">
+<div class="mngha-date-picker-dropdown" data-date-picker-dropdown="month">
+<button aria-controls="department-opening-month-menu" aria-expanded="false" aria-haspopup="listbox" class="mngha-date-picker-period-button" data-date-picker-month-trigger="" type="button">
+<span data-date-picker-month-label="">July</span>
+<span aria-hidden="true" class="mngha-date-picker-period-chevron"></span>
+</button>
+<div aria-label="Choose month" class="mngha-date-picker-menu" data-date-picker-month-menu="" id="department-opening-month-menu" role="listbox"></div>
+</div>
+<div class="mngha-date-picker-dropdown" data-date-picker-dropdown="year">
+<button aria-controls="department-opening-year-menu" aria-expanded="false" aria-haspopup="listbox" class="mngha-date-picker-period-button" data-date-picker-year-trigger="" type="button">
+<span data-date-picker-year-label="">2026</span>
+<span aria-hidden="true" class="mngha-date-picker-period-chevron"></span>
+</button>
+<div aria-label="Choose year" class="mngha-date-picker-menu" data-date-picker-year-menu="" id="department-opening-year-menu" role="listbox"></div>
+</div>
+</div>
+<div aria-label="Calendar navigation" class="mngha-date-picker-navigation" role="group">
+<button aria-label="Previous month" class="mngha-date-picker-navigation-button" data-date-picker-previous="" type="button">
+<svg aria-hidden="true" class="mngha-date-picker-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="m15 18-6-6 6-6"></path>
+</svg>
+</button>
+<button aria-label="Next month" class="mngha-date-picker-navigation-button" data-date-picker-next="" type="button">
+<svg aria-hidden="true" class="mngha-date-picker-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="m9 18 6-6-6-6"></path>
+</svg>
+</button>
+</div>
+</div>
+<ul aria-hidden="true" class="mngha-date-picker-weekdays">
+<li class="mngha-date-picker-weekday">Sun</li>
+<li class="mngha-date-picker-weekday">Mon</li>
+<li class="mngha-date-picker-weekday">Tue</li>
+<li class="mngha-date-picker-weekday">Wed</li>
+<li class="mngha-date-picker-weekday">Thu</li>
+<li class="mngha-date-picker-weekday">Fri</li>
+<li class="mngha-date-picker-weekday">Sat</li>
+</ul>
+<ul aria-label="July 2026" class="mngha-date-picker-days" data-date-picker-days="" role="grid"></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mngha-field mngha-form-column--full">
+<div class="mngha-form-label-row">
+<label class="mngha-label" for="department-description">
+              Description
+            </label>
+<span class="mngha-optional-text">Optional</span>
+</div>
+<textarea class="mngha-textarea" id="department-description" name="department-description" rows="4"></textarea>
+<p class="mngha-helper-text">
+            Briefly describe the department's responsibilities.
+          </p>
+</div>
+<div class="mngha-field"><span class="mngha-label" id="department-priority-label">Request priority</span><div class="mngha-custom-select" data-custom-select=""><button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="department-priority-label department-priority-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"><span data-custom-select-value="" id="department-priority-value">Normal</span><span aria-hidden="true" class="mngha-custom-select-arrow">⌄</span></button><ul aria-labelledby="department-priority-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="low" role="option" tabindex="-1">Low</li><li aria-selected="true" class="mngha-custom-select-option is-selected" data-custom-select-option="" data-value="normal" role="option" tabindex="0">Normal</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="high" role="option" tabindex="-1">High</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="urgent" role="option" tabindex="-1">Urgent</li></ul><input data-custom-select-input="" name="department-priority" type="hidden" value="normal"/></div></div></div>
+</section>
+</div>
+<footer class="mngha-form-actions">
+<button class="mngha-button mngha-button--primary mngha-button--md" type="submit">
       Create department
     </button>
-
-    <button
-      class="mngha-button mngha-button--secondary mngha-button--md"
-      type="reset"
-    >
+<button class="mngha-button mngha-button--secondary mngha-button--md" type="reset">
       Reset
     </button>
-  </footer>
-</form>
-          </div>
-        </div>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">HTML</h3>
-
-            <div class="mngha-code-block" data-code-block>
-              <div class="mngha-code-block-header">
-                <p class="mngha-code-block-title">Basic form layout</p>
-
-                <button
-                  class="mngha-code-block-copy"
-                  type="button"
-                  data-code-copy
-                >
+</footer>
+</form></div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">HTML</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Form with mixed controls</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                   Copy
                 </button>
-              </div>
-
-              <pre class="mngha-code-block-body"><code>&lt;form
-  class=&quot;mngha-form mngha-form--contained&quot;
-  action=&quot;#&quot;
-  method=&quot;post&quot;
-&gt;
-  &lt;header class=&quot;mngha-form-header&quot;&gt;
-    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Create department&lt;/h3&gt;
-
-    &lt;p class=&quot;mngha-form-description&quot;&gt;
-      Enter the basic department information.
+</div>
+<pre class="mngha-code-block-body"><code>&lt;form action="#" class="mngha-form mngha-form--contained" method="post"&gt;
+&lt;header class="mngha-form-header"&gt;
+&lt;h3 class="mngha-form-title"&gt;Create department&lt;/h3&gt;
+&lt;p class="mngha-form-description"&gt;
+      Enter the department details and select its operational settings.
     &lt;/p&gt;
-  &lt;/header&gt;
-
-  &lt;div class=&quot;mngha-form-body&quot;&gt;
-    &lt;section
-      class=&quot;mngha-form-section&quot;
-      aria-labelledby=&quot;department-details-title&quot;
-    &gt;
-      &lt;header class=&quot;mngha-form-section-header&quot;&gt;
-        &lt;h4
-          class=&quot;mngha-form-section-title&quot;
-          id=&quot;department-details-title&quot;
-        &gt;
+&lt;/header&gt;
+&lt;div class="mngha-form-body"&gt;
+&lt;section aria-labelledby="department-details-title" class="mngha-form-section"&gt;
+&lt;header class="mngha-form-section-header"&gt;
+&lt;h4 class="mngha-form-section-title" id="department-details-title"&gt;
           Department details
         &lt;/h4&gt;
-      &lt;/header&gt;
-
-      &lt;div class=&quot;mngha-form-row&quot;&gt;
-        &lt;div class=&quot;mngha-field&quot;&gt;
-          &lt;label class=&quot;mngha-label&quot; for=&quot;department-name&quot;&gt;
+&lt;p class="mngha-form-section-description"&gt;
+          Fields in the same row should be closely related.
+        &lt;/p&gt;
+&lt;/header&gt;
+&lt;div class="mngha-form-row mngha-form-row--2"&gt;
+&lt;div class="mngha-field"&gt;
+&lt;label class="mngha-label" for="department-name"&gt;
             Department name
-            &lt;span
-              class=&quot;mngha-required-marker&quot;
-              aria-hidden=&quot;true&quot;
-            &gt;*&lt;/span&gt;
-          &lt;/label&gt;
-
-          &lt;input
-            class=&quot;mngha-input&quot;
-            id=&quot;department-name&quot;
-            name=&quot;department-name&quot;
-            type=&quot;text&quot;
-            required
-          &gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-
-  &lt;footer class=&quot;mngha-form-actions&quot;&gt;
-    &lt;button
-      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
-      type=&quot;submit&quot;
-    &gt;
+            &lt;span aria-hidden="true" class="mngha-required-marker"&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;input autocomplete="organization" class="mngha-input" id="department-name" name="department-name" required="" type="text"/&gt;
+&lt;/div&gt;
+&lt;div class="mngha-field"&gt;
+&lt;label class="mngha-label" for="department-code"&gt;
+            Department code
+            &lt;span aria-hidden="true" class="mngha-required-marker"&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;input class="mngha-input" id="department-code" name="department-code" placeholder="Example: IT-01" required="" type="text"/&gt;
+&lt;/div&gt;
+&lt;div class="mngha-field"&gt;&lt;span class="mngha-label" id="department-type-label"&gt;Department type&lt;/span&gt;&lt;div class="mngha-custom-select" data-custom-select=""&gt;&lt;button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="department-type-label department-type-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"&gt;&lt;span data-custom-select-value="" id="department-type-value"&gt;Select type&lt;/span&gt;&lt;span aria-hidden="true" class="mngha-custom-select-arrow"&gt;⌄&lt;/span&gt;&lt;/button&gt;&lt;ul aria-labelledby="department-type-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="clinical" role="option" tabindex="0"&gt;Clinical&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="administrative" role="option" tabindex="-1"&gt;Administrative&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="technical" role="option" tabindex="-1"&gt;Technical&lt;/li&gt;&lt;/ul&gt;&lt;input data-custom-select-input="" name="department-type" type="hidden" value=""/&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div data-mngha-date-picker="" data-mode="single" data-selected-date="2026-07-24" data-view-date="2026-07-01" data-year-end="2032" data-year-start="2020"&gt;
+&lt;div class="mngha-field"&gt;
+&lt;label class="mngha-label" for="department-opening-input"&gt;
+      Opening date
+    &lt;/label&gt;
+&lt;div class="mngha-date-picker-anchor"&gt;
+&lt;input aria-controls="department-opening-calendar" aria-expanded="false" aria-haspopup="dialog" autocomplete="off" class="mngha-input mngha-date-picker-input" data-date-picker-input="" id="department-opening-input" name="opening-date" placeholder="DD/MM/YYYY" type="text" value="24/07/2026"/&gt;
+&lt;div aria-label="Choose opening date" class="mngha-date-picker" data-date-picker-calendar="" hidden="" id="department-opening-calendar" role="dialog"&gt;
+&lt;div class="mngha-date-picker-header"&gt;
+&lt;div class="mngha-date-picker-period"&gt;
+&lt;div class="mngha-date-picker-dropdown" data-date-picker-dropdown="month"&gt;
+&lt;button aria-controls="department-opening-month-menu" aria-expanded="false" aria-haspopup="listbox" class="mngha-date-picker-period-button" data-date-picker-month-trigger="" type="button"&gt;
+&lt;span data-date-picker-month-label=""&gt;July&lt;/span&gt;
+&lt;span aria-hidden="true" class="mngha-date-picker-period-chevron"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div aria-label="Choose month" class="mngha-date-picker-menu" data-date-picker-month-menu="" id="department-opening-month-menu" role="listbox"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mngha-date-picker-dropdown" data-date-picker-dropdown="year"&gt;
+&lt;button aria-controls="department-opening-year-menu" aria-expanded="false" aria-haspopup="listbox" class="mngha-date-picker-period-button" data-date-picker-year-trigger="" type="button"&gt;
+&lt;span data-date-picker-year-label=""&gt;2026&lt;/span&gt;
+&lt;span aria-hidden="true" class="mngha-date-picker-period-chevron"&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;div aria-label="Choose year" class="mngha-date-picker-menu" data-date-picker-year-menu="" id="department-opening-year-menu" role="listbox"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div aria-label="Calendar navigation" class="mngha-date-picker-navigation" role="group"&gt;
+&lt;button aria-label="Previous month" class="mngha-date-picker-navigation-button" data-date-picker-previous="" type="button"&gt;
+&lt;svg aria-hidden="true" class="mngha-date-picker-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"&gt;
+&lt;path d="m15 18-6-6 6-6"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;button aria-label="Next month" class="mngha-date-picker-navigation-button" data-date-picker-next="" type="button"&gt;
+&lt;svg aria-hidden="true" class="mngha-date-picker-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"&gt;
+&lt;path d="m9 18 6-6-6-6"&gt;&lt;/path&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul aria-hidden="true" class="mngha-date-picker-weekdays"&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Sun&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Mon&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Tue&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Wed&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Thu&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Fri&lt;/li&gt;
+&lt;li class="mngha-date-picker-weekday"&gt;Sat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul aria-label="July 2026" class="mngha-date-picker-days" data-date-picker-days="" role="grid"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="mngha-field mngha-form-column--full"&gt;
+&lt;div class="mngha-form-label-row"&gt;
+&lt;label class="mngha-label" for="department-description"&gt;
+              Description
+            &lt;/label&gt;
+&lt;span class="mngha-optional-text"&gt;Optional&lt;/span&gt;
+&lt;/div&gt;
+&lt;textarea class="mngha-textarea" id="department-description" name="department-description" rows="4"&gt;&lt;/textarea&gt;
+&lt;p class="mngha-helper-text"&gt;
+            Briefly describe the department's responsibilities.
+          &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="mngha-field"&gt;&lt;span class="mngha-label" id="department-priority-label"&gt;Request priority&lt;/span&gt;&lt;div class="mngha-custom-select" data-custom-select=""&gt;&lt;button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="department-priority-label department-priority-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"&gt;&lt;span data-custom-select-value="" id="department-priority-value"&gt;Normal&lt;/span&gt;&lt;span aria-hidden="true" class="mngha-custom-select-arrow"&gt;⌄&lt;/span&gt;&lt;/button&gt;&lt;ul aria-labelledby="department-priority-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="low" role="option" tabindex="-1"&gt;Low&lt;/li&gt;&lt;li aria-selected="true" class="mngha-custom-select-option is-selected" data-custom-select-option="" data-value="normal" role="option" tabindex="0"&gt;Normal&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="high" role="option" tabindex="-1"&gt;High&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="urgent" role="option" tabindex="-1"&gt;Urgent&lt;/li&gt;&lt;/ul&gt;&lt;input data-custom-select-input="" name="department-priority" type="hidden" value="normal"/&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;footer class="mngha-form-actions"&gt;
+&lt;button class="mngha-button mngha-button--primary mngha-button--md" type="submit"&gt;
       Create department
     &lt;/button&gt;
-
-    &lt;button
-      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
-      type=&quot;reset&quot;
-    &gt;
+&lt;button class="mngha-button mngha-button--secondary mngha-button--md" type="reset"&gt;
       Reset
     &lt;/button&gt;
-  &lt;/footer&gt;
+&lt;/footer&gt;
 &lt;/form&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Responsive rows -->
-      <section class="mngha-section" id="responsive-form-rows">
-        <h2 class="mngha-section-title">Responsive Form Rows</h2>
-
-        <p class="mngha-paragraph">
-          A basic <strong>mngha-form-row</strong> uses one column. Add
-          <strong>mngha-form-row--2</strong> or
-          <strong>mngha-form-row--3</strong> only when fields are closely
-          related. All variants collapse to one column on small screens.
-        </p>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Example</h3>
-
-            <div class="mngha-form">
-  <div class="mngha-form-row mngha-form-row--2">
-    <div class="mngha-field">
-      <label class="mngha-label" for="first-name">First name</label>
-      <input class="mngha-input" id="first-name" name="first-name" type="text">
-    </div>
-
-    <div class="mngha-field">
-      <label class="mngha-label" for="last-name">Last name</label>
-      <input class="mngha-input" id="last-name" name="last-name" type="text">
-    </div>
-  </div>
-
-  <div class="mngha-form-row mngha-form-row--3">
-    <div class="mngha-field">
-      <label class="mngha-label" for="city">City</label>
-      <input class="mngha-input" id="city" name="city" type="text">
-    </div>
-
-    <div class="mngha-field">
-      <label class="mngha-label" for="district">District</label>
-      <input class="mngha-input" id="district" name="district" type="text">
-    </div>
-
-    <div class="mngha-field">
-      <label class="mngha-label" for="postal-code">Postal code</label>
-      <input class="mngha-input" id="postal-code" name="postal-code" type="text">
-    </div>
-  </div>
 </div>
-          </div>
-        </div>
+</div>
+</div>
+</section>
+<!-- Responsive rows -->
 
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">HTML</h3>
-
-            <div class="mngha-code-block" data-code-block>
-              <div class="mngha-code-block-header">
-                <p class="mngha-code-block-title">Two- and three-column rows</p>
-
-                <button
-                  class="mngha-code-block-copy"
-                  type="button"
-                  data-code-copy
-                >
-                  Copy
-                </button>
-              </div>
-
-              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form&quot;&gt;
-  &lt;div class=&quot;mngha-form-row mngha-form-row--2&quot;&gt;
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;first-name&quot;&gt;
-        First name
-      &lt;/label&gt;
-      &lt;input
-        class=&quot;mngha-input&quot;
-        id=&quot;first-name&quot;
-        name=&quot;first-name&quot;
-        type=&quot;text&quot;
-      &gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;last-name&quot;&gt;
-        Last name
-      &lt;/label&gt;
-      &lt;input
-        class=&quot;mngha-input&quot;
-        id=&quot;last-name&quot;
-        name=&quot;last-name&quot;
-        type=&quot;text&quot;
-      &gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mngha-form-row mngha-form-row--3&quot;&gt;
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;city&quot;&gt;City&lt;/label&gt;
-      &lt;input class=&quot;mngha-input&quot; id=&quot;city&quot; name=&quot;city&quot; type=&quot;text&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;district&quot;&gt;District&lt;/label&gt;
-      &lt;input class=&quot;mngha-input&quot; id=&quot;district&quot; name=&quot;district&quot; type=&quot;text&quot;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;postal-code&quot;&gt;Postal code&lt;/label&gt;
-      &lt;input
-        class=&quot;mngha-input&quot;
-        id=&quot;postal-code&quot;
-        name=&quot;postal-code&quot;
-        type=&quot;text&quot;
-      &gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Required and optional fields -->
-      <section class="mngha-section" id="required-and-optional-fields">
-        <h2 class="mngha-section-title">Required and Optional Fields</h2>
-
-        <p class="mngha-paragraph">
+<!-- Required and optional fields -->
+<section class="mngha-section" id="required-and-optional-fields">
+<h2 class="mngha-section-title">Required and Optional Fields</h2>
+<p class="mngha-paragraph">
           Use <strong>mngha-required-marker</strong> for the required asterisk.
           Its color uses the design-system <strong>error-700</strong> token.
           Use <strong>mngha-optional-text</strong> for optional fields.
         </p>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Example</h3>
-
-            <div class="mngha-form">
-  <div class="mngha-form-row mngha-form-row--2">
-    <div class="mngha-field">
-      <label class="mngha-label" for="required-email">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Example</h3><div class="mngha-form">
+<div class="mngha-form-row mngha-form-row--2">
+<div class="mngha-field">
+<label class="mngha-label" for="required-email">
         Email address
-        <span class="mngha-required-marker" aria-hidden="true">*</span>
-      </label>
-
-      <input
-        class="mngha-input"
-        id="required-email"
-        name="required-email"
-        type="email"
-        required
-      >
-    </div>
-
-    <div class="mngha-field">
-      <div class="mngha-form-label-row">
-        <label class="mngha-label" for="optional-extension">
-          Extension number
-        </label>
-
-        <span class="mngha-optional-text">Optional</span>
-      </div>
-
-      <input
-        class="mngha-input"
-        id="optional-extension"
-        name="optional-extension"
-        type="text"
-      >
-    </div>
-  </div>
+        <span aria-hidden="true" class="mngha-required-marker">*</span>
+</label>
+<input class="mngha-input" id="required-email" name="required-email" required="" type="email"/>
 </div>
-          </div>
-        </div>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">HTML</h3>
-
-            <div class="mngha-code-block" data-code-block>
-              <div class="mngha-code-block-header">
-                <p class="mngha-code-block-title">Required and optional labels</p>
-
-                <button
-                  class="mngha-code-block-copy"
-                  type="button"
-                  data-code-copy
-                >
+<div class="mngha-field"><span class="mngha-label" id="request-category-label">Request category <span aria-hidden="true" class="mngha-required-marker">*</span></span><div class="mngha-custom-select" data-custom-select=""><button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="request-category-label request-category-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"><span data-custom-select-value="" id="request-category-value">Select category</span><span aria-hidden="true" class="mngha-custom-select-arrow">⌄</span></button><ul aria-labelledby="request-category-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="technical" role="option" tabindex="0">Technical support</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="human-resources" role="option" tabindex="-1">Human resources</li><li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="facilities" role="option" tabindex="-1">Facilities</li></ul><input data-custom-select-input="" name="required-category" required="" type="hidden" value=""/></div></div>
+<div class="mngha-field mngha-form-column--full">
+<div class="mngha-form-label-row">
+<label class="mngha-label" for="optional-notes">
+          Additional notes
+        </label>
+<span class="mngha-optional-text">Optional</span>
+</div>
+<textarea class="mngha-textarea" id="optional-notes" name="optional-notes" rows="4"></textarea>
+</div>
+</div>
+</div></div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">HTML</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Required and optional mixed controls</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                   Copy
                 </button>
-              </div>
-
-              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form&quot;&gt;
-  &lt;div class=&quot;mngha-form-row mngha-form-row--2&quot;&gt;
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;label class=&quot;mngha-label&quot; for=&quot;required-email&quot;&gt;
+</div>
+<pre class="mngha-code-block-body"><code>&lt;div class="mngha-form"&gt;
+&lt;div class="mngha-form-row mngha-form-row--2"&gt;
+&lt;div class="mngha-field"&gt;
+&lt;label class="mngha-label" for="required-email"&gt;
         Email address
-        &lt;span
-          class=&quot;mngha-required-marker&quot;
-          aria-hidden=&quot;true&quot;
-        &gt;*&lt;/span&gt;
-      &lt;/label&gt;
-
-      &lt;input
-        class=&quot;mngha-input&quot;
-        id=&quot;required-email&quot;
-        name=&quot;required-email&quot;
-        type=&quot;email&quot;
-        required
-      &gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;mngha-field&quot;&gt;
-      &lt;div class=&quot;mngha-form-label-row&quot;&gt;
-        &lt;label class=&quot;mngha-label&quot; for=&quot;optional-extension&quot;&gt;
-          Extension number
+        &lt;span aria-hidden="true" class="mngha-required-marker"&gt;*&lt;/span&gt;
+&lt;/label&gt;
+&lt;input class="mngha-input" id="required-email" name="required-email" required="" type="email"/&gt;
+&lt;/div&gt;
+&lt;div class="mngha-field"&gt;&lt;span class="mngha-label" id="request-category-label"&gt;Request category &lt;span aria-hidden="true" class="mngha-required-marker"&gt;*&lt;/span&gt;&lt;/span&gt;&lt;div class="mngha-custom-select" data-custom-select=""&gt;&lt;button aria-expanded="false" aria-haspopup="listbox" aria-labelledby="request-category-label request-category-value" class="mngha-custom-select-trigger" data-custom-select-trigger="" type="button"&gt;&lt;span data-custom-select-value="" id="request-category-value"&gt;Select category&lt;/span&gt;&lt;span aria-hidden="true" class="mngha-custom-select-arrow"&gt;⌄&lt;/span&gt;&lt;/button&gt;&lt;ul aria-labelledby="request-category-label" class="mngha-custom-select-menu" data-custom-select-menu="" role="listbox"&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="technical" role="option" tabindex="0"&gt;Technical support&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="human-resources" role="option" tabindex="-1"&gt;Human resources&lt;/li&gt;&lt;li aria-selected="false" class="mngha-custom-select-option" data-custom-select-option="" data-value="facilities" role="option" tabindex="-1"&gt;Facilities&lt;/li&gt;&lt;/ul&gt;&lt;input data-custom-select-input="" name="required-category" required="" type="hidden" value=""/&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="mngha-field mngha-form-column--full"&gt;
+&lt;div class="mngha-form-label-row"&gt;
+&lt;label class="mngha-label" for="optional-notes"&gt;
+          Additional notes
         &lt;/label&gt;
-
-        &lt;span class=&quot;mngha-optional-text&quot;&gt;Optional&lt;/span&gt;
-      &lt;/div&gt;
-
-      &lt;input
-        class=&quot;mngha-input&quot;
-        id=&quot;optional-extension&quot;
-        name=&quot;optional-extension&quot;
-        type=&quot;text&quot;
-      &gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;span class="mngha-optional-text"&gt;Optional&lt;/span&gt;
+&lt;/div&gt;
+&lt;textarea class="mngha-textarea" id="optional-notes" name="optional-notes" rows="4"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
+</div>
+</div>
+</div>
+</section>
+<!-- Validation summary -->
 
-      <!-- Validation summary -->
-      <section class="mngha-section" id="validation-summary">
-        <h2 class="mngha-section-title">Validation Summary</h2>
-
-        <p class="mngha-paragraph">
-          When submission fails, place the error summary before the form body.
-          Link every summary message to its invalid field and keep the same
-          message beside that field.
-        </p>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Example</h3>
-
-            <form class="mngha-form mngha-form--contained" action="#" method="post" novalidate>
-  <header class="mngha-form-header">
-    <h3 class="mngha-form-title">Contact support</h3>
-  </header>
-
-  <div
-    class="mngha-form-error-summary"
-    role="alert"
-    tabindex="-1"
-  >
-    <h4 class="mngha-form-error-summary-title">There is a problem</h4>
-
-    <ul class="mngha-form-error-list">
-      <li><a href="#support-email">Enter a valid email address.</a></li>
-    </ul>
-  </div>
-
-  <div class="mngha-form-body">
-    <section class="mngha-form-section" aria-labelledby="support-details-title">
-      <header class="mngha-form-section-header">
-        <h4 class="mngha-form-section-title" id="support-details-title">
-          Your details
-        </h4>
-      </header>
-
-      <div class="mngha-form-row">
-        <div class="mngha-field">
-          <label class="mngha-label" for="support-email">
-            Email address
-            <span class="mngha-required-marker" aria-hidden="true">*</span>
-          </label>
-
-          <input
-            class="mngha-input mngha-input--error"
-            id="support-email"
-            name="support-email"
-            type="email"
-            aria-invalid="true"
-            aria-describedby="support-email-error"
-            required
-          >
-
-          <p class="mngha-error-text" id="support-email-error">
-            Enter a valid email address.
-          </p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer class="mngha-form-actions">
-    <button
-      class="mngha-button mngha-button--primary mngha-button--md"
-      type="submit"
-    >
-      Submit again
-    </button>
-  </footer>
-</form>
-          </div>
-        </div>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">HTML</h3>
-
-            <div class="mngha-code-block" data-code-block>
-              <div class="mngha-code-block-header">
-                <p class="mngha-code-block-title">Form with validation summary</p>
-
-                <button
-                  class="mngha-code-block-copy"
-                  type="button"
-                  data-code-copy
-                >
-                  Copy
-                </button>
-              </div>
-
-              <pre class="mngha-code-block-body"><code>&lt;form
-  class=&quot;mngha-form mngha-form--contained&quot;
-  action=&quot;#&quot;
-  method=&quot;post&quot;
-  novalidate
-&gt;
-  &lt;header class=&quot;mngha-form-header&quot;&gt;
-    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Contact support&lt;/h3&gt;
-  &lt;/header&gt;
-
-  &lt;div
-    class=&quot;mngha-form-error-summary&quot;
-    role=&quot;alert&quot;
-    tabindex=&quot;-1&quot;
-  &gt;
-    &lt;h4 class=&quot;mngha-form-error-summary-title&quot;&gt;
-      There is a problem
-    &lt;/h4&gt;
-
-    &lt;ul class=&quot;mngha-form-error-list&quot;&gt;
-      &lt;li&gt;
-        &lt;a href=&quot;#support-email&quot;&gt;
-          Enter a valid email address.
-        &lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mngha-form-body&quot;&gt;
-    &lt;section
-      class=&quot;mngha-form-section&quot;
-      aria-labelledby=&quot;support-details-title&quot;
-    &gt;
-      &lt;header class=&quot;mngha-form-section-header&quot;&gt;
-        &lt;h4
-          class=&quot;mngha-form-section-title&quot;
-          id=&quot;support-details-title&quot;
-        &gt;
-          Your details
-        &lt;/h4&gt;
-      &lt;/header&gt;
-
-      &lt;div class=&quot;mngha-form-row&quot;&gt;
-        &lt;div class=&quot;mngha-field&quot;&gt;
-          &lt;label class=&quot;mngha-label&quot; for=&quot;support-email&quot;&gt;
-            Email address
-            &lt;span
-              class=&quot;mngha-required-marker&quot;
-              aria-hidden=&quot;true&quot;
-            &gt;*&lt;/span&gt;
-          &lt;/label&gt;
-
-          &lt;input
-            class=&quot;mngha-input mngha-input--error&quot;
-            id=&quot;support-email&quot;
-            name=&quot;support-email&quot;
-            type=&quot;email&quot;
-            aria-invalid=&quot;true&quot;
-            aria-describedby=&quot;support-email-error&quot;
-            required
-          &gt;
-
-          &lt;p class=&quot;mngha-error-text&quot; id=&quot;support-email-error&quot;&gt;
-            Enter a valid email address.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-
-  &lt;footer class=&quot;mngha-form-actions&quot;&gt;
-    &lt;button
-      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
-      type=&quot;submit&quot;
-    &gt;
-      Submit again
-    &lt;/button&gt;
-  &lt;/footer&gt;
-&lt;/form&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Compact form -->
-      <section class="mngha-section" id="compact-form">
-        <h2 class="mngha-section-title">Compact Form</h2>
-
-        <p class="mngha-paragraph">
+<!-- Compact form -->
+<section class="mngha-section" id="compact-form">
+<h2 class="mngha-section-title">Compact Form</h2>
+<p class="mngha-paragraph">
           Add <strong>mngha-form--compact</strong> for short forms inside dialogs
           or side panels. Do not use the compact variant to force long forms
           into small containers.
         </p>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">Example</h3>
-
-            <form
-              class="mngha-form mngha-form--contained mngha-form--compact"
-              action="#"
-              method="post"
-            >
-  <header class="mngha-form-header">
-    <h3 class="mngha-form-title">Rename item</h3>
-  </header>
-
-  <div class="mngha-form-body">
-    <div class="mngha-form-row">
-      <div class="mngha-field">
-        <label class="mngha-label" for="item-name">Name</label>
-        <input class="mngha-input" id="item-name" name="item-name" type="text">
-      </div>
-    </div>
-  </div>
-
-  <footer class="mngha-form-actions mngha-form-actions--end">
-    <button
-      class="mngha-button mngha-button--primary mngha-button--md"
-      type="submit"
-    >
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Example</h3><form action="#" class="mngha-form mngha-form--contained mngha-form--compact" method="post">
+<header class="mngha-form-header">
+<h3 class="mngha-form-title">Update notification preference</h3>
+<p class="mngha-form-description">
+      Choose one delivery method for system notifications.
+    </p>
+</header>
+<div class="mngha-form-body">
+<fieldset class="mngha-field">
+<legend class="mngha-label">Notification method</legend>
+<div class="mngha-radio-group">
+<label class="mngha-radio-option">
+<input checked="" class="mngha-radio-input" name="notification-method" type="radio" value="email"/>
+<span class="mngha-radio-content">
+<span class="mngha-radio-label">Email</span>
+<span class="mngha-radio-description">
+              Send notifications to the registered email address.
+            </span>
+</span>
+</label>
+<label class="mngha-radio-option">
+<input class="mngha-radio-input" name="notification-method" type="radio" value="sms"/>
+<span class="mngha-radio-content">
+<span class="mngha-radio-label">SMS</span>
+<span class="mngha-radio-description">
+              Send concise notifications to the registered mobile number.
+            </span>
+</span>
+</label>
+</div>
+</fieldset>
+</div>
+<footer class="mngha-form-actions mngha-form-actions--end">
+<button class="mngha-button mngha-button--primary mngha-button--md" type="submit">
       Save
     </button>
-
-    <button
-      class="mngha-button mngha-button--secondary mngha-button--md"
-      type="button"
-    >
+<button class="mngha-button mngha-button--secondary mngha-button--md" type="button">
       Cancel
     </button>
-  </footer>
-</form>
-          </div>
-        </div>
-
-        <div class="mngha-card">
-          <div class="mngha-card-content">
-            <h3 class="mngha-card-title">HTML</h3>
-
-            <div class="mngha-code-block" data-code-block>
-              <div class="mngha-code-block-header">
-                <p class="mngha-code-block-title">Compact form</p>
-
-                <button
-                  class="mngha-code-block-copy"
-                  type="button"
-                  data-code-copy
-                >
+</footer>
+</form></div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">HTML</h3>
+<div class="mngha-code-block" data-code-block="">
+<div class="mngha-code-block-header">
+<p class="mngha-code-block-title">Compact form with radio controls</p>
+<button class="mngha-code-block-copy" data-code-copy="" type="button">
                   Copy
                 </button>
-              </div>
-
-              <pre class="mngha-code-block-body"><code>&lt;form
-  class=&quot;mngha-form mngha-form--contained mngha-form--compact&quot;
-  action=&quot;#&quot;
-  method=&quot;post&quot;
-&gt;
-  &lt;header class=&quot;mngha-form-header&quot;&gt;
-    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Rename item&lt;/h3&gt;
-  &lt;/header&gt;
-
-  &lt;div class=&quot;mngha-form-body&quot;&gt;
-    &lt;div class=&quot;mngha-form-row&quot;&gt;
-      &lt;div class=&quot;mngha-field&quot;&gt;
-        &lt;label class=&quot;mngha-label&quot; for=&quot;item-name&quot;&gt;Name&lt;/label&gt;
-        &lt;input
-          class=&quot;mngha-input&quot;
-          id=&quot;item-name&quot;
-          name=&quot;item-name&quot;
-          type=&quot;text&quot;
-        &gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;footer class=&quot;mngha-form-actions mngha-form-actions--end&quot;&gt;
-    &lt;button
-      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
-      type=&quot;submit&quot;
-    &gt;
+</div>
+<pre class="mngha-code-block-body"><code>&lt;form action="#" class="mngha-form mngha-form--contained mngha-form--compact" method="post"&gt;
+&lt;header class="mngha-form-header"&gt;
+&lt;h3 class="mngha-form-title"&gt;Update notification preference&lt;/h3&gt;
+&lt;p class="mngha-form-description"&gt;
+      Choose one delivery method for system notifications.
+    &lt;/p&gt;
+&lt;/header&gt;
+&lt;div class="mngha-form-body"&gt;
+&lt;fieldset class="mngha-field"&gt;
+&lt;legend class="mngha-label"&gt;Notification method&lt;/legend&gt;
+&lt;div class="mngha-radio-group"&gt;
+&lt;label class="mngha-radio-option"&gt;
+&lt;input checked="" class="mngha-radio-input" name="notification-method" type="radio" value="email"/&gt;
+&lt;span class="mngha-radio-content"&gt;
+&lt;span class="mngha-radio-label"&gt;Email&lt;/span&gt;
+&lt;span class="mngha-radio-description"&gt;
+              Send notifications to the registered email address.
+            &lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class="mngha-radio-option"&gt;
+&lt;input class="mngha-radio-input" name="notification-method" type="radio" value="sms"/&gt;
+&lt;span class="mngha-radio-content"&gt;
+&lt;span class="mngha-radio-label"&gt;SMS&lt;/span&gt;
+&lt;span class="mngha-radio-description"&gt;
+              Send concise notifications to the registered mobile number.
+            &lt;/span&gt;
+&lt;/span&gt;
+&lt;/label&gt;
+&lt;/div&gt;
+&lt;/fieldset&gt;
+&lt;/div&gt;
+&lt;footer class="mngha-form-actions mngha-form-actions--end"&gt;
+&lt;button class="mngha-button mngha-button--primary mngha-button--md" type="submit"&gt;
       Save
     &lt;/button&gt;
-
-    &lt;button
-      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
-      type=&quot;button&quot;
-    &gt;
+&lt;button class="mngha-button mngha-button--secondary mngha-button--md" type="button"&gt;
       Cancel
     &lt;/button&gt;
-  &lt;/footer&gt;
+&lt;/footer&gt;
 &lt;/form&gt;</code></pre>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Class reference -->
-      <section class="mngha-section" id="class-reference">
-        <h2 class="mngha-section-title">Class Reference</h2>
-
-        <div class="mngha-table-wrapper">
-          <table
-            class="mngha-table mngha-table--header-dark"
-            aria-label="Form layout class reference"
-          >
-            <thead>
-              <tr>
-                <th scope="col">Class</th>
-                <th scope="col">Element</th>
-                <th scope="col">Purpose</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td><strong>.mngha-form</strong></td>
-                <td>form or container</td>
-                <td>Creates the base complete-form layout.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form--contained</strong></td>
-                <td>Modifier</td>
-                <td>Adds padding, border, background, and shadow.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form--compact</strong></td>
-                <td>Modifier</td>
-                <td>Reduces spacing for dialogs and side panels.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-header</strong></td>
-                <td>header</td>
-                <td>Contains the form title and description.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-body</strong></td>
-                <td>Container</td>
-                <td>Contains form sections and field rows.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-section</strong></td>
-                <td>section</td>
-                <td>Groups related fields under one heading.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-row</strong></td>
-                <td>Container</td>
-                <td>Creates a single-column field row.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-row--2</strong></td>
-                <td>Modifier</td>
-                <td>Creates a responsive two-column field row.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-row--3</strong></td>
-                <td>Modifier</td>
-                <td>Creates a responsive three-column field row.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-column--full</strong></td>
-                <td>Field modifier</td>
-                <td>Makes a field span every column in its row.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-actions</strong></td>
-                <td>footer or container</td>
-                <td>Places submit and secondary actions after the fields.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-required-marker</strong></td>
-                <td>span</td>
-                <td>Displays the required asterisk using error-700.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-optional-text</strong></td>
-                <td>span</td>
-                <td>Displays an optional-field label.</td>
-              </tr>
-
-              <tr>
-                <td><strong>.mngha-form-error-summary</strong></td>
-                <td>Container</td>
-                <td>Displays form-level validation errors.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Accessibility -->
-      <section class="mngha-section" id="accessibility">
-        <h2 class="mngha-section-title">Accessibility</h2>
-
-        <div class="mngha-grid mngha-grid-cols-3">
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Use visible labels</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+</div>
+</section>
+<!-- Class reference -->
+<section class="mngha-section" id="class-reference">
+<h2 class="mngha-section-title">Class Reference</h2>
+<div class="mngha-table-wrapper">
+<table aria-label="Form layout class reference" class="mngha-table mngha-table--header-dark">
+<thead>
+<tr>
+<th scope="col">Class</th>
+<th scope="col">Element</th>
+<th scope="col">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>.mngha-form</strong></td>
+<td>form or container</td>
+<td>Creates the base complete-form layout.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form--contained</strong></td>
+<td>Modifier</td>
+<td>Adds padding, border, background, and shadow.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form--compact</strong></td>
+<td>Modifier</td>
+<td>Reduces spacing for dialogs and side panels.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-header</strong></td>
+<td>header</td>
+<td>Contains the form title and description.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-body</strong></td>
+<td>Container</td>
+<td>Contains form sections and field rows.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-section</strong></td>
+<td>section</td>
+<td>Groups related fields under one heading.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-row</strong></td>
+<td>Container</td>
+<td>Creates a single-column field row.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-row--2</strong></td>
+<td>Modifier</td>
+<td>Creates a responsive two-column field row.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-row--3</strong></td>
+<td>Modifier</td>
+<td>Creates a responsive three-column field row.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-column--full</strong></td>
+<td>Field modifier</td>
+<td>Makes a field span every column in its row.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-actions</strong></td>
+<td>footer or container</td>
+<td>Places submit and secondary actions after the fields.</td>
+</tr>
+<tr>
+<td><strong>.mngha-required-marker</strong></td>
+<td>span</td>
+<td>Displays the required asterisk using error-700.</td>
+</tr>
+<tr>
+<td><strong>.mngha-optional-text</strong></td>
+<td>span</td>
+<td>Displays an optional-field label.</td>
+</tr>
+<tr>
+<td><strong>.mngha-form-error-summary</strong></td>
+<td>Container</td>
+<td>Displays form-level validation errors.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Accessibility -->
+<section class="mngha-section" id="accessibility">
+<h2 class="mngha-section-title">Accessibility</h2>
+<div class="mngha-grid mngha-grid-cols-3">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Use visible labels</h3>
+<p class="mngha-card-description">
                 Every interactive control must have a visible label connected
                 using matching for and id values.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Keep native required</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Keep native required</h3>
+<p class="mngha-card-description">
                 The visual asterisk is hidden from assistive technology. Keep
                 the native required attribute on the form control.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Use logical sections</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Use logical sections</h3>
+<p class="mngha-card-description">
                 Group only related fields and connect each section heading with
                 aria-labelledby when the section needs an accessible name.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Connect error messages</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Connect error messages</h3>
+<p class="mngha-card-description">
                 Set aria-invalid and connect inline error text using
                 aria-describedby after validation fails.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Focus the summary</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Focus the summary</h3>
+<p class="mngha-card-description">
                 Move keyboard focus to the error summary after an invalid form
                 submission so the problem is announced immediately.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Preserve source order</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Preserve source order</h3>
+<p class="mngha-card-description">
                 Keep the visual and DOM order logical when responsive rows
                 collapse from multiple columns to one column.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Usage guidance -->
-      <section class="mngha-section">
-        <h2 class="mngha-section-title">Usage Guidance</h2>
-
-        <div class="mngha-grid mngha-grid-cols-2">
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Do</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+</div>
+</section>
+<!-- Usage guidance -->
+<section class="mngha-section">
+<h2 class="mngha-section-title">Usage Guidance</h2>
+<div class="mngha-grid mngha-grid-cols-2">
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Do</h3>
+<p class="mngha-card-description">
                 Use one column by default, group related fields, keep actions at
                 the end, use concise headings, and provide clear validation.
               </p>
-            </div>
-          </div>
-
-          <div class="mngha-card">
-            <div class="mngha-card-content">
-              <h3 class="mngha-card-title">Avoid</h3>
-
-              <p class="mngha-card-description">
+</div>
+</div>
+<div class="mngha-card">
+<div class="mngha-card-content">
+<h3 class="mngha-card-title">Avoid</h3>
+<p class="mngha-card-description">
                 Do not place unrelated fields in one row, use too many columns,
                 hide required information, or place submit actions above fields.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<script>
+    (() => {
+      "use strict";
 
-    </div>
-  </main>
+      function createLocalDate(year, month, day) {
+        return new Date(
+          year,
+          month,
+          day,
+          12,
+          0,
+          0,
+          0
+        );
+      }
 
-  <script src="./assets/docs.js"></script>
-  <script src="./assets/code-block-copy.js"></script>
-  <script src="./assets/government-sections.js"></script>
+      function normalizeDate(date) {
+        return createLocalDate(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate()
+        );
+      }
+
+      function parseIsoDate(value) {
+        if (!value) {
+          return null;
+        }
+
+        const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(
+          value.trim()
+        );
+
+        if (!match) {
+          return null;
+        }
+
+        const year = Number(match[1]);
+        const month = Number(match[2]) - 1;
+        const day = Number(match[3]);
+
+        const date = createLocalDate(
+          year,
+          month,
+          day
+        );
+
+        if (
+          date.getFullYear() !== year ||
+          date.getMonth() !== month ||
+          date.getDate() !== day
+        ) {
+          return null;
+        }
+
+        return date;
+      }
+
+      function toIsoDate(date) {
+        const year = date.getFullYear();
+
+        const month = String(
+          date.getMonth() + 1
+        ).padStart(2, "0");
+
+        const day = String(
+          date.getDate()
+        ).padStart(2, "0");
+
+        return `${year}-${month}-${day}`;
+      }
+
+      function parseDisplayDate(value) {
+        if (!value) {
+          return null;
+        }
+
+        const match = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(
+          value.trim()
+        );
+
+        if (!match) {
+          return null;
+        }
+
+        const day = Number(match[1]);
+        const month = Number(match[2]) - 1;
+        const year = Number(match[3]);
+
+        const date = createLocalDate(
+          year,
+          month,
+          day
+        );
+
+        if (
+          date.getFullYear() !== year ||
+          date.getMonth() !== month ||
+          date.getDate() !== day
+        ) {
+          return null;
+        }
+
+        return date;
+      }
+
+      function formatDisplayDate(date) {
+        const day = String(
+          date.getDate()
+        ).padStart(2, "0");
+
+        const month = String(
+          date.getMonth() + 1
+        ).padStart(2, "0");
+
+        const year = date.getFullYear();
+
+        return `${day}/${month}/${year}`;
+      }
+
+      function addDays(date, amount) {
+        return createLocalDate(
+          date.getFullYear(),
+          date.getMonth(),
+          date.getDate() + amount
+        );
+      }
+
+      function addMonths(date, amount) {
+        const requiredDay = date.getDate();
+
+        const target = createLocalDate(
+          date.getFullYear(),
+          date.getMonth() + amount,
+          1
+        );
+
+        const lastDay = new Date(
+          target.getFullYear(),
+          target.getMonth() + 1,
+          0
+        ).getDate();
+
+        target.setDate(
+          Math.min(requiredDay, lastDay)
+        );
+
+        return normalizeDate(target);
+      }
+
+      function sameDate(first, second) {
+        return Boolean(
+          first &&
+          second &&
+          first.getFullYear() === second.getFullYear() &&
+          first.getMonth() === second.getMonth() &&
+          first.getDate() === second.getDate()
+        );
+      }
+
+      function isBefore(first, second) {
+        return (
+          normalizeDate(first).getTime() <
+          normalizeDate(second).getTime()
+        );
+      }
+
+      function isAfter(first, second) {
+        return (
+          normalizeDate(first).getTime() >
+          normalizeDate(second).getTime()
+        );
+      }
+
+
+      class MnghaDatePicker {
+        constructor(root) {
+          this.root = root;
+
+          this.mode =
+            root.dataset.mode === "range"
+              ? "range"
+              : "single";
+
+          this.input = root.querySelector(
+            "[data-date-picker-input]"
+          );
+
+          this.calendar = root.querySelector(
+            "[data-date-picker-calendar]"
+          );
+
+          this.daysGrid = root.querySelector(
+            "[data-date-picker-days]"
+          );
+
+          this.monthLabel = root.querySelector(
+            "[data-date-picker-month-label]"
+          );
+
+          this.yearLabel = root.querySelector(
+            "[data-date-picker-year-label]"
+          );
+
+          this.monthTrigger = root.querySelector(
+            "[data-date-picker-month-trigger]"
+          );
+
+          this.yearTrigger = root.querySelector(
+            "[data-date-picker-year-trigger]"
+          );
+
+          this.monthMenu = root.querySelector(
+            "[data-date-picker-month-menu]"
+          );
+
+          this.yearMenu = root.querySelector(
+            "[data-date-picker-year-menu]"
+          );
+
+          this.previousButton = root.querySelector(
+            "[data-date-picker-previous]"
+          );
+
+          this.nextButton = root.querySelector(
+            "[data-date-picker-next]"
+          );
+
+          this.todayButton = root.querySelector(
+            "[data-date-picker-today]"
+          );
+
+          this.clearButton = root.querySelector(
+            "[data-date-picker-clear]"
+          );
+
+          this.monthNames = Array.from(
+            { length: 12 },
+            (_, month) => {
+              return new Intl.DateTimeFormat(
+                "en",
+                { month: "long" }
+              ).format(
+                createLocalDate(2026, month, 1)
+              );
+            }
+          );
+
+          this.longDateFormatter =
+            new Intl.DateTimeFormat(
+              "en-GB",
+              {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+              }
+            );
+
+          this.today = normalizeDate(
+            new Date()
+          );
+
+          this.disabledDates = new Set(
+            (root.dataset.disabledDates || "")
+              .split(",")
+              .map(value => value.trim())
+              .filter(Boolean)
+          );
+
+          this.minimumDate = parseIsoDate(
+            root.dataset.minDate
+          );
+
+          this.maximumDate = parseIsoDate(
+            root.dataset.maxDate
+          );
+
+          this.yearStart =
+            Number(root.dataset.yearStart) || 2000;
+
+          this.yearEnd =
+            Number(root.dataset.yearEnd) || 2100;
+
+          this.selectedDate = parseIsoDate(
+            root.dataset.selectedDate
+          );
+
+          this.rangeStart = parseIsoDate(
+            root.dataset.rangeStart
+          );
+
+          this.rangeEnd = parseIsoDate(
+            root.dataset.rangeEnd
+          );
+
+          const initialView =
+            parseIsoDate(root.dataset.viewDate) ||
+            this.selectedDate ||
+            this.rangeStart ||
+            this.today;
+
+          this.viewDate = createLocalDate(
+            initialView.getFullYear(),
+            initialView.getMonth(),
+            1
+          );
+
+          this.focusedDate =
+            this.selectedDate ||
+            this.rangeEnd ||
+            this.rangeStart ||
+            this.today;
+
+          this.bindEvents();
+          this.render();
+          this.syncInput();
+        }
+
+
+        bindEvents() {
+          this.input?.addEventListener(
+            "click",
+            () => {
+              this.toggleCalendar();
+            }
+          );
+
+          this.input?.addEventListener(
+            "change",
+            () => {
+              this.applyTypedValue();
+            }
+          );
+
+          this.input?.addEventListener(
+            "keydown",
+            event => {
+              if (event.key === "ArrowDown") {
+                event.preventDefault();
+                this.openCalendar(true);
+                return;
+              }
+
+              if (event.key === "Enter") {
+                event.preventDefault();
+                this.applyTypedValue();
+                return;
+              }
+
+              if (event.key === "Escape") {
+                this.closeCalendar();
+              }
+            }
+          );
+
+          this.previousButton?.addEventListener(
+            "click",
+            () => {
+              this.changeMonth(-1);
+            }
+          );
+
+          this.nextButton?.addEventListener(
+            "click",
+            () => {
+              this.changeMonth(1);
+            }
+          );
+
+          this.monthTrigger?.addEventListener(
+            "click",
+            event => {
+              event.stopPropagation();
+              this.toggleDropdown("month");
+            }
+          );
+
+          this.yearTrigger?.addEventListener(
+            "click",
+            event => {
+              event.stopPropagation();
+              this.toggleDropdown("year");
+            }
+          );
+
+          this.daysGrid?.addEventListener(
+            "click",
+            event => {
+              const dayButton = event.target.closest(
+                ".mngha-date-picker-day"
+              );
+
+              if (
+                !dayButton ||
+                dayButton.getAttribute(
+                  "aria-disabled"
+                ) === "true"
+              ) {
+                return;
+              }
+
+              const date = parseIsoDate(
+                dayButton.dataset.date
+              );
+
+              if (date) {
+                this.selectDate(date);
+              }
+            }
+          );
+
+          this.daysGrid?.addEventListener(
+            "keydown",
+            event => {
+              this.handleDayKeydown(event);
+            }
+          );
+
+          this.todayButton?.addEventListener(
+            "click",
+            () => {
+              if (
+                this.isDateDisabled(this.today)
+              ) {
+                return;
+              }
+
+              this.viewDate = createLocalDate(
+                this.today.getFullYear(),
+                this.today.getMonth(),
+                1
+              );
+
+              this.focusedDate = this.today;
+
+              if (this.mode === "range") {
+                this.rangeStart = this.today;
+                this.rangeEnd = null;
+              } else {
+                this.selectedDate = this.today;
+              }
+
+              this.clearValidation();
+              this.syncInput();
+              this.render();
+              this.openCalendar(true);
+              this.emitChange();
+            }
+          );
+
+          this.clearButton?.addEventListener(
+            "click",
+            () => {
+              this.clearSelection();
+            }
+          );
+
+          document.addEventListener(
+            "click",
+            event => {
+              if (
+                !this.root.contains(event.target)
+              ) {
+                this.closeDropdowns();
+                this.closeCalendar();
+              }
+            }
+          );
+        }
+
+
+        isCalendarOpen() {
+          return Boolean(
+            this.calendar &&
+            !this.calendar.hidden
+          );
+        }
+
+
+        toggleCalendar() {
+          if (this.isCalendarOpen()) {
+            this.closeCalendar();
+          } else {
+            this.openCalendar(false);
+          }
+        }
+
+
+        openCalendar(focusDay = false) {
+          if (!this.calendar) {
+            return;
+          }
+
+          this.calendar.hidden = false;
+
+          this.input?.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
+          this.render();
+
+          if (focusDay) {
+            requestAnimationFrame(() => {
+              this.focusCurrentDayButton();
+            });
+          }
+        }
+
+
+        closeCalendar() {
+          if (!this.calendar) {
+            return;
+          }
+
+          this.calendar.hidden = true;
+
+          this.input?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          this.closeDropdowns();
+        }
+
+
+        toggleDropdown(type) {
+          const dropdown = this.root.querySelector(
+            `[data-date-picker-dropdown="${type}"]`
+          );
+
+          if (!dropdown) {
+            return;
+          }
+
+          const wasOpen =
+            dropdown.classList.contains("is-open");
+
+          this.closeDropdowns();
+
+          if (!wasOpen) {
+            dropdown.classList.add("is-open");
+
+            const trigger =
+              type === "month"
+                ? this.monthTrigger
+                : this.yearTrigger;
+
+            trigger?.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+
+            requestAnimationFrame(() => {
+              const selected =
+                dropdown.querySelector(
+                  ".mngha-date-picker-menu-item.is-selected"
+                );
+
+              selected?.scrollIntoView({
+                block: "nearest"
+              });
+            });
+          }
+        }
+
+
+        closeDropdowns() {
+          this.root
+            .querySelectorAll(
+              "[data-date-picker-dropdown]"
+            )
+            .forEach(dropdown => {
+              dropdown.classList.remove(
+                "is-open"
+              );
+
+              dropdown
+                .querySelector(
+                  ".mngha-date-picker-period-button"
+                )
+                ?.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+            });
+        }
+
+
+        changeMonth(amount) {
+          this.viewDate = addMonths(
+            this.viewDate,
+            amount
+          );
+
+          this.focusedDate = createLocalDate(
+            this.viewDate.getFullYear(),
+            this.viewDate.getMonth(),
+            1
+          );
+
+          this.closeDropdowns();
+          this.render();
+        }
+
+
+        render() {
+          this.renderPeriod();
+          this.renderMonthMenu();
+          this.renderYearMenu();
+          this.renderDays();
+        }
+
+
+        renderPeriod() {
+          if (this.monthLabel) {
+            this.monthLabel.textContent =
+              this.monthNames[
+                this.viewDate.getMonth()
+              ];
+          }
+
+          if (this.yearLabel) {
+            this.yearLabel.textContent =
+              String(
+                this.viewDate.getFullYear()
+              );
+          }
+
+          this.daysGrid?.setAttribute(
+            "aria-label",
+            `${
+              this.monthNames[
+                this.viewDate.getMonth()
+              ]
+            } ${this.viewDate.getFullYear()}`
+          );
+        }
+
+
+        renderMonthMenu() {
+          if (!this.monthMenu) {
+            return;
+          }
+
+          this.monthMenu.replaceChildren();
+
+          this.monthNames.forEach(
+            (monthName, monthIndex) => {
+              const item =
+                document.createElement("button");
+
+              const selected =
+                monthIndex ===
+                this.viewDate.getMonth();
+
+              item.type = "button";
+
+              item.className =
+                "mngha-date-picker-menu-item";
+
+              item.textContent = monthName;
+
+              item.setAttribute(
+                "role",
+                "option"
+              );
+
+              item.setAttribute(
+                "aria-selected",
+                String(selected)
+              );
+
+              if (selected) {
+                item.classList.add(
+                  "is-selected"
+                );
+              }
+
+              item.addEventListener(
+                "click",
+                event => {
+                  event.stopPropagation();
+
+                  this.viewDate =
+                    createLocalDate(
+                      this.viewDate.getFullYear(),
+                      monthIndex,
+                      1
+                    );
+
+                  this.focusedDate =
+                    this.viewDate;
+
+                  this.closeDropdowns();
+                  this.render();
+                  this.monthTrigger?.focus();
+                }
+              );
+
+              this.monthMenu.append(item);
+            }
+          );
+        }
+
+
+        renderYearMenu() {
+          if (!this.yearMenu) {
+            return;
+          }
+
+          this.yearMenu.replaceChildren();
+
+          for (
+            let year = this.yearStart;
+            year <= this.yearEnd;
+            year += 1
+          ) {
+            const item =
+              document.createElement("button");
+
+            const selected =
+              year ===
+              this.viewDate.getFullYear();
+
+            item.type = "button";
+
+            item.className =
+              "mngha-date-picker-menu-item";
+
+            item.textContent = String(year);
+
+            item.setAttribute(
+              "role",
+              "option"
+            );
+
+            item.setAttribute(
+              "aria-selected",
+              String(selected)
+            );
+
+            if (selected) {
+              item.classList.add(
+                "is-selected"
+              );
+            }
+
+            item.addEventListener(
+              "click",
+              event => {
+                event.stopPropagation();
+
+                this.viewDate =
+                  createLocalDate(
+                    year,
+                    this.viewDate.getMonth(),
+                    1
+                  );
+
+                this.focusedDate =
+                  this.viewDate;
+
+                this.closeDropdowns();
+                this.render();
+                this.yearTrigger?.focus();
+              }
+            );
+
+            this.yearMenu.append(item);
+          }
+        }
+
+
+        renderDays() {
+          if (!this.daysGrid) {
+            return;
+          }
+
+          const year =
+            this.viewDate.getFullYear();
+
+          const month =
+            this.viewDate.getMonth();
+
+          const firstOfMonth =
+            createLocalDate(
+              year,
+              month,
+              1
+            );
+
+          const gridStart = addDays(
+            firstOfMonth,
+            -firstOfMonth.getDay()
+          );
+
+          this.daysGrid.replaceChildren();
+
+          for (
+            let index = 0;
+            index < 42;
+            index += 1
+          ) {
+            const date = addDays(
+              gridStart,
+              index
+            );
+
+            const listItem =
+              document.createElement("li");
+
+            const button =
+              document.createElement("button");
+
+            const number =
+              document.createElement("span");
+
+            const outside =
+              date.getMonth() !== month;
+
+            const disabled =
+              this.isDateDisabled(date);
+
+            const today =
+              sameDate(date, this.today);
+
+            const selected =
+              sameDate(
+                date,
+                this.selectedDate
+              );
+
+            const rangeStart =
+              sameDate(
+                date,
+                this.rangeStart
+              );
+
+            const rangeEnd =
+              sameDate(
+                date,
+                this.rangeEnd
+              );
+
+            const inRange = Boolean(
+              this.rangeStart &&
+              this.rangeEnd &&
+              isAfter(
+                date,
+                this.rangeStart
+              ) &&
+              isBefore(
+                date,
+                this.rangeEnd
+              )
+            );
+
+            listItem.setAttribute(
+              "role",
+              "gridcell"
+            );
+
+            button.type = "button";
+
+            button.className =
+              "mngha-date-picker-day";
+
+            button.dataset.date =
+              toIsoDate(date);
+
+            button.setAttribute(
+              "aria-label",
+              this.createDayLabel(
+                date,
+                {
+                  disabled,
+                  today,
+                  selected,
+                  rangeStart,
+                  rangeEnd,
+                  inRange
+                }
+              )
+            );
+
+            if (outside) {
+              button.classList.add(
+                "is-outside"
+              );
+            }
+
+            if (disabled) {
+              button.classList.add(
+                "is-disabled"
+              );
+
+              button.setAttribute(
+                "aria-disabled",
+                "true"
+              );
+            }
+
+            if (today) {
+              button.classList.add(
+                "is-today"
+              );
+
+              button.setAttribute(
+                "aria-current",
+                "date"
+              );
+            }
+
+            if (
+              this.mode === "single" &&
+              selected
+            ) {
+              button.classList.add(
+                "is-selected"
+              );
+
+              button.setAttribute(
+                "aria-selected",
+                "true"
+              );
+            }
+
+            if (this.mode === "range") {
+              if (rangeStart) {
+                button.classList.add(
+                  "is-range-start",
+                  "is-selected"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+
+              if (inRange) {
+                button.classList.add(
+                  "is-in-range"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+
+              if (rangeEnd) {
+                button.classList.add(
+                  "is-range-end",
+                  "is-selected"
+                );
+
+                button.setAttribute(
+                  "aria-selected",
+                  "true"
+                );
+              }
+            }
+
+            const focused =
+              sameDate(
+                date,
+                this.focusedDate
+              );
+
+            const focusFirstDay =
+              !this.isDateInVisibleGrid(
+                this.focusedDate,
+                gridStart
+              ) &&
+              sameDate(
+                date,
+                firstOfMonth
+              );
+
+            button.tabIndex =
+              focused || focusFirstDay
+                ? 0
+                : -1;
+
+            number.className =
+              "mngha-date-picker-day-number";
+
+            number.textContent =
+              String(date.getDate());
+
+            button.append(number);
+            listItem.append(button);
+            this.daysGrid.append(listItem);
+          }
+        }
+
+
+        createDayLabel(date, states) {
+          const labels = [
+            this.longDateFormatter.format(date)
+          ];
+
+          if (states.today) {
+            labels.push("today");
+          }
+
+          if (states.disabled) {
+            labels.push("unavailable");
+          }
+
+          if (
+            this.mode === "single" &&
+            states.selected
+          ) {
+            labels.push("selected");
+          }
+
+          if (
+            states.rangeStart &&
+            states.rangeEnd
+          ) {
+            labels.push(
+              "range start and end"
+            );
+          } else if (states.rangeStart) {
+            labels.push("range start");
+          } else if (states.rangeEnd) {
+            labels.push("range end");
+          } else if (states.inRange) {
+            labels.push(
+              "in selected range"
+            );
+          }
+
+          return labels.join(", ");
+        }
+
+
+        isDateInVisibleGrid(
+          date,
+          gridStart
+        ) {
+          if (!date) {
+            return false;
+          }
+
+          const gridEnd = addDays(
+            gridStart,
+            41
+          );
+
+          return (
+            !isBefore(date, gridStart) &&
+            !isAfter(date, gridEnd)
+          );
+        }
+
+
+        isDateDisabled(date) {
+          const isoDate =
+            toIsoDate(date);
+
+          if (
+            this.disabledDates.has(isoDate)
+          ) {
+            return true;
+          }
+
+          if (
+            this.minimumDate &&
+            isBefore(
+              date,
+              this.minimumDate
+            )
+          ) {
+            return true;
+          }
+
+          if (
+            this.maximumDate &&
+            isAfter(
+              date,
+              this.maximumDate
+            )
+          ) {
+            return true;
+          }
+
+          return false;
+        }
+
+
+        selectDate(date) {
+          if (
+            this.isDateDisabled(date)
+          ) {
+            return;
+          }
+
+          this.focusedDate = date;
+
+          this.viewDate =
+            createLocalDate(
+              date.getFullYear(),
+              date.getMonth(),
+              1
+            );
+
+          if (this.mode === "single") {
+            this.selectedDate = date;
+
+            this.clearValidation();
+            this.syncInput();
+            this.render();
+            this.emitChange();
+            this.closeCalendar();
+            this.input?.focus();
+
+            return;
+          }
+
+          if (
+            !this.rangeStart ||
+            this.rangeEnd
+          ) {
+            this.rangeStart = date;
+            this.rangeEnd = null;
+          } else if (
+            isBefore(
+              date,
+              this.rangeStart
+            )
+          ) {
+            this.rangeEnd =
+              this.rangeStart;
+
+            this.rangeStart = date;
+          } else {
+            this.rangeEnd = date;
+          }
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+
+          if (
+            this.rangeStart &&
+            this.rangeEnd
+          ) {
+            this.closeCalendar();
+            this.input?.focus();
+          }
+        }
+
+
+        clearSelection() {
+          this.selectedDate = null;
+          this.rangeStart = null;
+          this.rangeEnd = null;
+          this.focusedDate = this.today;
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+
+          this.input?.focus();
+        }
+
+
+        syncInput() {
+          if (!this.input) {
+            return;
+          }
+
+          if (this.mode === "single") {
+            this.input.value =
+              this.selectedDate
+                ? formatDisplayDate(
+                    this.selectedDate
+                  )
+                : "";
+
+            return;
+          }
+
+          if (
+            this.rangeStart &&
+            this.rangeEnd
+          ) {
+            this.input.value =
+              `${formatDisplayDate(
+                this.rangeStart
+              )} – ${formatDisplayDate(
+                this.rangeEnd
+              )}`;
+          } else if (this.rangeStart) {
+            this.input.value =
+              `${formatDisplayDate(
+                this.rangeStart
+              )} – `;
+          } else {
+            this.input.value = "";
+          }
+        }
+
+
+        applyTypedValue() {
+          if (!this.input) {
+            return;
+          }
+
+          const value =
+            this.input.value.trim();
+
+          if (!value) {
+            this.clearSelection();
+            return;
+          }
+
+          if (this.mode === "single") {
+            const date =
+              parseDisplayDate(value);
+
+            if (
+              !date ||
+              this.isDateDisabled(date)
+            ) {
+              this.showValidation(
+                "Enter an available date using DD/MM/YYYY."
+              );
+
+              return;
+            }
+
+            this.selectedDate = date;
+            this.focusedDate = date;
+
+            this.viewDate =
+              createLocalDate(
+                date.getFullYear(),
+                date.getMonth(),
+                1
+              );
+
+            this.clearValidation();
+            this.syncInput();
+            this.render();
+            this.emitChange();
+
+            return;
+          }
+
+          const parts = value
+            .split(/\s*(?:–|—|-)\s*/)
+            .filter(Boolean);
+
+          if (parts.length !== 2) {
+            this.showValidation(
+              "Enter a start and end date using DD/MM/YYYY – DD/MM/YYYY."
+            );
+
+            return;
+          }
+
+          let start =
+            parseDisplayDate(parts[0]);
+
+          let end =
+            parseDisplayDate(parts[1]);
+
+          if (
+            !start ||
+            !end ||
+            this.isDateDisabled(start) ||
+            this.isDateDisabled(end)
+          ) {
+            this.showValidation(
+              "Enter two available dates using DD/MM/YYYY – DD/MM/YYYY."
+            );
+
+            return;
+          }
+
+          if (isAfter(start, end)) {
+            [start, end] = [end, start];
+          }
+
+          this.rangeStart = start;
+          this.rangeEnd = end;
+          this.focusedDate = end;
+
+          this.viewDate =
+            createLocalDate(
+              end.getFullYear(),
+              end.getMonth(),
+              1
+            );
+
+          this.clearValidation();
+          this.syncInput();
+          this.render();
+          this.emitChange();
+        }
+
+
+        showValidation(message) {
+          if (!this.input) {
+            return;
+          }
+
+          this.input.classList.add(
+            "mngha-input--error"
+          );
+
+          this.input.setAttribute(
+            "aria-invalid",
+            "true"
+          );
+
+          this.input.setCustomValidity(
+            message
+          );
+
+          this.input.reportValidity();
+        }
+
+
+        clearValidation() {
+          if (!this.input) {
+            return;
+          }
+
+          this.input.classList.remove(
+            "mngha-input--error"
+          );
+
+          this.input.removeAttribute(
+            "aria-invalid"
+          );
+
+          this.input.setCustomValidity("");
+        }
+
+
+        emitChange() {
+          this.root.dispatchEvent(
+            new CustomEvent(
+              "mngha:date-change",
+              {
+                bubbles: true,
+
+                detail: {
+                  mode: this.mode,
+
+                  value:
+                    this.input?.value || "",
+
+                  selectedDate:
+                    this.selectedDate
+                      ? toIsoDate(
+                          this.selectedDate
+                        )
+                      : null,
+
+                  rangeStart:
+                    this.rangeStart
+                      ? toIsoDate(
+                          this.rangeStart
+                        )
+                      : null,
+
+                  rangeEnd:
+                    this.rangeEnd
+                      ? toIsoDate(
+                          this.rangeEnd
+                        )
+                      : null
+                }
+              }
+            )
+          );
+        }
+
+
+        handleDayKeydown(event) {
+          const currentButton =
+            event.target.closest(
+              ".mngha-date-picker-day"
+            );
+
+          if (!currentButton) {
+            return;
+          }
+
+          const currentDate =
+            parseIsoDate(
+              currentButton.dataset.date
+            );
+
+          if (!currentDate) {
+            return;
+          }
+
+          const isRtl =
+            document.documentElement
+              .getAttribute("dir") === "rtl";
+
+          let targetDate = null;
+
+          switch (event.key) {
+            case "ArrowLeft":
+              targetDate = addDays(
+                currentDate,
+                isRtl ? 1 : -1
+              );
+              break;
+
+            case "ArrowRight":
+              targetDate = addDays(
+                currentDate,
+                isRtl ? -1 : 1
+              );
+              break;
+
+            case "ArrowUp":
+              targetDate = addDays(
+                currentDate,
+                -7
+              );
+              break;
+
+            case "ArrowDown":
+              targetDate = addDays(
+                currentDate,
+                7
+              );
+              break;
+
+            case "Home":
+              targetDate = addDays(
+                currentDate,
+                -currentDate.getDay()
+              );
+              break;
+
+            case "End":
+              targetDate = addDays(
+                currentDate,
+                6 - currentDate.getDay()
+              );
+              break;
+
+            case "PageUp":
+              targetDate = addMonths(
+                currentDate,
+                event.shiftKey ? -12 : -1
+              );
+              break;
+
+            case "PageDown":
+              targetDate = addMonths(
+                currentDate,
+                event.shiftKey ? 12 : 1
+              );
+              break;
+
+            case "Enter":
+            case " ":
+              event.preventDefault();
+              this.selectDate(currentDate);
+              return;
+
+            case "Escape":
+              event.preventDefault();
+              this.closeCalendar();
+              this.input?.focus();
+              return;
+
+            default:
+              return;
+          }
+
+          event.preventDefault();
+
+          this.moveFocus(targetDate);
+        }
+
+
+        moveFocus(targetDate) {
+          let availableDate = targetDate;
+          let attempts = 0;
+
+          const movingForward =
+            !this.focusedDate ||
+            !isBefore(
+              targetDate,
+              this.focusedDate
+            );
+
+          const step =
+            movingForward ? 1 : -1;
+
+          while (
+            this.isDateDisabled(
+              availableDate
+            ) &&
+            attempts < 366
+          ) {
+            availableDate = addDays(
+              availableDate,
+              step
+            );
+
+            attempts += 1;
+          }
+
+          this.focusedDate =
+            availableDate;
+
+          this.viewDate =
+            createLocalDate(
+              availableDate.getFullYear(),
+              availableDate.getMonth(),
+              1
+            );
+
+          this.render();
+
+          requestAnimationFrame(() => {
+            this.focusCurrentDayButton();
+          });
+        }
+
+
+        focusCurrentDayButton() {
+          if (
+            !this.daysGrid ||
+            !this.focusedDate
+          ) {
+            return;
+          }
+
+          const button =
+            this.daysGrid.querySelector(
+              `[data-date="${toIsoDate(
+                this.focusedDate
+              )}"]`
+            );
+
+          button?.focus();
+        }
+      }
+
+
+      const instances = [];
+
+      document
+        .querySelectorAll(
+          "[data-mngha-date-picker]"
+        )
+        .forEach(root => {
+          instances.push(
+            new MnghaDatePicker(root)
+          );
+        });
+
+      window.MnghaDatePicker =
+        MnghaDatePicker;
+
+      window.mnghaDatePickerInstances =
+        instances;
+    })();
+
+
+    /*
+     * Listen for changes anywhere in the page.
+     *
+     * event.detail contains:
+     * - mode
+     * - value
+     * - selectedDate
+     * - rangeStart
+     * - rangeEnd
+     */
+
+    document.addEventListener(
+      "mngha:date-change",
+      event => {
+        console.log(event.detail);
+      }
+    );
+  </script><script>
+function initCustomSelects() {
+  const selects = document.querySelectorAll(
+    "[data-custom-select]"
+  );
+
+  selects.forEach(function (select) {
+    const trigger = select.querySelector(
+      "[data-custom-select-trigger]"
+    );
+
+    const menu = select.querySelector(
+      "[data-custom-select-menu]"
+    );
+
+    const value = select.querySelector(
+      "[data-custom-select-value]"
+    );
+
+    const input = select.querySelector(
+      "[data-custom-select-input]"
+    );
+
+    const options = Array.from(
+      select.querySelectorAll(
+        "[data-custom-select-option]"
+      )
+    );
+
+    if (
+      !trigger ||
+      !menu ||
+      !value ||
+      !input ||
+      options.length === 0
+    ) {
+      return;
+    }
+
+    function openSelect() {
+      select.classList.add("is-open");
+      trigger.setAttribute("aria-expanded", "true");
+
+      const selected =
+        options.find(function (option) {
+          return (
+            option.getAttribute("aria-selected") ===
+            "true"
+          );
+        }) || options[0];
+
+      selected.focus();
+    }
+
+    function closeSelect() {
+      select.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+
+    function chooseOption(option) {
+      options.forEach(function (item) {
+        const isSelected = item === option;
+
+        item.classList.toggle(
+          "is-selected",
+          isSelected
+        );
+
+        item.setAttribute(
+          "aria-selected",
+          String(isSelected)
+        );
+
+        item.tabIndex = isSelected ? 0 : -1;
+      });
+
+      value.textContent =
+        option.textContent.trim();
+
+      input.value =
+        option.dataset.value || "";
+
+      select.classList.remove(
+        "mngha-custom-select--error"
+      );
+
+      trigger.removeAttribute("aria-invalid");
+
+      closeSelect();
+      trigger.focus();
+    }
+
+    trigger.addEventListener(
+      "click",
+      function () {
+        if (
+          select.classList.contains("is-open")
+        ) {
+          closeSelect();
+        } else {
+          openSelect();
+        }
+      }
+    );
+
+    trigger.addEventListener(
+      "keydown",
+      function (event) {
+        if (
+          event.key === "ArrowDown" ||
+          event.key === "ArrowUp" ||
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+          event.preventDefault();
+          openSelect();
+        }
+
+        if (event.key === "Escape") {
+          closeSelect();
+        }
+      }
+    );
+
+    options.forEach(function (option, index) {
+      option.addEventListener(
+        "click",
+        function () {
+          chooseOption(option);
+        }
+      );
+
+      option.addEventListener(
+        "keydown",
+        function (event) {
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+            event.preventDefault();
+            chooseOption(option);
+          }
+
+          if (event.key === "ArrowDown") {
+            event.preventDefault();
+
+            options[
+              (index + 1) % options.length
+            ].focus();
+          }
+
+          if (event.key === "ArrowUp") {
+            event.preventDefault();
+
+            options[
+              (
+                index -
+                1 +
+                options.length
+              ) % options.length
+            ].focus();
+          }
+
+          if (event.key === "Home") {
+            event.preventDefault();
+            options[0].focus();
+          }
+
+          if (event.key === "End") {
+            event.preventDefault();
+            options[options.length - 1].focus();
+          }
+
+          if (event.key === "Escape") {
+            closeSelect();
+            trigger.focus();
+          }
+        }
+      );
+    });
+
+    document.addEventListener(
+      "click",
+      function (event) {
+        if (!select.contains(event.target)) {
+          closeSelect();
+        }
+      }
+    );
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener(
+    "DOMContentLoaded",
+    initCustomSelects
+  );
+} else {
+  initCustomSelects();
+}
+  </script><script src="./assets/docs.js"></script>
+<script src="./assets/code-block-copy.js"></script>
+<script src="./assets/government-sections.js"></script>
 </body>
 </html>
