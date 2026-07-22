@@ -1,0 +1,239 @@
+/**
+ * --------------------------------------------------------------------------
+ * Form Control
+ * --------------------------------------------------------------------------
+ *
+ * Complete-form composition only. This file depends on the existing MNGHA
+ * field, input, textarea, select, radio, file-upload, and button components.
+ * It does not redefine the appearance of those controls.
+ */
+
+.mngha-form {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-4xl);
+}
+
+.mngha-form--contained {
+  box-sizing: border-box;
+  padding: var(--spacing-4xl);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.mngha-form-header {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.mngha-form-title,
+.mngha-form-description,
+.mngha-form-section-title,
+.mngha-form-section-description {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.mngha-form-title {
+  color: var(--color-gray-950);
+  font-size: var(--text-xl-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-md-line-height);
+}
+
+.mngha-form-description {
+  color: var(--color-gray-600);
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-md-line-height);
+}
+
+.mngha-form-body {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-4xl);
+}
+
+.mngha-form-section {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-3xl);
+}
+
+.mngha-form-section + .mngha-form-section {
+  padding-block-start: var(--spacing-4xl);
+  border-block-start: 1px solid var(--color-gray-300);
+}
+
+.mngha-form-section-header {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.mngha-form-section-title {
+  color: var(--color-gray-950);
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-md-line-height);
+}
+
+.mngha-form-section-description {
+  color: var(--color-gray-600);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-sm-line-height);
+}
+
+.mngha-form-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+.mngha-form-row--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mngha-form-row--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mngha-form-column--full {
+  grid-column: 1 / -1;
+}
+
+.mngha-form .mngha-field {
+  margin-block: 0;
+  align-self: start;
+}
+
+.mngha-form-label-row {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.mngha-required-marker {
+  color: var(--color-error-700);
+  font-weight: var(--font-weight-bold);
+}
+
+.mngha-optional-text {
+  flex-shrink: 0;
+  color: var(--color-gray-600);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-sm-line-height);
+}
+
+.mngha-form-actions {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-md);
+  padding-block-start: var(--spacing-3xl);
+  border-block-start: 1px solid var(--color-gray-300);
+}
+
+.mngha-form-actions--end {
+  justify-content: flex-end;
+}
+
+/**
+ * Validation Summary
+ */
+
+.mngha-form-error-summary {
+  min-width: 0;
+  display: grid;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  border: 2px solid var(--color-error-600);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-gray-950);
+}
+
+.mngha-form-error-summary[hidden] {
+  display: none;
+}
+
+.mngha-form-error-summary:focus {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 2px;
+}
+
+.mngha-form-error-summary-title {
+  margin: 0;
+  color: var(--color-error-600);
+  font-size: var(--text-md-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-md-line-height);
+}
+
+.mngha-form-error-list {
+  margin: 0;
+  padding-inline-start: var(--spacing-xl);
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.mngha-form-error-list a {
+  color: var(--color-error-600);
+  font-size: var(--text-sm-size);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--text-sm-line-height);
+}
+
+/**
+ * Compact Variant
+ * Use inside dialogs and side panels.
+ */
+
+.mngha-form--compact {
+  gap: var(--spacing-3xl);
+}
+
+.mngha-form--compact.mngha-form--contained {
+  padding: var(--spacing-3xl);
+}
+
+.mngha-form--compact .mngha-form-body,
+.mngha-form--compact .mngha-form-section,
+.mngha-form--compact .mngha-form-row {
+  gap: var(--spacing-xl);
+}
+
+@media (max-width: 640px) {
+  .mngha-form--contained {
+    padding: var(--spacing-xl);
+  }
+
+  .mngha-form-row--2,
+  .mngha-form-row--3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mngha-form-column--full {
+    grid-column: auto;
+  }
+
+  .mngha-form-actions {
+    align-items: stretch;
+  }
+
+  .mngha-form-actions > .mngha-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Form Layouts - mngha Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+  <link rel="stylesheet" href="./assets/form-control.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!-- Introduction -->
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h1 class="mngha-section-title">Form Layouts</h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              Form layout classes combine the existing MNGHA fields, inputs,
+              textareas, selects, radio controls, and buttons into complete,
+              structured, responsive, and accessible forms.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Overview</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Complete structure</h3>
+
+              <p class="mngha-card-description">
+                Use a form header, body, related sections, and an action area to
+                create a predictable complete-form structure.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Responsive rows</h3>
+
+              <p class="mngha-card-description">
+                Use one column by default and place only closely related fields
+                inside the optional two- or three-column rows.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Validation support</h3>
+
+              <p class="mngha-card-description">
+                Combine existing inline error states with the form-level error
+                summary to help users find and correct invalid fields.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Basic form layout -->
+      <section class="mngha-section" id="basic-form-layout">
+        <h2 class="mngha-section-title">Basic Form Layout</h2>
+
+        <p class="mngha-paragraph">
+          Start with <strong>mngha-form</strong>. Add
+          <strong>mngha-form--contained</strong> when the form needs its own
+          bordered surface. Controls continue to use the existing form classes.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <form class="mngha-form mngha-form--contained" action="#" method="post">
+  <header class="mngha-form-header">
+    <h3 class="mngha-form-title">Create department</h3>
+
+    <p class="mngha-form-description">
+      Enter the basic department information.
+    </p>
+  </header>
+
+  <div class="mngha-form-body">
+    <section class="mngha-form-section" aria-labelledby="department-details-title">
+      <header class="mngha-form-section-header">
+        <h4
+          class="mngha-form-section-title"
+          id="department-details-title"
+        >
+          Department details
+        </h4>
+      </header>
+
+      <div class="mngha-form-row">
+        <div class="mngha-field">
+          <label class="mngha-label" for="department-name">
+            Department name
+            <span class="mngha-required-marker" aria-hidden="true">*</span>
+          </label>
+
+          <input
+            class="mngha-input"
+            id="department-name"
+            name="department-name"
+            type="text"
+            required
+          >
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="mngha-form-actions">
+    <button
+      class="mngha-button mngha-button--primary mngha-button--md"
+      type="submit"
+    >
+      Create department
+    </button>
+
+    <button
+      class="mngha-button mngha-button--secondary mngha-button--md"
+      type="reset"
+    >
+      Reset
+    </button>
+  </footer>
+</form>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Basic form layout</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;form
+  class=&quot;mngha-form mngha-form--contained&quot;
+  action=&quot;#&quot;
+  method=&quot;post&quot;
+&gt;
+  &lt;header class=&quot;mngha-form-header&quot;&gt;
+    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Create department&lt;/h3&gt;
+
+    &lt;p class=&quot;mngha-form-description&quot;&gt;
+      Enter the basic department information.
+    &lt;/p&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;mngha-form-body&quot;&gt;
+    &lt;section
+      class=&quot;mngha-form-section&quot;
+      aria-labelledby=&quot;department-details-title&quot;
+    &gt;
+      &lt;header class=&quot;mngha-form-section-header&quot;&gt;
+        &lt;h4
+          class=&quot;mngha-form-section-title&quot;
+          id=&quot;department-details-title&quot;
+        &gt;
+          Department details
+        &lt;/h4&gt;
+      &lt;/header&gt;
+
+      &lt;div class=&quot;mngha-form-row&quot;&gt;
+        &lt;div class=&quot;mngha-field&quot;&gt;
+          &lt;label class=&quot;mngha-label&quot; for=&quot;department-name&quot;&gt;
+            Department name
+            &lt;span
+              class=&quot;mngha-required-marker&quot;
+              aria-hidden=&quot;true&quot;
+            &gt;*&lt;/span&gt;
+          &lt;/label&gt;
+
+          &lt;input
+            class=&quot;mngha-input&quot;
+            id=&quot;department-name&quot;
+            name=&quot;department-name&quot;
+            type=&quot;text&quot;
+            required
+          &gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+
+  &lt;footer class=&quot;mngha-form-actions&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;submit&quot;
+    &gt;
+      Create department
+    &lt;/button&gt;
+
+    &lt;button
+      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+      type=&quot;reset&quot;
+    &gt;
+      Reset
+    &lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive rows -->
+      <section class="mngha-section" id="responsive-form-rows">
+        <h2 class="mngha-section-title">Responsive Form Rows</h2>
+
+        <p class="mngha-paragraph">
+          A basic <strong>mngha-form-row</strong> uses one column. Add
+          <strong>mngha-form-row--2</strong> or
+          <strong>mngha-form-row--3</strong> only when fields are closely
+          related. All variants collapse to one column on small screens.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form">
+  <div class="mngha-form-row mngha-form-row--2">
+    <div class="mngha-field">
+      <label class="mngha-label" for="first-name">First name</label>
+      <input class="mngha-input" id="first-name" name="first-name" type="text">
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="last-name">Last name</label>
+      <input class="mngha-input" id="last-name" name="last-name" type="text">
+    </div>
+  </div>
+
+  <div class="mngha-form-row mngha-form-row--3">
+    <div class="mngha-field">
+      <label class="mngha-label" for="city">City</label>
+      <input class="mngha-input" id="city" name="city" type="text">
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="district">District</label>
+      <input class="mngha-input" id="district" name="district" type="text">
+    </div>
+
+    <div class="mngha-field">
+      <label class="mngha-label" for="postal-code">Postal code</label>
+      <input class="mngha-input" id="postal-code" name="postal-code" type="text">
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Two- and three-column rows</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form&quot;&gt;
+  &lt;div class=&quot;mngha-form-row mngha-form-row--2&quot;&gt;
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;first-name&quot;&gt;
+        First name
+      &lt;/label&gt;
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;first-name&quot;
+        name=&quot;first-name&quot;
+        type=&quot;text&quot;
+      &gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;last-name&quot;&gt;
+        Last name
+      &lt;/label&gt;
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;last-name&quot;
+        name=&quot;last-name&quot;
+        type=&quot;text&quot;
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-form-row mngha-form-row--3&quot;&gt;
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;city&quot;&gt;City&lt;/label&gt;
+      &lt;input class=&quot;mngha-input&quot; id=&quot;city&quot; name=&quot;city&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;district&quot;&gt;District&lt;/label&gt;
+      &lt;input class=&quot;mngha-input&quot; id=&quot;district&quot; name=&quot;district&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;postal-code&quot;&gt;Postal code&lt;/label&gt;
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;postal-code&quot;
+        name=&quot;postal-code&quot;
+        type=&quot;text&quot;
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Required and optional fields -->
+      <section class="mngha-section" id="required-and-optional-fields">
+        <h2 class="mngha-section-title">Required and Optional Fields</h2>
+
+        <p class="mngha-paragraph">
+          Use <strong>mngha-required-marker</strong> for the required asterisk.
+          Its color uses the design-system <strong>error-700</strong> token.
+          Use <strong>mngha-optional-text</strong> for optional fields.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <div class="mngha-form">
+  <div class="mngha-form-row mngha-form-row--2">
+    <div class="mngha-field">
+      <label class="mngha-label" for="required-email">
+        Email address
+        <span class="mngha-required-marker" aria-hidden="true">*</span>
+      </label>
+
+      <input
+        class="mngha-input"
+        id="required-email"
+        name="required-email"
+        type="email"
+        required
+      >
+    </div>
+
+    <div class="mngha-field">
+      <div class="mngha-form-label-row">
+        <label class="mngha-label" for="optional-extension">
+          Extension number
+        </label>
+
+        <span class="mngha-optional-text">Optional</span>
+      </div>
+
+      <input
+        class="mngha-input"
+        id="optional-extension"
+        name="optional-extension"
+        type="text"
+      >
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Required and optional labels</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-form&quot;&gt;
+  &lt;div class=&quot;mngha-form-row mngha-form-row--2&quot;&gt;
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;label class=&quot;mngha-label&quot; for=&quot;required-email&quot;&gt;
+        Email address
+        &lt;span
+          class=&quot;mngha-required-marker&quot;
+          aria-hidden=&quot;true&quot;
+        &gt;*&lt;/span&gt;
+      &lt;/label&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;required-email&quot;
+        name=&quot;required-email&quot;
+        type=&quot;email&quot;
+        required
+      &gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;mngha-field&quot;&gt;
+      &lt;div class=&quot;mngha-form-label-row&quot;&gt;
+        &lt;label class=&quot;mngha-label&quot; for=&quot;optional-extension&quot;&gt;
+          Extension number
+        &lt;/label&gt;
+
+        &lt;span class=&quot;mngha-optional-text&quot;&gt;Optional&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;input
+        class=&quot;mngha-input&quot;
+        id=&quot;optional-extension&quot;
+        name=&quot;optional-extension&quot;
+        type=&quot;text&quot;
+      &gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Validation summary -->
+      <section class="mngha-section" id="validation-summary">
+        <h2 class="mngha-section-title">Validation Summary</h2>
+
+        <p class="mngha-paragraph">
+          When submission fails, place the error summary before the form body.
+          Link every summary message to its invalid field and keep the same
+          message beside that field.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <form class="mngha-form mngha-form--contained" action="#" method="post" novalidate>
+  <header class="mngha-form-header">
+    <h3 class="mngha-form-title">Contact support</h3>
+  </header>
+
+  <div
+    class="mngha-form-error-summary"
+    role="alert"
+    tabindex="-1"
+  >
+    <h4 class="mngha-form-error-summary-title">There is a problem</h4>
+
+    <ul class="mngha-form-error-list">
+      <li><a href="#support-email">Enter a valid email address.</a></li>
+    </ul>
+  </div>
+
+  <div class="mngha-form-body">
+    <section class="mngha-form-section" aria-labelledby="support-details-title">
+      <header class="mngha-form-section-header">
+        <h4 class="mngha-form-section-title" id="support-details-title">
+          Your details
+        </h4>
+      </header>
+
+      <div class="mngha-form-row">
+        <div class="mngha-field">
+          <label class="mngha-label" for="support-email">
+            Email address
+            <span class="mngha-required-marker" aria-hidden="true">*</span>
+          </label>
+
+          <input
+            class="mngha-input mngha-input--error"
+            id="support-email"
+            name="support-email"
+            type="email"
+            aria-invalid="true"
+            aria-describedby="support-email-error"
+            required
+          >
+
+          <p class="mngha-error-text" id="support-email-error">
+            Enter a valid email address.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="mngha-form-actions">
+    <button
+      class="mngha-button mngha-button--primary mngha-button--md"
+      type="submit"
+    >
+      Submit again
+    </button>
+  </footer>
+</form>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Form with validation summary</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;form
+  class=&quot;mngha-form mngha-form--contained&quot;
+  action=&quot;#&quot;
+  method=&quot;post&quot;
+  novalidate
+&gt;
+  &lt;header class=&quot;mngha-form-header&quot;&gt;
+    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Contact support&lt;/h3&gt;
+  &lt;/header&gt;
+
+  &lt;div
+    class=&quot;mngha-form-error-summary&quot;
+    role=&quot;alert&quot;
+    tabindex=&quot;-1&quot;
+  &gt;
+    &lt;h4 class=&quot;mngha-form-error-summary-title&quot;&gt;
+      There is a problem
+    &lt;/h4&gt;
+
+    &lt;ul class=&quot;mngha-form-error-list&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#support-email&quot;&gt;
+          Enter a valid email address.
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mngha-form-body&quot;&gt;
+    &lt;section
+      class=&quot;mngha-form-section&quot;
+      aria-labelledby=&quot;support-details-title&quot;
+    &gt;
+      &lt;header class=&quot;mngha-form-section-header&quot;&gt;
+        &lt;h4
+          class=&quot;mngha-form-section-title&quot;
+          id=&quot;support-details-title&quot;
+        &gt;
+          Your details
+        &lt;/h4&gt;
+      &lt;/header&gt;
+
+      &lt;div class=&quot;mngha-form-row&quot;&gt;
+        &lt;div class=&quot;mngha-field&quot;&gt;
+          &lt;label class=&quot;mngha-label&quot; for=&quot;support-email&quot;&gt;
+            Email address
+            &lt;span
+              class=&quot;mngha-required-marker&quot;
+              aria-hidden=&quot;true&quot;
+            &gt;*&lt;/span&gt;
+          &lt;/label&gt;
+
+          &lt;input
+            class=&quot;mngha-input mngha-input--error&quot;
+            id=&quot;support-email&quot;
+            name=&quot;support-email&quot;
+            type=&quot;email&quot;
+            aria-invalid=&quot;true&quot;
+            aria-describedby=&quot;support-email-error&quot;
+            required
+          &gt;
+
+          &lt;p class=&quot;mngha-error-text&quot; id=&quot;support-email-error&quot;&gt;
+            Enter a valid email address.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+
+  &lt;footer class=&quot;mngha-form-actions&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;submit&quot;
+    &gt;
+      Submit again
+    &lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Compact form -->
+      <section class="mngha-section" id="compact-form">
+        <h2 class="mngha-section-title">Compact Form</h2>
+
+        <p class="mngha-paragraph">
+          Add <strong>mngha-form--compact</strong> for short forms inside dialogs
+          or side panels. Do not use the compact variant to force long forms
+          into small containers.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">Example</h3>
+
+            <form
+              class="mngha-form mngha-form--contained mngha-form--compact"
+              action="#"
+              method="post"
+            >
+  <header class="mngha-form-header">
+    <h3 class="mngha-form-title">Rename item</h3>
+  </header>
+
+  <div class="mngha-form-body">
+    <div class="mngha-form-row">
+      <div class="mngha-field">
+        <label class="mngha-label" for="item-name">Name</label>
+        <input class="mngha-input" id="item-name" name="item-name" type="text">
+      </div>
+    </div>
+  </div>
+
+  <footer class="mngha-form-actions mngha-form-actions--end">
+    <button
+      class="mngha-button mngha-button--primary mngha-button--md"
+      type="submit"
+    >
+      Save
+    </button>
+
+    <button
+      class="mngha-button mngha-button--secondary mngha-button--md"
+      type="button"
+    >
+      Cancel
+    </button>
+  </footer>
+</form>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">HTML</h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">Compact form</p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;form
+  class=&quot;mngha-form mngha-form--contained mngha-form--compact&quot;
+  action=&quot;#&quot;
+  method=&quot;post&quot;
+&gt;
+  &lt;header class=&quot;mngha-form-header&quot;&gt;
+    &lt;h3 class=&quot;mngha-form-title&quot;&gt;Rename item&lt;/h3&gt;
+  &lt;/header&gt;
+
+  &lt;div class=&quot;mngha-form-body&quot;&gt;
+    &lt;div class=&quot;mngha-form-row&quot;&gt;
+      &lt;div class=&quot;mngha-field&quot;&gt;
+        &lt;label class=&quot;mngha-label&quot; for=&quot;item-name&quot;&gt;Name&lt;/label&gt;
+        &lt;input
+          class=&quot;mngha-input&quot;
+          id=&quot;item-name&quot;
+          name=&quot;item-name&quot;
+          type=&quot;text&quot;
+        &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;footer class=&quot;mngha-form-actions mngha-form-actions--end&quot;&gt;
+    &lt;button
+      class=&quot;mngha-button mngha-button--primary mngha-button--md&quot;
+      type=&quot;submit&quot;
+    &gt;
+      Save
+    &lt;/button&gt;
+
+    &lt;button
+      class=&quot;mngha-button mngha-button--secondary mngha-button--md&quot;
+      type=&quot;button&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/footer&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class reference -->
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">Class Reference</h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Form layout class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Element</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-form</strong></td>
+                <td>form or container</td>
+                <td>Creates the base complete-form layout.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form--contained</strong></td>
+                <td>Modifier</td>
+                <td>Adds padding, border, background, and shadow.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form--compact</strong></td>
+                <td>Modifier</td>
+                <td>Reduces spacing for dialogs and side panels.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-header</strong></td>
+                <td>header</td>
+                <td>Contains the form title and description.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-body</strong></td>
+                <td>Container</td>
+                <td>Contains form sections and field rows.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-section</strong></td>
+                <td>section</td>
+                <td>Groups related fields under one heading.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-row</strong></td>
+                <td>Container</td>
+                <td>Creates a single-column field row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-row--2</strong></td>
+                <td>Modifier</td>
+                <td>Creates a responsive two-column field row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-row--3</strong></td>
+                <td>Modifier</td>
+                <td>Creates a responsive three-column field row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-column--full</strong></td>
+                <td>Field modifier</td>
+                <td>Makes a field span every column in its row.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-actions</strong></td>
+                <td>footer or container</td>
+                <td>Places submit and secondary actions after the fields.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-required-marker</strong></td>
+                <td>span</td>
+                <td>Displays the required asterisk using error-700.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-optional-text</strong></td>
+                <td>span</td>
+                <td>Displays an optional-field label.</td>
+              </tr>
+
+              <tr>
+                <td><strong>.mngha-form-error-summary</strong></td>
+                <td>Container</td>
+                <td>Displays form-level validation errors.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Accessibility -->
+      <section class="mngha-section" id="accessibility">
+        <h2 class="mngha-section-title">Accessibility</h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use visible labels</h3>
+
+              <p class="mngha-card-description">
+                Every interactive control must have a visible label connected
+                using matching for and id values.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Keep native required</h3>
+
+              <p class="mngha-card-description">
+                The visual asterisk is hidden from assistive technology. Keep
+                the native required attribute on the form control.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Use logical sections</h3>
+
+              <p class="mngha-card-description">
+                Group only related fields and connect each section heading with
+                aria-labelledby when the section needs an accessible name.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Connect error messages</h3>
+
+              <p class="mngha-card-description">
+                Set aria-invalid and connect inline error text using
+                aria-describedby after validation fails.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Focus the summary</h3>
+
+              <p class="mngha-card-description">
+                Move keyboard focus to the error summary after an invalid form
+                submission so the problem is announced immediately.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Preserve source order</h3>
+
+              <p class="mngha-card-description">
+                Keep the visual and DOM order logical when responsive rows
+                collapse from multiple columns to one column.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Usage guidance -->
+      <section class="mngha-section">
+        <h2 class="mngha-section-title">Usage Guidance</h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Do</h3>
+
+              <p class="mngha-card-description">
+                Use one column by default, group related fields, keep actions at
+                the end, use concise headings, and provide clear validation.
+              </p>
+            </div>
+          </div>
+
+          <div class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">Avoid</h3>
+
+              <p class="mngha-card-description">
+                Do not place unrelated fields in one row, use too many columns,
+                hide required information, or place submit actions above fields.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+</body>
+</html>

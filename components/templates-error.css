@@ -30,7 +30,7 @@
 .mngha-error-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: var(--spacing-3xl);
 }
@@ -38,9 +38,9 @@
 .mngha-error-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: var(--spacing-lg);
-  text-align: center;
+  text-align: start;
 }
 
 .mngha-error-title {

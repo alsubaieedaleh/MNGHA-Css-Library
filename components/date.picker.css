@@ -532,3 +532,6 @@ html[dir="rtl"]
     transition: none;
   }
 }
+.mngha-date-picker-input {
+  max-inline-size: 26.5rem;  
+ }
