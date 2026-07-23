@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="external">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Footer - MNGHA Universal CSS</title>
+
+  <link rel="stylesheet" href="./../mngha-ui.css">
+</head>
+
+<body>
+  <div id="docs-government-bar">
+    <div id="docs-government-verification"></div>
+    <div id="docs-government-toolbar"></div>
+  </div>
+
+  <div id="docs-header"></div>
+
+  <main class="mngha-main">
+    <div class="mngha-container">
+
+      <!-- Introduction -->
+      <section class="mngha-section">
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <p class="mngha-card-description">
+              MNGHA Universal CSS
+            </p>
+
+            <h1 class="mngha-section-title">
+              Footer
+            </h1>
+
+            <p class="mngha-card-description mngha-paragraph">
+              The footer provides documentation links, social media actions,
+              accessibility tools, copyright information, page metadata, and
+              official logos. Keep the real footer in one shared partial and
+              load it at the end of every documentation page.
+            </p>
+          </div>
+
+          <div class="mngha-card-actions">
+            <button
+              class="mngha-button mngha-button--primary mngha-button--md"
+              type="button"
+              data-toggle-theme
+            >
+              Switch Theme
+            </button>
+
+            <button
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              type="button"
+              data-toggle-direction
+            >
+              Toggle Direction
+            </button>
+
+            <a
+              class="mngha-button mngha-button--secondary mngha-button--md"
+              href="./components.html"
+            >
+              View Components
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="mngha-section" aria-labelledby="footer-overview-title">
+        <h2 class="mngha-section-title" id="footer-overview-title">
+          Overview
+        </h2>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Shared partial
+              </h3>
+
+              <p class="mngha-card-description">
+                Store the complete production footer in
+                <strong>partials/footer.html</strong> and update it in one
+                place.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Responsive
+              </h3>
+
+              <p class="mngha-card-description">
+                Navigation, tools, legal content, and logos automatically
+                rearrange for tablet and mobile layouts.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Accessible
+              </h3>
+
+              <p class="mngha-card-description">
+                Use semantic navigation, visible group headings, named icon
+                links, and descriptive logo alternative text.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Navigation Group -->
+      <section class="mngha-section" id="navigation-group">
+        <h2 class="mngha-section-title">
+          Navigation Group
+        </h2>
+
+        <p class="mngha-paragraph">
+          Use one section for each related group of footer links. Connect the
+          section to its visible heading with <strong>aria-labelledby</strong>.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Visual example
+            </h3>
+          </div>
+
+          <div class="mngha-footer mngha-footer--brand-primary">
+            <div class="mngha-footer-container">
+              <nav
+                class="mngha-footer-navigation"
+                aria-label="Example footer navigation"
+              >
+                <section
+                  class="mngha-footer-group"
+                  aria-labelledby="example-documentation-title"
+                >
+                  <h3
+                    class="mngha-footer-heading"
+                    id="example-documentation-title"
+                  >
+                    Documentation
+                  </h3>
+
+                  <ul class="mngha-footer-list">
+                    <li>
+                      <a class="mngha-footer-link" href="./index.html">
+                        Documentation Home
+                      </a>
+                    </li>
+                    <li>
+                      <a class="mngha-footer-link" href="./foundations.html">
+                        Foundations
+                      </a>
+                    </li>
+                    <li>
+                      <a class="mngha-footer-link" href="./components.html">
+                        Components
+                      </a>
+                    </li>
+                    <li>
+                      <a class="mngha-footer-link" href="./theme.html">
+                        Themes
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Navigation group
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;section
+  class=&quot;mngha-footer-group&quot;
+  aria-labelledby=&quot;footer-documentation-title&quot;
+&gt;
+  &lt;h2
+    class=&quot;mngha-footer-heading&quot;
+    id=&quot;footer-documentation-title&quot;
+  &gt;
+    Documentation
+  &lt;/h2&gt;
+
+  &lt;ul class=&quot;mngha-footer-list&quot;&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;mngha-footer-link&quot; href=&quot;./index.html&quot;&gt;
+        Documentation Home
+      &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;a class=&quot;mngha-footer-link&quot; href=&quot;./foundations.html&quot;&gt;
+        Foundations
+      &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;a class=&quot;mngha-footer-link&quot; href=&quot;./components.html&quot;&gt;
+        Components
+      &lt;/a&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;
+      &lt;a class=&quot;mngha-footer-link&quot; href=&quot;./theme.html&quot;&gt;
+        Themes
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media -->
+      <section class="mngha-section" id="social-media">
+        <h2 class="mngha-section-title">
+          Social Media Actions
+        </h2>
+
+        <p class="mngha-paragraph">
+          Place icon-only social links inside
+          <strong>mngha-footer-actions</strong>. Every icon-only link must have
+          an accessible name.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Visual example
+            </h3>
+          </div>
+
+          <div class="mngha-footer mngha-footer--brand-primary">
+            <div class="mngha-footer-container">
+              <section
+                class="mngha-footer-tool-group"
+                aria-labelledby="example-social-title"
+              >
+                <h3
+                  class="mngha-footer-heading"
+                  id="example-social-title"
+                >
+                  Social Media
+                </h3>
+
+                <div class="mngha-footer-actions">
+                  <a
+                    class="mngha-footer-action"
+                    href="https://x.com/NGHAnews"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="MNGHA on X, opens in a new tab"
+                    title="X"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-6.4L6.6 22H3.5l7.2-8.2L3 2h6.4l4.4 5.8L18.9 2Zm-1.1 17.9h1.7L8.5 4H6.7l11.1 15.9Z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    class="mngha-footer-action"
+                    href="https://www.youtube.com/user/NGHAmedia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="MNGHA on YouTube, opens in a new tab"
+                    title="YouTube"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    class="mngha-footer-action"
+                    href="https://www.linkedin.com/company/national-guard-health-affairs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="MNGHA on LinkedIn, opens in a new tab"
+                    title="LinkedIn"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M5.4 7.8H1V22h4.4V7.8ZM3.2 1A2.6 2.6 0 1 0 3.2 6.2 2.6 2.6 0 0 0 3.2 1ZM22.9 13.9c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.3 2.4V7.8H8.8V22h4.4v-7c0-1.9.4-3.7 2.7-3.7 2.3 0 2.3 2.1 2.3 3.8V22h4.4l.3-8.1Z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Social media actions
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;section
+  class=&quot;mngha-footer-tool-group&quot;
+  aria-labelledby=&quot;footer-social-title&quot;
+&gt;
+  &lt;h2
+    class=&quot;mngha-footer-heading&quot;
+    id=&quot;footer-social-title&quot;
+  &gt;
+    Social Media
+  &lt;/h2&gt;
+
+  &lt;div class=&quot;mngha-footer-actions&quot;&gt;
+    &lt;a
+      class=&quot;mngha-footer-action&quot;
+      href=&quot;https://x.com/NGHAnews&quot;
+      target=&quot;_blank&quot;
+      rel=&quot;noopener noreferrer&quot;
+      aria-label=&quot;MNGHA on X, opens in a new tab&quot;
+      title=&quot;X&quot;
+    &gt;
+      &lt;svg
+        viewBox=&quot;0 0 24 24&quot;
+        aria-hidden=&quot;true&quot;
+        focusable=&quot;false&quot;
+      &gt;
+        &lt;!-- X icon path --&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+
+    &lt;a
+      class=&quot;mngha-footer-action&quot;
+      href=&quot;https://www.youtube.com/user/NGHAmedia&quot;
+      target=&quot;_blank&quot;
+      rel=&quot;noopener noreferrer&quot;
+      aria-label=&quot;MNGHA on YouTube, opens in a new tab&quot;
+      title=&quot;YouTube&quot;
+    &gt;
+      &lt;svg
+        viewBox=&quot;0 0 24 24&quot;
+        aria-hidden=&quot;true&quot;
+        focusable=&quot;false&quot;
+      &gt;
+        &lt;!-- YouTube icon path --&gt;
+      &lt;/svg&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secondary Links -->
+      <section class="mngha-section" id="secondary-links">
+        <h2 class="mngha-section-title">
+          Secondary Links
+        </h2>
+
+        <p class="mngha-paragraph">
+          Use secondary links for important documentation destinations that
+          should remain easy to find without repeating the full navigation.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Visual example
+            </h3>
+          </div>
+
+          <div class="mngha-footer mngha-footer--brand-primary">
+            <div class="mngha-footer-container">
+              <ul
+                class="mngha-footer-meta-links"
+                aria-label="Documentation quick links"
+              >
+                <li>
+                  <a class="mngha-footer-meta-link" href="./index.html">
+                    Documentation Home
+                  </a>
+                </li>
+                <li>
+                  <a class="mngha-footer-meta-link" href="./foundations.html">
+                    Foundations
+                  </a>
+                </li>
+                <li>
+                  <a class="mngha-footer-meta-link" href="./components.html">
+                    Components
+                  </a>
+                </li>
+                <li>
+                  <a class="mngha-footer-meta-link" href="./theme.html">
+                    Themes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Secondary links
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;ul
+  class=&quot;mngha-footer-meta-links&quot;
+  aria-label=&quot;Documentation quick links&quot;
+&gt;
+  &lt;li&gt;
+    &lt;a class=&quot;mngha-footer-meta-link&quot; href=&quot;./index.html&quot;&gt;
+      Documentation Home
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;a
+      class=&quot;mngha-footer-meta-link&quot;
+      href=&quot;./foundations.html&quot;
+    &gt;
+      Foundations
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;a class=&quot;mngha-footer-meta-link&quot; href=&quot;./components.html&quot;&gt;
+      Components
+    &lt;/a&gt;
+  &lt;/li&gt;
+
+  &lt;li&gt;
+    &lt;a class=&quot;mngha-footer-meta-link&quot; href=&quot;./theme.html&quot;&gt;
+      Themes
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copyright and Branding -->
+      <section class="mngha-section" id="copyright-branding">
+        <h2 class="mngha-section-title">
+          Copyright and Logos
+        </h2>
+
+        <p class="mngha-paragraph">
+          Keep legal information and official logos inside
+          <strong>mngha-footer-bottom</strong>. The responsive footer keeps the
+          logos visible and rearranges them on smaller screens.
+        </p>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              Visual example
+            </h3>
+          </div>
+
+          <div class="mngha-footer mngha-footer--brand-primary">
+            <div class="mngha-footer-container">
+              <div class="mngha-footer-bottom">
+                <div class="mngha-footer-legal">
+                  <p class="mngha-footer-copyright">
+                    All rights reserved for MNGHA ©
+                    <span>2026</span>
+                  </p>
+
+                  <ul
+                    class="mngha-footer-policy-links"
+                    aria-label="Example page information"
+                  >
+                    <li>
+                      <span class="mngha-footer-note">
+                        Last Modified:
+                        <time datetime="2026-07-23">
+                          7/23/2026
+                        </time>
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div
+                  class="mngha-footer-branding"
+                  aria-label="MNGHA initiatives and programs"
+                >
+                  <a
+                    class="mngha-footer-logo"
+                    href="https://mngha.med.sa/english/pages/default.aspx"
+                    aria-label="MNGHA home"
+                  >
+                    <img
+                      src="https://mngha.med.sa/_catalogs/masterpage/MNGHA-Resources/img/mngha-logo-ar.webp"
+                      alt="Ministry of National Guard Health Affairs"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </a>
+
+                  <a
+                    class="mngha-footer-logo"
+                    href="https://www.vision2030.gov.sa/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Saudi Vision 2030, opens in a new tab"
+                  >
+                    <img
+                      src="https://mngha.med.sa/_catalogs/masterpage/MNGHA-Resources/img/vision-logo.webp"
+                      alt="Saudi Vision 2030"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </a>
+
+                  <span class="mngha-footer-logo">
+                    <img
+                      src="https://mngha.med.sa/_catalogs/masterpage/MNGHA-Resources/img/Ai-Logo.svg"
+                      alt="Year of Artificial Intelligence"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Copyright and branding
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;div class=&quot;mngha-footer-bottom&quot;&gt;
+  &lt;div class=&quot;mngha-footer-legal&quot;&gt;
+    &lt;p class=&quot;mngha-footer-copyright&quot;&gt;
+      All rights reserved for MNGHA ©
+      &lt;span data-footer-year&gt;2026&lt;/span&gt;
+    &lt;/p&gt;
+
+    &lt;ul
+      class=&quot;mngha-footer-policy-links&quot;
+      aria-label=&quot;Page information&quot;
+    &gt;
+      &lt;li&gt;
+        &lt;span class=&quot;mngha-footer-note&quot;&gt;
+          Last Modified:
+          &lt;time
+            datetime=&quot;2026-07-23&quot;
+            data-footer-last-modified
+          &gt;
+            7/23/2026
+          &lt;/time&gt;
+        &lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class=&quot;mngha-footer-branding&quot;
+    aria-label=&quot;MNGHA initiatives and programs&quot;
+  &gt;
+    &lt;!-- Keep the approved MNGHA, Vision 2030, and AI logos here. --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background Variants -->
+      <section class="mngha-section" id="background-variants">
+        <h2 class="mngha-section-title">
+          Background Variants
+        </h2>
+
+        <p class="mngha-paragraph">
+          Add one modifier to the footer root. Brand backgrounds automatically
+          apply inverse text and action colors.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Gray
+              </h3>
+            </div>
+
+            <div class="mngha-footer mngha-footer--gray">
+              <div class="mngha-footer-container">
+                <section class="mngha-footer-group">
+                  <h4 class="mngha-footer-heading">
+                    Documentation
+                  </h4>
+                  <ul class="mngha-footer-list">
+                    <li>
+                      <a class="mngha-footer-link" href="./components.html">
+                        Components
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Brand primary
+              </h3>
+            </div>
+
+            <div class="mngha-footer mngha-footer--brand-primary">
+              <div class="mngha-footer-container">
+                <section class="mngha-footer-group">
+                  <h4 class="mngha-footer-heading">
+                    Documentation
+                  </h4>
+                  <ul class="mngha-footer-list">
+                    <li>
+                      <a class="mngha-footer-link" href="./components.html">
+                        Components
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Brand secondary
+              </h3>
+            </div>
+
+            <div class="mngha-footer mngha-footer--brand-secondary">
+              <div class="mngha-footer-container">
+                <section class="mngha-footer-group">
+                  <h4 class="mngha-footer-heading">
+                    Documentation
+                  </h4>
+                  <ul class="mngha-footer-list">
+                    <li>
+                      <a class="mngha-footer-link" href="./components.html">
+                        Components
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Background variants
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;footer class=&quot;mngha-footer mngha-footer--gray&quot;&gt;
+  ...
+&lt;/footer&gt;
+
+&lt;footer class=&quot;mngha-footer mngha-footer--brand-primary&quot;&gt;
+  ...
+&lt;/footer&gt;
+
+&lt;footer class=&quot;mngha-footer mngha-footer--brand-secondary&quot;&gt;
+  ...
+&lt;/footer&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Installation -->
+      <section class="mngha-section" id="installation">
+        <h2 class="mngha-section-title">
+          Add the Real Footer to a Page
+        </h2>
+
+        <p class="mngha-paragraph">
+          Add one empty footer host after the main page content, then include
+          the shared footer loader once before the closing body tag.
+        </p>
+
+        <div class="mngha-grid mngha-grid-cols-3">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                1. Create the partial
+              </h3>
+
+              <p class="mngha-card-description">
+                Keep the approved footer markup in
+                <strong>partials/footer.html</strong>.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                2. Add the host
+              </h3>
+
+              <p class="mngha-card-description">
+                Add <strong>data-mngha-footer</strong> after the main element.
+              </p>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                3. Load the script
+              </h3>
+
+              <p class="mngha-card-description">
+                Include <strong>assets/js/footer.js</strong> once.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mngha-card">
+          <div class="mngha-card-content">
+            <h3 class="mngha-card-title">
+              HTML
+            </h3>
+
+            <div class="mngha-code-block" data-code-block>
+              <div class="mngha-code-block-header">
+                <p class="mngha-code-block-title">
+                  Page implementation
+                </p>
+
+                <button
+                  class="mngha-code-block-copy"
+                  type="button"
+                  data-code-copy
+                >
+                  Copy
+                </button>
+              </div>
+
+              <pre class="mngha-code-block-body"><code>&lt;body&gt;
+  &lt;div id=&quot;docs-header&quot;&gt;&lt;/div&gt;
+
+  &lt;main class=&quot;mngha-main&quot;&gt;
+    &lt;div class=&quot;mngha-container&quot;&gt;
+      &lt;!-- Documentation page content --&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;div data-mngha-footer&gt;&lt;/div&gt;
+
+  &lt;script src=&quot;./assets/docs.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./assets/code-block-copy.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./assets/government-sections.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;./assets/js/footer.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class Reference -->
+      <section class="mngha-section" id="class-reference">
+        <h2 class="mngha-section-title">
+          Footer Class Reference
+        </h2>
+
+        <div class="mngha-table-wrapper">
+          <table
+            class="mngha-table mngha-table--header-dark"
+            aria-label="Footer class reference"
+          >
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>.mngha-footer</strong></td>
+                <td>Footer root and base component styles.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-container</strong></td>
+                <td>Constrains and pads the footer content.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-main</strong></td>
+                <td>Arranges navigation and tool sections.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-navigation</strong></td>
+                <td>Contains grouped footer navigation.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-group</strong></td>
+                <td>Groups one heading with related links.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-heading</strong></td>
+                <td>Footer section heading and divider.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-list</strong></td>
+                <td>Vertical footer link list.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-link</strong></td>
+                <td>Main footer navigation link.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-tools</strong></td>
+                <td>Contains social and accessibility tools.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-action</strong></td>
+                <td>Square icon-only action.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-meta-links</strong></td>
+                <td>Secondary footer links.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-bottom</strong></td>
+                <td>Legal information and official branding area.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-branding</strong></td>
+                <td>Responsive official logo group.</td>
+              </tr>
+              <tr>
+                <td><strong>.mngha-footer-logo</strong></td>
+                <td>Shared logo link or container.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Guidance -->
+      <section class="mngha-section" id="usage-guidance">
+        <h2 class="mngha-section-title">
+          Usage Guidance
+        </h2>
+
+        <div class="mngha-grid mngha-grid-cols-2">
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Do
+              </h3>
+
+              <ul class="mngha-footer-list">
+                <li>
+                  <span class="mngha-card-description">
+                    Keep one shared footer partial for all documentation pages.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Use only real documentation page links.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Keep social links, copyright, and official logos consistent.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Test desktop, tablet, mobile, LTR, and RTL layouts.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="mngha-card">
+            <div class="mngha-card-content">
+              <h3 class="mngha-card-title">
+                Do not
+              </h3>
+
+              <ul class="mngha-footer-list">
+                <li>
+                  <span class="mngha-card-description">
+                    Do not copy the complete footer into every page.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Do not place the real footer inside the main element.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Do not remove accessible names from icon-only links.
+                  </span>
+                </li>
+                <li>
+                  <span class="mngha-card-description">
+                    Do not hide the official logos on mobile.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+    <div data-mngha-footer id="footer-id"></div>
+    <script src="./assets/footer.js"></script>
+  </main>
+
+ 
+
+  <script src="./assets/docs.js"></script>
+  <script src="./assets/code-block-copy.js"></script>
+  <script src="./assets/government-sections.js"></script>
+</body>
+</html>
