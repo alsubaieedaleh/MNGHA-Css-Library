@@ -3,10 +3,6 @@
  * Footer
  * --------------------------------------------------------------------------
  *
- * Responsive application footer with neutral, primary-brand, and
- * secondary-brand background variants.
- *
- * All visual values use the existing mngha design-system tokens.
  */
 
 mngha-footer {
@@ -16,6 +12,7 @@ mngha-footer {
 .mngha-footer,
 .mngha-footer * {
   box-sizing: border-box;
+  padding-block: var(--spacing-xs);
 }
 
 /**
@@ -85,7 +82,7 @@ mngha-footer {
 .mngha-footer-heading {
   margin: var(--spacing-none);
   padding-block-end: var(--spacing-md);
-  border-block-end: thin solid var(--color-gray-300);
+  border-bottom: 1px solid rgb(255 255 255 / 30%) !important;
   color: inherit;
   font-size: var(--text-md-size);
   line-height: var(--text-md-line-height);
@@ -109,7 +106,7 @@ mngha-footer {
   color: var(--color-body-brand);
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-line-height);
-  font-weight: var(--font-weight-regular);
+  font-weight: var(--font-weight-meduim);
   text-underline-offset: var(--spacing-xs);
 }
 
@@ -260,6 +257,10 @@ mngha-footer {
   background: var(--color-white);
   color: var(--color-body-brand);
   text-decoration: none;
+  flex-wrap: nowrap;
+flex: 0 0 auto;
+max-width: 135px;
+max-height: none;
 }
 
 .mngha-footer-logo img,
@@ -343,12 +344,19 @@ mngha-footer {
     gap: var(--spacing-4xl);
   }
 }
-
 @media (max-width: 640px) {
+  .mngha-footer-container {
+    padding-inline: var(--spacing-xl);
+  }
+
   .mngha-footer-navigation {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--spacing-3xl);
     row-gap: var(--spacing-4xl);
+  }
+
+  .mngha-footer-tools {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .mngha-footer-meta-links {
@@ -357,8 +365,10 @@ mngha-footer {
   }
 
   .mngha-footer-bottom {
+    width: 100%;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-5xl);
   }
 
   .mngha-footer-legal {
@@ -366,13 +376,47 @@ mngha-footer {
     text-align: center;
   }
 
-  .mngha-footer-policy-links,
-  .mngha-footer-branding {
+  .mngha-footer-policy-links {
     width: 100%;
     justify-content: center;
   }
 
   .mngha-footer-branding {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
+    gap: var(--spacing-lg);
+  }
+
+  .mngha-footer-logo {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .mngha-footer-logo img,
+  .mngha-footer-logo svg {
+    width: auto;
+    max-width: 110px;
+    height: 44px;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 400px) {
+  .mngha-footer-navigation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mngha-footer-branding {
+    gap: var(--spacing-sm);
+  }
+
+  .mngha-footer-logo img,
+  .mngha-footer-logo svg {
+    max-width: 90px;
+    height: 38px;
   }
 }

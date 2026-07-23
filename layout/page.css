@@ -5,5 +5,5 @@
  */
 
 .mngha-main {
-  padding-block: var(--spacing-6xl);
+  padding-block-start: var(--spacing-6xl);
 }
